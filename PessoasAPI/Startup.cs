@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PessoasAPI.Context;
 using PessoasAPI.Repository;
+using Pro.Search.PersonDomains.PersonEngine.Commands;
+using Pro.Search.PersonDomains.PersonEngine.Queries;
 using System.Reflection;
 
 namespace PessoasAPI
@@ -26,11 +28,14 @@ namespace PessoasAPI
             services.AddControllers();
             services.AddDbContext<ContextDB>(options => options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             services.AddTransient<IPessoasRepository, PessoasRepository>();
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(
+                typeof(GetAllPersonQueryHandler).GetTypeInfo().Assembly, 
+                typeof(PersonCreateCommandHandler).GetTypeInfo().Assembly,
+                typeof(PersonUpdateCommandHandler).GetTypeInfo().Assembly,
+                typeof(GetOnePersonQueryHandler).GetTypeInfo().Assembly);
 
             services.AddSwaggerGen();
         }
-
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

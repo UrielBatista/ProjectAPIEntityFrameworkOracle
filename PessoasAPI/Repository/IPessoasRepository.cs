@@ -8,18 +8,6 @@ namespace PessoasAPI.Repository
 {
     public interface IPessoasRepository
     {
-        Task<IList<Pessoas>> ListarPessoasAsync();
-
-        Task<Pessoas> ListarPessoaUnicaAsync(string id);
-
-        Task<Pessoas> InsertPessoasAsync(Pessoas pessoas);
-
-        Task<Pessoas> AtualizarPessoasAsync(Pessoas pessoas);
-
-        string CalcMediaAsync();
-
-        string DeletePessoasAsync(Pessoas pessoas);
-
-        
+        Task<string> CalcMediaAsync();
     }
 }

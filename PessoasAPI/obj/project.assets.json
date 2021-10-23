@@ -639,6 +639,37 @@
             "rid": "win"
           }
         }
+      },
+      "Pro.Search.Infraestructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.10",
+          "Oracle.EntityFrameworkCore": "5.21.3"
+        },
+        "compile": {
+          "bin/placeholder/Pro.Search.Infraestructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pro.Search.Infraestructure.dll": {}
+        }
+      },
+      "Pro.Search.PersonDomains/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MediatR": "9.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.10",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Pro.Search.Infraestructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Pro.Search.PersonDomains.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pro.Search.PersonDomains.dll": {}
+        }
       }
     }
   },
@@ -1908,6 +1939,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Pro.Search.Infraestructure/1.0.0": {
+      "type": "project",
+      "path": "../Pro.Search.Infraestructure/Pro.Search.Infraestructure.csproj",
+      "msbuildProject": "../Pro.Search.Infraestructure/Pro.Search.Infraestructure.csproj"
+    },
+    "Pro.Search.PersonDomains/1.0.0": {
+      "type": "project",
+      "path": "../Pro.Search.PersonDomains/Pro.Search.PersonDomains.csproj",
+      "msbuildProject": "../Pro.Search.PersonDomains/Pro.Search.PersonDomains.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1919,6 +1960,8 @@
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.10",
       "Oracle.EntityFrameworkCore >= 5.21.3",
+      "Pro.Search.Infraestructure >= 1.0.0",
+      "Pro.Search.PersonDomains >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.2"
     ]
   },
@@ -1928,11 +1971,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Uriel\\source\\repos\\PessoasAPI\\PessoasAPI\\PessoasAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
       "projectName": "PessoasAPI",
-      "projectPath": "C:\\Users\\Uriel\\source\\repos\\PessoasAPI\\PessoasAPI\\PessoasAPI.csproj",
+      "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
       "packagesPath": "C:\\Users\\Uriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Uriel\\source\\repos\\PessoasAPI\\PessoasAPI\\obj\\",
+      "outputPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Uriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1948,7 +1991,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj"
+            },
+            "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj": {
+              "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

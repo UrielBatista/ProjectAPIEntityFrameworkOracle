@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3R4CR4puf8YDxQQCaeBGgr7dNK+puQO+paFIJWnCi5B4G2tqRrZXeDK90qzMtSzFVGYPPi4vAkz1aqy+5K6xNA==",
+  "dgSpecHash": "9oeqgjGAud/HufEQdglmil1FC+tc1nCrNwRQbBCfPMhaxRTkjDAcrHlvnWUls4W1LmNATo3o3QVc0T5Mp6sKAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Uriel\\source\\repos\\PessoasAPI\\PessoasAPI\\PessoasAPI.csproj",
+  "projectFilePath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Uriel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Uriel\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
