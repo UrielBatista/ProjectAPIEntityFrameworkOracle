@@ -5,11 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PessoasAPI.Context;
-using PessoasAPI.Repository;
-using Pro.Search.PersonDomains.PersonEngine.Commands;
+using Pro.Search.Infraestructure;
+using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure.Profiles;
 using Pro.Search.PersonDomains.PersonEngine.Queries;
-using System.Reflection;
 
 namespace PessoasAPI
 {
@@ -26,13 +25,12 @@ namespace PessoasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddMvc();
             services.AddDbContext<ContextDB>(options => options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
-            services.AddTransient<IPessoasRepository, PessoasRepository>();
+            services.AddAutoMapper(typeof(PersonProfile).Assembly);
+            services.AddSearchInfraestruture();
             services.AddMediatR(
-                typeof(GetAllPersonQueryHandler).GetTypeInfo().Assembly, 
-                typeof(PersonCreateCommandHandler).GetTypeInfo().Assembly,
-                typeof(PersonUpdateCommandHandler).GetTypeInfo().Assembly,
-                typeof(GetOnePersonQueryHandler).GetTypeInfo().Assembly);
+                typeof(GetOnePersonQuery).Assembly);
 
             services.AddSwaggerGen();
         }
@@ -45,8 +43,6 @@ namespace PessoasAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseSwaggerUI();
             app.UseSwagger();
 
@@ -57,9 +53,7 @@ namespace PessoasAPI
             });
 
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

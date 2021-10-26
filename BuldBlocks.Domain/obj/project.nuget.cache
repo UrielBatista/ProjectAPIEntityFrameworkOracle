@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WKuMwbiPvb9ApWRf4crll+TigQ/o0yCbY2WGyHufRAihhFBjtxqht+ERQTWNSxLOwDW95f6T11V+58RcXiLtxw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\BuldBlocks.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

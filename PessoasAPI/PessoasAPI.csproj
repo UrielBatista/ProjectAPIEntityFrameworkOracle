@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pro.Search.Commands\Pro.Search.Commands.csproj" />
     <ProjectReference Include="..\Pro.Search.Infraestructure\Pro.Search.Infraestructure.csproj" />
     <ProjectReference Include="..\Pro.Search.PersonDomains\Pro.Search.PersonDomains.csproj" />
   </ItemGroup>

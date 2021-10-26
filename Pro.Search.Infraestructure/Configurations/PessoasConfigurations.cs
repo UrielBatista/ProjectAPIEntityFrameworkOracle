@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Pro.Search.PersonDomains.PersonEngine.Entities;
 
-namespace PessoasAPI.Model.Configurations
+namespace Pro.Search.Infraestructure.Configurations
 {
     public class PessoasConfigurations : IEntityTypeConfiguration<Pessoas>
     {

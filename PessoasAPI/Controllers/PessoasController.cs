@@ -1,9 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using PessoasAPI.Context;
-using PessoasAPI.Model;
-using PessoasAPI.Repository;
 using Pro.Search.PersonDomains.PersonEngine.Commands;
+using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Queries;
 using System;
 using System.Threading.Tasks;
@@ -14,16 +12,15 @@ namespace PessoasAPI.Controllers
     [Route("V1/Pessoas")]
     public class PessoasController : ControllerBase
     {
-        private readonly IPessoasRepository _pessoasRepository;
+        private readonly IMediator mediator;
 
-        public PessoasController(IPessoasRepository pessoasRepository, ContextDB context)
+        public PessoasController(IMediator mediator)
         {
-            _pessoasRepository = new PessoasRepository(context);
-
+            this.mediator = mediator;
         }
 
         [HttpGet]
-        public async Task<IActionResult> ListarPessoas([FromServices] IMediator mediator)
+        public async Task<IActionResult> ListarPessoas()
         {
             try
             {
@@ -37,12 +34,11 @@ namespace PessoasAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> BuscarUmaPessoa(
-            [FromServices] IMediator mediator, string id)
+        public async Task<IActionResult> BuscarUmaPessoa(string id)
         {
             try
             {
-                var response = await mediator.Send(new GetOnePersonQuery { Id_Pessoas = id });
+                var response = await mediator.Send(new GetOnePersonQuery(id));
                 return Ok(response);
             }
             catch (Exception ex)
@@ -51,30 +47,28 @@ namespace PessoasAPI.Controllers
             }
         }
 
-        
-        [HttpGet]
-        [Route("media")]
-        public async Task<IActionResult> CalcMedia()
-        {
-            try
-            {
-                var data =  await _pessoasRepository.CalcMediaAsync();
-                return Ok(data);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(400, new { message = ex.Message });
-            }
-        }
+
+        //[HttpGet]
+        //[Route("media")]
+        //public async Task<IActionResult> CalcMedia()
+        //{
+        //    try
+        //    {
+        //        var data =  await _pessoasRepository.CalcMediaAsync();
+        //        return Ok(data);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(400, new { message = ex.Message });
+        //    }
+        //}
 
         [HttpPost]
-        public async Task<IActionResult> InserirPessoas(
-            [FromBody] PersonCreateCommand command,
-            [FromServices] IMediator mediator)
+        public async Task<IActionResult> InserirPessoas([FromBody] PersonDto personDto)
         {
             try
             {
-                var response = await mediator.Send(command);
+                var response = await mediator.Send(new PersonCreateCommand(personDto)).ConfigureAwait(false);
                 return Ok(response);
 
             }
@@ -83,24 +77,23 @@ namespace PessoasAPI.Controllers
                 return StatusCode(400, new { message = ex.Message });
             }
         }
-        
-        [HttpPut]
-        public async Task<IActionResult> AtualizarPessoasAsync(
-            [FromServices] IMediator mediator, 
-            [FromBody] PersonUpdateCommand command)
-        {
-            var response = await mediator.Send(command);
-            return Ok(response);
-        }
-        
+
+        //[HttpPut]
+        //public async Task<IActionResult> AtualizarPessoasAsync(
+        //    [FromServices] IMediator mediator, 
+        //    [FromBody] PersonUpdateCommand command)
+        //{
+        //    var response = await mediator.Send(command);
+        //    return Ok(response);
+        //}
+
         [HttpDelete]
         [Route("{id}")]
-        public async Task<IActionResult> DeletearPessoas(
-            [FromServices] IMediator mediator, string id)
+        public async Task<IActionResult> DeletearPessoas(string id)
         {
             try
             {
-                var response = await mediator.Send(new PersonDeleteCommand { Id_Pessoas = id });
+                var response = await mediator.Send(new PersonDeleteCommand(id)).ConfigureAwait(false);
                 return Ok(response);
             }
             catch (Exception ex)

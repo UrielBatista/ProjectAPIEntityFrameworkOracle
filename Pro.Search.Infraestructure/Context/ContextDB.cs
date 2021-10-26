@@ -1,12 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PessoasAPI.Model;
-using PessoasAPI.Model.Configurations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Pro.Search.Infraestructure.Configurations;
+using Pro.Search.PersonDomains.PersonEngine.Entities;
 
-namespace PessoasAPI.Context
+namespace Pro.Search.Infraestructure.Context
 {
     public class ContextDB : DbContext
     {
