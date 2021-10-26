@@ -15,7 +15,5 @@ namespace Pro.Search.PersonDomains.PersonEngine.Entities
         public float Pessoas_Calc_Number { get; set; }
 
         public DateTime DataHora { get; set; }
-
-        
     }
 }

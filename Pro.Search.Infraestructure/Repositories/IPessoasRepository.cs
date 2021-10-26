@@ -10,6 +10,5 @@ namespace Pro.Search.Infraestructure.Repositories
         Task<Pessoas> FindOneAsyncPerson(string Id_Pessoas, CancellationToken cancellationToken);
 
         Task<List<Pessoas>> FindAllAsyncPerson(CancellationToken cancellationToken);
-
     }
 }

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pro.Search.PersonDomains.PersonEngine.Commands
+namespace Pro.Search.PersonCommands.Queries.Responses
 {
     public class GetAllPersonQueryHandler : IQueryHandler<GetAllPersonQuery, List<PessoasAllInfoDto>>
     {

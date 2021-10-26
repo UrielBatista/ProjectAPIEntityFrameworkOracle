@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Pro.Search.PersonDomains.PersonEngine.Dtos
 {
     public class PessoasInfoDto
     {
+        [Key]
         public string Id_Pessoas { get; set; }
 
         public string Nome { get; set; }

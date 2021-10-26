@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fco5J2nCAED9zGdFWjr1sbVeuQ+AIWQTZ5LohUC81a+YJRVP4nmb0vDQOnAEG43RCwuXxw7ZDDLvaAG9OiEjSg==",
+  "dgSpecHash": "aeUXo5eTkvIi+ccOIumLxOwXkv2MdfWNiR2+tzXrYCOEZ+hzjqUIO1YCNbD/w1nzkb+uE7P4kx+Gr3DWFu1J4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uriel_batista\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",

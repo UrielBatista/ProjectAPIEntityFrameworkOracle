@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Pro.Search.Infraestructure;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Profiles;
-using Pro.Search.PersonDomains.PersonEngine.Queries;
+using Pro.Search.PersonCommands.Queries.Responses;
 
 namespace PessoasAPI
 {
@@ -20,7 +20,6 @@ namespace PessoasAPI
         }
 
         public IConfiguration Configuration { get; }
-
         
         public void ConfigureServices(IServiceCollection services)
         {
@@ -45,7 +44,6 @@ namespace PessoasAPI
 
             app.UseSwaggerUI();
             app.UseSwagger();
-
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");

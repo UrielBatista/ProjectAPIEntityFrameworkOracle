@@ -7,7 +7,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pro.Search.PersonDomains.PersonEngine.Queries
+namespace Pro.Search.PersonCommands.Queries.Responses
 {
     public class GetOnePersonQueryHandler : IQueryHandler<GetOnePersonQuery, PersonDto>
     {

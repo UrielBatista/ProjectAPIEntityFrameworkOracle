@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Pro.Search.PersonDomains.PersonEngine.Commands;
+using Pro.Search.PersonCommands.Queries.Requests;
+using Pro.Search.PersonCommands.Queries.Responses;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
-using Pro.Search.PersonDomains.PersonEngine.Queries;
 using System;
 using System.Threading.Tasks;
 
@@ -47,45 +47,28 @@ namespace PessoasAPI.Controllers
             }
         }
 
-
-        //[HttpGet]
-        //[Route("media")]
-        //public async Task<IActionResult> CalcMedia()
-        //{
-        //    try
-        //    {
-        //        var data =  await _pessoasRepository.CalcMediaAsync();
-        //        return Ok(data);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(400, new { message = ex.Message });
-        //    }
-        //}
+        [HttpGet]
+        [Route("media")]
+        public async Task<IActionResult> CalcMedia()
+        {
+            var data = await mediator.Send(new GetMediaPersonQuery());
+            return Ok(data);
+        }
 
         [HttpPost]
         public async Task<IActionResult> InserirPessoas([FromBody] PersonDto personDto)
         {
-            try
-            {
-                var response = await mediator.Send(new PersonCreateCommand(personDto)).ConfigureAwait(false);
-                return Ok(response);
-
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(400, new { message = ex.Message });
-            }
+            var response = await mediator.Send(new CreatePersonCommand(personDto)).ConfigureAwait(false);
+            if (response == null) return BadRequest();
+            return Ok(response);
         }
 
-        //[HttpPut]
-        //public async Task<IActionResult> AtualizarPessoasAsync(
-        //    [FromServices] IMediator mediator, 
-        //    [FromBody] PersonUpdateCommand command)
-        //{
-        //    var response = await mediator.Send(command);
-        //    return Ok(response);
-        //}
+        [HttpPut]
+        public async Task<IActionResult> AtualizarPessoasAsync([FromBody] PersonDto command)
+        {
+            var response = await mediator.Send(new UpdatePersonCommand(command)).ConfigureAwait(false);
+            return Ok(response);
+        }
 
         [HttpDelete]
         [Route("{id}")]
@@ -93,7 +76,7 @@ namespace PessoasAPI.Controllers
         {
             try
             {
-                var response = await mediator.Send(new PersonDeleteCommand(id)).ConfigureAwait(false);
+                var response = await mediator.Send(new DeletePersonCommand(id)).ConfigureAwait(false);
                 return Ok(response);
             }
             catch (Exception ex)
