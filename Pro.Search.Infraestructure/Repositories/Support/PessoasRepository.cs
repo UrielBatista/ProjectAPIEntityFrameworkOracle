@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PessoasAPI.Context;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System.Collections.Generic;

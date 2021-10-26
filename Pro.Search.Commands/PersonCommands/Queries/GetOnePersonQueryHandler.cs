@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
 using BuldBlocks.Domain.Commons;
-using Pro.Search.Infraestructure.Dtos;
-using Pro.Search.Infraestructure.Entities;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
