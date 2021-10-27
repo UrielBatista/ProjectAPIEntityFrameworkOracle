@@ -1,10 +1,7 @@
 ﻿using BuldBlocks.Domain.Commons;
-using Pro.Search.Infraestructure.Repositories;
-using Pro.Search.PersonDomains.PersonEngine.Dtos;
-using System;
+using Pro.Search.PersonDomains.PersonEngine;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

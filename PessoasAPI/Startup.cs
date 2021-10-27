@@ -24,7 +24,6 @@ namespace PessoasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddMvc();
             services.AddDbContext<ContextDB>(options => options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             services.AddAutoMapper(typeof(PersonProfile).Assembly);
             services.AddSearchInfraestruture();

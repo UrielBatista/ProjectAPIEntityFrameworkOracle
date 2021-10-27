@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
 using BuldBlocks.Domain.Commons;
-using MediatR;
 using Pro.Search.Infraestructure.Context;
-using Pro.Search.Infraestructure.Repositories;
+using Pro.Search.PersonDomains.PersonEngine;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using System;
 using System.Threading;
@@ -29,11 +28,6 @@ namespace Pro.Search.PersonCommands.Queries.Requests
 
             _ = personDb ?? throw new ArgumentNullException(paramName: nameof(personDb), message: "Argumento nao pode ser nulo");
 
-            var returnPersonDto = new PersonDto
-            {
-                Pessoas = request.PersonDto!.Pessoas,
-            };
-            
             personDb.Nome = request.PersonDto.Pessoas.Nome;
             personDb.Sobrenome = request.PersonDto.Pessoas.Sobrenome;
             personDb.Pessoas_Calc_Number = request.PersonDto.Pessoas.Pessoas_Calc_Number;

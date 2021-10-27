@@ -77,6 +77,7 @@ namespace PessoasAPI.Controllers
             try
             {
                 var response = await mediator.Send(new DeletePersonCommand(id)).ConfigureAwait(false);
+                if (response.Count == 0) return NotFound();
                 return Ok(response);
             }
             catch (Exception ex)

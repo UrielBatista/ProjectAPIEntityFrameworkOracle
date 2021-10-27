@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QTla9pmf2NLwqQNdaVmLB0HSy+dQKaJA2XjxTHxjTmgO2PesONVffuNL/3MjKbCU+7lzBBfEvnvOGm7LHtdktQ==",
+  "dgSpecHash": "vjFAsxCP70B5hBj9VkkMmCwOV9ZSuREsmofugB2mlMeC3LNdubx3Izgl8B081LFMUHSw2n6uSxS6WvHnN+HB5g==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uriel_batista\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.4\\fluentvalidation.aspnetcore.10.3.4.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.4\\fluentvalidation.dependencyinjectionextensions.10.3.4.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",

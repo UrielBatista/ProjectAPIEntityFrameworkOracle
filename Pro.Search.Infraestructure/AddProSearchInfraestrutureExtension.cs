@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Pro.Search.Infraestructure.Repositories;
-using Pro.Search.Infraestructure.Repositories.Support;
+using Pro.Search.Infraestructure.Repositories.Support.DependencyInjection;
+using Pro.Search.Infraestructure.Validators.DependencyInjection;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Pro.Search.Infraestructure
@@ -10,7 +10,8 @@ namespace Pro.Search.Infraestructure
     {
         public static IServiceCollection AddSearchInfraestruture(this IServiceCollection services)
         {
-            _ = services.AddTransient<IPessoasRepository, PessoasRepository>();
+            _ = services.AddSearchRepository()
+                .AddPersonEngineValidators();
             return services;
         }
     }

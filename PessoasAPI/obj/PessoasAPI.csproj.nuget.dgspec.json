@@ -253,6 +253,10 @@
               "target": "Package",
               "version": "[10.1.1, )"
             },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.3.4, )"
+            },
             "Oracle.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.21.3, )"
