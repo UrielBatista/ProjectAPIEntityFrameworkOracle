@@ -22,29 +22,17 @@ namespace PessoasAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> ListarPessoas()
         {
-            try
-            {
-                var response = await mediator.Send(new GetAllPersonQuery());
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var response = await mediator.Send(new GetAllPersonQuery());
+            if (response == null) return NotFound();
+            return Ok(response);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> BuscarUmaPessoa(string id)
         {
-            try
-            {
-                var response = await mediator.Send(new GetOnePersonQuery(id));
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var response = await mediator.Send(new GetOnePersonQuery(id));
+            if (response == null) return NotFound();
+            return Ok(response);
         }
 
         [HttpGet]
@@ -74,16 +62,9 @@ namespace PessoasAPI.Controllers
         [Route("{id}")]
         public async Task<IActionResult> DeletearPessoas(string id)
         {
-            try
-            {
-                var response = await mediator.Send(new DeletePersonCommand(id)).ConfigureAwait(false);
-                if (response.Count == 0) return NotFound();
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var response = await mediator.Send(new DeletePersonCommand(id)).ConfigureAwait(false);
+            if (response.Count == 0) return NotFound();
+            return Ok(response);
         }
     }
 }
