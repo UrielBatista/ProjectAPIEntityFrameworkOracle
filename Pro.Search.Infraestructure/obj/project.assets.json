@@ -1821,19 +1821,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\": {}
+    "C:\\Users\\Uriel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj",
+      "projectUniqueName": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj",
       "projectName": "Pro.Search.Infraestructure",
-      "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj",
-      "packagesPath": "C:\\Users\\uriel_batista\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\obj\\",
+      "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj",
+      "packagesPath": "C:\\Users\\Uriel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\uriel_batista\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Uriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1847,8 +1847,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj": {
-              "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj"
+            "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj": {
+              "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj"
             }
           }
         }

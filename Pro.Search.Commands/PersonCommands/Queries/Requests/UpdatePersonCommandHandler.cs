@@ -28,12 +28,20 @@ namespace Pro.Search.PersonCommands.Queries.Requests
 
             _ = personDb ?? throw new ArgumentNullException(paramName: nameof(personDb), message: "Argumento nao pode ser nulo");
 
+            var dateTime = UpdatePersonCommandHandler.DefineLocalTime(request);
             personDb.Nome = request.PersonDto.Pessoas.Nome;
             personDb.Sobrenome = request.PersonDto.Pessoas.Sobrenome;
             personDb.Pessoas_Calc_Number = request.PersonDto.Pessoas.Pessoas_Calc_Number;
-            personDb.DataHora = request.PersonDto.Pessoas.DataHora;
+            personDb.DataHora = dateTime;
             await _context.SaveChangesAsync();
             return request.PersonDto;
+        }
+
+        private static DateTime DefineLocalTime(UpdatePersonCommand request)
+        {
+            DateTime localDate = DateTime.Now;
+            request.PersonDto.Pessoas.DataHora = localDate;
+            return localDate;
         }
     }
 }

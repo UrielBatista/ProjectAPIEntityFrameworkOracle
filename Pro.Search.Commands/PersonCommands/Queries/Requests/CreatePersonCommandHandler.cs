@@ -29,6 +29,8 @@ namespace Pro.Search.PersonCommands.Queries.Requests
 
             var validationPerson = await CheckPersonExist(request, cancellationToken);
 
+            CreatePersonCommandHandler.DefineLocalTime(request);
+
             if (validationPerson)
             {
                 var returnValidation = new PersonDto
@@ -51,6 +53,12 @@ namespace Pro.Search.PersonCommands.Queries.Requests
             if (personDb == null) return true;
             return false;
 
+        }
+
+        private static void DefineLocalTime(CreatePersonCommand request)
+        {
+            DateTime localDate = DateTime.Now;
+            request.PersonDto.Pessoas.DataHora = localDate;
         }
     }
 }

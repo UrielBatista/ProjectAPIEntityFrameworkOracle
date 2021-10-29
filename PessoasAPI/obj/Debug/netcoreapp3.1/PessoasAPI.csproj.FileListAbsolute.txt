@@ -84,12 +84,10 @@ C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\PessoasAPI.runtimeconfig.dev.json
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\PessoasAPI.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\PessoasAPI.pdb
-C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\MediatR.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
@@ -249,3 +247,13 @@ C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.pdb
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.genruntimeconfig.cache
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\BuldBlocks.Domain.dll
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Pro.Search.Commands.dll
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Pro.Search.Commands.pdb
+C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\BuldBlocks.Domain.pdb
