@@ -1,15 +1,14 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Pro.Search.PersonCommands.Queries.Requests;
-using Pro.Search.PersonCommands.Queries.Responses;
+using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
-using System;
 using System.Threading.Tasks;
 
-namespace PessoasAPI.Controllers
+namespace PessoasAPI.Controllers.V1
 {
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
     [ApiController]
-    [Route("V1/Pessoas")]
     public class PessoasController : ControllerBase
     {
         private readonly IMediator mediator;
@@ -35,8 +34,7 @@ namespace PessoasAPI.Controllers
             return Ok(response);
         }
 
-        [HttpGet]
-        [Route("media")]
+        [HttpGet("/media")]
         public async Task<IActionResult> CalcMedia()
         {
             var data = await mediator.Send(new GetMediaPersonQuery());

@@ -1,14 +1,16 @@
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PessoasAPI.Swagger.DependencyInjection;
 using Pro.Search.Infraestructure;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Profiles;
-using Pro.Search.PersonCommands.Queries.Responses;
+using Pro.Search.PersonCommands.Queries;
 
 namespace PessoasAPI
 {
@@ -26,6 +28,21 @@ namespace PessoasAPI
             services.AddControllers();
             services.AddDbContext<ContextDB>(options => options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             services.AddAutoMapper(typeof(PersonProfile).Assembly);
+
+            _ = services.AddApiVersioning(options =>
+            {
+                options.ReportApiVersions = true;
+                options.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(2, 0);
+                options.AssumeDefaultVersionWhenUnspecified = true;
+            });
+
+            _ = services.AddVersionedApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'VVV";
+                options.SubstituteApiVersionInUrl = true;
+            });
+            _ = services.AddCustomSwagger();
+            
             services.AddSearchInfraestruture();
             services.AddMediatR(
                 typeof(GetOnePersonQuery).Assembly);
@@ -33,7 +50,7 @@ namespace PessoasAPI
             services.AddSwaggerGen();
         }
         
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
             
             if (env.IsDevelopment())
@@ -41,13 +58,7 @@ namespace PessoasAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwaggerUI();
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                c.RoutePrefix = string.Empty;
-            });
+            _ = app.UseCustomSwagger(provider);
 
             app.UseRouting();
             app.UseAuthorization();

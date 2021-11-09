@@ -1,7 +1,7 @@
 ﻿using BuldBlocks.Domain.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
-namespace Pro.Search.PersonCommands.Queries.Responses
+namespace Pro.Search.PersonCommands.Queries
 {
     public class GetOnePersonQuery : IQuery<PersonDto>
     {

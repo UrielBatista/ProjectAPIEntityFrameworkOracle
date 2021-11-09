@@ -8,7 +8,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pro.Search.PersonCommands.Queries.Requests
+namespace Pro.Search.PersonCommands.Queries
 {
     public class CreatePersonCommandHandler : ICommandHandler<CreatePersonCommand, PersonDto>
     {

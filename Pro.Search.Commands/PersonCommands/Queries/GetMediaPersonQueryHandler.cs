@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pro.Search.PersonCommands.Queries.Responses
+namespace Pro.Search.PersonCommands.Queries
 {
     public class GetMediaPersonQueryHandler : IQueryHandler<GetMediaPersonQuery, float>
     {

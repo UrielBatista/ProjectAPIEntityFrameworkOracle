@@ -1,11 +1,11 @@
 ﻿using BuldBlocks.Domain.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
-namespace Pro.Search.PersonCommands.Queries.Requests
+namespace Pro.Search.PersonCommands.Queries
 {
-    public class CreatePersonCommand : ICommand<PersonDto>
+    public class UpdatePersonCommand : ICommand<PersonDto>
     {
-        public CreatePersonCommand(PersonDto dto)
+        public UpdatePersonCommand(PersonDto dto)
         {
             this.PersonDto = dto;
         }
