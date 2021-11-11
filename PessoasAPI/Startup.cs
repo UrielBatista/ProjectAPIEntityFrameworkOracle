@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using PessoasAPI.Swagger.DependencyInjection;
 using Pro.Search.Infraestructure;
 using Pro.Search.Infraestructure.Context;
-using Pro.Search.Infraestructure.Profiles;
+using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
 
 namespace PessoasAPI
@@ -27,7 +27,7 @@ namespace PessoasAPI
         {
             services.AddControllers();
             services.AddDbContext<ContextDB>(options => options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
-            services.AddAutoMapper(typeof(PersonProfile).Assembly);
+            services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
             _ = services.AddApiVersioning(options =>
             {

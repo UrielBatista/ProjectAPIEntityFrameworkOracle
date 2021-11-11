@@ -8,6 +8,8 @@ namespace Pro.Search.Infraestructure.Context
     {
         public DbSet<Pessoas> Pessoas { get; set; }
 
+        public DbSet<Food> Food { get; set; }
+
         public ContextDB(DbContextOptions<ContextDB> options) : base(options)
         {
 
@@ -16,6 +18,7 @@ namespace Pro.Search.Infraestructure.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new PessoasConfigurations());
+            modelBuilder.ApplyConfiguration(new FoodConfigurations());
         }
 
     }

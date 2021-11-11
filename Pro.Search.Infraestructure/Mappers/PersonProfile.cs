@@ -3,7 +3,7 @@ using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Pro.Search.Infraestructure.Profiles
+namespace Pro.Search.Infraestructure.Mappers
 {
     public class PersonProfile : Profile
     {

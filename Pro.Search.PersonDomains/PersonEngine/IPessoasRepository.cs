@@ -10,5 +10,7 @@ namespace Pro.Search.PersonDomains.PersonEngine
         Task<Pessoas> FindOneAsyncPerson(string Id_Pessoas, CancellationToken cancellationToken);
 
         Task<List<Pessoas>> FindAllAsyncPerson(CancellationToken cancellationToken);
+
+        Task<List<Food>> FindAllAsyncFood(CancellationToken cancellationToken);
     }
 }
