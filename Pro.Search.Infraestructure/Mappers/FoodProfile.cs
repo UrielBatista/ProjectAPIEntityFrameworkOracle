@@ -8,7 +8,7 @@ namespace Pro.Search.Infraestructure.Mappers
     {
         public FoodProfile()
         {
-            _ = this.CreateMap<Food, FoodAllInfoDto>()
+            _ = this.CreateMap<Food, FoodDto>()
                 .ForMember(dist => dist.Id_Food, src => src.MapFrom(src => src.Id_Food))
                 .ForMember(dist => dist.Nome, src => src.MapFrom(src => src.Name_Food))
                 .ForMember(dist => dist.LocalDeVenda, src => src.MapFrom(src => src.Locale_Purcache_Food))

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pro.Search.PersonDomains.PersonEngine
+namespace Pro.Search.Infraestructure.Repositories
 {
     public interface IPessoasRepository
     {

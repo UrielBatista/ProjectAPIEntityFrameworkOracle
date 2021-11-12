@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Pro.Search.Infraestructure.Context;
-using Pro.Search.PersonDomains.PersonEngine;
+using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System;
 using System.Collections.Generic;

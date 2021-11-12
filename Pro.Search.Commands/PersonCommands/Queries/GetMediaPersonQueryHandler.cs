@@ -1,5 +1,5 @@
 ﻿using BuldBlocks.Domain.Commons;
-using Pro.Search.PersonDomains.PersonEngine;
+using Pro.Search.Infraestructure.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;

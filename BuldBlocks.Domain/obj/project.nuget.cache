@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AjaDsdoupLz4oB2A/+MNfl9UoaAgiMXW1RWcG2b48SB53C9DIuQ33sTjF7mqHXfaIYUIOgIFW9kjfY4eSLI82g==",
+  "dgSpecHash": "WKuMwbiPvb9ApWRf4crll+TigQ/o0yCbY2WGyHufRAihhFBjtxqht+ERQTWNSxLOwDW95f6T11V+58RcXiLtxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\BuldBlocks.Domain.csproj",
+  "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\BuldBlocks.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Uriel\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }

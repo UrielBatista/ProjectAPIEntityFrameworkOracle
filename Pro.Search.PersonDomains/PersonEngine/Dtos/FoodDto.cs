@@ -1,6 +1,6 @@
 ﻿namespace Pro.Search.PersonDomains.PersonEngine.Dtos
 {
-    public class FoodAllInfoDto
+    public class FoodDto
     {
         public string Id_Food { get; set; }
 

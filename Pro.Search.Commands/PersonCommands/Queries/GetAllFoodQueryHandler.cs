@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using BuldBlocks.Domain.Commons;
-using Pro.Search.PersonDomains.PersonEngine;
+using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class GetAllFoodQueryHandler : IQueryHandler<GetAllFoodQuery, List<FoodAllInfoDto>>
+    public class GetAllFoodQueryHandler : IQueryHandler<GetAllFoodQuery, List<FoodDto>>
     {
         private readonly IPessoasRepository repository;
         private readonly IMapper mapper;
@@ -20,14 +20,14 @@ namespace Pro.Search.Commands.PersonCommands.Queries
             this.mapper = mapper;
         }
 
-        public async Task<List<FoodAllInfoDto>> Handle(GetAllFoodQuery request, CancellationToken cancellationToken)
+        public async Task<List<FoodDto>> Handle(GetAllFoodQuery request, CancellationToken cancellationToken)
         {
             var foodAllDb = await this.repository.FindAllAsyncFood(cancellationToken);
 
-            var data = new List<FoodAllInfoDto>();
+            var data = new List<FoodDto>();
             foreach (var i in foodAllDb)
             {
-                data.Add(mapper.Map<Food, FoodAllInfoDto>(i));
+                data.Add(mapper.Map<Food, FoodDto>(i));
             }
 
             return data;

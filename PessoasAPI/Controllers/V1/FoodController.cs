@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Pro.Search.Commands.PersonCommands.Queries;
+using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using System.Threading.Tasks;
 
 namespace PessoasAPI.Controllers.V1
@@ -22,6 +23,14 @@ namespace PessoasAPI.Controllers.V1
         {
             var response = await mediator.Send(new GetAllFoodQuery());
             if (response == null) return NotFound();
+            return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> InserirComida([FromBody] FoodDto foodDto)
+        {
+            var response = await mediator.Send(new CreateFoodCommand(foodDto)).ConfigureAwait(false);
+            if (response == null) return BadRequest();
             return Ok(response);
         }
     }
