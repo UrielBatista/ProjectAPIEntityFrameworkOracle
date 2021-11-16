@@ -33,5 +33,13 @@ namespace PessoasAPI.Controllers.V1
             if (response == null) return BadRequest();
             return Ok(response);
         }
+
+        [HttpPut]
+        public async Task<IActionResult> AtualizarComida([FromBody] FoodDto foodDto)
+        {
+            var response = await mediator.Send(new UpdateFoodCommand(foodDto));
+            if (response == null) return BadRequest();
+            return Ok(response);
+        }
     }
 }

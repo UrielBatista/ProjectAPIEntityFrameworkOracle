@@ -38,5 +38,10 @@ namespace Pro.Search.Infraestructure.Repositories.Support
         {
             return await _context.Food.ToListAsync(cancellationToken);
         }
+
+        public async Task<Food> FindOneAsyncFood(string Id_Food, CancellationToken cancellationToken)
+        {
+            return await _context.Food.FirstOrDefaultAsync(f => f.Id_Food == Id_Food, cancellationToken).ConfigureAwait(false);
+        }
     }
 }
