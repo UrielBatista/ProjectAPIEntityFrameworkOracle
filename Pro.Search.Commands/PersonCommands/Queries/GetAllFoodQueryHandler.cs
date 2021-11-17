@@ -11,10 +11,10 @@ namespace Pro.Search.Commands.PersonCommands.Queries
 {
     public class GetAllFoodQueryHandler : IQueryHandler<GetAllFoodQuery, List<FoodDto>>
     {
-        private readonly IPessoasRepository repository;
+        private readonly IFoodRepository repository;
         private readonly IMapper mapper;
 
-        public GetAllFoodQueryHandler(IPessoasRepository repository, IMapper mapper)
+        public GetAllFoodQueryHandler(IFoodRepository repository, IMapper mapper)
         {
             this.repository = repository;
             this.mapper = mapper;

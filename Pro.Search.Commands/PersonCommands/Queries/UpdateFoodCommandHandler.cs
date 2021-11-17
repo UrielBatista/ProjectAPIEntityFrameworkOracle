@@ -12,10 +12,10 @@ namespace Pro.Search.Commands.PersonCommands.Queries
     public class UpdateFoodCommandHandler : ICommandHandler<UpdateFoodCommand, FoodDto>
     {
         private readonly ContextDB _context;
-        private readonly IPessoasRepository repository;
+        private readonly IFoodRepository repository;
         private readonly IMapper mapper;
 
-        public UpdateFoodCommandHandler(ContextDB context, IPessoasRepository repository, IMapper mapper)
+        public UpdateFoodCommandHandler(ContextDB context, IFoodRepository repository, IMapper mapper)
         {
             _context = context;
             this.repository = repository;
