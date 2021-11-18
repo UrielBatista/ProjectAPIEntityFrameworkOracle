@@ -14,8 +14,6 @@ namespace Pro.Search.Infraestructure.Mappers
             _ = this.CreateMap<PessoasInfoDto, Pessoas>();
 
             _ = this.CreateMap<Pessoas, PessoasAllInfoDto>();
-            
-            
         }
     }
 }

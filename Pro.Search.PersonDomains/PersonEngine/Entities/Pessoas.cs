@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Pro.Search.PersonDomains.PersonEngine.Entities
@@ -15,5 +16,7 @@ namespace Pro.Search.PersonDomains.PersonEngine.Entities
         public float Pessoas_Calc_Number { get; set; }
 
         public DateTime DataHora { get; set; }
+
+        public IEnumerable<Food> ComidaComprada { get; set; }
     }
 }

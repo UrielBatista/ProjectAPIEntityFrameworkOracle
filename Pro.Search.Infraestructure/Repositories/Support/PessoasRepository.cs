@@ -21,6 +21,15 @@ namespace Pro.Search.Infraestructure.Repositories.Support
             this.pessoas = this._context.Pessoas;
         }
 
+        public async Task<Pessoas> FindPersonPurcashFood(string Id_Pessoas, CancellationToken cancellationToken)
+        {
+            var personPurcashFood = await _context.Pessoas
+                .Include(i => i.ComidaComprada)
+                .FirstOrDefaultAsync(p => p.Id_Pessoas == Id_Pessoas, cancellationToken).ConfigureAwait(false);
+
+            return personPurcashFood;
+        }
+
         public async Task<List<Pessoas>> FindAllAsyncPerson(CancellationToken cancellationToken)
         {
             return await _context.Pessoas.ToListAsync(cancellationToken);
