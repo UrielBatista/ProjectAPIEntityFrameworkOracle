@@ -41,5 +41,14 @@ namespace PessoasAPI.Controllers.V1
             if (response == null) return BadRequest();
             return Ok(response);
         }
+
+        [HttpDelete]
+        [Route("{id_food}")]
+        public async Task<IActionResult> DeletearComida(string id_food)
+        {
+            var response = await mediator.Send(new DeleteFoodCommand(id_food)).ConfigureAwait(false);
+            if (response.Count == 0) return NotFound();
+            return Ok(response);
+        }
     }
 }

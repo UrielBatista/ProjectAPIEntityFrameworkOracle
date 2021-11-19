@@ -26,7 +26,7 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id_pessoa}")]
         public async Task<IActionResult> BuscarUmaPessoa(string id)
         {
             var response = await mediator.Send(new GetOnePersonQuery(id));
@@ -57,7 +57,7 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpDelete]
-        [Route("{id}")]
+        [Route("{id_pessoa}")]
         public async Task<IActionResult> DeletearPessoas(string id)
         {
             var response = await mediator.Send(new DeletePersonCommand(id)).ConfigureAwait(false);
