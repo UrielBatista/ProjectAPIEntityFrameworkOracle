@@ -464,6 +464,15 @@
           "lib/netstandard2.1/Oracle.ManagedDataAccess.dll": {}
         }
       },
+      "RestSharp/106.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -1918,7 +1927,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.10",
           "Newtonsoft.Json": "13.0.1",
-          "OneOf": "3.0.201"
+          "OneOf": "3.0.201",
+          "RestSharp": "106.13.0"
         },
         "compile": {
           "bin/placeholder/Pro.Search.PersonDomains.dll": {}
@@ -2663,6 +2673,22 @@
         "oracle.manageddataaccess.core.3.21.3.nupkg.sha512",
         "oracle.manageddataaccess.core.nuspec",
         "readme.txt"
+      ]
+    },
+    "RestSharp/106.13.0": {
+      "sha512": "vwUdmmtC5vtePeNfBWnFcixBF2KjUeVv3ss4ZFzCIkOf7NB7W/9qX8JNZD9DOrz2yGk4AJW8k9znwgPZhnoiNg==",
+      "type": "package",
+      "path": "restsharp/106.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.13.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -6584,19 +6610,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\": {}
+    "C:\\Users\\Uriel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
       "projectName": "PessoasAPI",
-      "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
-      "packagesPath": "C:\\Users\\uriel_batista\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\obj\\",
+      "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
+      "packagesPath": "C:\\Users\\Uriel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\uriel_batista\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Uriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6610,14 +6636,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj": {
-              "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj"
+            "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj": {
+              "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj"
             },
-            "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj"
+            "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj"
             },
-            "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj": {
-              "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj"
+            "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj": {
+              "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj"
             }
           }
         }

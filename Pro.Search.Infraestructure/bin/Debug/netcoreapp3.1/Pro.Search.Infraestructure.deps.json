@@ -341,6 +341,14 @@
           }
         }
       },
+      "RestSharp/106.13.0": {
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {
+            "assemblyVersion": "106.13.0.0",
+            "fileVersion": "106.13.0.0"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1212,7 +1220,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.10",
           "Newtonsoft.Json": "13.0.1",
-          "OneOf": "3.0.201"
+          "OneOf": "3.0.201",
+          "RestSharp": "106.13.0"
         },
         "runtime": {
           "Pro.Search.PersonDomains.dll": {}
@@ -1421,6 +1430,13 @@
       "sha512": "sha512-GKnvuXPWHHuSFSHAQIalXrmTfdu9wfLXL+gZQcwtlUQHwNmQcuxWt5SbET8E67Rrkn4/5ushZ0eG2bYAYvZoWw==",
       "path": "oracle.manageddataaccess.core/3.21.3",
       "hashPath": "oracle.manageddataaccess.core.3.21.3.nupkg.sha512"
+    },
+    "RestSharp/106.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vwUdmmtC5vtePeNfBWnFcixBF2KjUeVv3ss4ZFzCIkOf7NB7W/9qX8JNZD9DOrz2yGk4AJW8k9znwgPZhnoiNg==",
+      "path": "restsharp/106.13.0",
+      "hashPath": "restsharp.106.13.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

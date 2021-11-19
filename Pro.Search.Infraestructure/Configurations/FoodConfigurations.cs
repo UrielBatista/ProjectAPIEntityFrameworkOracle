@@ -8,7 +8,7 @@ namespace Pro.Search.Infraestructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Food> builder)
         {
-            builder.ToTable("FOOD").HasKey(p => new { p.Id_Pessoas_References });
+            builder.ToTable("FOOD").HasKey(p => new { p.Id_Food });
             builder.Property(p => p.Id_Food).HasColumnName("ID_FOOD").HasColumnType("VARCHAR2");
             builder.Property(p => p.Name_Food).HasColumnName("NAME_FOOD").HasColumnType("VARCHAR2");
             builder.Property(p => p.Locale_Purcache_Food).HasColumnName("LOCALE_PURCACHE_FOOD").HasColumnType("VARCHAR2");

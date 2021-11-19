@@ -10,7 +10,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.10",
           "Newtonsoft.Json": "13.0.1",
-          "OneOf": "3.0.201"
+          "OneOf": "3.0.201",
+          "RestSharp": "106.13.0"
         },
         "runtime": {
           "Pro.Search.PersonDomains.dll": {}
@@ -204,6 +205,14 @@
           "lib/netstandard1.3/OneOf.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RestSharp/106.13.0": {
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {
+            "assemblyVersion": "106.13.0.0",
+            "fileVersion": "106.13.0.0"
           }
         }
       },
@@ -957,6 +966,13 @@
       "sha512": "sha512-FDxGA7YbVTUM1bInsNunuHE7POGPWKCkFQTzZh6QMgmV1H0KNVnhPvFRPYEZGsymTcZzI4Eqa98Q8ZPBBGJ/ug==",
       "path": "oneof/3.0.201",
       "hashPath": "oneof.3.0.201.nupkg.sha512"
+    },
+    "RestSharp/106.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vwUdmmtC5vtePeNfBWnFcixBF2KjUeVv3ss4ZFzCIkOf7NB7W/9qX8JNZD9DOrz2yGk4AJW8k9znwgPZhnoiNg==",
+      "path": "restsharp/106.13.0",
+      "hashPath": "restsharp.106.13.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
