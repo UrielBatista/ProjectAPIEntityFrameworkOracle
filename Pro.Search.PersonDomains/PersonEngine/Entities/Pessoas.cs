@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pro.Search.PersonDomains.PersonEngine.Dtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,7 +14,7 @@ namespace Pro.Search.PersonDomains.PersonEngine.Entities
 
         public string Sobrenome { get; set; }
 
-        public float Pessoas_Calc_Number { get; set; }
+        public decimal Pessoas_Calc_Number { get; set; }
 
         public DateTime DataHora { get; set; }
 

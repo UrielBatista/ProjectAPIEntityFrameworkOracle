@@ -2,7 +2,7 @@
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System.Collections.Generic;
 
-namespace Pro.Search.Commands.PersonCommands.Queries
+namespace Pro.Search.Commands.PersonCommands
 {
     public class DeleteFoodCommand : IRequest<List<Food>>
     {

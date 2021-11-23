@@ -6610,19 +6610,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Uriel\\.nuget\\packages\\": {}
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
+      "projectUniqueName": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
       "projectName": "PessoasAPI",
-      "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
-      "packagesPath": "C:\\Users\\Uriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\obj\\",
+      "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\PessoasAPI.csproj",
+      "packagesPath": "C:\\Users\\uriel_batista\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Uriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\uriel_batista\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6636,14 +6636,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj": {
-              "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj"
+            "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj": {
+              "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj"
             },
-            "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj"
+            "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj"
             },
-            "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj": {
-              "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj"
+            "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj": {
+              "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\Pro.Search.PersonDomains.csproj"
             }
           }
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetMediaPersonQueryHandler : IQueryHandler<GetMediaPersonQuery, float>
+    public class GetMediaPersonQueryHandler : IQueryHandler<GetMediaPersonQuery, decimal>
     {
         private readonly IPessoasRepository repository;
 
@@ -16,16 +16,16 @@ namespace Pro.Search.PersonCommands.Queries
             this.repository = repository;
         }
 
-        public async Task<float> Handle(GetMediaPersonQuery request, CancellationToken cancellationToken)
+        public async Task<decimal> Handle(GetMediaPersonQuery request, CancellationToken cancellationToken)
         {
             var personsAllDb = await this.repository.FindAllAsyncPerson(cancellationToken);
 
-            List<float> mediaPerson = new List<float>();
+            List<decimal> mediaPerson = new List<decimal>();
             foreach (var item in personsAllDb)
             {
                 mediaPerson.Add(item.Pessoas_Calc_Number);
             }
-            float total = mediaPerson.Sum();
+            decimal total = mediaPerson.Sum();
             total = total / personsAllDb.Count;
             return total;
         }

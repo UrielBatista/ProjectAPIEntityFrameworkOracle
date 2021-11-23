@@ -10,7 +10,7 @@ namespace Pro.Search.PersonDomains.PersonEngine.Dtos
 
         public string Sobrenome { get; set; }
 
-        public float Pessoas_Calc_Number { get; set; }
+        public decimal Pessoas_Calc_Number { get; set; }
 
         public DateTime DataHora { get; set; }
     }

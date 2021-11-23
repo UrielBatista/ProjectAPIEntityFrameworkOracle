@@ -2,7 +2,7 @@
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetMediaPersonQuery : IQuery<float>
+    public class GetMediaPersonQuery : IQuery<decimal>
     {
     }
 }

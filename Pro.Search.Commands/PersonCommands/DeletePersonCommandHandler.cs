@@ -9,7 +9,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pro.Search.PersonCommands.Queries
+namespace Pro.Search.PersonCommands
 {
     public class DeletePersonCommandHandler : IRequestHandler<DeletePersonCommand, List<Pessoas>>
     {

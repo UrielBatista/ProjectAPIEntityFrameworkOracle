@@ -8,7 +8,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pro.Search.Commands.PersonCommands.Queries
+namespace Pro.Search.Commands.PersonCommands
 {
     public class CreateFoodCommandHandler : ICommandHandler<CreateFoodCommand, FoodDto>
     {

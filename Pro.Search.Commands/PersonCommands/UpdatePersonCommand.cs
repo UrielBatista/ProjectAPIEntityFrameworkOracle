@@ -1,7 +1,7 @@
 ﻿using BuldBlocks.Domain.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
-namespace Pro.Search.PersonCommands.Queries
+namespace Pro.Search.PersonCommands
 {
     public class UpdatePersonCommand : ICommand<PersonDto>
     {

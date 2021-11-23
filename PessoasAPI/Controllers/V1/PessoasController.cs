@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Pro.Search.PersonCommands;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using System.Threading.Tasks;
