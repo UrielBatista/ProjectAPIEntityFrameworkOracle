@@ -39,9 +39,6 @@ namespace Pro.Search.Commands.PersonCommands
 
             dataPerson.Food = await this.UpdateFoodAsync(request.PersonPurcashDto.Food.ToList(), cancellationToken).ConfigureAwait(false);
 
-
-            
-
             return dataPerson;
         }
 
@@ -62,10 +59,10 @@ namespace Pro.Search.Commands.PersonCommands
             //};
 
             //_context.Pessoas.Update(dataRetornoPessoasAllInfoDto);
-            personDb.Nome = pessoasAllInfoDto.Nome;
-            personDb.Sobrenome = pessoasAllInfoDto.Sobrenome;
-            personDb.Pessoas_Calc_Number = pessoasAllInfoDto.Pessoas_Calc_Number;
-            personDb.DataHora = DateTime.Now;
+            personDb.Nome = pessoasAllInfoDto.Nome != null ? pessoasAllInfoDto.Nome : personDb.Nome;
+            personDb.Sobrenome = pessoasAllInfoDto.Sobrenome != null ? pessoasAllInfoDto.Sobrenome : personDb.Sobrenome;
+            personDb.Pessoas_Calc_Number = pessoasAllInfoDto.Pessoas_Calc_Number != 0 ? pessoasAllInfoDto.Pessoas_Calc_Number : personDb.Pessoas_Calc_Number;
+            personDb.DataHora = DateTime.Now != null ? DateTime.Now : personDb.DataHora;
             await _context.SaveChangesAsync();
             return pessoasAllInfoDto;
         }
