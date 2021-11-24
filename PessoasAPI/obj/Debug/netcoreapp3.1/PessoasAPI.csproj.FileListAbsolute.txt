@@ -171,13 +171,6 @@ C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.pdb
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.genruntimeconfig.cache
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.csproj.AssemblyReference.cache
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.AssemblyInfoInputs.cache
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.AssemblyInfo.cs
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.csproj.CoreCompileInputs.cache
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\PessoasAPI.exe
@@ -258,6 +251,13 @@ C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Pro.Search.Infraestructure.pdb
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Pro.Search.PersonDomains.pdb
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\BuldBlocks.Domain.pdb
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.csproj.AssemblyReference.cache
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.AssemblyInfoInputs.cache
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.AssemblyInfo.cs
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.csproj.CoreCompileInputs.cache
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\staticwebassets\PessoasAPI.StaticWebAssets.Manifest.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\staticwebassets\PessoasAPI.StaticWebAssets.xml
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\PessoasAPI.styles.css

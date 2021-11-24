@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class GetAllFoodQueryHandler : IQueryHandler<GetAllFoodQuery, List<FoodDto>>
+    public class GetAllFoodQueryHandler : IQueryHandler<GetAllFoodQuery, List<FoodAllInfoDto>>
     {
         private readonly IFoodRepository repository;
         private readonly IMapper mapper;
@@ -20,14 +20,14 @@ namespace Pro.Search.Commands.PersonCommands.Queries
             this.mapper = mapper;
         }
 
-        public async Task<List<FoodDto>> Handle(GetAllFoodQuery request, CancellationToken cancellationToken)
+        public async Task<List<FoodAllInfoDto>> Handle(GetAllFoodQuery request, CancellationToken cancellationToken)
         {
             var foodAllDb = await this.repository.FindAllAsyncFood(cancellationToken);
 
-            var data = new List<FoodDto>();
+            var data = new List<FoodAllInfoDto>();
             foreach (var i in foodAllDb)
             {
-                data.Add(mapper.Map<Food, FoodDto>(i));
+                data.Add(mapper.Map<Food, FoodAllInfoDto>(i));
             }
 
             return data;

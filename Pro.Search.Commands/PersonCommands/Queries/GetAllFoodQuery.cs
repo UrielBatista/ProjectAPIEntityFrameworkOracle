@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class GetAllFoodQuery : IQuery<List<FoodDto>>
+    public class GetAllFoodQuery : IQuery<List<FoodAllInfoDto>>
     {
     }
 }

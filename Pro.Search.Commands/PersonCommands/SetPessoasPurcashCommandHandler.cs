@@ -14,6 +14,7 @@ namespace Pro.Search.Commands.PersonCommands
 {
     public class SetPessoasPurcashCommandHandler : ICommandHandler<SetPessoasPurcashCommand, PersonPurcashDto>
     {
+        private readonly Random _random = new Random();
         private readonly ContextDB _context;
         private readonly IPessoasRepository repository;
         private readonly IFoodRepository repositoryFood;
@@ -37,7 +38,7 @@ namespace Pro.Search.Commands.PersonCommands
 
             dataPerson.Pessoas = await this.UpdatePessoasAsync(request.Id_Pessoa, request.PersonPurcashDto.Pessoas, cancellationToken).ConfigureAwait(false);
 
-            dataPerson.Food = await this.UpdateFoodAsync(request.PersonPurcashDto.Food.ToList(), cancellationToken).ConfigureAwait(false);
+            dataPerson.Food = await this.UpdateFoodAsync(request.Id_Pessoa, request.PersonPurcashDto.Food.ToList(), cancellationToken).ConfigureAwait(false);
 
             return dataPerson;
         }
@@ -67,7 +68,7 @@ namespace Pro.Search.Commands.PersonCommands
             return pessoasAllInfoDto;
         }
 
-        private async Task<IEnumerable<FoodDto>> UpdateFoodAsync(List<FoodDto> foodDto, CancellationToken cancellationToken)
+        private async Task<IEnumerable<FoodAllInfoDto>> UpdateFoodAsync(string id_pessoa, List<FoodAllInfoDto> foodDto, CancellationToken cancellationToken)
         {
             _ = foodDto ?? throw new ArgumentException(nameof(foodDto));
             
@@ -75,51 +76,94 @@ namespace Pro.Search.Commands.PersonCommands
             {
                 foreach(var data in foodDto)
                 {
-                    var foodDb = await this.repositoryFood.FindOneAsyncFood(data.Id_Food, cancellationToken).ConfigureAwait(false);
+                    var food = await this.repositoryFood.FindOneAsyncFoodReferenceToPerson(id_pessoa, cancellationToken).ConfigureAwait(false);
 
-                    if (foodDb == null)
+                    if (food == null)
                     {
-                        var returnValidation = new FoodDto
+                        var returnValidation = new FoodAllInfoDto
                         {
-                            Id_Food = data.Id_Food,
-                            Nome = data.Nome,
-                            LocalDeVenda = data.LocalDeVenda,
-                            ReferenciaIdPessoa = data.ReferenciaIdPessoa,
-                            PrecoComida = data.PrecoComida
+                            Id_Food = data.Id_Food != null ? data.Id_Food : food.Id_Food,
+                            Nome = data.Nome != null ? data.Nome : food.Name_Food,
+                            LocalDeVenda = data.LocalDeVenda != null ? data.LocalDeVenda : food.Locale_Purcache_Food,
+                            ReferenciaIdPessoa = data.ReferenciaIdPessoa != null ? data.ReferenciaIdPessoa : food.Id_Pessoas_References,
+                            PrecoComida = data.PrecoComida != 0 ? data.PrecoComida : food.Price_Food
                         };
 
-                        _ = await _context.Food.AddAsync(this.mapper.Map<FoodDto, Food>(returnValidation), cancellationToken).ConfigureAwait(false);
+                        _ = await _context.Food.AddAsync(this.mapper.Map<FoodAllInfoDto, Food>(returnValidation), cancellationToken).ConfigureAwait(false);
                         _ = await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                         return foodDto;
                     }
 
-                    foodDb.Id_Food = data.Id_Food;
-                    foodDb.Name_Food = data.Nome;
-                    foodDb.Locale_Purcache_Food = data.LocalDeVenda;
-                    foodDb.Id_Pessoas_References = data.ReferenciaIdPessoa;
-                    foodDb.Price_Food = data.PrecoComida;
+                    food.Id_Food = data.Id_Food != null ? data.Id_Food : food.Id_Food;
+                    food.Name_Food = data.Nome != null ? data.Nome : food.Name_Food;
+                    food.Locale_Purcache_Food = data.LocalDeVenda != null ? data.LocalDeVenda : food.Locale_Purcache_Food;
+                    food.Id_Pessoas_References = data.ReferenciaIdPessoa != null ? data.ReferenciaIdPessoa : food.Id_Pessoas_References;
+                    food.Price_Food = data.PrecoComida != 0 ? data.PrecoComida : food.Price_Food;
                     await _context.SaveChangesAsync();
                     return foodDto;
                 }
             }
 
-            foreach(var dataFood in foodDto)
+            var foodDb = this.repositoryFood.FindAllAsyncFoodReferenceToPerson(id_pessoa);
+            int count = 0;
+            foreach (var data in foodDto)
             {
-                var dataRetornoFoodDto = new Food
+                if (count > 0)
                 {
-                    Id_Food = dataFood.Id_Food,
-                    Name_Food = dataFood.Nome,
-                    Locale_Purcache_Food = dataFood.LocalDeVenda,
-                    Id_Pessoas_References = dataFood.ReferenciaIdPessoa,
-                    Price_Food = dataFood.PrecoComida
-                };
+                    if (count >= 2)
+                    {
+                        foodDb = foodDb.Skip(count - 1);
+                    }
+                    else
+                    {
+                        foodDb = foodDb.Skip(count);
+                    }
+                }
+                foreach (var newDate in foodDb) 
+                {
 
-                _context.Food.Update(dataRetornoFoodDto);
+                    newDate.Id_Food = data.Id_Food != null ? data.Id_Food : newDate.Id_Food;
+                    newDate.Name_Food = data.Nome != null ? data.Nome : newDate.Name_Food;
+                    newDate.Locale_Purcache_Food = data.LocalDeVenda != null ? data.LocalDeVenda : newDate.Locale_Purcache_Food;
+                    newDate.Id_Pessoas_References = data.ReferenciaIdPessoa != null ? data.ReferenciaIdPessoa : newDate.Id_Pessoas_References;
+                    newDate.Price_Food = data.PrecoComida != 0 ? data.PrecoComida : newDate.Price_Food;
+                    await _context.SaveChangesAsync();
+                    count += 1;
+                    break;
+                }
             }
 
-            await _context.SaveChangesAsync();
+            if (foodDto.Count() > foodDb.Count())
+            {
+                var result = foodDto.Skip(count);
+
+                foreach (var newDate in result)
+                {
+                    var food = await this.repositoryFood.FindOneAsyncFood(newDate.Id_Food, cancellationToken).ConfigureAwait(false);
+                    if (food == null)
+                    {
+                        var returnValidation = new FoodAllInfoDto
+                        {
+                            Id_Food = newDate.Id_Food != null ? newDate.Id_Food : food.Id_Food,
+                            Nome = newDate.Nome != null ? newDate.Nome : food.Name_Food,
+                            LocalDeVenda = newDate.LocalDeVenda != null ? newDate.LocalDeVenda : food.Locale_Purcache_Food,
+                            ReferenciaIdPessoa = newDate.ReferenciaIdPessoa != null ? newDate.ReferenciaIdPessoa : food.Id_Pessoas_References,
+                            PrecoComida = newDate.PrecoComida != 0 ? newDate.PrecoComida : food.Price_Food
+                        };
+
+                        _ = await _context.Food.AddAsync(this.mapper.Map<FoodAllInfoDto, Food>(returnValidation), cancellationToken).ConfigureAwait(false);
+                        _ = await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+                        return foodDto;
+                    }
+                }
+            }
 
             return foodDto;
+        }
+
+        private string RandomNumber(int min, int max)
+        {
+            return _random.Next(min, max).ToString();
         }
     }
 }

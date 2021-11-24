@@ -8,6 +8,6 @@ namespace Pro.Search.PersonDomains.PersonEngine.Dtos
     {
         public PessoasAllInfoDto Pessoas { get; set; }
 
-        public IEnumerable<FoodDto> Food { get; set; }
+        public IEnumerable<FoodAllInfoDto> Food { get; set; }
     }
 }

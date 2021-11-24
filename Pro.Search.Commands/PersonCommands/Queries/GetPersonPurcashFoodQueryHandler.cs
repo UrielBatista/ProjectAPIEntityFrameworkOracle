@@ -5,7 +5,6 @@ using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -31,7 +30,7 @@ namespace Pro.Search.Commands.PersonCommands.Queries
             var returnPersonPurcashFood = new PersonPurcashDto
             {
                 Pessoas = this.mapper.Map<Pessoas, PessoasAllInfoDto>(personPurcashFood),
-                Food = this.mapper.Map<IEnumerable<Food>, IEnumerable<FoodDto>>(personPurcashFood.ComidaComprada)
+                Food = this.mapper.Map<IEnumerable<Food>, IEnumerable<FoodAllInfoDto>>(personPurcashFood.ComidaComprada)
             };
 
             return returnPersonPurcashFood;

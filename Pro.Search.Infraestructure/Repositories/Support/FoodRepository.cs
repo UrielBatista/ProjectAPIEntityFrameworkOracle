@@ -2,6 +2,7 @@
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -27,6 +28,20 @@ namespace Pro.Search.Infraestructure.Repositories.Support
         public async Task<List<Food>> FindAllAsyncFood(CancellationToken cancellationToken)
         {
             return await _context.Food.ToListAsync(cancellationToken);
+        }
+
+        public IEnumerable<Food> FindAllAsyncFoodReferenceToPerson(string Id_Pessoas)
+        {
+            var foodReferencedPerson = _context.Food.Where(p =>  p.Id_Pessoas_References == Id_Pessoas).ToList();
+
+            return foodReferencedPerson;
+        }
+
+        public async Task<Food> FindOneAsyncFoodReferenceToPerson(string Id_Pessoas, CancellationToken cancellationToken)
+        {
+            var foodReferencedPersonOne = await _context.Food.FirstOrDefaultAsync(p => p.Id_Pessoas_References == Id_Pessoas, cancellationToken).ConfigureAwait(false);
+
+            return foodReferencedPersonOne;
         }
     }
 }
