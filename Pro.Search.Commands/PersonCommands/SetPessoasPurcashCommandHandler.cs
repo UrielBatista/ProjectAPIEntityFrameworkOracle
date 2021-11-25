@@ -49,17 +49,7 @@ namespace Pro.Search.Commands.PersonCommands
             _ = pessoasAllInfoDto ?? throw new ArgumentException(nameof(pessoasAllInfoDto));
 
             var personDb = await this.repository.FindOneAsyncPerson(id_pessoa, cancellationToken).ConfigureAwait(false);
-            //var dataRetornoPessoasAllInfoDto = new Pessoas
-            //{
-            //    Id_Pessoas = pessoasAllInfoDto.Id_Pessoas,
-            //    Nome = pessoasAllInfoDto.Nome,
-            //    Sobrenome = pessoasAllInfoDto.Sobrenome,
-            //    Pessoas_Calc_Number = pessoasAllInfoDto.Pessoas_Calc_Number,
-            //    DataHora = DateTime.Now.Date,
-            //    ComidaComprada = null
-            //};
-
-            //_context.Pessoas.Update(dataRetornoPessoasAllInfoDto);
+            
             personDb.Nome = pessoasAllInfoDto.Nome != null ? pessoasAllInfoDto.Nome : personDb.Nome;
             personDb.Sobrenome = pessoasAllInfoDto.Sobrenome != null ? pessoasAllInfoDto.Sobrenome : personDb.Sobrenome;
             personDb.Pessoas_Calc_Number = pessoasAllInfoDto.Pessoas_Calc_Number != 0 ? pessoasAllInfoDto.Pessoas_Calc_Number : personDb.Pessoas_Calc_Number;
@@ -153,7 +143,6 @@ namespace Pro.Search.Commands.PersonCommands
 
                         _ = await _context.Food.AddAsync(this.mapper.Map<FoodAllInfoDto, Food>(returnValidation), cancellationToken).ConfigureAwait(false);
                         _ = await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
-                        return foodDto;
                     }
                 }
             }

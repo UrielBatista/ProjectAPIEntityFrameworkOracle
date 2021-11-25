@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pro.Search.Infraestructure.Context;
-using Pro.Search.PersonDomains.PersonEngine;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System.Collections.Generic;
 using System.Threading;

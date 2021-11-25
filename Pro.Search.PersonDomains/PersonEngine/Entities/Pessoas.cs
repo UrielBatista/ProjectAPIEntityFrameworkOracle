@@ -1,5 +1,4 @@
-﻿using Pro.Search.PersonDomains.PersonEngine.Dtos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
