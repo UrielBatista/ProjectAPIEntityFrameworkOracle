@@ -109,9 +109,9 @@ namespace Pro.Search.Commands.PersonCommands
                         foodDb = foodDb.Skip(count);
                     }
                 }
+
                 foreach (var newDate in foodDb) 
                 {
-
                     newDate.Id_Food = data.Id_Food != null ? data.Id_Food : newDate.Id_Food;
                     newDate.Name_Food = data.Nome != null ? data.Nome : newDate.Name_Food;
                     newDate.Locale_Purcache_Food = data.LocalDeVenda != null ? data.LocalDeVenda : newDate.Locale_Purcache_Food;

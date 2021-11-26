@@ -3,13 +3,13 @@ using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
 namespace Pro.Search.Commands.PersonCommands
 {
-    public class CreateFoodCommand : ICommand<FoodDto>
+    public class CreateFoodCommand : ICommand<FoodAllInfoDto>
     {
-        public CreateFoodCommand(FoodDto foodDto)
+        public CreateFoodCommand(FoodAllInfoDto foodAllInfoDto)
         {
-            this.FoodDto = foodDto;
+            this.FoodAllInfoDto = foodAllInfoDto;
         }
 
-        public FoodDto FoodDto { get; set; }
+        public FoodAllInfoDto FoodAllInfoDto { get; set; }
     }
 }

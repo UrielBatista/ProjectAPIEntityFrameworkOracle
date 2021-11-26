@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands
 {
-    public class UpdateFoodCommandHandler : ICommandHandler<UpdateFoodCommand, FoodDto>
+    public class UpdateFoodCommandHandler : ICommandHandler<UpdateFoodCommand, FoodAllInfoDto>
     {
         private readonly ContextDB _context;
         private readonly IFoodRepository repository;
@@ -22,19 +22,19 @@ namespace Pro.Search.Commands.PersonCommands
             this.mapper = mapper;
         }
 
-        public async Task<FoodDto> Handle(UpdateFoodCommand request, CancellationToken cancellationToken)
+        public async Task<FoodAllInfoDto> Handle(UpdateFoodCommand request, CancellationToken cancellationToken)
         {
-            var foodDb = await this.repository.FindOneAsyncFood(request.FoodDto.Id_Food, cancellationToken);
+            var foodDb = await this.repository.FindOneAsyncFood(request.FoodAllInfoDto.Id_Food, cancellationToken);
 
             _ = foodDb ?? throw new ArgumentNullException(nameof(foodDb));
 
-            foodDb.Id_Food = request.FoodDto.Id_Food;
-            foodDb.Name_Food = request.FoodDto.Nome;
-            foodDb.Locale_Purcache_Food = request.FoodDto.LocalDeVenda;
-            foodDb.Id_Pessoas_References = request.FoodDto.ReferenciaIdPessoa;
-            foodDb.Price_Food = request.FoodDto.PrecoComida;
+            foodDb.Id_Food = request.FoodAllInfoDto.Id_Food;
+            foodDb.Name_Food = request.FoodAllInfoDto.Nome;
+            foodDb.Locale_Purcache_Food = request.FoodAllInfoDto.LocalDeVenda;
+            foodDb.Id_Pessoas_References = request.FoodAllInfoDto.ReferenciaIdPessoa;
+            foodDb.Price_Food = request.FoodAllInfoDto.PrecoComida;
             await _context.SaveChangesAsync();
-            return request.FoodDto;
+            return request.FoodAllInfoDto;
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands
 {
-    public class CreateFoodCommandHandler : ICommandHandler<CreateFoodCommand, FoodDto>
+    public class CreateFoodCommandHandler : ICommandHandler<CreateFoodCommand, FoodAllInfoDto>
     {
         private readonly ContextDB _context;
         private readonly IPessoasRepository repository;
@@ -23,20 +23,20 @@ namespace Pro.Search.Commands.PersonCommands
             this.repository = repository;
         }
 
-        public async Task<FoodDto> Handle(CreateFoodCommand request, CancellationToken cancellationToken)
+        public async Task<FoodAllInfoDto> Handle(CreateFoodCommand request, CancellationToken cancellationToken)
         {
             _ = request ?? throw new ArgumentNullException(nameof(request));
 
-            var returnValidation = new FoodDto
+            var returnValidation = new FoodAllInfoDto
             {
-                Id_Food = request.FoodDto.Id_Food,
-                Nome = request.FoodDto.Nome,
-                LocalDeVenda = request.FoodDto.LocalDeVenda,
-                ReferenciaIdPessoa = request.FoodDto.ReferenciaIdPessoa,
-                PrecoComida = request.FoodDto.PrecoComida
+                Id_Food = request.FoodAllInfoDto.Id_Food,
+                Nome = request.FoodAllInfoDto.Nome,
+                LocalDeVenda = request.FoodAllInfoDto.LocalDeVenda,
+                ReferenciaIdPessoa = request.FoodAllInfoDto.ReferenciaIdPessoa,
+                PrecoComida = request.FoodAllInfoDto.PrecoComida
             };
 
-            _ = await _context.Food.AddAsync(this.mapper.Map<FoodDto, Food>(returnValidation), cancellationToken).ConfigureAwait(false);
+            _ = await _context.Food.AddAsync(this.mapper.Map<FoodAllInfoDto, Food>(returnValidation), cancellationToken).ConfigureAwait(false);
             _ = await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
             return returnValidation;

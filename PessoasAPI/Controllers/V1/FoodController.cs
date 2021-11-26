@@ -28,17 +28,17 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpPost]
-        public async Task<IActionResult> InserirComida([FromBody] FoodDto foodDto)
+        public async Task<IActionResult> InserirComida([FromBody] FoodAllInfoDto foodAllInfoDto)
         {
-            var response = await mediator.Send(new CreateFoodCommand(foodDto)).ConfigureAwait(false);
+            var response = await mediator.Send(new CreateFoodCommand(foodAllInfoDto)).ConfigureAwait(false);
             if (response == null) return BadRequest();
             return Ok(response);
         }
 
         [HttpPut]
-        public async Task<IActionResult> AtualizarComida([FromBody] FoodDto foodDto)
+        public async Task<IActionResult> AtualizarComida([FromBody] FoodAllInfoDto foodAllInfoDto)
         {
-            var response = await mediator.Send(new UpdateFoodCommand(foodDto));
+            var response = await mediator.Send(new UpdateFoodCommand(foodAllInfoDto));
             if (response == null) return BadRequest();
             return Ok(response);
         }
