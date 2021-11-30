@@ -23,4 +23,3 @@ C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Infraestructure\obj\Debug\netcoreapp3.1\Pro.Search.Infraestructure.csproj.CoreCompileInputs.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Infraestructure\obj\Debug\netcoreapp3.1\Pro.Search.Infraestructure.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Infraestructure\obj\Debug\netcoreapp3.1\Pro.Search.Infraestructure.pdb
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Infraestructure\obj\Debug\netcoreapp3.1\Pro.Search.Infraestructure.csproj.CopyComplete
