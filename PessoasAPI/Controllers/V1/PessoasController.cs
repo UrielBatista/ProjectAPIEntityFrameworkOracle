@@ -35,7 +35,7 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
-        [HttpGet("/media")]
+        [HttpGet("media")]
         public async Task<IActionResult> CalcMedia()
         {
             var data = await mediator.Send(new GetMediaPersonQuery());
