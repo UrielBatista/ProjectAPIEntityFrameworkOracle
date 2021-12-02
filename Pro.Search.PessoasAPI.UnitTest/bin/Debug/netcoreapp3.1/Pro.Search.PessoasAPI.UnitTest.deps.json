@@ -14,7 +14,7 @@
           "Microsoft.NET.Test.Sdk": "16.9.4",
           "NSubstitute": "4.2.2",
           "Pro.Search.Commands": "1.0.0",
-          "coverlet.collector": "3.0.2"
+          "coverlet.collector": "3.1.0"
         },
         "runtime": {
           "Pro.Search.PessoasAPI.UnitTest.dll": {}
@@ -52,7 +52,7 @@
           }
         }
       },
-      "coverlet.collector/3.0.2": {},
+      "coverlet.collector/3.1.0": {},
       "FluentAssertions/6.2.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "5.0.0"
@@ -1732,12 +1732,12 @@
       "path": "castle.core/4.4.0",
       "hashPath": "castle.core.4.4.0.nupkg.sha512"
     },
-    "coverlet.collector/3.0.2": {
+    "coverlet.collector/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iBvPAIDaI7j/iMx/DzCGCJ3rdiOmel9VINEfaTiBv/NKIGHOP4X3hqc6Q1wgMtArEshlhXexQknP17SK4vXb1w==",
-      "path": "coverlet.collector/3.0.2",
-      "hashPath": "coverlet.collector.3.0.2.nupkg.sha512"
+      "sha512": "sha512-YzYqSRrjoP5lULBhTDcTOjuM4IDPPi6PhFsl4w8EI4WdZhE6llt7E38Tg4CHyrS+QKwyu1+9OwkdDgluOdoBTw==",
+      "path": "coverlet.collector/3.1.0",
+      "hashPath": "coverlet.collector.3.1.0.nupkg.sha512"
     },
     "FluentAssertions/6.2.0": {
       "type": "package",

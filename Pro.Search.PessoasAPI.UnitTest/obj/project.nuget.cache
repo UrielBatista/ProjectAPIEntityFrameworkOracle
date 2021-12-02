@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Jnmyn86NWD1wJY0ddpcZdVwmNkRZDfhtY+BSBiTk0u9lbFHtkNduHaEkMpYIXqICHTTyxHSlK8iAhuBB3/1ulw==",
+  "dgSpecHash": "eJsA3vB9rkYH4oU8A4E1ho/m/rDWejVBZNWKc6KVwcm7j09a7I7DqoqZLmUysTUp3AFostTgZe/L3NeYCXIlqw==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PessoasAPI.UnitTest\\Pro.Search.PessoasAPI.UnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uriel_batista\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentassertions\\6.2.0\\fluentassertions.6.2.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.4\\fluentvalidation.aspnetcore.10.3.4.nupkg.sha512",

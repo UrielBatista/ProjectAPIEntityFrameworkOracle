@@ -1,0 +1,2092 @@
+{
+  "BuldBlocks.Domain.dll": {},
+  "Pro.Search.Commands.dll": {
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreatePersonCommand.cs": {
+      "Pro.Search.PersonCommands.CreatePersonCommand": {
+        "Pro.Search.PersonDomains.PersonEngine.Dtos.PersonDto Pro.Search.PersonCommands.CreatePersonCommand::get_PersonDto()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.PersonCommands.CreatePersonCommand::.ctor(Pro.Search.PersonDomains.PersonEngine.Dtos.PersonDto)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreatePersonCommandHandler.cs": {
+      "Pro.Search.PersonCommands.CreatePersonCommandHandler": {
+        "System.Void Pro.Search.PersonCommands.CreatePersonCommandHandler::DefineLocalTime(Pro.Search.PersonCommands.CreatePersonCommand)": {
+          "Lines": {
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.PersonCommands.CreatePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,AutoMapper.IMapper,Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.PersonCommands.CreatePersonCommandHandler/<Handle>d__4": {
+        "System.Void Pro.Search.PersonCommands.CreatePersonCommandHandler/<Handle>d__4::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "47": 0,
+            "48": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 46,
+              "EndOffset": 48,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 46,
+              "EndOffset": 59,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 211,
+              "EndOffset": 216,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 211,
+              "EndOffset": 574,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Pro.Search.PersonCommands.CreatePersonCommandHandler/<CheckPersonExist>d__5": {
+        "System.Void Pro.Search.PersonCommands.CreatePersonCommandHandler/<CheckPersonExist>d__5::MoveNext()": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "56": 0
+          },
+          "Branches": [
+            {
+              "Line": 53,
+              "Offset": 195,
+              "EndOffset": 197,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 195,
+              "EndOffset": 201,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeletePersonCommand.cs": {
+      "Pro.Search.PersonCommands.DeletePersonCommand": {
+        "System.String Pro.Search.PersonCommands.DeletePersonCommand::get_Id_Pessoas()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.PersonCommands.DeletePersonCommand::.ctor(System.String)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeletePersonCommandHandler.cs": {
+      "Pro.Search.PersonCommands.DeletePersonCommandHandler": {
+        "System.Void Pro.Search.PersonCommands.DeletePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.PersonCommands.DeletePersonCommandHandler/<Handle>d__3": {
+        "System.Void Pro.Search.PersonCommands.DeletePersonCommandHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 68,
+              "EndOffset": 70,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 68,
+              "EndOffset": 81,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 430,
+              "EndOffset": 370,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 430,
+              "EndOffset": 432,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdatePersonCommand.cs": {
+      "Pro.Search.PersonCommands.UpdatePersonCommand": {
+        "Pro.Search.PersonDomains.PersonEngine.Dtos.PersonDto Pro.Search.PersonCommands.UpdatePersonCommand::get_PersonDto()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.PersonCommands.UpdatePersonCommand::.ctor(Pro.Search.PersonDomains.PersonEngine.Dtos.PersonDto)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdatePersonCommandHandler.cs": {
+      "Pro.Search.PersonCommands.UpdatePersonCommandHandler": {
+        "System.DateTime Pro.Search.PersonCommands.UpdatePersonCommandHandler::DefineLocalTime(Pro.Search.PersonCommands.UpdatePersonCommand)": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.PersonCommands.UpdatePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.PersonCommands.UpdatePersonCommandHandler/<Handle>d__4": {
+        "System.Void Pro.Search.PersonCommands.UpdatePersonCommandHandler/<Handle>d__4::MoveNext()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 199,
+              "EndOffset": 201,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 199,
+              "EndOffset": 217,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetAllPersonQueryHandler.cs": {
+      "Pro.Search.PersonCommands.Queries.GetAllPersonQueryHandler": {
+        "System.Void Pro.Search.PersonCommands.Queries.GetAllPersonQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.PersonCommands.Queries.GetAllPersonQueryHandler/<Handle>d__3": {
+        "System.Void Pro.Search.PersonCommands.Queries.GetAllPersonQueryHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "24": 1,
+            "25": 1,
+            "27": 1,
+            "28": 5,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "33": 1,
+            "34": 1
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 253,
+              "EndOffset": 182,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 28,
+              "Offset": 253,
+              "EndOffset": 255,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetMediaPersonQueryHandler.cs": {
+      "Pro.Search.PersonCommands.Queries.GetMediaPersonQueryHandler": {
+        "System.Void Pro.Search.PersonCommands.Queries.GetMediaPersonQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
+          "Lines": {
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.PersonCommands.Queries.GetMediaPersonQueryHandler/<Handle>d__2": {
+        "System.Void Pro.Search.PersonCommands.Queries.GetMediaPersonQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "23": 1,
+            "24": 5,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 242,
+              "EndOffset": 182,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 24,
+              "Offset": 242,
+              "EndOffset": 244,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetOnePersonQuery.cs": {
+      "Pro.Search.PersonCommands.Queries.GetOnePersonQuery": {
+        "System.String Pro.Search.PersonCommands.Queries.GetOnePersonQuery::get_Id_Pessoas()": {
+          "Lines": {
+            "13": 2
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.PersonCommands.Queries.GetOnePersonQuery::.ctor(System.String)": {
+          "Lines": {
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetOnePersonQueryHandler.cs": {
+      "Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler": {
+        "System.Void Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler/<Handle>d__3": {
+        "System.Void Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "24": 1,
+            "25": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 21,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreateFoodCommand.cs": {
+      "Pro.Search.Commands.PersonCommands.CreateFoodCommand": {
+        "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto Pro.Search.Commands.PersonCommands.CreateFoodCommand::get_FoodAllInfoDto()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.Commands.PersonCommands.CreateFoodCommand::.ctor(Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreateFoodCommandHandler.cs": {
+      "Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler": {
+        "System.Void Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,AutoMapper.IMapper,Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler/<Handle>d__4": {
+        "System.Void Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler/<Handle>d__4::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 35,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 35,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeleteFoodCommand.cs": {
+      "Pro.Search.Commands.PersonCommands.DeleteFoodCommand": {
+        "System.String Pro.Search.Commands.PersonCommands.DeleteFoodCommand::get_Id_Food()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommand::.ctor(System.String)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeleteFoodCommandHandler.cs": {
+      "Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler": {
+        "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler/<Handle>d__2": {
+        "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 68,
+              "EndOffset": 70,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 68,
+              "EndOffset": 81,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 430,
+              "EndOffset": 370,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 430,
+              "EndOffset": 432,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\SetPessoasPurcashCommand.cs": {
+      "Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommand": {
+        "System.String Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommand::get_Id_Pessoa()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommand::get_PersonPurcashDto()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommand::.ctor(System.String,Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\SetPessoasPurcashCommandHandler.cs": {
+      "Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler": {
+        "System.String Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler::RandomNumber(System.Int32,System.Int32)": {
+          "Lines": {
+            "154": 0,
+            "155": 0,
+            "156": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,Pro.Search.Infraestructure.Repositories.IFoodRepository,Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "17": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler/<Handle>d__6": {
+        "System.Void Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler/<Handle>d__6::MoveNext()": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 35,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 35,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler/<UpdatePessoasAsync>d__7": {
+        "System.Void Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler/<UpdatePessoasAsync>d__7::MoveNext()": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 35,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 35,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 54,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 54,
+              "EndOffset": 67,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 236,
+              "EndOffset": 238,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 236,
+              "EndOffset": 251,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 285,
+              "EndOffset": 287,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 285,
+              "EndOffset": 300,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 344,
+              "EndOffset": 346,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 344,
+              "EndOffset": 359,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler/<UpdateFoodAsync>d__8": {
+        "System.Void Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler/<UpdateFoodAsync>d__8::MoveNext()": {
+          "Lines": {
+            "62": 0,
+            "63": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "124": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "150": 0,
+            "151": 0
+          },
+          "Branches": [
+            {
+              "Line": 63,
+              "Offset": 66,
+              "EndOffset": 68,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 66,
+              "EndOffset": 79,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 65,
+              "Offset": 95,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 1324,
+              "EndOffset": 169,
+              "Path": 1,
+              "Ordinal": 27,
+              "Hits": 0
+            },
+            {
+              "Line": 71,
+              "Offset": 353,
+              "EndOffset": 358,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 377,
+              "EndOffset": 379,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 377,
+              "EndOffset": 392,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 421,
+              "EndOffset": 423,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 421,
+              "EndOffset": 436,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 465,
+              "EndOffset": 467,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 465,
+              "EndOffset": 480,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 509,
+              "EndOffset": 511,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 509,
+              "EndOffset": 524,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 563,
+              "EndOffset": 565,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 563,
+              "EndOffset": 578,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 71,
+              "Offset": 353,
+              "EndOffset": 926,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 87,
+              "Offset": 943,
+              "EndOffset": 945,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 87,
+              "Offset": 943,
+              "EndOffset": 958,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 88,
+              "Offset": 992,
+              "EndOffset": 994,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 88,
+              "Offset": 992,
+              "EndOffset": 1007,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 1041,
+              "EndOffset": 1043,
+              "Path": 0,
+              "Ordinal": 20,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 1041,
+              "EndOffset": 1056,
+              "Path": 1,
+              "Ordinal": 21,
+              "Hits": 0
+            },
+            {
+              "Line": 90,
+              "Offset": 1090,
+              "EndOffset": 1092,
+              "Path": 0,
+              "Ordinal": 22,
+              "Hits": 0
+            },
+            {
+              "Line": 90,
+              "Offset": 1090,
+              "EndOffset": 1105,
+              "Path": 1,
+              "Ordinal": 23,
+              "Hits": 0
+            },
+            {
+              "Line": 91,
+              "Offset": 1149,
+              "EndOffset": 1151,
+              "Path": 0,
+              "Ordinal": 24,
+              "Hits": 0
+            },
+            {
+              "Line": 91,
+              "Offset": 1149,
+              "EndOffset": 1164,
+              "Path": 1,
+              "Ordinal": 25,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 1324,
+              "EndOffset": 1329,
+              "Path": 0,
+              "Ordinal": 26,
+              "Hits": 0
+            },
+            {
+              "Line": 65,
+              "Offset": 95,
+              "EndOffset": 1367,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 99,
+              "Offset": 2057,
+              "EndOffset": 1437,
+              "Path": 1,
+              "Ordinal": 45,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 1468,
+              "EndOffset": 1470,
+              "Path": 0,
+              "Ordinal": 28,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 1487,
+              "EndOffset": 1489,
+              "Path": 0,
+              "Ordinal": 30,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 1487,
+              "EndOffset": 1518,
+              "Path": 1,
+              "Ordinal": 31,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 1468,
+              "EndOffset": 1544,
+              "Path": 1,
+              "Ordinal": 29,
+              "Hits": 0
+            },
+            {
+              "Line": 113,
+              "Offset": 1999,
+              "EndOffset": 1579,
+              "Path": 1,
+              "Ordinal": 43,
+              "Hits": 0
+            },
+            {
+              "Line": 115,
+              "Offset": 1614,
+              "EndOffset": 1616,
+              "Path": 0,
+              "Ordinal": 32,
+              "Hits": 0
+            },
+            {
+              "Line": 115,
+              "Offset": 1614,
+              "EndOffset": 1629,
+              "Path": 1,
+              "Ordinal": 33,
+              "Hits": 0
+            },
+            {
+              "Line": 116,
+              "Offset": 1663,
+              "EndOffset": 1665,
+              "Path": 0,
+              "Ordinal": 34,
+              "Hits": 0
+            },
+            {
+              "Line": 116,
+              "Offset": 1663,
+              "EndOffset": 1678,
+              "Path": 1,
+              "Ordinal": 35,
+              "Hits": 0
+            },
+            {
+              "Line": 117,
+              "Offset": 1712,
+              "EndOffset": 1714,
+              "Path": 0,
+              "Ordinal": 36,
+              "Hits": 0
+            },
+            {
+              "Line": 117,
+              "Offset": 1712,
+              "EndOffset": 1727,
+              "Path": 1,
+              "Ordinal": 37,
+              "Hits": 0
+            },
+            {
+              "Line": 118,
+              "Offset": 1761,
+              "EndOffset": 1763,
+              "Path": 0,
+              "Ordinal": 38,
+              "Hits": 0
+            },
+            {
+              "Line": 118,
+              "Offset": 1761,
+              "EndOffset": 1776,
+              "Path": 1,
+              "Ordinal": 39,
+              "Hits": 0
+            },
+            {
+              "Line": 119,
+              "Offset": 1820,
+              "EndOffset": 1822,
+              "Path": 0,
+              "Ordinal": 40,
+              "Hits": 0
+            },
+            {
+              "Line": 119,
+              "Offset": 1820,
+              "EndOffset": 1835,
+              "Path": 1,
+              "Ordinal": 41,
+              "Hits": 0
+            },
+            {
+              "Line": 113,
+              "Offset": 1999,
+              "EndOffset": 2004,
+              "Path": 0,
+              "Ordinal": 42,
+              "Hits": 0
+            },
+            {
+              "Line": 99,
+              "Offset": 2057,
+              "EndOffset": 2062,
+              "Path": 0,
+              "Ordinal": 44,
+              "Hits": 0
+            },
+            {
+              "Line": 126,
+              "Offset": 2127,
+              "EndOffset": 2132,
+              "Path": 0,
+              "Ordinal": 46,
+              "Hits": 0
+            },
+            {
+              "Line": 130,
+              "Offset": 3004,
+              "EndOffset": 2217,
+              "Path": 1,
+              "Ordinal": 65,
+              "Hits": 0
+            },
+            {
+              "Line": 130,
+              "Offset": 2178,
+              "EndOffset": 2335,
+              "Path": 1,
+              "Ordinal": 49,
+              "Hits": 0
+            },
+            {
+              "Line": 133,
+              "Offset": 2409,
+              "EndOffset": 2414,
+              "Path": 0,
+              "Ordinal": 52,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2433,
+              "EndOffset": 2435,
+              "Path": 0,
+              "Ordinal": 54,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2433,
+              "EndOffset": 2448,
+              "Path": 1,
+              "Ordinal": 55,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2477,
+              "EndOffset": 2479,
+              "Path": 0,
+              "Ordinal": 56,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2477,
+              "EndOffset": 2492,
+              "Path": 1,
+              "Ordinal": 57,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2521,
+              "EndOffset": 2523,
+              "Path": 0,
+              "Ordinal": 58,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2521,
+              "EndOffset": 2536,
+              "Path": 1,
+              "Ordinal": 59,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2565,
+              "EndOffset": 2567,
+              "Path": 0,
+              "Ordinal": 60,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2565,
+              "EndOffset": 2580,
+              "Path": 1,
+              "Ordinal": 61,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2619,
+              "EndOffset": 2621,
+              "Path": 0,
+              "Ordinal": 62,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 2619,
+              "EndOffset": 2634,
+              "Path": 1,
+              "Ordinal": 63,
+              "Hits": 0
+            },
+            {
+              "Line": 130,
+              "Offset": 2178,
+              "EndOffset": 2776,
+              "Path": 2,
+              "Ordinal": 50,
+              "Hits": 0
+            },
+            {
+              "Line": 130,
+              "Offset": 2178,
+              "EndOffset": 2921,
+              "Path": 3,
+              "Ordinal": 51,
+              "Hits": 0
+            },
+            {
+              "Line": 133,
+              "Offset": 2409,
+              "EndOffset": 2978,
+              "Path": 1,
+              "Ordinal": 53,
+              "Hits": 0
+            },
+            {
+              "Line": 130,
+              "Offset": 2178,
+              "EndOffset": 2993,
+              "Path": 0,
+              "Ordinal": 48,
+              "Hits": 0
+            },
+            {
+              "Line": 130,
+              "Offset": 3004,
+              "EndOffset": 3009,
+              "Path": 0,
+              "Ordinal": 64,
+              "Hits": 0
+            },
+            {
+              "Line": 126,
+              "Offset": 2127,
+              "EndOffset": 3051,
+              "Path": 1,
+              "Ordinal": 47,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdateFoodCommand.cs": {
+      "Pro.Search.Commands.PersonCommands.UpdateFoodCommand": {
+        "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto Pro.Search.Commands.PersonCommands.UpdateFoodCommand::get_FoodAllInfoDto()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.Commands.PersonCommands.UpdateFoodCommand::.ctor(Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdateFoodCommandHandler.cs": {
+      "Pro.Search.Commands.PersonCommands.UpdateFoodCommandHandler": {
+        "System.Void Pro.Search.Commands.PersonCommands.UpdateFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,Pro.Search.Infraestructure.Repositories.IFoodRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Commands.PersonCommands.UpdateFoodCommandHandler/<Handle>d__4": {
+        "System.Void Pro.Search.Commands.PersonCommands.UpdateFoodCommandHandler/<Handle>d__4::MoveNext()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 184,
+              "EndOffset": 186,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 184,
+              "EndOffset": 197,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetAllFoodQueryHandler.cs": {
+      "Pro.Search.Commands.PersonCommands.Queries.GetAllFoodQueryHandler": {
+        "System.Void Pro.Search.Commands.PersonCommands.Queries.GetAllFoodQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IFoodRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Commands.PersonCommands.Queries.GetAllFoodQueryHandler/<Handle>d__3": {
+        "System.Void Pro.Search.Commands.PersonCommands.Queries.GetAllFoodQueryHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "24": 1,
+            "25": 1,
+            "27": 1,
+            "28": 5,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "33": 1,
+            "34": 1
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 253,
+              "EndOffset": 182,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 28,
+              "Offset": 253,
+              "EndOffset": 255,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetPersonPurcashFoodQuery.cs": {
+      "Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQuery": {
+        "System.String Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQuery::get_Id_Pessoas()": {
+          "Lines": {
+            "13": 2
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQuery::.ctor(System.String)": {
+          "Lines": {
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetPersonPurcashFoodQueryHandler.cs": {
+      "Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler": {
+        "System.Void Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
+          "Lines": {
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler/<Handle>d__3": {
+        "System.Void Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "36": 1,
+            "39": 1
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 21,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Pro.Search.Infraestructure.dll": {
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Validators\\FoodDtoValidator.cs": {
+      "Pro.Search.Infraestructure.Validators.FoodDtoValidator": {
+        "System.Void Pro.Search.Infraestructure.Validators.FoodDtoValidator::.ctor()": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Validators\\PersonDtoValidator.cs": {
+      "Pro.Search.Infraestructure.Validators.PersonDtoValidator": {
+        "System.Void Pro.Search.Infraestructure.Validators.PersonDtoValidator::.ctor()": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Validators\\DependencyInjection\\ValidatorsRegistrationExtensions.cs": {
+      "Pro.Search.Infraestructure.Validators.DependencyInjection.ValidatorsRegistrationExtensions": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection Pro.Search.Infraestructure.Validators.DependencyInjection.ValidatorsRegistrationExtensions::AddPersonEngineValidators(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": [
+            {
+              "Line": 12,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 2,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\FoodRepository.cs": {
+      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository": {
+        "System.Collections.Generic.IEnumerable`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food> Pro.Search.Infraestructure.Repositories.Support.FoodRepository::FindAllAsyncFoodReferenceToPerson(System.String)": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository::.ctor(Pro.Search.Infraestructure.Context.ContextDB)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFood>d__3": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFood>d__3::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFood>d__4": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFood>d__4::MoveNext()": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFoodReferenceToPerson>d__6": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFoodReferenceToPerson>d__6::MoveNext()": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\PessoasRepository.cs": {
+      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository::.ctor(Pro.Search.Infraestructure.Context.ContextDB)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__3": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__3::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__4": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__4::MoveNext()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__5": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__5::MoveNext()": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\DependencyInjection\\RepositoryRegistrationExtensions.cs": {
+      "Pro.Search.Infraestructure.Repositories.Support.DependencyInjection.RepositoryRegistrationExtensions": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection Pro.Search.Infraestructure.Repositories.Support.DependencyInjection.RepositoryRegistrationExtensions::AddSearchRepository(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Mappers\\FoodProfile.cs": {
+      "Pro.Search.Infraestructure.Mappers.FoodProfile": {
+        "System.Void Pro.Search.Infraestructure.Mappers.FoodProfile::.ctor()": {
+          "Lines": {
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 2,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 2,
+            "24": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Context\\ContextDB.cs": {
+      "Pro.Search.Infraestructure.Context.ContextDB": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas> Pro.Search.Infraestructure.Context.ContextDB::get_Pessoas()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food> Pro.Search.Infraestructure.Context.ContextDB::get_Food()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.Infraestructure.Context.ContextDB::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Void Pro.Search.Infraestructure.Context.ContextDB::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Pro.Search.Infraestructure.Context.ContextDB>)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Configurations\\FoodConfigurations.cs": {
+      "Pro.Search.Infraestructure.Configurations.FoodConfigurations": {
+        "System.Void Pro.Search.Infraestructure.Configurations.FoodConfigurations::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food>)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Configurations\\PessoasConfigurations.cs": {
+      "Pro.Search.Infraestructure.Configurations.PessoasConfigurations": {
+        "System.Void Pro.Search.Infraestructure.Configurations.PessoasConfigurations::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas>)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Pro.Search.PersonDomains.dll": {
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Entities\\Food.cs": {
+      "Pro.Search.PersonDomains.PersonEngine.Entities.Food": {
+        "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Food()": {
+          "Lines": {
+            "8": 2
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Name_Food()": {
+          "Lines": {
+            "10": 1
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Locale_Purcache_Food()": {
+          "Lines": {
+            "12": 1
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Pessoas_References()": {
+          "Lines": {
+            "14": 1
+          },
+          "Branches": []
+        },
+        "System.Decimal Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Price_Food()": {
+          "Lines": {
+            "16": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Entities\\Pessoas.cs": {
+      "Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas": {
+        "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Id_Pessoas()": {
+          "Lines": {
+            "10": 7
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Nome()": {
+          "Lines": {
+            "12": 3
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Sobrenome()": {
+          "Lines": {
+            "14": 3
+          },
+          "Branches": []
+        },
+        "System.Decimal Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Pessoas_Calc_Number()": {
+          "Lines": {
+            "16": 4
+          },
+          "Branches": []
+        },
+        "System.DateTime Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_DataHora()": {
+          "Lines": {
+            "18": 3
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food> Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_ComidaComprada()": {
+          "Lines": {
+            "20": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\FoodAllInfoDto.cs": {
+      "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto": {
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_Id_Food()": {
+          "Lines": {
+            "5": 1
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_Nome()": {
+          "Lines": {
+            "7": 1
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_LocalDeVenda()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_ReferenciaIdPessoa()": {
+          "Lines": {
+            "11": 1
+          },
+          "Branches": []
+        },
+        "System.Decimal Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_PrecoComida()": {
+          "Lines": {
+            "13": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\FoodDto.cs": {
+      "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodDto": {
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodDto::get_Id_Food()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodDto::get_Nome()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodDto::get_LocalDeVenda()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodDto::get_ReferenciaIdPessoa()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Decimal Pro.Search.PersonDomains.PersonEngine.Dtos.FoodDto::get_PrecoComida()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\PersonPurcashDto.cs": {
+      "Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto": {
+        "Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto::get_Pessoas()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto> Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto::get_Food()": {
+          "Lines": {
+            "11": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\PessoasAllInfoDto.cs": {
+      "Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto": {
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_Id_Pessoas()": {
+          "Lines": {
+            "7": 2
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_Nome()": {
+          "Lines": {
+            "9": 2
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_Sobrenome()": {
+          "Lines": {
+            "11": 2
+          },
+          "Branches": []
+        },
+        "System.Decimal Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_Pessoas_Calc_Number()": {
+          "Lines": {
+            "13": 2
+          },
+          "Branches": []
+        },
+        "System.DateTime Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_DataHora()": {
+          "Lines": {
+            "15": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\PessoasInfoDto.cs": {
+      "Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasInfoDto": {
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasInfoDto::get_Id_Pessoas()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasInfoDto::get_Nome()": {
+          "Lines": {
+            "11": 1
+          },
+          "Branches": []
+        },
+        "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasInfoDto::get_Sobrenome()": {
+          "Lines": {
+            "13": 1
+          },
+          "Branches": []
+        },
+        "System.Decimal Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasInfoDto::get_Pessoas_Calc_Number()": {
+          "Lines": {
+            "15": 1
+          },
+          "Branches": []
+        },
+        "System.DateTime Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasInfoDto::get_DataHora()": {
+          "Lines": {
+            "17": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
