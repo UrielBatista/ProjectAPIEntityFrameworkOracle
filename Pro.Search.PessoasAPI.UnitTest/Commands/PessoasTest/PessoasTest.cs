@@ -9,6 +9,7 @@ using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -89,6 +90,16 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
         }
 
         [TestMethod]
+        public async Task HandleGetOnePessoaExceptionNullArgument()
+        {
+            var handler = CreateHandlerExceptionGetOnePessoa();
+
+            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+
+            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+        }
+
+        [TestMethod]
         public async Task HandleGetPersonPurcashFood()
         {
             // Prepare
@@ -109,6 +120,16 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             {
                 _ = result.Should().NotBeNull();
             }
+        }
+
+        [TestMethod]
+        public async Task HandleGetPersonPurcashFoodExceptionNullArgument()
+        {
+            var handler = CreateHandlerGetPersonPurcashFoodExceptionGetOnePessoa();
+
+            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+
+            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
         }
 
 
@@ -137,6 +158,16 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
             return new GetPersonPurcashFoodQueryHandler(repository, mapper);
+        }
+
+        private static GetOnePersonQueryHandler CreateHandlerExceptionGetOnePessoa(IPessoasRepository repository = default, IMapper mapper = default)
+        {
+            return new GetOnePersonQueryHandler(repository ?? Substitute.For<IPessoasRepository>(), mapper ?? Substitute.For<IMapper>());
+        }
+
+        private static GetPersonPurcashFoodQueryHandler CreateHandlerGetPersonPurcashFoodExceptionGetOnePessoa(IPessoasRepository repository = default, IMapper mapper = default)
+        {
+            return new GetPersonPurcashFoodQueryHandler(repository ?? Substitute.For<IPessoasRepository>(), mapper ?? Substitute.For<IMapper>());
         }
     }
 }

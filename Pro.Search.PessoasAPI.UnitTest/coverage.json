@@ -408,11 +408,11 @@
       "Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler": {
         "System.Void Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
           "Lines": {
-            "17": 1,
-            "18": 1,
-            "19": 1,
-            "20": 1,
-            "21": 1
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2
           },
           "Branches": []
         }
@@ -420,8 +420,8 @@
       "Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler/<Handle>d__3": {
         "System.Void Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler/<Handle>d__3::MoveNext()": {
           "Lines": {
-            "24": 1,
-            "25": 1,
+            "24": 2,
+            "25": 2,
             "27": 1,
             "28": 1,
             "29": 1,
@@ -437,7 +437,7 @@
               "EndOffset": 23,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 25,
@@ -1539,11 +1539,11 @@
       "Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler": {
         "System.Void Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
           "Lines": {
-            "18": 1,
-            "19": 1,
-            "20": 1,
-            "21": 1,
-            "22": 1
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2
           },
           "Branches": []
         }
@@ -1551,8 +1551,8 @@
       "Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler/<Handle>d__3": {
         "System.Void Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler/<Handle>d__3::MoveNext()": {
           "Lines": {
-            "25": 1,
-            "26": 1,
+            "25": 2,
+            "26": 2,
             "28": 1,
             "30": 1,
             "31": 1,
@@ -1569,7 +1569,7 @@
               "EndOffset": 23,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 26,
