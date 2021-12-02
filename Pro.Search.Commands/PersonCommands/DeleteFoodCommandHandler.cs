@@ -12,11 +12,11 @@ namespace Pro.Search.Commands.PersonCommands
 {
     public class DeleteFoodCommandHandler : IRequestHandler<DeleteFoodCommand, List<Food>>
     {
-        private readonly ContextDB _context;
+        private readonly IContextDB _context;
 
-        public DeleteFoodCommandHandler(ContextDB context)
+        public DeleteFoodCommandHandler(IContextDB _context)
         {
-            _context = context;
+            this._context = _context;
         }
 
         public async Task<List<Food>> Handle(DeleteFoodCommand request, CancellationToken cancellationToken)
@@ -26,7 +26,7 @@ namespace Pro.Search.Commands.PersonCommands
             var foods = await _context.Food.Where(a => a.Id_Food == request.Id_Food).ToListAsync();
             foreach (var item in foods)
             {
-                _context.Remove(item);
+                _context.Food.Remove(item);
             }
             await _context.SaveChangesAsync();
             return foods;

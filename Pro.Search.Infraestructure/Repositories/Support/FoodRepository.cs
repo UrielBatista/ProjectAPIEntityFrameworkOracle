@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -10,36 +11,35 @@ namespace Pro.Search.Infraestructure.Repositories.Support
 {
     public class FoodRepository : IFoodRepository
     {
-        protected readonly ContextDB _context;
 
         private readonly DbSet<Food> foods;
 
-        public FoodRepository(ContextDB context)
+        public FoodRepository(IContextDB _context)
         {
-            _context = context;
-            this.foods = this._context.Food;
+            _ = _context ?? throw new ArgumentNullException(nameof(_context));
+            this.foods = _context.Food;
         }
 
         public async Task<Food> FindOneAsyncFood(string Id_Food, CancellationToken cancellationToken)
         {
-            return await _context.Food.FirstOrDefaultAsync(f => f.Id_Food == Id_Food, cancellationToken).ConfigureAwait(false);
+            return await this.foods.FirstOrDefaultAsync(f => f.Id_Food == Id_Food, cancellationToken).ConfigureAwait(false);
         }
 
         public async Task<List<Food>> FindAllAsyncFood(CancellationToken cancellationToken)
         {
-            return await _context.Food.ToListAsync(cancellationToken);
+            return await this.foods.ToListAsync(cancellationToken);
         }
 
         public IEnumerable<Food> FindAllAsyncFoodReferenceToPerson(string Id_Pessoas)
         {
-            var foodReferencedPerson = _context.Food.Where(p =>  p.Id_Pessoas_References == Id_Pessoas).ToList();
+            var foodReferencedPerson = this.foods.Where(p =>  p.Id_Pessoas_References == Id_Pessoas).ToList();
 
             return foodReferencedPerson;
         }
 
         public async Task<Food> FindOneAsyncFoodReferenceToPerson(string Id_Pessoas, CancellationToken cancellationToken)
         {
-            var foodReferencedPersonOne = await _context.Food.FirstOrDefaultAsync(p => p.Id_Pessoas_References == Id_Pessoas, cancellationToken).ConfigureAwait(false);
+            var foodReferencedPersonOne = await this.foods.FirstOrDefaultAsync(p => p.Id_Pessoas_References == Id_Pessoas, cancellationToken).ConfigureAwait(false);
 
             return foodReferencedPersonOne;
         }

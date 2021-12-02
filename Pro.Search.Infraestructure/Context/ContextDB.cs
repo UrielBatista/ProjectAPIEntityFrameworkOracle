@@ -4,21 +4,23 @@ using Pro.Search.PersonDomains.PersonEngine.Entities;
 
 namespace Pro.Search.Infraestructure.Context
 {
-    public class ContextDB : DbContext
+    public sealed class ContextDB : DbContext, IContextDB
     {
+        public ContextDB(DbContextOptions<ContextDB> options) : base(options)
+        {
+            this.Pessoas = this.Set<Pessoas>();
+            this.Food = this.Set<Food>();
+        }
+
         public DbSet<Pessoas> Pessoas { get; set; }
 
         public DbSet<Food> Food { get; set; }
-
-        public ContextDB(DbContextOptions<ContextDB> options) : base(options)
-        {
-
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new PessoasConfigurations());
             modelBuilder.ApplyConfiguration(new FoodConfigurations());
+            base.OnModelCreating(modelBuilder);
         }
 
     }

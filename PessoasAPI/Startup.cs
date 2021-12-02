@@ -26,7 +26,7 @@ namespace PessoasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<ContextDB>(options => options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            services.AddDbContext<IContextDB, ContextDB>(options => options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
             _ = services.AddApiVersioning(options =>

@@ -4,8 +4,10 @@ using FluentAssertions.Execution;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using Pro.Search.Commands.PersonCommands.Queries;
+using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.Infraestructure.Repositories;
+using Pro.Search.PersonCommands;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
@@ -132,6 +134,55 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
         }
 
+        [TestMethod]
+        public async Task HandleDeletePersonCommandHandler()
+        {
+            // Prepare
+            var id_pessoa = "6548";
+
+            var pessoa = new Pessoas
+            {
+                Id_Pessoas = "04682",
+                Nome = "TesteHandle1",
+                Sobrenome = "TesteHandleSobrenome1",
+                Pessoas_Calc_Number = 45.2M,
+                DataHora = DateTime.Now,
+                ComidaComprada = new List<Food>
+                {
+                    new Food
+                    {
+                        Id_Food = "88585",
+                        Name_Food = "TesteHandleFood1",
+                        Locale_Purcache_Food = "TestandoLocalHandle1",
+                        Id_Pessoas_References = "04682",
+                         Price_Food = 44.6M
+                    }
+                }
+            };
+
+            var request = new DeletePersonCommand(id_pessoa);
+
+            var repository = Substitute.For<IPessoasRepository>();
+            _ = repository.SearchAllPersonToIdPerson(id_pessoa, CancellationToken.None).Returns(
+                new List<Pessoas>
+                    {
+                        new Pessoas()
+                    }
+                );
+
+            _ = repository.DeletePersonToIdPessoa(pessoa, CancellationToken.None).Returns(
+                new Pessoas()
+                );
+
+            // Assert
+            var handler = DeleteHandlePersonCommand(Substitute.For<IContextDB>(), repository);
+            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
+            using (new AssertionScope())
+            {
+                _ = result.Should().NotBeNull();
+            }
+        }
+
 
         protected static GetAllPersonQueryHandler QueryHandler(IPessoasRepository repository)
         {
@@ -158,6 +209,11 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
             return new GetPersonPurcashFoodQueryHandler(repository, mapper);
+        }
+
+        protected static DeletePersonCommandHandler DeleteHandlePersonCommand(IContextDB context, IPessoasRepository repository)
+        {
+            return new DeletePersonCommandHandler(context ?? Substitute.For<IContextDB>(), repository ?? Substitute.For<IPessoasRepository>());
         }
 
         private static GetOnePersonQueryHandler CreateHandlerExceptionGetOnePessoa(IPessoasRepository repository = default, IMapper mapper = default)

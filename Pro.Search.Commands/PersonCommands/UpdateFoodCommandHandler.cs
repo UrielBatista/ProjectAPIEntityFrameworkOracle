@@ -11,13 +11,13 @@ namespace Pro.Search.Commands.PersonCommands
 {
     public class UpdateFoodCommandHandler : ICommandHandler<UpdateFoodCommand, FoodAllInfoDto>
     {
-        private readonly ContextDB _context;
+        private readonly IContextDB _context;
         private readonly IFoodRepository repository;
         private readonly IMapper mapper;
 
-        public UpdateFoodCommandHandler(ContextDB context, IFoodRepository repository, IMapper mapper)
+        public UpdateFoodCommandHandler(IContextDB _context, IFoodRepository repository, IMapper mapper)
         {
-            _context = context;
+            this._context = _context;
             this.repository = repository;
             this.mapper = mapper;
         }

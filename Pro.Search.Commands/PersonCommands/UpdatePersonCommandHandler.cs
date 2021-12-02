@@ -11,13 +11,13 @@ namespace Pro.Search.PersonCommands
 {
     public class UpdatePersonCommandHandler : ICommandHandler<UpdatePersonCommand, PersonDto>
     {
-        private readonly ContextDB _context;
+        private readonly IContextDB _context;
         private readonly IPessoasRepository repository;
         private readonly IMapper mapper;
 
-        public UpdatePersonCommandHandler(ContextDB context, IPessoasRepository repository, IMapper mapper)
+        public UpdatePersonCommandHandler(IContextDB _context, IPessoasRepository repository, IMapper mapper)
         {
-            _context = context;
+            this._context = _context;
             this.repository = repository;
             this.mapper = mapper;
         }

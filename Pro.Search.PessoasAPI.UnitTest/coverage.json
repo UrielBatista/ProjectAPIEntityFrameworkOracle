@@ -132,16 +132,16 @@
       "Pro.Search.PersonCommands.DeletePersonCommand": {
         "System.String Pro.Search.PersonCommands.DeletePersonCommand::get_Id_Pessoas()": {
           "Lines": {
-            "14": 0
+            "14": 2
           },
           "Branches": []
         },
         "System.Void Pro.Search.PersonCommands.DeletePersonCommand::.ctor(System.String)": {
           "Lines": {
-            "9": 0,
-            "10": 0,
-            "11": 0,
-            "12": 0
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1
           },
           "Branches": []
         }
@@ -149,13 +149,13 @@
     },
     "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeletePersonCommandHandler.cs": {
       "Pro.Search.PersonCommands.DeletePersonCommandHandler": {
-        "System.Void Pro.Search.PersonCommands.DeletePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
+        "System.Void Pro.Search.PersonCommands.DeletePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
           },
           "Branches": []
         }
@@ -163,49 +163,49 @@
       "Pro.Search.PersonCommands.DeletePersonCommandHandler/<Handle>d__3": {
         "System.Void Pro.Search.PersonCommands.DeletePersonCommandHandler/<Handle>d__3::MoveNext()": {
           "Lines": {
-            "26": 0,
-            "27": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0
+            "26": 1,
+            "27": 1,
+            "29": 1,
+            "31": 5,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1
           },
           "Branches": [
             {
               "Line": 27,
-              "Offset": 68,
-              "EndOffset": 70,
+              "Offset": 32,
+              "EndOffset": 34,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
               "Line": 27,
-              "Offset": 68,
-              "EndOffset": 81,
+              "Offset": 32,
+              "EndOffset": 45,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 30,
-              "Offset": 430,
-              "EndOffset": 370,
+              "Line": 31,
+              "Offset": 288,
+              "EndOffset": 222,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 30,
-              "Offset": 430,
-              "EndOffset": 432,
+              "Line": 31,
+              "Offset": 288,
+              "EndOffset": 290,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -1709,13 +1709,22 @@
     },
     "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\PessoasRepository.cs": {
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository": {
+        "Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas Pro.Search.Infraestructure.Repositories.Support.PessoasRepository::DeletePersonToIdPessoa(Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas,System.Threading.CancellationToken)": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        },
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository::.ctor(Pro.Search.Infraestructure.Context.ContextDB)": {
           "Lines": {
-            "17": 0,
             "18": 0,
             "19": 0,
             "20": 0,
-            "21": 0
+            "21": 0,
+            "22": 0
           },
           "Branches": []
         }
@@ -1723,12 +1732,12 @@
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__3": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__3::MoveNext()": {
           "Lines": {
-            "24": 0,
             "25": 0,
             "26": 0,
             "27": 0,
-            "29": 0,
-            "30": 0
+            "28": 0,
+            "30": 0,
+            "31": 0
           },
           "Branches": []
         }
@@ -1736,9 +1745,9 @@
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__4": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__4::MoveNext()": {
           "Lines": {
-            "33": 0,
             "34": 0,
-            "35": 0
+            "35": 0,
+            "36": 0
           },
           "Branches": []
         }
@@ -1746,9 +1755,20 @@
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__5": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__5::MoveNext()": {
           "Lines": {
-            "38": 0,
             "39": 0,
-            "40": 0
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<SearchAllPersonToIdPerson>d__7": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<SearchAllPersonToIdPerson>d__7::MoveNext()": {
+          "Lines": {
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0
           },
           "Branches": []
         }
@@ -1866,31 +1886,31 @@
       "Pro.Search.PersonDomains.PersonEngine.Entities.Food": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Food()": {
           "Lines": {
-            "8": 2
+            "8": 3
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Name_Food()": {
           "Lines": {
-            "10": 1
+            "10": 2
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Locale_Purcache_Food()": {
           "Lines": {
-            "12": 1
+            "12": 2
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Pessoas_References()": {
           "Lines": {
-            "14": 1
+            "14": 2
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Price_Food()": {
           "Lines": {
-            "16": 1
+            "16": 2
           },
           "Branches": []
         }
@@ -1900,37 +1920,37 @@
       "Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Id_Pessoas()": {
           "Lines": {
-            "10": 7
+            "10": 8
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Nome()": {
           "Lines": {
-            "12": 3
+            "12": 4
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Sobrenome()": {
           "Lines": {
-            "14": 3
+            "14": 4
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Pessoas_Calc_Number()": {
           "Lines": {
-            "16": 4
+            "16": 5
           },
           "Branches": []
         },
         "System.DateTime Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_DataHora()": {
           "Lines": {
-            "18": 3
+            "18": 4
           },
           "Branches": []
         },
         "System.Collections.Generic.IEnumerable`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food> Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_ComidaComprada()": {
           "Lines": {
-            "20": 1
+            "20": 2
           },
           "Branches": []
         }

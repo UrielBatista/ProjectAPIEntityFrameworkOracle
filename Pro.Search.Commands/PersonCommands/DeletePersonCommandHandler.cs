@@ -13,12 +13,12 @@ namespace Pro.Search.PersonCommands
 {
     public class DeletePersonCommandHandler : IRequestHandler<DeletePersonCommand, List<Pessoas>>
     {
-        private readonly ContextDB _context;
+        private readonly IContextDB _context;
         private readonly IPessoasRepository repository;
 
-        public DeletePersonCommandHandler(ContextDB context, IPessoasRepository repository)
+        public DeletePersonCommandHandler(IContextDB _context, IPessoasRepository repository)
         {
-            _context = context;
+            this._context = _context;
             this.repository = repository;
         }
 
@@ -26,10 +26,11 @@ namespace Pro.Search.PersonCommands
         {
             _ = request ?? throw new ArgumentNullException(nameof(request));
 
-            var pessoas = await _context.Pessoas.Where(a => a.Id_Pessoas == request.Id_Pessoas).ToListAsync();
+            var pessoas = await this.repository.SearchAllPersonToIdPerson(request.Id_Pessoas, cancellationToken).ConfigureAwait(false);
+
             foreach(var item in pessoas)
             {
-                _context.Remove(item);
+               _ = this.repository.DeletePersonToIdPessoa(item, cancellationToken);
             }
             await _context.SaveChangesAsync();
             return pessoas;
