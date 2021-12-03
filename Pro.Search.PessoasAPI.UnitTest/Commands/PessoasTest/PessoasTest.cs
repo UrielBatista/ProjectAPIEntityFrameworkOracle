@@ -92,16 +92,6 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
         }
 
         [TestMethod]
-        public async Task HandleGetOnePessoaExceptionNullArgument()
-        {
-            var handler = CreateHandlerExceptionGetOnePessoa();
-
-            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
-
-            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
-        }
-
-        [TestMethod]
         public async Task HandleGetPersonPurcashFood()
         {
             // Prepare
@@ -123,15 +113,73 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 _ = result.Should().NotBeNull();
             }
         }
+        
+        [TestMethod]
+        public async Task HandleCreatePersonCommand()
+        {
+            // Prepare
+            var request = new CreatePersonCommand(
+                new PersonDto
+                {
+                    Pessoas = new PessoasInfoDto
+                    {
+                        Id_Pessoas = "987456",
+                        Nome = "CreateTestePerson",
+                        Sobrenome = "CreateTesteSobrenomePerson",
+                        Pessoas_Calc_Number = 11.2M,
+                        DataHora = DateTime.Now
+                    }
+                });
+
+            var repository = Substitute.For<IPessoasRepository>();
+            _ = repository.FindOneAsyncPerson(request.PersonDto.Pessoas.Id_Pessoas, CancellationToken.None).Returns(
+                new Pessoas()
+                {
+                    Id_Pessoas = "987456",
+                    Nome = "CreateTestePerson",
+                    Sobrenome = "CreateTesteSobrenomePerson",
+                    Pessoas_Calc_Number = 11.2M,
+                    DataHora = DateTime.Now
+                });
+
+            // Assert
+            var handler = CreatePersonCommandHandlerData(Substitute.For<IContextDB>(), repository);
+            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
+            _ = result.Should().BeOfType(typeof(PersonDto));
+        }
 
         [TestMethod]
-        public async Task HandleGetPersonPurcashFoodExceptionNullArgument()
+        public async Task HandleUpdatePersonCommand()
         {
-            var handler = CreateHandlerGetPersonPurcashFoodExceptionGetOnePessoa();
+            // Prepare
+            var request = new UpdatePersonCommand(
+                new PersonDto
+                {
+                    Pessoas = new PessoasInfoDto
+                    {
+                        Id_Pessoas = "25752",
+                        Nome = "UpdateTestePerson",
+                        Sobrenome = "UpdateTesteSobrenomePerson",
+                        Pessoas_Calc_Number = 12.6M,
+                        DataHora = DateTime.Now
+                    }
+                });
 
-            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+            var repository = Substitute.For<IPessoasRepository>();
+            _ = repository.FindOneAsyncPerson(request.PersonDto.Pessoas.Id_Pessoas, CancellationToken.None).Returns(
+                new Pessoas()
+                {
+                    Id_Pessoas = "987456",
+                    Nome = "CreateTestePerson",
+                    Sobrenome = "CreateTesteSobrenomePerson",
+                    Pessoas_Calc_Number = 11.2M,
+                    DataHora = DateTime.Now
+                });
 
-            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+            // Assert
+            var handler = UpdatePersonCommandHandlerData(Substitute.For<IContextDB>(), repository);
+            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
+            _ = result.Should().BeOfType(typeof(PersonDto));
         }
 
         [TestMethod]
@@ -179,6 +227,45 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             }
         }
 
+        [TestMethod]
+        public async Task HandleGetOnePessoaExceptionNullArgument()
+        {
+            var handler = CreateHandlerExceptionGetOnePessoa();
+
+            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+
+            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+        }
+
+        [TestMethod]
+        public async Task HandleGetPersonPurcashFoodExceptionNullArgument()
+        {
+            var handler = CreateHandlerGetPersonPurcashFoodExceptionGetOnePessoa();
+
+            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+
+            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+        }
+
+        [TestMethod]
+        public async Task HandleCreatePersonExceptionNullArgument()
+        {
+            var handler = CreateHandlerSetPersonExceptionGetOnePessoa();
+
+            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+
+            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+        }
+
+        [TestMethod]
+        public async Task HandleUpdatePersonExceptionNullArgument()
+        {
+            var handler = CreateHandlerUpdatePersonExceptionGetOnePessoa();
+
+            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+
+            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+        }
 
         protected static GetAllPersonQueryHandler QueryHandler(IPessoasRepository repository)
         {
@@ -207,20 +294,61 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             return new GetPersonPurcashFoodQueryHandler(repository, mapper);
         }
 
-        protected static DeletePersonCommandHandler DeleteHandlePersonCommand(IContextDB context, IPessoasRepository repository)
+        protected static CreatePersonCommandHandler CreatePersonCommandHandlerData(IContextDB _context, IPessoasRepository repository)
         {
-            return new DeletePersonCommandHandler(context ?? Substitute.For<IContextDB>(), repository ?? Substitute.For<IPessoasRepository>());
+            var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
+            var mapper = new Mapper(mapperConf);
+            return new CreatePersonCommandHandler(Substitute.For<IContextDB>(), mapper, Substitute.For<IPessoasRepository>());
         }
 
-        private static GetOnePersonQueryHandler CreateHandlerExceptionGetOnePessoa(IPessoasRepository repository = default, IMapper mapper = default)
+        protected static UpdatePersonCommandHandler UpdatePersonCommandHandlerData(IContextDB _context, IPessoasRepository repository)
         {
-            return new GetOnePersonQueryHandler(repository ?? Substitute.For<IPessoasRepository>(), mapper ?? Substitute.For<IMapper>());
+            var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
+            var mapper = new Mapper(mapperConf);
+            return new UpdatePersonCommandHandler(
+                Substitute.For<IContextDB>(), 
+                repository ?? Substitute.For<IPessoasRepository>(), 
+                mapper);
+        }
+
+        protected static DeletePersonCommandHandler DeleteHandlePersonCommand(IContextDB context, IPessoasRepository repository)
+        {
+            return new DeletePersonCommandHandler(
+                context ?? Substitute.For<IContextDB>(), 
+                repository ?? Substitute.For<IPessoasRepository>());
         }
 
         private static GetPersonPurcashFoodQueryHandler CreateHandlerGetPersonPurcashFoodExceptionGetOnePessoa(
             IPessoasRepository repository = default, IMapper mapper = default)
         {
-            return new GetPersonPurcashFoodQueryHandler(repository ?? Substitute.For<IPessoasRepository>(), mapper ?? Substitute.For<IMapper>());
+            return new GetPersonPurcashFoodQueryHandler(
+                repository ?? Substitute.For<IPessoasRepository>(),
+                mapper ?? Substitute.For<IMapper>());
+        }
+
+        private static GetOnePersonQueryHandler CreateHandlerExceptionGetOnePessoa(IPessoasRepository repository = default, IMapper mapper = default)
+        {
+            return new GetOnePersonQueryHandler(
+                repository ?? Substitute.For<IPessoasRepository>(),
+                mapper ?? Substitute.For<IMapper>());
+        }
+
+        protected static CreatePersonCommandHandler CreateHandlerSetPersonExceptionGetOnePessoa(
+            IContextDB context = default, IMapper mapper = default, IPessoasRepository repository = default)
+        {
+            return new CreatePersonCommandHandler(
+                context ?? Substitute.For<IContextDB>(), 
+                mapper, 
+                repository ?? Substitute.For<IPessoasRepository>());
+        }
+        
+        protected static UpdatePersonCommandHandler CreateHandlerUpdatePersonExceptionGetOnePessoa(
+            IContextDB context = default, IMapper mapper = default, IPessoasRepository repository = default)
+        {
+            return new UpdatePersonCommandHandler(
+                context ?? Substitute.For<IContextDB>(),
+                repository ?? Substitute.For<IPessoasRepository>(), 
+                mapper);
         }
     }
 }

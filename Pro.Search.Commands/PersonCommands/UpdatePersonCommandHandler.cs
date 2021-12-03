@@ -24,6 +24,8 @@ namespace Pro.Search.PersonCommands
 
         public async Task<PersonDto> Handle(UpdatePersonCommand request, CancellationToken cancellationToken)
         {
+            _ = request ?? throw new ArgumentNullException(nameof(request));
+
             var personDb = await this.repository.FindOneAsyncPerson(request.PersonDto.Pessoas.Id_Pessoas, cancellationToken).ConfigureAwait(false);
 
             _ = personDb ?? throw new ArgumentNullException(paramName: nameof(personDb), message: "Argumento nao pode ser nulo");
