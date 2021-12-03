@@ -527,16 +527,16 @@
       "Pro.Search.Commands.PersonCommands.DeleteFoodCommand": {
         "System.String Pro.Search.Commands.PersonCommands.DeleteFoodCommand::get_Id_Food()": {
           "Lines": {
-            "14": 0
+            "14": 2
           },
           "Branches": []
         },
         "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommand::.ctor(System.String)": {
           "Lines": {
-            "9": 0,
-            "10": 0,
-            "11": 0,
-            "12": 0
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1
           },
           "Branches": []
         }
@@ -544,62 +544,63 @@
     },
     "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeleteFoodCommandHandler.cs": {
       "Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler": {
-        "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB)": {
+        "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,Pro.Search.Infraestructure.Repositories.IFoodRepository)": {
           "Lines": {
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2
           },
           "Branches": []
         }
       },
-      "Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler/<Handle>d__2": {
-        "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler/<Handle>d__2::MoveNext()": {
+      "Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler/<Handle>d__3": {
+        "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler/<Handle>d__3::MoveNext()": {
           "Lines": {
-            "23": 0,
-            "24": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0
+            "24": 2,
+            "25": 2,
+            "27": 1,
+            "28": 5,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1
           },
           "Branches": [
             {
-              "Line": 24,
-              "Offset": 68,
-              "EndOffset": 70,
+              "Line": 25,
+              "Offset": 32,
+              "EndOffset": 34,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 24,
-              "Offset": 68,
-              "EndOffset": 81,
+              "Line": 25,
+              "Offset": 32,
+              "EndOffset": 45,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 27,
-              "Offset": 435,
-              "EndOffset": 370,
+              "Line": 28,
+              "Offset": 277,
+              "EndOffset": 212,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 27,
-              "Offset": 435,
-              "EndOffset": 437,
+              "Line": 28,
+              "Offset": 277,
+              "EndOffset": 279,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -1554,13 +1555,14 @@
             "25": 2,
             "26": 2,
             "28": 1,
-            "30": 1,
+            "29": 1,
             "31": 1,
             "32": 1,
             "33": 1,
             "34": 1,
-            "36": 1,
-            "39": 1
+            "35": 1,
+            "37": 1,
+            "40": 1
           },
           "Branches": [
             {
@@ -1577,6 +1579,22 @@
               "EndOffset": 34,
               "Path": 1,
               "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 29,
+              "Offset": 197,
+              "EndOffset": 199,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 197,
+              "EndOffset": 210,
+              "Path": 1,
+              "Ordinal": 3,
               "Hits": 1
             }
           ]
@@ -1719,6 +1737,17 @@
             "42": 0,
             "44": 0,
             "45": 0
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindListFoodReferenceToIDFood>d__6": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindListFoodReferenceToIDFood>d__6::MoveNext()": {
+          "Lines": {
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0
           },
           "Branches": []
         }
@@ -1914,31 +1943,31 @@
       "Pro.Search.PersonDomains.PersonEngine.Entities.Food": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Food()": {
           "Lines": {
-            "8": 5
+            "8": 6
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Name_Food()": {
           "Lines": {
-            "10": 4
+            "10": 5
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Locale_Purcache_Food()": {
           "Lines": {
-            "12": 4
+            "12": 5
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Pessoas_References()": {
           "Lines": {
-            "14": 4
+            "14": 5
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Price_Food()": {
           "Lines": {
-            "16": 4
+            "16": 5
           },
           "Branches": []
         }

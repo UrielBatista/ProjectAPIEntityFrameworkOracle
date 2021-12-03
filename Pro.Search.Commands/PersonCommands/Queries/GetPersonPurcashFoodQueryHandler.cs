@@ -26,6 +26,7 @@ namespace Pro.Search.Commands.PersonCommands.Queries
             _ = request ?? throw new ArgumentNullException(nameof(request));
 
             var personPurcashFood = await this.repository.FindPersonPurcashFood(request.Id_Pessoas, cancellationToken).ConfigureAwait(false);
+            _ = personPurcashFood ?? throw new ArgumentNullException(nameof(personPurcashFood));
 
             var returnPersonPurcashFood = new PersonPurcashDto
             {

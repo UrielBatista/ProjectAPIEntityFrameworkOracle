@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FluentAssertions;
+using FluentAssertions.Execution;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using Pro.Search.Commands.PersonCommands;
@@ -44,6 +45,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
         [TestMethod]
         public async Task HandleCreateFoodCommand()
         {
+            // Prepare
             var request = new CreateFoodCommand(
                 new FoodAllInfoDto
                 {
@@ -65,6 +67,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
                     Price_Food = 66.6M
                 });
 
+            // Assert
             var handler = CreateFoodCommandHandlerData(Substitute.For<IContextDB>() ,repository);
             var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
             _ = result.Should().BeOfType(typeof(FoodAllInfoDto));
@@ -78,7 +81,50 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
             Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
 
             _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+        }
 
+        [TestMethod]
+        public async Task HandleDeleteFoodCommandHandler()
+        {
+            // Prepare
+            var id_food = "7858";
+
+            var food = new Food
+            {
+                Id_Food = "88585",
+                Name_Food = "TesteHandleFood1",
+                Locale_Purcache_Food = "TestandoLocalHandle1",
+                Id_Pessoas_References = "04682",
+                Price_Food = 44.6M
+            };
+
+            var request = new DeleteFoodCommand(id_food);
+
+            var repository = Substitute.For<IFoodRepository>();
+            _ = repository.FindListFoodReferenceToIDFood(id_food, CancellationToken.None).Returns(
+                new List<Food>
+                    {
+                        food
+                    }
+                );
+
+            // Assert
+            var handler = DeleteFoodCommandHandlerData(Substitute.For<IContextDB>(), repository);
+            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
+            using (new AssertionScope())
+            {
+                _ = result.Should().NotBeNull();
+            }
+        }
+
+        [TestMethod]
+        public async Task HandleDeleteFoodCommandThrowExceptionArgumentIsNull()
+        {
+            var handler = DeleteHandlerFoodCommandThrowExceptionArgumentIsNull();
+
+            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+
+            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
         }
 
         protected static GetAllFoodQueryHandler QueryHandlerAllFood(IFoodRepository repository)
@@ -92,13 +138,34 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<FoodProfile>());
             var mapper = new Mapper(mapperConf);
-            return new CreateFoodCommandHandler(Substitute.For<IContextDB>(), mapper, repository ?? Substitute.For<IFoodRepository>());
+            return new CreateFoodCommandHandler(
+                Substitute.For<IContextDB>(), 
+                mapper, 
+                repository ?? Substitute.For<IFoodRepository>());
         }
 
         private static CreateFoodCommandHandler CreateHandlerFoodCommandThrowExceptionArgumentIsNull(
             IContextDB _context = default, IMapper mapper = default, IFoodRepository repository = default)
         {
-            return new CreateFoodCommandHandler(_context ?? Substitute.For<IContextDB>(), mapper ?? Substitute.For<IMapper>(), repository ?? Substitute.For<IFoodRepository>());
+            return new CreateFoodCommandHandler(
+                _context ?? Substitute.For<IContextDB>(), 
+                mapper ?? Substitute.For<IMapper>(), 
+                repository ?? Substitute.For<IFoodRepository>());
+        }
+
+        protected static DeleteFoodCommandHandler DeleteFoodCommandHandlerData(IContextDB _context, IFoodRepository foodRepository)
+        {
+            return new DeleteFoodCommandHandler(
+                _context ?? Substitute.For<IContextDB>(), 
+                foodRepository ?? Substitute.For<IFoodRepository>());
+        }
+
+        private static DeleteFoodCommandHandler DeleteHandlerFoodCommandThrowExceptionArgumentIsNull(
+            IContextDB _context = default, IFoodRepository foodRepository = default)
+        {
+            return new DeleteFoodCommandHandler(
+                _context ?? Substitute.For<IContextDB>(), 
+                foodRepository ?? Substitute.For<IFoodRepository>());
         }
     }
 }

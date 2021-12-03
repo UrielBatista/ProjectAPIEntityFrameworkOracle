@@ -14,5 +14,7 @@ namespace Pro.Search.Infraestructure.Repositories
         Task<Food> FindOneAsyncFoodReferenceToPerson(string Id_Pessoas, CancellationToken cancellationToken);
         
         Task<Food> FindOneAsyncFood(string Id_Food, CancellationToken cancellationToken);
+
+        Task<List<Food>> FindListFoodReferenceToIDFood(string result, CancellationToken cancellationToken);
     }
 }

@@ -43,5 +43,11 @@ namespace Pro.Search.Infraestructure.Repositories.Support
 
             return foodReferencedPersonOne;
         }
+
+        public async Task<List<Food>> FindListFoodReferenceToIDFood(string id_food, CancellationToken cancellationToken)
+        {
+            var result = await this.foods.Where(a => a.Id_Food == id_food).ToListAsync();
+            return result;
+        }
     }
 }

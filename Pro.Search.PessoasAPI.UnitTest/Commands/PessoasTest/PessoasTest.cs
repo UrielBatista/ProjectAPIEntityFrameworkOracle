@@ -217,7 +217,8 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             return new GetOnePersonQueryHandler(repository ?? Substitute.For<IPessoasRepository>(), mapper ?? Substitute.For<IMapper>());
         }
 
-        private static GetPersonPurcashFoodQueryHandler CreateHandlerGetPersonPurcashFoodExceptionGetOnePessoa(IPessoasRepository repository = default, IMapper mapper = default)
+        private static GetPersonPurcashFoodQueryHandler CreateHandlerGetPersonPurcashFoodExceptionGetOnePessoa(
+            IPessoasRepository repository = default, IMapper mapper = default)
         {
             return new GetPersonPurcashFoodQueryHandler(repository ?? Substitute.For<IPessoasRepository>(), mapper ?? Substitute.For<IMapper>());
         }
