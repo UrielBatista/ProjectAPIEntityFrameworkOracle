@@ -251,7 +251,6 @@ C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Pro.Search.Infraestructure.pdb
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\Pro.Search.PersonDomains.pdb
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\bin\Debug\netcoreapp3.1\BuldBlocks.Domain.pdb
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.csproj.AssemblyReference.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.AssemblyInfoInputs.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PessoasAPI\obj\Debug\netcoreapp3.1\PessoasAPI.AssemblyInfo.cs

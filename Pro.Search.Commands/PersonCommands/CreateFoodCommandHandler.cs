@@ -13,10 +13,10 @@ namespace Pro.Search.Commands.PersonCommands
     public class CreateFoodCommandHandler : ICommandHandler<CreateFoodCommand, FoodAllInfoDto>
     {
         private readonly IContextDB _context;
-        private readonly IPessoasRepository repository;
+        private readonly IFoodRepository repository;
         private readonly IMapper mapper;
 
-        public CreateFoodCommandHandler(IContextDB _context, IMapper mapper, IPessoasRepository repository)
+        public CreateFoodCommandHandler(IContextDB _context, IMapper mapper, IFoodRepository repository)
         {
             this._context = _context;
             this.mapper = mapper;

@@ -13,8 +13,6 @@ namespace Pro.Search.Infraestructure.Repositories
         
         Task<List<Pessoas>> FindAllAsyncPerson(CancellationToken cancellationToken);
 
-        Pessoas DeletePersonToIdPessoa(Pessoas pessoas, CancellationToken cancellationToken);
-
         Task<List<Pessoas>> SearchAllPersonToIdPerson(string id_pessoa,CancellationToken cancellationToken);
     }
 }

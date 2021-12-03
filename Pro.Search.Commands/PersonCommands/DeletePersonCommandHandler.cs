@@ -30,7 +30,7 @@ namespace Pro.Search.PersonCommands
 
             foreach(var item in pessoas)
             {
-               _ = this.repository.DeletePersonToIdPessoa(item, cancellationToken);
+                _ = this._context.Pessoas.Remove(item);
             }
             await _context.SaveChangesAsync();
             return pessoas;

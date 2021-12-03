@@ -31,7 +31,7 @@
           },
           "Branches": []
         },
-        "System.Void Pro.Search.PersonCommands.CreatePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,AutoMapper.IMapper,Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
+        "System.Void Pro.Search.PersonCommands.CreatePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,AutoMapper.IMapper,Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
           "Lines": {
             "19": 0,
             "20": 0,
@@ -193,7 +193,7 @@
             },
             {
               "Line": 31,
-              "Offset": 288,
+              "Offset": 287,
               "EndOffset": 222,
               "Path": 1,
               "Ordinal": 3,
@@ -201,8 +201,8 @@
             },
             {
               "Line": 31,
-              "Offset": 288,
-              "EndOffset": 290,
+              "Offset": 287,
+              "EndOffset": 289,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 1
@@ -242,7 +242,7 @@
           },
           "Branches": []
         },
-        "System.Void Pro.Search.PersonCommands.UpdatePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
+        "System.Void Pro.Search.PersonCommands.UpdatePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
           "Lines": {
             "18": 0,
             "19": 0,
@@ -455,16 +455,16 @@
       "Pro.Search.Commands.PersonCommands.CreateFoodCommand": {
         "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto Pro.Search.Commands.PersonCommands.CreateFoodCommand::get_FoodAllInfoDto()": {
           "Lines": {
-            "13": 0
+            "13": 7
           },
           "Branches": []
         },
         "System.Void Pro.Search.Commands.PersonCommands.CreateFoodCommand::.ctor(Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto)": {
           "Lines": {
-            "8": 0,
-            "9": 0,
-            "10": 0,
-            "11": 0
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1
           },
           "Branches": []
         }
@@ -472,14 +472,14 @@
     },
     "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreateFoodCommandHandler.cs": {
       "Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler": {
-        "System.Void Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,AutoMapper.IMapper,Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
+        "System.Void Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,AutoMapper.IMapper,Pro.Search.Infraestructure.Repositories.IFoodRepository)": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2,
+            "24": 2
           },
           "Branches": []
         }
@@ -487,20 +487,20 @@
       "Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler/<Handle>d__4": {
         "System.Void Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler/<Handle>d__4::MoveNext()": {
           "Lines": {
-            "27": 0,
-            "28": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0
+            "27": 2,
+            "28": 2,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "39": 1,
+            "40": 1,
+            "42": 1,
+            "43": 1
           },
           "Branches": [
             {
@@ -509,7 +509,7 @@
               "EndOffset": 37,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 28,
@@ -517,7 +517,7 @@
               "EndOffset": 48,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -544,7 +544,7 @@
     },
     "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeleteFoodCommandHandler.cs": {
       "Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler": {
-        "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB)": {
+        "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB)": {
           "Lines": {
             "17": 0,
             "18": 0,
@@ -587,7 +587,7 @@
             },
             {
               "Line": 27,
-              "Offset": 430,
+              "Offset": 435,
               "EndOffset": 370,
               "Path": 1,
               "Ordinal": 3,
@@ -595,8 +595,8 @@
             },
             {
               "Line": 27,
-              "Offset": 430,
-              "EndOffset": 432,
+              "Offset": 435,
+              "EndOffset": 437,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
@@ -641,7 +641,7 @@
           },
           "Branches": []
         },
-        "System.Void Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,Pro.Search.Infraestructure.Repositories.IFoodRepository,Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
+        "System.Void Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,Pro.Search.Infraestructure.Repositories.IFoodRepository,Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
           "Lines": {
             "17": 0,
             "23": 0,
@@ -1421,7 +1421,7 @@
     },
     "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdateFoodCommandHandler.cs": {
       "Pro.Search.Commands.PersonCommands.UpdateFoodCommandHandler": {
-        "System.Void Pro.Search.Commands.PersonCommands.UpdateFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.ContextDB,Pro.Search.Infraestructure.Repositories.IFoodRepository,AutoMapper.IMapper)": {
+        "System.Void Pro.Search.Commands.PersonCommands.UpdateFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,Pro.Search.Infraestructure.Repositories.IFoodRepository,AutoMapper.IMapper)": {
           "Lines": {
             "18": 0,
             "19": 0,
@@ -1664,7 +1664,7 @@
           },
           "Branches": []
         },
-        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository::.ctor(Pro.Search.Infraestructure.Context.ContextDB)": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository::.ctor(Pro.Search.Infraestructure.Context.IContextDB)": {
           "Lines": {
             "17": 0,
             "18": 0,
@@ -1672,11 +1672,28 @@
             "20": 0,
             "21": 0
           },
-          "Branches": []
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 9,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
         }
       },
-      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFood>d__3": {
-        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFood>d__3::MoveNext()": {
+      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFood>d__2": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFood>d__2::MoveNext()": {
           "Lines": {
             "24": 0,
             "25": 0,
@@ -1685,8 +1702,8 @@
           "Branches": []
         }
       },
-      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFood>d__4": {
-        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFood>d__4::MoveNext()": {
+      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFood>d__3": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFood>d__3::MoveNext()": {
           "Lines": {
             "29": 0,
             "30": 0,
@@ -1695,8 +1712,8 @@
           "Branches": []
         }
       },
-      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFoodReferenceToPerson>d__6": {
-        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFoodReferenceToPerson>d__6::MoveNext()": {
+      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFoodReferenceToPerson>d__5": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFoodReferenceToPerson>d__5::MoveNext()": {
           "Lines": {
             "41": 0,
             "42": 0,
@@ -1709,66 +1726,74 @@
     },
     "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\PessoasRepository.cs": {
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository": {
-        "Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas Pro.Search.Infraestructure.Repositories.Support.PessoasRepository::DeletePersonToIdPessoa(Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas,System.Threading.CancellationToken)": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository::.ctor(Pro.Search.Infraestructure.Context.IContextDB)": {
           "Lines": {
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0
-          },
-          "Branches": []
-        },
-        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository::.ctor(Pro.Search.Infraestructure.Context.ContextDB)": {
-          "Lines": {
+            "16": 0,
+            "17": 0,
             "18": 0,
             "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0
+            "20": 0
           },
-          "Branches": []
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 9,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
         }
       },
-      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__3": {
-        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__3::MoveNext()": {
+      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__2": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__2::MoveNext()": {
           "Lines": {
+            "23": 0,
+            "24": 0,
             "25": 0,
             "26": 0,
-            "27": 0,
             "28": 0,
-            "30": 0,
-            "31": 0
+            "29": 0
           },
           "Branches": []
         }
       },
-      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__4": {
-        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__4::MoveNext()": {
+      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__3": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__3::MoveNext()": {
           "Lines": {
-            "34": 0,
-            "35": 0,
-            "36": 0
+            "32": 0,
+            "33": 0,
+            "34": 0
           },
           "Branches": []
         }
       },
-      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__5": {
-        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__5::MoveNext()": {
+      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__4": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__4::MoveNext()": {
           "Lines": {
-            "39": 0,
-            "40": 0,
-            "41": 0
+            "37": 0,
+            "38": 0,
+            "39": 0
           },
           "Branches": []
         }
       },
-      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<SearchAllPersonToIdPerson>d__7": {
-        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<SearchAllPersonToIdPerson>d__7::MoveNext()": {
+      "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<SearchAllPersonToIdPerson>d__5": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<SearchAllPersonToIdPerson>d__5::MoveNext()": {
           "Lines": {
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0
           },
           "Branches": []
         }
@@ -1792,21 +1817,21 @@
       "Pro.Search.Infraestructure.Mappers.FoodProfile": {
         "System.Void Pro.Search.Infraestructure.Mappers.FoodProfile::.ctor()": {
           "Lines": {
-            "9": 1,
-            "10": 1,
-            "11": 1,
-            "12": 1,
-            "13": 1,
-            "14": 1,
-            "15": 1,
-            "16": 2,
-            "18": 1,
-            "19": 1,
-            "20": 1,
-            "21": 1,
-            "22": 1,
-            "23": 2,
-            "24": 1
+            "9": 2,
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 4,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 4,
+            "24": 2
           },
           "Branches": []
         }
@@ -1816,30 +1841,33 @@
       "Pro.Search.Infraestructure.Context.ContextDB": {
         "Microsoft.EntityFrameworkCore.DbSet`1<Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas> Pro.Search.Infraestructure.Context.ContextDB::get_Pessoas()": {
           "Lines": {
-            "9": 0
+            "15": 0
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food> Pro.Search.Infraestructure.Context.ContextDB::get_Food()": {
           "Lines": {
-            "11": 0
+            "17": 0
           },
           "Branches": []
         },
         "System.Void Pro.Search.Infraestructure.Context.ContextDB::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
           "Lines": {
-            "19": 0,
             "20": 0,
             "21": 0,
-            "22": 0
+            "22": 0,
+            "23": 0,
+            "24": 0
           },
           "Branches": []
         },
         "System.Void Pro.Search.Infraestructure.Context.ContextDB::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Pro.Search.Infraestructure.Context.ContextDB>)": {
           "Lines": {
-            "13": 0,
-            "14": 0,
-            "16": 0
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
           },
           "Branches": []
         }
@@ -1886,31 +1914,31 @@
       "Pro.Search.PersonDomains.PersonEngine.Entities.Food": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Food()": {
           "Lines": {
-            "8": 3
+            "8": 5
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Name_Food()": {
           "Lines": {
-            "10": 2
+            "10": 4
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Locale_Purcache_Food()": {
           "Lines": {
-            "12": 2
+            "12": 4
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Pessoas_References()": {
           "Lines": {
-            "14": 2
+            "14": 4
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Price_Food()": {
           "Lines": {
-            "16": 2
+            "16": 4
           },
           "Branches": []
         }
@@ -1960,31 +1988,31 @@
       "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_Id_Food()": {
           "Lines": {
-            "5": 1
+            "5": 6
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_Nome()": {
           "Lines": {
-            "7": 1
+            "7": 5
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_LocalDeVenda()": {
           "Lines": {
-            "9": 1
+            "9": 5
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_ReferenciaIdPessoa()": {
           "Lines": {
-            "11": 1
+            "11": 5
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_PrecoComida()": {
           "Lines": {
-            "13": 1
+            "13": 5
           },
           "Branches": []
         }

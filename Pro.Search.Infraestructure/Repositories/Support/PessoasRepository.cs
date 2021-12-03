@@ -38,12 +38,6 @@ namespace Pro.Search.Infraestructure.Repositories.Support
             return await this.pessoas.FirstOrDefaultAsync(p => p.Id_Pessoas == Id_Pessoas, cancellationToken).ConfigureAwait(false);
         }
 
-        public Pessoas DeletePersonToIdPessoa(Pessoas pessoas, CancellationToken cancellationToken)
-        {
-            _ = this.pessoas.Remove(pessoas);
-            return pessoas;
-        }
-
         public async Task<List<Pessoas>> SearchAllPersonToIdPerson(string id_pessoa, CancellationToken cancellationToken)
         {
             var pessoas = await this.pessoas.Where(a => a.Id_Pessoas == id_pessoa).ToListAsync();

@@ -170,10 +170,6 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                     }
                 );
 
-            _ = repository.DeletePersonToIdPessoa(pessoa, CancellationToken.None).Returns(
-                new Pessoas()
-                );
-
             // Assert
             var handler = DeleteHandlePersonCommand(Substitute.For<IContextDB>(), repository);
             var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
