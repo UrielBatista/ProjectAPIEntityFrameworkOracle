@@ -74,13 +74,34 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
         }
 
         [TestMethod]
-        public async Task HandleCreateFoodCommandThrowExceptionArgumentIsNull()
+        public async Task HandleUpdateFoodCommand()
         {
-            var handler = CreateHandlerFoodCommandThrowExceptionArgumentIsNull();
+            // Prepare
+            var request = new UpdateFoodCommand(
+                new FoodAllInfoDto
+                {
+                    Id_Food = "654321",
+                    Nome = "TestandoCreate2",
+                    LocalDeVenda = "TestandoLocalCreate2",
+                    ReferenciaIdPessoa = "159753",
+                    PrecoComida = 66.6M
+                });
 
-            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+            var repository = Substitute.For<IFoodRepository>();
+            _ = repository.FindOneAsyncFood(request.FoodAllInfoDto.Id_Food, CancellationToken.None).Returns(
+                new Food()
+                {
+                    Id_Food = "654321",
+                    Name_Food = "TestandoCreate2",
+                    Locale_Purcache_Food = "TestandoLocalCreate2",
+                    Id_Pessoas_References = "159753",
+                    Price_Food = 66.6M
+                });
 
-            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+            // Assert
+            var handler = UpdateFoodCommandHandlerData(Substitute.For<IContextDB>(), repository);
+            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
+            _ = result.Should().BeOfType(typeof(FoodAllInfoDto));
         }
 
         [TestMethod]
@@ -118,6 +139,26 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
         }
 
         [TestMethod]
+        public async Task HandleCreateFoodCommandThrowExceptionArgumentIsNull()
+        {
+            var handler = CreateHandlerFoodCommandThrowExceptionArgumentIsNull();
+
+            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+
+            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+        }
+
+        [TestMethod]
+        public async Task HandleUpdateFoodCommandThrowExceptionArgumentIsNull()
+        {
+            var handler = UpdateHandlerFoodCommandThrowExceptionArgumentIsNull();
+
+            Func<Task> result = async () => _ = await handler.Handle(default, default).ConfigureAwait(false);
+
+            _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
+        }
+
+        [TestMethod]
         public async Task HandleDeleteFoodCommandThrowExceptionArgumentIsNull()
         {
             var handler = DeleteHandlerFoodCommandThrowExceptionArgumentIsNull();
@@ -144,6 +185,16 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
                 repository ?? Substitute.For<IFoodRepository>());
         }
 
+        protected static UpdateFoodCommandHandler UpdateFoodCommandHandlerData(IContextDB _context, IFoodRepository repository)
+        {
+            var mapperConf = new MapperConfiguration(conf => conf.AddProfile<FoodProfile>());
+            var mapper = new Mapper(mapperConf);
+            return new UpdateFoodCommandHandler(
+                Substitute.For<IContextDB>(),
+                repository ?? Substitute.For<IFoodRepository>(),
+                mapper);
+        }
+
         private static CreateFoodCommandHandler CreateHandlerFoodCommandThrowExceptionArgumentIsNull(
             IContextDB _context = default, IMapper mapper = default, IFoodRepository repository = default)
         {
@@ -151,6 +202,15 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
                 _context ?? Substitute.For<IContextDB>(), 
                 mapper ?? Substitute.For<IMapper>(), 
                 repository ?? Substitute.For<IFoodRepository>());
+        }
+
+        private static UpdateFoodCommandHandler UpdateHandlerFoodCommandThrowExceptionArgumentIsNull(
+            IContextDB _context = default, IMapper mapper = default, IFoodRepository repository = default)
+        {
+            return new UpdateFoodCommandHandler(
+                _context ?? Substitute.For<IContextDB>(),
+                repository ?? Substitute.For<IFoodRepository>(),
+                mapper ?? Substitute.For<IMapper>());
         }
 
         protected static DeleteFoodCommandHandler DeleteFoodCommandHandlerData(IContextDB _context, IFoodRepository foodRepository)

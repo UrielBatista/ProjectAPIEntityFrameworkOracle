@@ -24,6 +24,8 @@ namespace Pro.Search.Commands.PersonCommands
 
         public async Task<FoodAllInfoDto> Handle(UpdateFoodCommand request, CancellationToken cancellationToken)
         {
+            _ = request ?? throw new ArgumentNullException(nameof(request));
+
             var foodDb = await this.repository.FindOneAsyncFood(request.FoodAllInfoDto.Id_Food, cancellationToken);
 
             _ = foodDb ?? throw new ArgumentNullException(nameof(foodDb));
