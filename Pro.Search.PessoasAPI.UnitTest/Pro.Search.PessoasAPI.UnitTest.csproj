@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PessoasAPI\PessoasAPI.csproj" />
     <ProjectReference Include="..\Pro.Search.Commands\Pro.Search.Commands.csproj" />
   </ItemGroup>
 
