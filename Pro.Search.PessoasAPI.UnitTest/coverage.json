@@ -524,10 +524,10 @@
       "PessoasAPI.Controllers.V1.FoodController": {
         "System.Void PessoasAPI.Controllers.V1.FoodController::.ctor(MediatR.IMediator)": {
           "Lines": {
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
+            "17": 8,
+            "18": 8,
+            "19": 8,
+            "20": 8
           },
           "Branches": []
         }
@@ -535,11 +535,11 @@
       "PessoasAPI.Controllers.V1.FoodController/<ListarComida>d__2": {
         "System.Void PessoasAPI.Controllers.V1.FoodController/<ListarComida>d__2::MoveNext()": {
           "Lines": {
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0
+            "24": 2,
+            "25": 2,
+            "26": 3,
+            "27": 1,
+            "28": 2
           },
           "Branches": [
             {
@@ -548,7 +548,7 @@
               "EndOffset": 175,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 26,
@@ -556,7 +556,7 @@
               "EndOffset": 189,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -564,11 +564,11 @@
       "PessoasAPI.Controllers.V1.FoodController/<InserirComida>d__3": {
         "System.Void PessoasAPI.Controllers.V1.FoodController/<InserirComida>d__3::MoveNext()": {
           "Lines": {
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0
+            "32": 2,
+            "33": 2,
+            "34": 3,
+            "35": 1,
+            "36": 2
           },
           "Branches": [
             {
@@ -577,7 +577,7 @@
               "EndOffset": 191,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 34,
@@ -585,7 +585,7 @@
               "EndOffset": 205,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -593,11 +593,11 @@
       "PessoasAPI.Controllers.V1.FoodController/<AtualizarComida>d__4": {
         "System.Void PessoasAPI.Controllers.V1.FoodController/<AtualizarComida>d__4::MoveNext()": {
           "Lines": {
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0
+            "40": 2,
+            "41": 2,
+            "42": 3,
+            "43": 1,
+            "44": 2
           },
           "Branches": [
             {
@@ -606,7 +606,7 @@
               "EndOffset": 181,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 42,
@@ -614,7 +614,7 @@
               "EndOffset": 195,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -622,11 +622,11 @@
       "PessoasAPI.Controllers.V1.FoodController/<DeletearComida>d__5": {
         "System.Void PessoasAPI.Controllers.V1.FoodController/<DeletearComida>d__5::MoveNext()": {
           "Lines": {
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0
+            "49": 2,
+            "50": 2,
+            "51": 3,
+            "52": 1,
+            "53": 2
           },
           "Branches": [
             {
@@ -635,7 +635,7 @@
               "EndOffset": 196,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 51,
@@ -643,7 +643,7 @@
               "EndOffset": 210,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -653,10 +653,10 @@
       "PessoasAPI.Controllers.V1.PessoasController": {
         "System.Void PessoasAPI.Controllers.V1.PessoasController::.ctor(MediatR.IMediator)": {
           "Lines": {
-            "17": 9,
-            "18": 9,
-            "19": 9,
-            "20": 9
+            "17": 10,
+            "18": 10,
+            "19": 10,
+            "20": 10
           },
           "Branches": []
         }
@@ -773,11 +773,11 @@
       "PessoasAPI.Controllers.V1.PessoasController/<DeletearPessoas>d__7": {
         "System.Void PessoasAPI.Controllers.V1.PessoasController/<DeletearPessoas>d__7::MoveNext()": {
           "Lines": {
-            "63": 1,
-            "64": 1,
-            "65": 1,
+            "63": 2,
+            "64": 2,
+            "65": 3,
             "66": 1,
-            "67": 1
+            "67": 2
           },
           "Branches": [
             {
@@ -786,7 +786,7 @@
               "EndOffset": 196,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 65,
@@ -1004,16 +1004,16 @@
       "Pro.Search.PersonCommands.DeletePersonCommand": {
         "System.String Pro.Search.PersonCommands.DeletePersonCommand::get_Id_Pessoas()": {
           "Lines": {
-            "14": 4
+            "14": 6
           },
           "Branches": []
         },
         "System.Void Pro.Search.PersonCommands.DeletePersonCommand::.ctor(System.String)": {
           "Lines": {
-            "9": 2,
-            "10": 2,
-            "11": 2,
-            "12": 2
+            "9": 3,
+            "10": 3,
+            "11": 3,
+            "12": 3
           },
           "Branches": []
         }
@@ -1344,16 +1344,16 @@
       "Pro.Search.Commands.PersonCommands.CreateFoodCommand": {
         "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto Pro.Search.Commands.PersonCommands.CreateFoodCommand::get_FoodAllInfoDto()": {
           "Lines": {
-            "13": 7
+            "13": 11
           },
           "Branches": []
         },
         "System.Void Pro.Search.Commands.PersonCommands.CreateFoodCommand::.ctor(Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto)": {
           "Lines": {
-            "8": 1,
-            "9": 1,
-            "10": 1,
-            "11": 1
+            "8": 3,
+            "9": 3,
+            "10": 3,
+            "11": 3
           },
           "Branches": []
         }
@@ -1416,16 +1416,16 @@
       "Pro.Search.Commands.PersonCommands.DeleteFoodCommand": {
         "System.String Pro.Search.Commands.PersonCommands.DeleteFoodCommand::get_Id_Food()": {
           "Lines": {
-            "14": 2
+            "14": 6
           },
           "Branches": []
         },
         "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommand::.ctor(System.String)": {
           "Lines": {
-            "9": 1,
-            "10": 1,
-            "11": 1,
-            "12": 1
+            "9": 3,
+            "10": 3,
+            "11": 3,
+            "12": 3
           },
           "Branches": []
         }
@@ -2294,16 +2294,16 @@
       "Pro.Search.Commands.PersonCommands.UpdateFoodCommand": {
         "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto Pro.Search.Commands.PersonCommands.UpdateFoodCommand::get_FoodAllInfoDto()": {
           "Lines": {
-            "13": 9
+            "13": 13
           },
           "Branches": []
         },
         "System.Void Pro.Search.Commands.PersonCommands.UpdateFoodCommand::.ctor(Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto)": {
           "Lines": {
-            "8": 1,
-            "9": 1,
-            "10": 1,
-            "11": 1
+            "8": 3,
+            "9": 3,
+            "10": 3,
+            "11": 3
           },
           "Branches": []
         }
@@ -2849,31 +2849,31 @@
       "Pro.Search.PersonDomains.PersonEngine.Entities.Food": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Food()": {
           "Lines": {
-            "8": 9
+            "8": 10
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Name_Food()": {
           "Lines": {
-            "10": 8
+            "10": 9
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Locale_Purcache_Food()": {
           "Lines": {
-            "12": 8
+            "12": 9
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Pessoas_References()": {
           "Lines": {
-            "14": 8
+            "14": 9
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Price_Food()": {
           "Lines": {
-            "16": 8
+            "16": 9
           },
           "Branches": []
         }
@@ -2923,31 +2923,31 @@
       "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_Id_Food()": {
           "Lines": {
-            "5": 10
+            "5": 13
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_Nome()": {
           "Lines": {
-            "7": 7
+            "7": 10
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_LocalDeVenda()": {
           "Lines": {
-            "9": 7
+            "9": 10
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_ReferenciaIdPessoa()": {
           "Lines": {
-            "11": 7
+            "11": 10
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_PrecoComida()": {
           "Lines": {
-            "13": 7
+            "13": 10
           },
           "Branches": []
         }
