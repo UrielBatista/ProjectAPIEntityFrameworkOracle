@@ -31,6 +31,7 @@ C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PessoasAPI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PessoasAPI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PessoasAPI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PessoasAPI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PessoasAPI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PessoasAPI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PessoasAPI.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll

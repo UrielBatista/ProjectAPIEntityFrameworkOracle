@@ -94,7 +94,7 @@ namespace Pro.Search.Commands.PersonCommands
                 }
             }
 
-            var foodDb = this.repositoryFood.FindAllAsyncFoodReferenceToPerson(id_pessoa);
+            var foodDb = await this.repositoryFood.FindAllAsyncFoodReferenceToPerson(id_pessoa, cancellationToken);
             int count = 0;
             foreach (var data in foodDto)
             {

@@ -1760,528 +1760,528 @@
           "Branches": [
             {
               "Line": 63,
-              "Offset": 66,
-              "EndOffset": 68,
+              "Offset": 75,
+              "EndOffset": 77,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
               "Line": 63,
-              "Offset": 66,
-              "EndOffset": 79,
+              "Offset": 75,
+              "EndOffset": 88,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
               "Line": 65,
-              "Offset": 95,
-              "EndOffset": 100,
+              "Offset": 104,
+              "EndOffset": 109,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
               "Line": 67,
-              "Offset": 1324,
-              "EndOffset": 169,
+              "Offset": 1333,
+              "EndOffset": 178,
               "Path": 1,
               "Ordinal": 27,
               "Hits": 0
             },
             {
               "Line": 71,
-              "Offset": 353,
-              "EndOffset": 358,
+              "Offset": 362,
+              "EndOffset": 367,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 377,
-              "EndOffset": 379,
+              "Offset": 386,
+              "EndOffset": 388,
               "Path": 0,
               "Ordinal": 6,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 377,
-              "EndOffset": 392,
+              "Offset": 386,
+              "EndOffset": 401,
               "Path": 1,
               "Ordinal": 7,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 421,
-              "EndOffset": 423,
+              "Offset": 430,
+              "EndOffset": 432,
               "Path": 0,
               "Ordinal": 8,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 421,
-              "EndOffset": 436,
+              "Offset": 430,
+              "EndOffset": 445,
               "Path": 1,
               "Ordinal": 9,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 465,
-              "EndOffset": 467,
+              "Offset": 474,
+              "EndOffset": 476,
               "Path": 0,
               "Ordinal": 10,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 465,
-              "EndOffset": 480,
+              "Offset": 474,
+              "EndOffset": 489,
               "Path": 1,
               "Ordinal": 11,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 509,
-              "EndOffset": 511,
+              "Offset": 518,
+              "EndOffset": 520,
               "Path": 0,
               "Ordinal": 12,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 509,
-              "EndOffset": 524,
+              "Offset": 518,
+              "EndOffset": 533,
               "Path": 1,
               "Ordinal": 13,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 563,
-              "EndOffset": 565,
+              "Offset": 572,
+              "EndOffset": 574,
               "Path": 0,
               "Ordinal": 14,
               "Hits": 0
             },
             {
               "Line": 73,
-              "Offset": 563,
-              "EndOffset": 578,
+              "Offset": 572,
+              "EndOffset": 587,
               "Path": 1,
               "Ordinal": 15,
               "Hits": 0
             },
             {
               "Line": 71,
-              "Offset": 353,
-              "EndOffset": 926,
+              "Offset": 362,
+              "EndOffset": 935,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 0
             },
             {
               "Line": 87,
-              "Offset": 943,
-              "EndOffset": 945,
+              "Offset": 952,
+              "EndOffset": 954,
               "Path": 0,
               "Ordinal": 16,
               "Hits": 0
             },
             {
               "Line": 87,
-              "Offset": 943,
-              "EndOffset": 958,
+              "Offset": 952,
+              "EndOffset": 967,
               "Path": 1,
               "Ordinal": 17,
               "Hits": 0
             },
             {
               "Line": 88,
-              "Offset": 992,
-              "EndOffset": 994,
+              "Offset": 1001,
+              "EndOffset": 1003,
               "Path": 0,
               "Ordinal": 18,
               "Hits": 0
             },
             {
               "Line": 88,
-              "Offset": 992,
-              "EndOffset": 1007,
+              "Offset": 1001,
+              "EndOffset": 1016,
               "Path": 1,
               "Ordinal": 19,
               "Hits": 0
             },
             {
               "Line": 89,
-              "Offset": 1041,
-              "EndOffset": 1043,
+              "Offset": 1050,
+              "EndOffset": 1052,
               "Path": 0,
               "Ordinal": 20,
               "Hits": 0
             },
             {
               "Line": 89,
-              "Offset": 1041,
-              "EndOffset": 1056,
+              "Offset": 1050,
+              "EndOffset": 1065,
               "Path": 1,
               "Ordinal": 21,
               "Hits": 0
             },
             {
               "Line": 90,
-              "Offset": 1090,
-              "EndOffset": 1092,
+              "Offset": 1099,
+              "EndOffset": 1101,
               "Path": 0,
               "Ordinal": 22,
               "Hits": 0
             },
             {
               "Line": 90,
-              "Offset": 1090,
-              "EndOffset": 1105,
+              "Offset": 1099,
+              "EndOffset": 1114,
               "Path": 1,
               "Ordinal": 23,
               "Hits": 0
             },
             {
               "Line": 91,
-              "Offset": 1149,
-              "EndOffset": 1151,
+              "Offset": 1158,
+              "EndOffset": 1160,
               "Path": 0,
               "Ordinal": 24,
               "Hits": 0
             },
             {
               "Line": 91,
-              "Offset": 1149,
-              "EndOffset": 1164,
+              "Offset": 1158,
+              "EndOffset": 1173,
               "Path": 1,
               "Ordinal": 25,
               "Hits": 0
             },
             {
               "Line": 67,
-              "Offset": 1324,
-              "EndOffset": 1329,
+              "Offset": 1333,
+              "EndOffset": 1338,
               "Path": 0,
               "Ordinal": 26,
               "Hits": 0
             },
             {
               "Line": 65,
-              "Offset": 95,
-              "EndOffset": 1367,
+              "Offset": 104,
+              "EndOffset": 1376,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
             },
             {
               "Line": 99,
-              "Offset": 2057,
-              "EndOffset": 1437,
+              "Offset": 2184,
+              "EndOffset": 1564,
               "Path": 1,
               "Ordinal": 45,
               "Hits": 0
             },
             {
               "Line": 101,
-              "Offset": 1468,
-              "EndOffset": 1470,
+              "Offset": 1595,
+              "EndOffset": 1597,
               "Path": 0,
               "Ordinal": 28,
               "Hits": 0
             },
             {
               "Line": 103,
-              "Offset": 1487,
-              "EndOffset": 1489,
+              "Offset": 1614,
+              "EndOffset": 1616,
               "Path": 0,
               "Ordinal": 30,
               "Hits": 0
             },
             {
               "Line": 103,
-              "Offset": 1487,
-              "EndOffset": 1518,
+              "Offset": 1614,
+              "EndOffset": 1645,
               "Path": 1,
               "Ordinal": 31,
               "Hits": 0
             },
             {
               "Line": 101,
-              "Offset": 1468,
-              "EndOffset": 1544,
+              "Offset": 1595,
+              "EndOffset": 1671,
               "Path": 1,
               "Ordinal": 29,
               "Hits": 0
             },
             {
               "Line": 113,
-              "Offset": 1999,
-              "EndOffset": 1579,
+              "Offset": 2126,
+              "EndOffset": 1706,
               "Path": 1,
               "Ordinal": 43,
               "Hits": 0
             },
             {
               "Line": 115,
-              "Offset": 1614,
-              "EndOffset": 1616,
+              "Offset": 1741,
+              "EndOffset": 1743,
               "Path": 0,
               "Ordinal": 32,
               "Hits": 0
             },
             {
               "Line": 115,
-              "Offset": 1614,
-              "EndOffset": 1629,
+              "Offset": 1741,
+              "EndOffset": 1756,
               "Path": 1,
               "Ordinal": 33,
               "Hits": 0
             },
             {
               "Line": 116,
-              "Offset": 1663,
-              "EndOffset": 1665,
+              "Offset": 1790,
+              "EndOffset": 1792,
               "Path": 0,
               "Ordinal": 34,
               "Hits": 0
             },
             {
               "Line": 116,
-              "Offset": 1663,
-              "EndOffset": 1678,
+              "Offset": 1790,
+              "EndOffset": 1805,
               "Path": 1,
               "Ordinal": 35,
               "Hits": 0
             },
             {
               "Line": 117,
-              "Offset": 1712,
-              "EndOffset": 1714,
+              "Offset": 1839,
+              "EndOffset": 1841,
               "Path": 0,
               "Ordinal": 36,
               "Hits": 0
             },
             {
               "Line": 117,
-              "Offset": 1712,
-              "EndOffset": 1727,
+              "Offset": 1839,
+              "EndOffset": 1854,
               "Path": 1,
               "Ordinal": 37,
               "Hits": 0
             },
             {
               "Line": 118,
-              "Offset": 1761,
-              "EndOffset": 1763,
+              "Offset": 1888,
+              "EndOffset": 1890,
               "Path": 0,
               "Ordinal": 38,
               "Hits": 0
             },
             {
               "Line": 118,
-              "Offset": 1761,
-              "EndOffset": 1776,
+              "Offset": 1888,
+              "EndOffset": 1903,
               "Path": 1,
               "Ordinal": 39,
               "Hits": 0
             },
             {
               "Line": 119,
-              "Offset": 1820,
-              "EndOffset": 1822,
+              "Offset": 1947,
+              "EndOffset": 1949,
               "Path": 0,
               "Ordinal": 40,
               "Hits": 0
             },
             {
               "Line": 119,
-              "Offset": 1820,
-              "EndOffset": 1835,
+              "Offset": 1947,
+              "EndOffset": 1962,
               "Path": 1,
               "Ordinal": 41,
               "Hits": 0
             },
             {
               "Line": 113,
-              "Offset": 1999,
-              "EndOffset": 2004,
+              "Offset": 2126,
+              "EndOffset": 2131,
               "Path": 0,
               "Ordinal": 42,
               "Hits": 0
             },
             {
               "Line": 99,
-              "Offset": 2057,
-              "EndOffset": 2062,
+              "Offset": 2184,
+              "EndOffset": 2189,
               "Path": 0,
               "Ordinal": 44,
               "Hits": 0
             },
             {
               "Line": 126,
-              "Offset": 2127,
-              "EndOffset": 2132,
+              "Offset": 2254,
+              "EndOffset": 2259,
               "Path": 0,
               "Ordinal": 46,
               "Hits": 0
             },
             {
               "Line": 130,
-              "Offset": 3004,
-              "EndOffset": 2217,
+              "Offset": 3131,
+              "EndOffset": 2344,
               "Path": 1,
               "Ordinal": 65,
               "Hits": 0
             },
             {
               "Line": 130,
-              "Offset": 2178,
-              "EndOffset": 2335,
+              "Offset": 2305,
+              "EndOffset": 2462,
               "Path": 1,
               "Ordinal": 49,
               "Hits": 0
             },
             {
               "Line": 133,
-              "Offset": 2409,
-              "EndOffset": 2414,
+              "Offset": 2536,
+              "EndOffset": 2541,
               "Path": 0,
               "Ordinal": 52,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2433,
-              "EndOffset": 2435,
+              "Offset": 2560,
+              "EndOffset": 2562,
               "Path": 0,
               "Ordinal": 54,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2433,
-              "EndOffset": 2448,
+              "Offset": 2560,
+              "EndOffset": 2575,
               "Path": 1,
               "Ordinal": 55,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2477,
-              "EndOffset": 2479,
+              "Offset": 2604,
+              "EndOffset": 2606,
               "Path": 0,
               "Ordinal": 56,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2477,
-              "EndOffset": 2492,
+              "Offset": 2604,
+              "EndOffset": 2619,
               "Path": 1,
               "Ordinal": 57,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2521,
-              "EndOffset": 2523,
+              "Offset": 2648,
+              "EndOffset": 2650,
               "Path": 0,
               "Ordinal": 58,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2521,
-              "EndOffset": 2536,
+              "Offset": 2648,
+              "EndOffset": 2663,
               "Path": 1,
               "Ordinal": 59,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2565,
-              "EndOffset": 2567,
+              "Offset": 2692,
+              "EndOffset": 2694,
               "Path": 0,
               "Ordinal": 60,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2565,
-              "EndOffset": 2580,
+              "Offset": 2692,
+              "EndOffset": 2707,
               "Path": 1,
               "Ordinal": 61,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2619,
-              "EndOffset": 2621,
+              "Offset": 2746,
+              "EndOffset": 2748,
               "Path": 0,
               "Ordinal": 62,
               "Hits": 0
             },
             {
               "Line": 135,
-              "Offset": 2619,
-              "EndOffset": 2634,
+              "Offset": 2746,
+              "EndOffset": 2761,
               "Path": 1,
               "Ordinal": 63,
               "Hits": 0
             },
             {
               "Line": 130,
-              "Offset": 2178,
-              "EndOffset": 2776,
+              "Offset": 2305,
+              "EndOffset": 2903,
               "Path": 2,
               "Ordinal": 50,
               "Hits": 0
             },
             {
               "Line": 130,
-              "Offset": 2178,
-              "EndOffset": 2921,
+              "Offset": 2305,
+              "EndOffset": 3048,
               "Path": 3,
               "Ordinal": 51,
               "Hits": 0
             },
             {
               "Line": 133,
-              "Offset": 2409,
-              "EndOffset": 2978,
+              "Offset": 2536,
+              "EndOffset": 3105,
               "Path": 1,
               "Ordinal": 53,
               "Hits": 0
             },
             {
               "Line": 130,
-              "Offset": 2178,
-              "EndOffset": 2993,
+              "Offset": 2305,
+              "EndOffset": 3120,
               "Path": 0,
               "Ordinal": 48,
               "Hits": 0
             },
             {
               "Line": 130,
-              "Offset": 3004,
-              "EndOffset": 3009,
+              "Offset": 3131,
+              "EndOffset": 3136,
               "Path": 0,
               "Ordinal": 64,
               "Hits": 0
             },
             {
               "Line": 126,
-              "Offset": 2127,
-              "EndOffset": 3051,
+              "Offset": 2254,
+              "EndOffset": 3178,
               "Path": 1,
               "Ordinal": 47,
               "Hits": 0
@@ -2579,22 +2579,13 @@
     },
     "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\FoodRepository.cs": {
       "Pro.Search.Infraestructure.Repositories.Support.FoodRepository": {
-        "System.Collections.Generic.IEnumerable`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food> Pro.Search.Infraestructure.Repositories.Support.FoodRepository::FindAllAsyncFoodReferenceToPerson(System.String)": {
-          "Lines": {
-            "34": 0,
-            "35": 0,
-            "37": 0,
-            "38": 0
-          },
-          "Branches": []
-        },
         "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository::.ctor(Pro.Search.Infraestructure.Context.IContextDB)": {
           "Lines": {
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0
+            "17": 5,
+            "18": 5,
+            "19": 5,
+            "20": 5,
+            "21": 5
           },
           "Branches": [
             {
@@ -2611,7 +2602,7 @@
               "EndOffset": 22,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 5
             }
           ]
         }
@@ -2619,9 +2610,9 @@
       "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFood>d__2": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFood>d__2::MoveNext()": {
           "Lines": {
-            "24": 0,
-            "25": 0,
-            "26": 0
+            "24": 1,
+            "25": 1,
+            "26": 1
           },
           "Branches": []
         }
@@ -2629,9 +2620,20 @@
       "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFood>d__3": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFood>d__3::MoveNext()": {
           "Lines": {
-            "29": 0,
-            "30": 0,
-            "31": 0
+            "29": 1,
+            "30": 1,
+            "31": 1
+          },
+          "Branches": []
+        }
+      },
+      "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFoodReferenceToPerson>d__4": {
+        "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindAllAsyncFoodReferenceToPerson>d__4::MoveNext()": {
+          "Lines": {
+            "34": 1,
+            "35": 1,
+            "37": 1,
+            "38": 1
           },
           "Branches": []
         }
@@ -2639,10 +2641,10 @@
       "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFoodReferenceToPerson>d__5": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindOneAsyncFoodReferenceToPerson>d__5::MoveNext()": {
           "Lines": {
-            "41": 0,
-            "42": 0,
-            "44": 0,
-            "45": 0
+            "41": 1,
+            "42": 1,
+            "44": 1,
+            "45": 1
           },
           "Branches": []
         }
@@ -2650,10 +2652,10 @@
       "Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindListFoodReferenceToIDFood>d__6": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository/<FindListFoodReferenceToIDFood>d__6::MoveNext()": {
           "Lines": {
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0
+            "48": 1,
+            "49": 1,
+            "50": 1,
+            "51": 1
           },
           "Branches": []
         }
@@ -2663,11 +2665,11 @@
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository::.ctor(Pro.Search.Infraestructure.Context.IContextDB)": {
           "Lines": {
-            "16": 0,
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
+            "16": 4,
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4
           },
           "Branches": [
             {
@@ -2684,7 +2686,7 @@
               "EndOffset": 22,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 4
             }
           ]
         }
@@ -2692,12 +2694,12 @@
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__2": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindPersonPurcashFood>d__2::MoveNext()": {
           "Lines": {
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "28": 0,
-            "29": 0
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "29": 1
           },
           "Branches": []
         }
@@ -2705,9 +2707,9 @@
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__3": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindAllAsyncPerson>d__3::MoveNext()": {
           "Lines": {
-            "32": 0,
-            "33": 0,
-            "34": 0
+            "32": 1,
+            "33": 1,
+            "34": 1
           },
           "Branches": []
         }
@@ -2715,9 +2717,9 @@
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__4": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<FindOneAsyncPerson>d__4::MoveNext()": {
           "Lines": {
-            "37": 0,
-            "38": 0,
-            "39": 0
+            "37": 1,
+            "38": 1,
+            "39": 1
           },
           "Branches": []
         }
@@ -2725,10 +2727,10 @@
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<SearchAllPersonToIdPerson>d__5": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository/<SearchAllPersonToIdPerson>d__5::MoveNext()": {
           "Lines": {
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1
           },
           "Branches": []
         }
@@ -2776,33 +2778,33 @@
       "Pro.Search.Infraestructure.Context.ContextDB": {
         "Microsoft.EntityFrameworkCore.DbSet`1<Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas> Pro.Search.Infraestructure.Context.ContextDB::get_Pessoas()": {
           "Lines": {
-            "15": 0
+            "15": 26
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food> Pro.Search.Infraestructure.Context.ContextDB::get_Food()": {
           "Lines": {
-            "17": 0
+            "17": 28
           },
           "Branches": []
         },
         "System.Void Pro.Search.Infraestructure.Context.ContextDB::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
           "Lines": {
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1
           },
           "Branches": []
         },
         "System.Void Pro.Search.Infraestructure.Context.ContextDB::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Pro.Search.Infraestructure.Context.ContextDB>)": {
           "Lines": {
-            "9": 0,
-            "10": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0
+            "9": 9,
+            "10": 9,
+            "11": 9,
+            "12": 9,
+            "13": 9
           },
           "Branches": []
         }
@@ -2812,15 +2814,15 @@
       "Pro.Search.Infraestructure.Configurations.FoodConfigurations": {
         "System.Void Pro.Search.Infraestructure.Configurations.FoodConfigurations::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food>)": {
           "Lines": {
-            "10": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1
           },
           "Branches": []
         }
@@ -2830,14 +2832,14 @@
       "Pro.Search.Infraestructure.Configurations.PessoasConfigurations": {
         "System.Void Pro.Search.Infraestructure.Configurations.PessoasConfigurations::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas>)": {
           "Lines": {
-            "10": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1
           },
           "Branches": []
         }
@@ -2849,7 +2851,7 @@
       "Pro.Search.PersonDomains.PersonEngine.Entities.Food": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Food()": {
           "Lines": {
-            "8": 10
+            "8": 15
           },
           "Branches": []
         },
@@ -2867,7 +2869,7 @@
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Pessoas_References()": {
           "Lines": {
-            "14": 9
+            "14": 14
           },
           "Branches": []
         },
@@ -2883,7 +2885,7 @@
       "Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Id_Pessoas()": {
           "Lines": {
-            "10": 12
+            "10": 16
           },
           "Branches": []
         },

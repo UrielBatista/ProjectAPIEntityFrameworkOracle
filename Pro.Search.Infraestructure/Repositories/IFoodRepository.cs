@@ -9,7 +9,7 @@ namespace Pro.Search.Infraestructure.Repositories
     {
         Task<List<Food>> FindAllAsyncFood(CancellationToken cancellationToken);
 
-        IEnumerable<Food> FindAllAsyncFoodReferenceToPerson(string Id_Pessoas);
+        Task<IEnumerable<Food>> FindAllAsyncFoodReferenceToPerson(string Id_Pessoas, CancellationToken cancellationToken);
 
         Task<Food> FindOneAsyncFoodReferenceToPerson(string Id_Pessoas, CancellationToken cancellationToken);
         

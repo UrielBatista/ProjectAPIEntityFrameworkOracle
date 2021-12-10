@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "82LseSEM6a9dYl9xG5RO80nFFhXbsJn1o3N/3Cddj6gSH5U7ULIlsoY6iMXpMXSxB5JSHnpQKZpbchML5FOgKw==",
+  "dgSpecHash": "K0YA0oROYxd+TQxLfHBkJ2K5jNePfBBIuQCrAqKw8FV2em8lJQNDQi7KbT2w95JxDFtl+FwRxOc+6bMUjDsqlg==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PessoasAPI.UnitTest\\Pro.Search.PessoasAPI.UnitTest.csproj",
   "expectedPackageFiles": [
@@ -18,9 +18,10 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.10\\microsoft.entityframeworkcore.analyzers.5.0.10.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.12\\microsoft.entityframeworkcore.5.0.12.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.12\\microsoft.entityframeworkcore.abstractions.5.0.12.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.12\\microsoft.entityframeworkcore.analyzers.5.0.12.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.12\\microsoft.entityframeworkcore.inmemory.5.0.12.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.6\\microsoft.entityframeworkcore.relational.5.0.6.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",

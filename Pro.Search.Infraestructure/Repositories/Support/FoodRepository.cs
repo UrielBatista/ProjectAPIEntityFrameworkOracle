@@ -30,9 +30,9 @@ namespace Pro.Search.Infraestructure.Repositories.Support
             return await this.foods.ToListAsync(cancellationToken);
         }
 
-        public IEnumerable<Food> FindAllAsyncFoodReferenceToPerson(string Id_Pessoas)
+        public async Task<IEnumerable<Food>> FindAllAsyncFoodReferenceToPerson(string Id_Pessoas, CancellationToken cancellationToken)
         {
-            var foodReferencedPerson = this.foods.Where(p =>  p.Id_Pessoas_References == Id_Pessoas).ToList();
+            var foodReferencedPerson = await this.foods.Where(p =>  p.Id_Pessoas_References == Id_Pessoas).ToListAsync().ConfigureAwait(false);
 
             return foodReferencedPerson;
         }
