@@ -1,7 +1,7 @@
 {
   "BuldBlocks.Domain.dll": {},
   "PessoasAPI.dll": {
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Program.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Program.cs": {
       "PessoasAPI.Program": {
         "System.Void PessoasAPI.Program::Main(System.String[])": {
           "Lines": {
@@ -23,7 +23,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Startup.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Startup.cs": {
       "PessoasAPI.Startup": {
         "Microsoft.Extensions.Configuration.IConfiguration PessoasAPI.Startup::get_Configuration()": {
           "Lines": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Swagger\\ConfigureSwaggerOptions.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Swagger\\ConfigureSwaggerOptions.cs": {
       "PessoasAPI.Swagger.ConfigureSwaggerOptions": {
         "System.Void PessoasAPI.Swagger.ConfigureSwaggerOptions::Configure(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions)": {
           "Lines": {
@@ -222,7 +222,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Swagger\\SwaggerDefaultValues.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Swagger\\SwaggerDefaultValues.cs": {
       "PessoasAPI.Swagger.SwaggerDefaultValues": {
         "System.Void PessoasAPI.Swagger.SwaggerDefaultValues::Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)": {
           "Lines": {
@@ -380,7 +380,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Swagger\\DependencyInjection\\SwaggerRegistrationExtensions.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Swagger\\DependencyInjection\\SwaggerRegistrationExtensions.cs": {
       "PessoasAPI.Swagger.DependencyInjection.SwaggerRegistrationExtensions": {
         "Microsoft.Extensions.DependencyInjection.IServiceCollection PessoasAPI.Swagger.DependencyInjection.SwaggerRegistrationExtensions::AddCustomSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
           "Lines": {
@@ -479,7 +479,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Controllers\\V2\\ValuesController.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Controllers\\V2\\ValuesController.cs": {
       "PessoasAPI.Controllers.V2.ValuesController": {
         "System.Collections.Generic.IEnumerable`1<System.String> PessoasAPI.Controllers.V2.ValuesController::Get()": {
           "Lines": {
@@ -520,7 +520,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Controllers\\V1\\FoodController.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Controllers\\V1\\FoodController.cs": {
       "PessoasAPI.Controllers.V1.FoodController": {
         "System.Void PessoasAPI.Controllers.V1.FoodController::.ctor(MediatR.IMediator)": {
           "Lines": {
@@ -649,7 +649,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Controllers\\V1\\PessoasController.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Controllers\\V1\\PessoasController.cs": {
       "PessoasAPI.Controllers.V1.PessoasController": {
         "System.Void PessoasAPI.Controllers.V1.PessoasController::.ctor(MediatR.IMediator)": {
           "Lines": {
@@ -800,14 +800,14 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Controllers\\V1\\PessoasPurcashController.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\PessoasAPI\\Controllers\\V1\\PessoasPurcashController.cs": {
       "PessoasAPI.Controllers.V1.PessoasPurcashController": {
         "System.Void PessoasAPI.Controllers.V1.PessoasPurcashController::.ctor(MediatR.IMediator)": {
           "Lines": {
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4
           },
           "Branches": []
         }
@@ -815,11 +815,11 @@
       "PessoasAPI.Controllers.V1.PessoasPurcashController/<PessoasPurcashedFood>d__2": {
         "System.Void PessoasAPI.Controllers.V1.PessoasPurcashController/<PessoasPurcashedFood>d__2::MoveNext()": {
           "Lines": {
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0
+            "24": 2,
+            "25": 2,
+            "26": 3,
+            "27": 1,
+            "28": 2
           },
           "Branches": [
             {
@@ -828,7 +828,7 @@
               "EndOffset": 181,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 26,
@@ -836,7 +836,7 @@
               "EndOffset": 195,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -844,11 +844,11 @@
       "PessoasAPI.Controllers.V1.PessoasPurcashController/<PessoasPurcashedFood>d__3": {
         "System.Void PessoasAPI.Controllers.V1.PessoasPurcashController/<PessoasPurcashedFood>d__3::MoveNext()": {
           "Lines": {
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0
+            "32": 2,
+            "33": 2,
+            "34": 3,
+            "35": 1,
+            "36": 2
           },
           "Branches": [
             {
@@ -857,7 +857,7 @@
               "EndOffset": 187,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 34,
@@ -865,7 +865,7 @@
               "EndOffset": 201,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -873,7 +873,7 @@
     }
   },
   "Pro.Search.Commands.dll": {
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreatePersonCommand.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreatePersonCommand.cs": {
       "Pro.Search.PersonCommands.CreatePersonCommand": {
         "Pro.Search.PersonDomains.PersonEngine.Dtos.PersonDto Pro.Search.PersonCommands.CreatePersonCommand::get_PersonDto()": {
           "Lines": {
@@ -892,7 +892,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreatePersonCommandHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreatePersonCommandHandler.cs": {
       "Pro.Search.PersonCommands.CreatePersonCommandHandler": {
         "System.Void Pro.Search.PersonCommands.CreatePersonCommandHandler::DefineLocalTime(Pro.Search.PersonCommands.CreatePersonCommand)": {
           "Lines": {
@@ -1000,7 +1000,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeletePersonCommand.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeletePersonCommand.cs": {
       "Pro.Search.PersonCommands.DeletePersonCommand": {
         "System.String Pro.Search.PersonCommands.DeletePersonCommand::get_Id_Pessoas()": {
           "Lines": {
@@ -1019,7 +1019,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeletePersonCommandHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeletePersonCommandHandler.cs": {
       "Pro.Search.PersonCommands.DeletePersonCommandHandler": {
         "System.Void Pro.Search.PersonCommands.DeletePersonCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
           "Lines": {
@@ -1083,7 +1083,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdatePersonCommand.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdatePersonCommand.cs": {
       "Pro.Search.PersonCommands.UpdatePersonCommand": {
         "Pro.Search.PersonDomains.PersonEngine.Dtos.PersonDto Pro.Search.PersonCommands.UpdatePersonCommand::get_PersonDto()": {
           "Lines": {
@@ -1102,7 +1102,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdatePersonCommandHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdatePersonCommandHandler.cs": {
       "Pro.Search.PersonCommands.UpdatePersonCommandHandler": {
         "System.DateTime Pro.Search.PersonCommands.UpdatePersonCommandHandler::DefineLocalTime(Pro.Search.PersonCommands.UpdatePersonCommand)": {
           "Lines": {
@@ -1179,7 +1179,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetAllPersonQueryHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetAllPersonQueryHandler.cs": {
       "Pro.Search.PersonCommands.Queries.GetAllPersonQueryHandler": {
         "System.Void Pro.Search.PersonCommands.Queries.GetAllPersonQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
           "Lines": {
@@ -1226,7 +1226,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetMediaPersonQueryHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetMediaPersonQueryHandler.cs": {
       "Pro.Search.PersonCommands.Queries.GetMediaPersonQueryHandler": {
         "System.Void Pro.Search.PersonCommands.Queries.GetMediaPersonQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository)": {
           "Lines": {
@@ -1274,7 +1274,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetOnePersonQuery.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetOnePersonQuery.cs": {
       "Pro.Search.PersonCommands.Queries.GetOnePersonQuery": {
         "System.String Pro.Search.PersonCommands.Queries.GetOnePersonQuery::get_Id_Pessoas()": {
           "Lines": {
@@ -1293,7 +1293,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetOnePersonQueryHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetOnePersonQueryHandler.cs": {
       "Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler": {
         "System.Void Pro.Search.PersonCommands.Queries.GetOnePersonQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
           "Lines": {
@@ -1340,7 +1340,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreateFoodCommand.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreateFoodCommand.cs": {
       "Pro.Search.Commands.PersonCommands.CreateFoodCommand": {
         "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto Pro.Search.Commands.PersonCommands.CreateFoodCommand::get_FoodAllInfoDto()": {
           "Lines": {
@@ -1359,7 +1359,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreateFoodCommandHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\CreateFoodCommandHandler.cs": {
       "Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler": {
         "System.Void Pro.Search.Commands.PersonCommands.CreateFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,AutoMapper.IMapper,Pro.Search.Infraestructure.Repositories.IFoodRepository)": {
           "Lines": {
@@ -1412,7 +1412,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeleteFoodCommand.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeleteFoodCommand.cs": {
       "Pro.Search.Commands.PersonCommands.DeleteFoodCommand": {
         "System.String Pro.Search.Commands.PersonCommands.DeleteFoodCommand::get_Id_Food()": {
           "Lines": {
@@ -1431,7 +1431,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeleteFoodCommandHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\DeleteFoodCommandHandler.cs": {
       "Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler": {
         "System.Void Pro.Search.Commands.PersonCommands.DeleteFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,Pro.Search.Infraestructure.Repositories.IFoodRepository)": {
           "Lines": {
@@ -1495,33 +1495,33 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\SetPessoasPurcashCommand.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\SetPessoasPurcashCommand.cs": {
       "Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommand": {
         "System.String Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommand::get_Id_Pessoa()": {
           "Lines": {
-            "14": 0
+            "14": 4
           },
           "Branches": []
         },
         "Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommand::get_PersonPurcashDto()": {
           "Lines": {
-            "16": 0
+            "16": 2
           },
           "Branches": []
         },
         "System.Void Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommand::.ctor(System.String,Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto)": {
           "Lines": {
-            "8": 0,
-            "9": 0,
-            "10": 0,
-            "11": 0,
-            "12": 0
+            "8": 2,
+            "9": 2,
+            "10": 2,
+            "11": 2,
+            "12": 2
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\SetPessoasPurcashCommandHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\SetPessoasPurcashCommandHandler.cs": {
       "Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler": {
         "System.String Pro.Search.Commands.PersonCommands.SetPessoasPurcashCommandHandler::RandomNumber(System.Int32,System.Int32)": {
           "Lines": {
@@ -2290,7 +2290,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdateFoodCommand.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdateFoodCommand.cs": {
       "Pro.Search.Commands.PersonCommands.UpdateFoodCommand": {
         "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto Pro.Search.Commands.PersonCommands.UpdateFoodCommand::get_FoodAllInfoDto()": {
           "Lines": {
@@ -2309,7 +2309,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdateFoodCommandHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\UpdateFoodCommandHandler.cs": {
       "Pro.Search.Commands.PersonCommands.UpdateFoodCommandHandler": {
         "System.Void Pro.Search.Commands.PersonCommands.UpdateFoodCommandHandler::.ctor(Pro.Search.Infraestructure.Context.IContextDB,Pro.Search.Infraestructure.Repositories.IFoodRepository,AutoMapper.IMapper)": {
           "Lines": {
@@ -2376,7 +2376,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetAllFoodQueryHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetAllFoodQueryHandler.cs": {
       "Pro.Search.Commands.PersonCommands.Queries.GetAllFoodQueryHandler": {
         "System.Void Pro.Search.Commands.PersonCommands.Queries.GetAllFoodQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IFoodRepository,AutoMapper.IMapper)": {
           "Lines": {
@@ -2423,34 +2423,34 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetPersonPurcashFoodQuery.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetPersonPurcashFoodQuery.cs": {
       "Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQuery": {
         "System.String Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQuery::get_Id_Pessoas()": {
           "Lines": {
-            "13": 2
+            "13": 8
           },
           "Branches": []
         },
         "System.Void Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQuery::.ctor(System.String)": {
           "Lines": {
-            "8": 1,
-            "9": 1,
-            "10": 1,
-            "11": 1
+            "8": 4,
+            "9": 4,
+            "10": 4,
+            "11": 4
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetPersonPurcashFoodQueryHandler.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\PersonCommands\\Queries\\GetPersonPurcashFoodQueryHandler.cs": {
       "Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler": {
         "System.Void Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler::.ctor(Pro.Search.Infraestructure.Repositories.IPessoasRepository,AutoMapper.IMapper)": {
           "Lines": {
-            "18": 2,
-            "19": 2,
-            "20": 2,
-            "21": 2,
-            "22": 2
+            "18": 3,
+            "19": 3,
+            "20": 3,
+            "21": 3,
+            "22": 3
           },
           "Branches": []
         }
@@ -2458,17 +2458,17 @@
       "Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler/<Handle>d__3": {
         "System.Void Pro.Search.Commands.PersonCommands.Queries.GetPersonPurcashFoodQueryHandler/<Handle>d__3::MoveNext()": {
           "Lines": {
-            "25": 2,
-            "26": 2,
-            "28": 1,
-            "29": 1,
-            "31": 1,
-            "32": 1,
-            "33": 1,
-            "34": 1,
-            "35": 1,
-            "37": 1,
-            "40": 1
+            "25": 3,
+            "26": 3,
+            "28": 2,
+            "29": 2,
+            "31": 2,
+            "32": 2,
+            "33": 2,
+            "34": 2,
+            "35": 2,
+            "37": 2,
+            "40": 2
           },
           "Branches": [
             {
@@ -2485,7 +2485,7 @@
               "EndOffset": 34,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 2
             },
             {
               "Line": 29,
@@ -2501,7 +2501,7 @@
               "EndOffset": 210,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 1
+              "Hits": 2
             }
           ]
         }
@@ -2509,7 +2509,7 @@
     }
   },
   "Pro.Search.Infraestructure.dll": {
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Validators\\FoodDtoValidator.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Validators\\FoodDtoValidator.cs": {
       "Pro.Search.Infraestructure.Validators.FoodDtoValidator": {
         "System.Void Pro.Search.Infraestructure.Validators.FoodDtoValidator::.ctor()": {
           "Lines": {
@@ -2526,7 +2526,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Validators\\PersonDtoValidator.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Validators\\PersonDtoValidator.cs": {
       "Pro.Search.Infraestructure.Validators.PersonDtoValidator": {
         "System.Void Pro.Search.Infraestructure.Validators.PersonDtoValidator::.ctor()": {
           "Lines": {
@@ -2543,7 +2543,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Validators\\DependencyInjection\\ValidatorsRegistrationExtensions.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Validators\\DependencyInjection\\ValidatorsRegistrationExtensions.cs": {
       "Pro.Search.Infraestructure.Validators.DependencyInjection.ValidatorsRegistrationExtensions": {
         "Microsoft.Extensions.DependencyInjection.IServiceCollection Pro.Search.Infraestructure.Validators.DependencyInjection.ValidatorsRegistrationExtensions::AddPersonEngineValidators(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
           "Lines": {
@@ -2577,7 +2577,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\FoodRepository.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\FoodRepository.cs": {
       "Pro.Search.Infraestructure.Repositories.Support.FoodRepository": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.FoodRepository::.ctor(Pro.Search.Infraestructure.Context.IContextDB)": {
           "Lines": {
@@ -2661,7 +2661,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\PessoasRepository.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\PessoasRepository.cs": {
       "Pro.Search.Infraestructure.Repositories.Support.PessoasRepository": {
         "System.Void Pro.Search.Infraestructure.Repositories.Support.PessoasRepository::.ctor(Pro.Search.Infraestructure.Context.IContextDB)": {
           "Lines": {
@@ -2736,7 +2736,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\DependencyInjection\\RepositoryRegistrationExtensions.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Repositories\\Support\\DependencyInjection\\RepositoryRegistrationExtensions.cs": {
       "Pro.Search.Infraestructure.Repositories.Support.DependencyInjection.RepositoryRegistrationExtensions": {
         "Microsoft.Extensions.DependencyInjection.IServiceCollection Pro.Search.Infraestructure.Repositories.Support.DependencyInjection.RepositoryRegistrationExtensions::AddSearchRepository(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
           "Lines": {
@@ -2750,7 +2750,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Mappers\\FoodProfile.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Mappers\\FoodProfile.cs": {
       "Pro.Search.Infraestructure.Mappers.FoodProfile": {
         "System.Void Pro.Search.Infraestructure.Mappers.FoodProfile::.ctor()": {
           "Lines": {
@@ -2774,7 +2774,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Context\\ContextDB.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Context\\ContextDB.cs": {
       "Pro.Search.Infraestructure.Context.ContextDB": {
         "Microsoft.EntityFrameworkCore.DbSet`1<Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas> Pro.Search.Infraestructure.Context.ContextDB::get_Pessoas()": {
           "Lines": {
@@ -2810,7 +2810,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Configurations\\FoodConfigurations.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Configurations\\FoodConfigurations.cs": {
       "Pro.Search.Infraestructure.Configurations.FoodConfigurations": {
         "System.Void Pro.Search.Infraestructure.Configurations.FoodConfigurations::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food>)": {
           "Lines": {
@@ -2828,7 +2828,7 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Configurations\\PessoasConfigurations.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Configurations\\PessoasConfigurations.cs": {
       "Pro.Search.Infraestructure.Configurations.PessoasConfigurations": {
         "System.Void Pro.Search.Infraestructure.Configurations.PessoasConfigurations::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas>)": {
           "Lines": {
@@ -2847,7 +2847,7 @@
     }
   },
   "Pro.Search.PersonDomains.dll": {
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Entities\\Food.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Entities\\Food.cs": {
       "Pro.Search.PersonDomains.PersonEngine.Entities.Food": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Food::get_Id_Food()": {
           "Lines": {
@@ -2881,81 +2881,81 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Entities\\Pessoas.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Entities\\Pessoas.cs": {
       "Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Id_Pessoas()": {
           "Lines": {
-            "10": 16
+            "10": 18
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Nome()": {
           "Lines": {
-            "12": 9
+            "12": 10
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Sobrenome()": {
           "Lines": {
-            "14": 9
+            "14": 10
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_Pessoas_Calc_Number()": {
           "Lines": {
-            "16": 10
+            "16": 11
           },
           "Branches": []
         },
         "System.DateTime Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_DataHora()": {
           "Lines": {
-            "18": 9
+            "18": 10
           },
           "Branches": []
         },
         "System.Collections.Generic.IEnumerable`1<Pro.Search.PersonDomains.PersonEngine.Entities.Food> Pro.Search.PersonDomains.PersonEngine.Entities.Pessoas::get_ComidaComprada()": {
           "Lines": {
-            "20": 3
+            "20": 4
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\FoodAllInfoDto.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\FoodAllInfoDto.cs": {
       "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_Id_Food()": {
           "Lines": {
-            "5": 13
+            "5": 15
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_Nome()": {
           "Lines": {
-            "7": 10
+            "7": 12
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_LocalDeVenda()": {
           "Lines": {
-            "9": 10
+            "9": 12
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_ReferenciaIdPessoa()": {
           "Lines": {
-            "11": 10
+            "11": 12
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto::get_PrecoComida()": {
           "Lines": {
-            "13": 10
+            "13": 12
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\FoodDto.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\FoodDto.cs": {
       "Pro.Search.PersonDomains.PersonEngine.Dtos.FoodDto": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.FoodDto::get_Id_Food()": {
           "Lines": {
@@ -2989,57 +2989,57 @@
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\PersonPurcashDto.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\PersonPurcashDto.cs": {
       "Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto": {
         "Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto::get_Pessoas()": {
           "Lines": {
-            "9": 1
+            "9": 4
           },
           "Branches": []
         },
         "System.Collections.Generic.IEnumerable`1<Pro.Search.PersonDomains.PersonEngine.Dtos.FoodAllInfoDto> Pro.Search.PersonDomains.PersonEngine.Dtos.PersonPurcashDto::get_Food()": {
           "Lines": {
-            "11": 1
+            "11": 4
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\PessoasAllInfoDto.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\PessoasAllInfoDto.cs": {
       "Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_Id_Pessoas()": {
           "Lines": {
-            "7": 3
+            "7": 6
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_Nome()": {
           "Lines": {
-            "9": 3
+            "9": 6
           },
           "Branches": []
         },
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_Sobrenome()": {
           "Lines": {
-            "11": 3
+            "11": 6
           },
           "Branches": []
         },
         "System.Decimal Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_Pessoas_Calc_Number()": {
           "Lines": {
-            "13": 3
+            "13": 6
           },
           "Branches": []
         },
         "System.DateTime Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasAllInfoDto::get_DataHora()": {
           "Lines": {
-            "15": 3
+            "15": 6
           },
           "Branches": []
         }
       }
     },
-    "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\PessoasInfoDto.cs": {
+    "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonDomains\\PersonEngine\\Dtos\\PessoasInfoDto.cs": {
       "Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasInfoDto": {
         "System.String Pro.Search.PersonDomains.PersonEngine.Dtos.PessoasInfoDto::get_Id_Pessoas()": {
           "Lines": {
