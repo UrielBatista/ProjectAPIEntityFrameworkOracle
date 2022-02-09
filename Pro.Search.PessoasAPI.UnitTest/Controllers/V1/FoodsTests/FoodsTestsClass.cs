@@ -79,7 +79,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.FoodsTests
             };
 
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<CreateFoodCommand>(p => p.FoodAllInfoDto == result)).Returns(result);
+            _ = mediator.Send(Arg.Is<CreateFoodInMemoryCommand>(p => p.FoodAllInfoDto == result)).Returns(result);
 
             // Assert
             var controller = CreateController(mediator);
@@ -99,7 +99,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.FoodsTests
             };
 
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<CreateFoodCommand>(p => p.FoodAllInfoDto == result)).Returns((FoodAllInfoDto)default);
+            _ = mediator.Send(Arg.Is<CreateFoodInMemoryCommand>(p => p.FoodAllInfoDto == result)).Returns((FoodAllInfoDto)default);
 
             // Assert
             var controller = CreateController(mediator);

@@ -4,6 +4,7 @@ using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
+using ServiceStack.Redis;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -27,6 +28,9 @@ namespace Pro.Search.Commands.PersonCommands
         {
             _ = request ?? throw new ArgumentNullException(nameof(request));
 
+            var validityIdFood = await repository.FindOneAsyncFood(request.FoodAllInfoDto.Id_Food, cancellationToken).ConfigureAwait(false);
+
+            // Persistence Entity in Database
             var returnValidation = new FoodAllInfoDto
             {
                 Id_Food = request.FoodAllInfoDto.Id_Food,

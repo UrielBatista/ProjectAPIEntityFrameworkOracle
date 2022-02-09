@@ -9,6 +9,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="OneOf" Version="3.0.201" />
     <PackageReference Include="RestSharp" Version="106.13.0" />
+    <PackageReference Include="ServiceStack.Redis" Version="6.0.2" />
   </ItemGroup>
 
 </Project>

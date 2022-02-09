@@ -25,11 +25,14 @@ namespace Pro.Search.Commands.PersonCommands
             _ = request ?? throw new ArgumentNullException(nameof(request));
 
             var foods = await foodRepository.FindListFoodReferenceToIDFood(request.Id_Food, cancellationToken);
+            
             foreach (var item in foods)
             {
                 _context.Food.Remove(item);
             }
+            
             await _context.SaveChangesAsync();
+
             return foods;
         }
     }

@@ -28,9 +28,19 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpPost]
+        [Route("/persistence")]
         public async Task<IActionResult> InserirComida([FromBody] FoodAllInfoDto foodAllInfoDto)
         {
             var response = await mediator.Send(new CreateFoodCommand(foodAllInfoDto)).ConfigureAwait(false);
+            if (response == null) return BadRequest();
+            return Ok(response);
+        }
+
+        [HttpPost]
+        [Route("/inMemory")]
+        public async Task<IActionResult> InserirComidaEmMemoria([FromBody] FoodAllInfoDto foodAllInfoDto)
+        {
+            var response = await mediator.Send(new CreateFoodInMemoryCommand(foodAllInfoDto)).ConfigureAwait(false);
             if (response == null) return BadRequest();
             return Ok(response);
         }

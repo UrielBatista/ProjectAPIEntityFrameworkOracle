@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ServiceStack.Redis" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BuldBlocks.Domain\BuldBlocks.Domain.csproj" />
     <ProjectReference Include="..\Pro.Search.Infraestructure\Pro.Search.Infraestructure.csproj" />
     <ProjectReference Include="..\Pro.Search.PersonDomains\Pro.Search.PersonDomains.csproj" />
