@@ -18,8 +18,7 @@ namespace Pro.Search.Infraestructure.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new PessoasConfigurations());
-            modelBuilder.ApplyConfiguration(new FoodConfigurations());
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PessoasConfigurations).Assembly);
             base.OnModelCreating(modelBuilder);
         }
 
