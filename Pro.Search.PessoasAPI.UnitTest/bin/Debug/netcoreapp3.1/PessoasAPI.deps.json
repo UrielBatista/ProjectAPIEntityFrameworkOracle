@@ -1948,6 +1948,7 @@
       },
       "Pro.Search.Commands/1.0.0": {
         "dependencies": {
+          "AutoMapper": "10.1.1",
           "BuldBlocks.Domain": "1.0.0",
           "Pro.Search.Infraestructure": "1.0.0",
           "Pro.Search.PersonDomains": "1.0.0",

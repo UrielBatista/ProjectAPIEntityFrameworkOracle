@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PessoasAPI.Middleware;
+using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
 using Pro.Search.Infraestructure;
 using Pro.Search.Infraestructure.Context;
@@ -61,7 +61,7 @@ namespace PessoasAPI
 
             _ = app.UseCustomSwagger(provider);
 
-            app.ConfigureExceptionHandler();
+            _ = app.UseGlobalExceptionHandler();
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
