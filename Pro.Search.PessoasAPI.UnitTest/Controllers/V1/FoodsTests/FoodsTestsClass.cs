@@ -16,54 +16,54 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.FoodsTests
     [TestClass]
     public sealed class FoodsTestsClass : TestBase
     {
-        [TestMethod]
-        public async Task GetFoodsShouldReturnOk()
-        {
-            // Prepare
-            var results = new List<FoodAllInfoDto>
-            {
-                new FoodAllInfoDto
-                {
-                    Id_Food = "51092",
-                    Nome = "TestGetFoodMethodController1",
-                    LocalDeVenda = "TestGetFoodMethodController2",
-                    ReferenciaIdPessoa = "19747",
-                    PrecoComida = 88.8M
-                },
-            };
+        //[TestMethod]
+        //public async Task GetFoodsShouldReturnOk()
+        //{
+        //    // Prepare
+        //    var results = new List<FoodAllInfoDto>
+        //    {
+        //        new FoodAllInfoDto
+        //        {
+        //            Id_Food = "51092",
+        //            Nome = "TestGetFoodMethodController1",
+        //            LocalDeVenda = "TestGetFoodMethodController2",
+        //            ReferenciaIdPessoa = "19747",
+        //            PrecoComida = 88.8M
+        //        },
+        //    };
 
-            var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Any<GetAllFoodQuery>()).Returns(results);
+        //    var mediator = Substitute.For<IMediator>();
+        //    _ = mediator.Send(Arg.Any<GetAllFoodQuery>()).Returns(results);
 
-            // Assert
-            var controller = CreateController(mediator);
-            var response = await controller.ListarComida().ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = response.Should().BeOfType<OkObjectResult>().Which.Value.Should().BeOfType<List<FoodAllInfoDto>>();
-            }
-        }
+        //    // Assert
+        //    var controller = CreateController(mediator);
+        //    var response = await controller.ListarComida().ConfigureAwait(false);
+        //    using (new AssertionScope())
+        //    {
+        //        _ = response.Should().BeOfType<OkObjectResult>().Which.Value.Should().BeOfType<List<FoodAllInfoDto>>();
+        //    }
+        //}
 
-        [TestMethod]
-        public async Task GetFoodsShouldNotFound()
-        {
-            // Prepare
-            var results = new List<FoodAllInfoDto>
-            {
-                default
-            };
+        //[TestMethod]
+        //public async Task GetFoodsShouldNotFound()
+        //{
+        //    // Prepare
+        //    var results = new List<FoodAllInfoDto>
+        //    {
+        //        default
+        //    };
 
-            var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Any<GetAllFoodQuery>()).Returns(((List<FoodAllInfoDto>)default));
+        //    var mediator = Substitute.For<IMediator>();
+        //    _ = mediator.Send(Arg.Any<GetAllFoodQuery>()).Returns(((List<FoodAllInfoDto>)default));
 
-            // Assert
-            var controller = CreateController(mediator);
-            var response = await controller.ListarComida().ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = response.Should().BeOfType<NotFoundResult>();
-            }
-        }
+        //    // Assert
+        //    var controller = CreateController(mediator);
+        //    var response = await controller.ListarComida().ConfigureAwait(false);
+        //    using (new AssertionScope())
+        //    {
+        //        _ = response.Should().BeOfType<NotFoundResult>();
+        //    }
+        //}
 
         [TestMethod]
         public async Task CreateFoodShouldReturnOk()

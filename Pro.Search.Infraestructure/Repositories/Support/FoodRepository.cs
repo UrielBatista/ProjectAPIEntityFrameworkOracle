@@ -25,9 +25,11 @@ namespace Pro.Search.Infraestructure.Repositories.Support
             return await this.foods.FirstOrDefaultAsync(f => f.Id_Food == Id_Food, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<List<Food>> FindAllAsyncFood(CancellationToken cancellationToken)
+        public async Task<IEnumerable<Food>> FindAllAsyncFood(CancellationToken cancellationToken)
         {
-            return await this.foods.ToListAsync(cancellationToken);
+            var foods =  await this.foods.ToListAsync(cancellationToken);
+            IEnumerable<Food> query = foods.OrderBy(foods => foods.Id_Food);
+            return query;
         }
 
         public async Task<IEnumerable<Food>> FindAllAsyncFoodReferenceToPerson(string Id_Pessoas, CancellationToken cancellationToken)

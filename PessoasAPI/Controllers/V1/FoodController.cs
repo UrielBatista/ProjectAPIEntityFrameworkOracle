@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Pro.Search.Commands.PersonCommands;
 using Pro.Search.Commands.PersonCommands.Queries;
+using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using System.Threading.Tasks;
 
@@ -20,9 +21,9 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpGet]
-        public async Task<IActionResult> ListarComida()
+        public async Task<IActionResult> ListarComida([FromQuery] PageAndFilteredRequestParams @params)
         {
-            var response = await mediator.Send(new GetAllFoodQuery());
+            var response = await mediator.Send(new GetAllFoodQuery(@params.PageNumber, @params.PageSize));
             if (response == null) return NotFound();
             return Ok(response);
         }

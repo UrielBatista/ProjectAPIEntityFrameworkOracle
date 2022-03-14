@@ -3,13 +3,15 @@ using BuldBlocks.Domain.Commons;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class GetAllFoodQueryHandler : IQueryHandler<GetAllFoodQuery, List<FoodAllInfoDto>>
+    public class GetAllFoodQueryHandler : IQueryHandler<GetAllFoodQuery, FoodResponse>
     {
         private readonly IFoodRepository repository;
         private readonly IMapper mapper;
@@ -20,17 +22,35 @@ namespace Pro.Search.Commands.PersonCommands.Queries
             this.mapper = mapper;
         }
 
-        public async Task<List<FoodAllInfoDto>> Handle(GetAllFoodQuery request, CancellationToken cancellationToken)
+        public async Task<FoodResponse> Handle(GetAllFoodQuery request, CancellationToken cancellationToken)
         {
             var foodAllDb = await this.repository.FindAllAsyncFood(cancellationToken);
 
-            var data = new List<FoodAllInfoDto>();
-            foreach (var i in foodAllDb)
+           
+            var pageResult = request.PageSize;
+            var pageCount = Math.Ceiling(foodAllDb.Count() / pageResult);
+
+
+            var pagePickup = foodAllDb
+                .Skip((request.Page - 1) * (int)pageResult)
+                .Take((int)pageResult).ToList();
+
+
+            var allFoods = new List<FoodAllInfoDto>();
+
+            foreach (var i in pagePickup)
             {
-                data.Add(mapper.Map<Food, FoodAllInfoDto>(i));
+                allFoods.Add(mapper.Map<Food, FoodAllInfoDto>(i));
             }
 
-            return data;
+            var response = new FoodResponse
+            {
+                Foods = allFoods,
+                CurrentPage = request.Page,
+                Pages = (int)pageCount
+            };
+
+            return response;
         }
     }
 }

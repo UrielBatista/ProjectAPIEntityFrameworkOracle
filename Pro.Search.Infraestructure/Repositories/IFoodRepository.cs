@@ -1,4 +1,5 @@
-﻿using Pro.Search.PersonDomains.PersonEngine.Entities;
+﻿using Pro.Search.PersonDomains.PersonEngine.Dtos;
+using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ namespace Pro.Search.Infraestructure.Repositories
 {
     public interface IFoodRepository
     {
-        Task<List<Food>> FindAllAsyncFood(CancellationToken cancellationToken);
+        Task<IEnumerable<Food>> FindAllAsyncFood(CancellationToken cancellationToken);
 
         Task<IEnumerable<Food>> FindAllAsyncFoodReferenceToPerson(string Id_Pessoas, CancellationToken cancellationToken);
 

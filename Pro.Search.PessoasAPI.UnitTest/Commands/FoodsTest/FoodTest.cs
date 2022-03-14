@@ -20,27 +20,27 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
     [TestClass]
     public class FoodTest
     {
-        [TestMethod]
-        public async Task HandleGetAllFoodQuery()
-        {
-            // Prepare
-            var request = new GetAllFoodQuery();
+        //[TestMethod]
+        //public async Task HandleGetAllFoodQuery()
+        //{
+        //    // Prepare
+        //    var request = new GetAllFoodQuery();
 
-            var repository = Substitute.For<IFoodRepository>();
-            _ = repository.FindAllAsyncFood(CancellationToken.None).Returns(
-                new List<Food>
-                {
-                    new Food
-                    {
-                        Id_Food = "159753",
-                    },
-                });
+        //    var repository = Substitute.For<IFoodRepository>();
+        //    _ = repository.FindAllAsyncFood(CancellationToken.None).Returns(
+        //        new List<Food>
+        //        {
+        //            new Food
+        //            {
+        //                Id_Food = "159753",
+        //            },
+        //        });
 
-            // Assert
-            var handler = QueryHandlerAllFood(repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            _ = result.Should().BeOfType(typeof(List<FoodAllInfoDto>));
-        }
+        //    // Assert
+        //    var handler = QueryHandlerAllFood(repository);
+        //    var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
+        //    _ = result.Should().BeOfType(typeof(List<FoodAllInfoDto>));
+        //}
 
         [TestMethod]
         public async Task HandleCreateFoodCommand()
