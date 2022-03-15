@@ -24,7 +24,7 @@ namespace Pro.Search.Commands.PersonCommands.Queries
 
         public async Task<FoodResponse> Handle(GetAllFoodQuery request, CancellationToken cancellationToken)
         {
-            var allFoodsOrdened = await this.repository.FindAllAsyncFood(request.Page, request.PageSize, cancellationToken);
+            var allFoodsOrdened = await this.repository.FindAllAsyncFood(request.Page, request.PageSize, request.FlagsValue, cancellationToken);
 
             var pageCount = Math.Ceiling((double)allFoodsOrdened.Count() / (double)request.PageSize);
 

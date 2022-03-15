@@ -8,7 +8,7 @@ namespace Pro.Search.Infraestructure.Repositories
 {
     public interface IFoodRepository
     {
-        Task<IEnumerable<Food>> FindAllAsyncFood(int page, int pageSize, CancellationToken cancellationToken);
+        Task<IEnumerable<Food>> FindAllAsyncFood(int page, int pageSize, bool flagsCancellationToken, CancellationToken cancellationToken);
 
         Task<IEnumerable<Food>> FindAllAsyncFoodReferenceToPerson(string Id_Pessoas, CancellationToken cancellationToken);
 

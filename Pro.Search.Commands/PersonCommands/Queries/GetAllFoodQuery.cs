@@ -10,10 +10,13 @@ namespace Pro.Search.Commands.PersonCommands.Queries
         {
             this.Page = parans.PageNumber;
             this.PageSize = parans.PageSize;
+            this.FlagsValue = parans.flagsValue;
         }
 
         public int Page { get; set; }
 
         public int PageSize { get; set; }
+
+        public bool FlagsValue { get; set; }
     }
 }
