@@ -4,6 +4,6 @@
     {
         public int PageNumber { get; set; }
         
-        public decimal PageSize { get; set; }
+        public int PageSize { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace PessoasAPI.Controllers.V1
         [HttpGet]
         public async Task<IActionResult> ListarComida([FromQuery] PageAndFilteredRequestParams @params)
         {
-            var response = await mediator.Send(new GetAllFoodQuery(@params.PageNumber, @params.PageSize));
+            var response = await mediator.Send(new GetAllFoodQuery(@params));
             if (response == null) return NotFound();
             return Ok(response);
         }

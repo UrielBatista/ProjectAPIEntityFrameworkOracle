@@ -24,21 +24,13 @@ namespace Pro.Search.Commands.PersonCommands.Queries
 
         public async Task<FoodResponse> Handle(GetAllFoodQuery request, CancellationToken cancellationToken)
         {
-            var foodAllDb = await this.repository.FindAllAsyncFood(cancellationToken);
+            var allFoodsOrdened = await this.repository.FindAllAsyncFood(request.Page, request.PageSize, cancellationToken);
 
-           
-            var pageResult = request.PageSize;
-            var pageCount = Math.Ceiling(foodAllDb.Count() / pageResult);
-
-
-            var pagePickup = foodAllDb
-                .Skip((request.Page - 1) * (int)pageResult)
-                .Take((int)pageResult).ToList();
-
+            var pageCount = Math.Ceiling((double)allFoodsOrdened.Count() / (double)request.PageSize);
 
             var allFoods = new List<FoodAllInfoDto>();
 
-            foreach (var i in pagePickup)
+            foreach (var i in allFoodsOrdened)
             {
                 allFoods.Add(mapper.Map<Food, FoodAllInfoDto>(i));
             }
