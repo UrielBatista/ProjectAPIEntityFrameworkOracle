@@ -21,9 +21,9 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpGet]
-        public async Task<IActionResult> ListarComida([FromQuery] PageAndFilteredRequestParams @params)
+        public async Task<IActionResult> ListarComida([FromQuery] PageAndFilteredRequestParams parans)
         {
-            var response = await mediator.Send(new GetAllFoodQuery(@params));
+            var response = await mediator.Send(new GetAllFoodQuery(parans));
             if (response == null) return NotFound();
             return Ok(response);
         }

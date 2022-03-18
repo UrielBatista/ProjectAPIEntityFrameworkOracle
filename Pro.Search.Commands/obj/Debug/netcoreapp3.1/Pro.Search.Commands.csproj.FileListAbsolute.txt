@@ -29,6 +29,6 @@ C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Commands\obj\Debug\netcoreapp3.1\Pro.Search.Commands.AssemblyInfoInputs.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Commands\obj\Debug\netcoreapp3.1\Pro.Search.Commands.AssemblyInfo.cs
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Commands\obj\Debug\netcoreapp3.1\Pro.Search.Commands.csproj.CoreCompileInputs.cache
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Commands\obj\Debug\netcoreapp3.1\Pro.Search.Commands.csproj.CopyComplete
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Commands\obj\Debug\netcoreapp3.1\Pro.Search.Commands.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Commands\obj\Debug\netcoreapp3.1\Pro.Search.Commands.pdb
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.Commands\obj\Debug\netcoreapp3.1\Pro.Search.Commands.csproj.CopyComplete
