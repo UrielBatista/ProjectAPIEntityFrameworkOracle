@@ -28,10 +28,12 @@ namespace Pro.Search.Commands.PersonCommands
         {
             _ = request ?? throw new ArgumentNullException(nameof(request));
 
+            var key = GenerateKeyString(request.FoodAllInfoDto.ReferenciaIdPessoa);
+
             var validityIdFood = await repository.FindOneAsyncFood(request.FoodAllInfoDto.Id_Food, cancellationToken).ConfigureAwait(false);
 
             // Create Entity in Memory
-            var dataRedis = new FoodInMemory
+            var dataRedis = new FoodInMemory(key)
             {
                 Name_Food = request.FoodAllInfoDto.Nome,
                 Locale_Purcache_Food = request.FoodAllInfoDto.LocalDeVenda,
@@ -56,6 +58,12 @@ namespace Pro.Search.Commands.PersonCommands
             };
 
             return returnValidation;
+        }
+
+        private string GenerateKeyString(string id)
+        {
+            var data = id + "123";
+            return data;
         }
     }
 }

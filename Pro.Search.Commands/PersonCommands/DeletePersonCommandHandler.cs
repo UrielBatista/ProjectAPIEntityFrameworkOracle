@@ -11,18 +11,18 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.PersonCommands
 {
-    public class DeletePersonCommandHandler : IRequestHandler<DeletePersonCommand, List<Pessoas>>
+    public class DeletePersonCommandHandler : IRequestHandler<DeletePersonCommand, List<Persons>>
     {
         private readonly IContextDB _context;
-        private readonly IPessoasRepository repository;
+        private readonly IPersonsRepository repository;
 
-        public DeletePersonCommandHandler(IContextDB _context, IPessoasRepository repository)
+        public DeletePersonCommandHandler(IContextDB _context, IPersonsRepository repository)
         {
             this._context = _context;
             this.repository = repository;
         }
 
-        public async Task<List<Pessoas>> Handle(DeletePersonCommand request, CancellationToken cancellationToken)
+        public async Task<List<Persons>> Handle(DeletePersonCommand request, CancellationToken cancellationToken)
         {
             _ = request ?? throw new ArgumentNullException(nameof(request));
 

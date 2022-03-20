@@ -9,25 +9,25 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetAllPersonQueryHandler : IQueryHandler<GetAllPersonQuery, List<PessoasAllInfoDto>>
+    public class GetAllPersonQueryHandler : IQueryHandler<GetAllPersonQuery, List<PersonsAllInfoDto>>
     {
-        private readonly IPessoasRepository repository;
+        private readonly IPersonsRepository repository;
         private readonly IMapper mapper;
 
-        public GetAllPersonQueryHandler(IPessoasRepository repository, IMapper mapper)
+        public GetAllPersonQueryHandler(IPersonsRepository repository, IMapper mapper)
         {
             this.repository = repository;
             this.mapper = mapper;
         }
 
-        public async Task<List<PessoasAllInfoDto>> Handle(GetAllPersonQuery request, CancellationToken cancellationToken)
+        public async Task<List<PersonsAllInfoDto>> Handle(GetAllPersonQuery request, CancellationToken cancellationToken)
         {
             var personsAllDb = await this.repository.FindAllAsyncPerson(cancellationToken);
 
-            var data = new List<PessoasAllInfoDto>();
+            var data = new List<PersonsAllInfoDto>();
             foreach(var i in personsAllDb)
             {
-                data.Add(mapper.Map<Pessoas, PessoasAllInfoDto>(i));
+                data.Add(mapper.Map<Persons, PersonsAllInfoDto>(i));
             }
 
             return data;

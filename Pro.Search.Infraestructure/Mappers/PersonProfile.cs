@@ -10,10 +10,10 @@ namespace Pro.Search.Infraestructure.Mappers
         [ExcludeFromCodeCoverage]
         public PersonProfile()
         {
-            _ = this.CreateMap<Pessoas, PessoasInfoDto>();
-            _ = this.CreateMap<PessoasInfoDto, Pessoas>();
+            _ = this.CreateMap<Persons, PersonsInfoDto>();
+            _ = this.CreateMap<PersonsInfoDto, Persons>();
 
-            _ = this.CreateMap<Pessoas, PessoasAllInfoDto>();
+            _ = this.CreateMap<Persons, PersonsAllInfoDto>();
         }
     }
 }

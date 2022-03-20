@@ -8,12 +8,3 @@ C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\BuldBlocks.Dom
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\obj\Debug\netcoreapp3.1\BuldBlocks.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\obj\Debug\netcoreapp3.1\BuldBlocks.Domain.dll
 C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\obj\Debug\netcoreapp3.1\BuldBlocks.Domain.pdb
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\bin\Debug\netcoreapp3.1\BuldBlocks.Domain.deps.json
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\bin\Debug\netcoreapp3.1\BuldBlocks.Domain.dll
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\bin\Debug\netcoreapp3.1\BuldBlocks.Domain.pdb
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\obj\Debug\netcoreapp3.1\BuldBlocks.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\obj\Debug\netcoreapp3.1\BuldBlocks.Domain.AssemblyInfoInputs.cache
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\obj\Debug\netcoreapp3.1\BuldBlocks.Domain.AssemblyInfo.cs
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\obj\Debug\netcoreapp3.1\BuldBlocks.Domain.csproj.CoreCompileInputs.cache
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\obj\Debug\netcoreapp3.1\BuldBlocks.Domain.dll
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\BuldBlocks.Domain\obj\Debug\netcoreapp3.1\BuldBlocks.Domain.pdb

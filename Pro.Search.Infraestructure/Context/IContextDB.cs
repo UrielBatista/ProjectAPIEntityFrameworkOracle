@@ -9,7 +9,7 @@ namespace Pro.Search.Infraestructure.Context
     {
         DbSet<Food> Food { get; set; }
 
-        DbSet<Pessoas> Pessoas { get; set; }
+        DbSet<Persons> Pessoas { get; set; }
         
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 

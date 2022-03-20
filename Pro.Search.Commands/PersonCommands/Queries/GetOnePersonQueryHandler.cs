@@ -11,10 +11,10 @@ namespace Pro.Search.PersonCommands.Queries
 {
     public class GetOnePersonQueryHandler : IQueryHandler<GetOnePersonQuery, PersonDto>
     {
-        private readonly IPessoasRepository repository;
+        private readonly IPersonsRepository repository;
         private readonly IMapper mapper;
 
-        public GetOnePersonQueryHandler(IPessoasRepository repository , IMapper mapper)
+        public GetOnePersonQueryHandler(IPersonsRepository repository , IMapper mapper)
         {
             this.repository = repository;
             this.mapper = mapper;
@@ -25,10 +25,14 @@ namespace Pro.Search.PersonCommands.Queries
             _ = request ?? throw new ArgumentNullException(nameof(request));
             
             var personDb = await this.repository.FindOneAsyncPerson(request.Id_Pessoas, cancellationToken).ConfigureAwait(false);
+            
+            if (personDb == null) return null;
+            
             var personDto = new PersonDto
             {
-                Pessoas = this.mapper.Map<Pessoas, PessoasInfoDto>(personDb),
+                Pessoas = this.mapper.Map<Persons, PersonsInfoDto>(personDb),
             };
+
             return personDto;
         }
     }

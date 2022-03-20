@@ -16,11 +16,11 @@ namespace Pro.Search.Commands.PersonCommands
     {
         private readonly Random _random = new Random();
         private readonly IContextDB _context;
-        private readonly IPessoasRepository repository;
+        private readonly IPersonsRepository repository;
         private readonly IFoodRepository repositoryFood;
         private readonly IMapper mapper;
 
-        public SetPessoasPurcashCommandHandler(IContextDB _context, IFoodRepository repositoryFood, IPessoasRepository repository, IMapper mapper)
+        public SetPessoasPurcashCommandHandler(IContextDB _context, IFoodRepository repositoryFood, IPersonsRepository repository, IMapper mapper)
         {
             this._context = _context;
             this.repository = repository;
@@ -43,7 +43,7 @@ namespace Pro.Search.Commands.PersonCommands
             return dataPerson;
         }
 
-        private async Task<PessoasAllInfoDto> UpdatePessoasAsync(string id_pessoa, PessoasAllInfoDto pessoasAllInfoDto, CancellationToken cancellationToken)
+        private async Task<PersonsAllInfoDto> UpdatePessoasAsync(string id_pessoa, PersonsAllInfoDto pessoasAllInfoDto, CancellationToken cancellationToken)
         {
             _ = id_pessoa ?? throw new ArgumentException(nameof(id_pessoa)); 
             _ = pessoasAllInfoDto ?? throw new ArgumentException(nameof(pessoasAllInfoDto));

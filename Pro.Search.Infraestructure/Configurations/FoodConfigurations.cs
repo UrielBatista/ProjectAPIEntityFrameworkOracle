@@ -14,7 +14,7 @@ namespace Pro.Search.Infraestructure.Configurations
             builder.Property(p => p.Locale_Purcache_Food).HasColumnName("LOCALE_PURCACHE_FOOD").HasColumnType("VARCHAR2");
             builder.Property(p => p.Id_Pessoas_References).HasColumnName("ID_PESSOAS_REFERENCES").HasColumnType("VARCHAR2");
             builder.Property(p => p.Price_Food).HasColumnName("PRICE_FOOD").HasColumnType("NUMBER");
-            builder.HasOne<Pessoas>().WithMany(f => f.ComidaComprada).HasForeignKey(p => p.Id_Pessoas_References);
+            builder.HasOne<Persons>().WithMany(f => f.ComidaComprada).HasForeignKey(p => p.Id_Pessoas_References);
         }
     }
 }

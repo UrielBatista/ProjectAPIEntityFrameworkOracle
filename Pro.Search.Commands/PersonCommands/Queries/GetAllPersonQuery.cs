@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetAllPersonQuery : IQuery<List<PessoasAllInfoDto>>
+    public class GetAllPersonQuery : IQuery<List<PersonsAllInfoDto>>
     {
     }
 }

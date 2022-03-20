@@ -12,10 +12,10 @@ namespace Pro.Search.PersonCommands
     public class UpdatePersonCommandHandler : ICommandHandler<UpdatePersonCommand, PersonDto>
     {
         private readonly IContextDB _context;
-        private readonly IPessoasRepository repository;
+        private readonly IPersonsRepository repository;
         private readonly IMapper mapper;
 
-        public UpdatePersonCommandHandler(IContextDB _context, IPessoasRepository repository, IMapper mapper)
+        public UpdatePersonCommandHandler(IContextDB _context, IPersonsRepository repository, IMapper mapper)
         {
             this._context = _context;
             this.repository = repository;
@@ -28,7 +28,7 @@ namespace Pro.Search.PersonCommands
 
             var personDb = await this.repository.FindOneAsyncPerson(request.PersonDto.Pessoas.Id_Pessoas, cancellationToken).ConfigureAwait(false);
 
-            _ = personDb ?? throw new ArgumentNullException(paramName: nameof(personDb), message: "Argumento nao pode ser nulo");
+            if (personDb == null) return null;
 
             var dateTime = UpdatePersonCommandHandler.DefineLocalTime(request);
             personDb.Nome = request.PersonDto.Pessoas.Nome;

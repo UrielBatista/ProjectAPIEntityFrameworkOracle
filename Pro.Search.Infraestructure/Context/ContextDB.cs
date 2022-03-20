@@ -8,17 +8,17 @@ namespace Pro.Search.Infraestructure.Context
     {
         public ContextDB(DbContextOptions<ContextDB> options) : base(options)
         {
-            this.Pessoas = this.Set<Pessoas>();
+            this.Pessoas = this.Set<Persons>();
             this.Food = this.Set<Food>();
         }
 
-        public DbSet<Pessoas> Pessoas { get; set; }
+        public DbSet<Persons> Pessoas { get; set; }
 
         public DbSet<Food> Food { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PessoasConfigurations).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PersonsConfigurations).Assembly);
             base.OnModelCreating(modelBuilder);
         }
 

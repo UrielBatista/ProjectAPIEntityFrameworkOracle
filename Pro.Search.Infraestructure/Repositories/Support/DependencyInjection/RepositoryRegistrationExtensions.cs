@@ -6,7 +6,7 @@ namespace Pro.Search.Infraestructure.Repositories.Support.DependencyInjection
     {
         public static IServiceCollection AddSearchRepository(this IServiceCollection services)
         {
-            _ = services.AddTransient<IPessoasRepository, PessoasRepository>()
+            _ = services.AddTransient<IPersonsRepository, PersonsRepository>()
                 .AddTransient<IFoodRepository, FoodRepository>();
                     
             return services;

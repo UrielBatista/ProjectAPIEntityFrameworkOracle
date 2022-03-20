@@ -9,9 +9,9 @@ namespace Pro.Search.PersonCommands.Queries
 {
     public class GetMediaPersonQueryHandler : IQueryHandler<GetMediaPersonQuery, decimal>
     {
-        private readonly IPessoasRepository repository;
+        private readonly IPersonsRepository repository;
 
-        public GetMediaPersonQueryHandler(IPessoasRepository repository)
+        public GetMediaPersonQueryHandler(IPersonsRepository repository)
         {
             this.repository = repository;
         }

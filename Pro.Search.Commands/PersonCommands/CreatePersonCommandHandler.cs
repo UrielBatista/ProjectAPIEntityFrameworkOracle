@@ -13,10 +13,10 @@ namespace Pro.Search.PersonCommands
     public class CreatePersonCommandHandler : ICommandHandler<CreatePersonCommand, PersonDto>
     {
         private readonly IContextDB _context;
-        private readonly IPessoasRepository repository;
+        private readonly IPersonsRepository repository;
         private readonly IMapper mapper;
 
-        public CreatePersonCommandHandler(IContextDB _context, IMapper mapper, IPessoasRepository repository)
+        public CreatePersonCommandHandler(IContextDB _context, IMapper mapper, IPersonsRepository repository)
         {
             this._context = _context;
             this.mapper = mapper;
@@ -38,7 +38,7 @@ namespace Pro.Search.PersonCommands
                     Pessoas = request.PersonDto!.Pessoas,
                 };
 
-                _ = await _context.Pessoas.AddAsync(this.mapper.Map<PessoasInfoDto, Pessoas>(returnValidation.Pessoas), cancellationToken).ConfigureAwait(false);
+                _ = await _context.Pessoas.AddAsync(this.mapper.Map<PersonsInfoDto, Persons>(returnValidation.Pessoas), cancellationToken).ConfigureAwait(false);
                 _ = await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
                 return returnValidation;

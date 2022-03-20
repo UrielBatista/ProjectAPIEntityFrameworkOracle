@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Pro.Search.PersonDomains.PersonEngine.Entities
 {
     public class FoodInMemory
     {
         [Key]
-        public Guid Id_Food { get; private set; }
+        public string Id_Food { get; private set; }
 
         public string Name_Food { get; set; }
 
@@ -18,9 +15,9 @@ namespace Pro.Search.PersonDomains.PersonEngine.Entities
 
         public decimal Price_Food { get; set; }
 
-        public FoodInMemory()
+        public FoodInMemory(string id_food)
         {
-            Id_Food = Guid.NewGuid();
+            Id_Food = id_food;
         }
     }
 }

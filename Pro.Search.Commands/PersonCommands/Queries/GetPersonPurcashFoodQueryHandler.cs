@@ -12,10 +12,10 @@ namespace Pro.Search.Commands.PersonCommands.Queries
 {
     public class GetPersonPurcashFoodQueryHandler : IQueryHandler<GetPersonPurcashFoodQuery, PersonPurcashDto>
     {
-        private readonly IPessoasRepository repository;
+        private readonly IPersonsRepository repository;
         private readonly IMapper mapper;
 
-        public GetPersonPurcashFoodQueryHandler(IPessoasRepository repository, IMapper mapper)
+        public GetPersonPurcashFoodQueryHandler(IPersonsRepository repository, IMapper mapper)
         {
             this.repository = repository;
             this.mapper = mapper;
@@ -26,11 +26,12 @@ namespace Pro.Search.Commands.PersonCommands.Queries
             _ = request ?? throw new ArgumentNullException(nameof(request));
 
             var personPurcashFood = await this.repository.FindPersonPurcashFood(request.Id_Pessoas, cancellationToken).ConfigureAwait(false);
-            _ = personPurcashFood ?? throw new ArgumentNullException("Response of request in FindPersonPurcashFood not be null, id_pessoa invalid or not exist");
+
+            if (personPurcashFood == null) return null;
 
             var returnPersonPurcashFood = new PersonPurcashDto
             {
-                Pessoas = this.mapper.Map<Pessoas, PessoasAllInfoDto>(personPurcashFood),
+                Pessoas = this.mapper.Map<Persons, PersonsAllInfoDto>(personPurcashFood),
                 Food = this.mapper.Map<IEnumerable<Food>, IEnumerable<FoodAllInfoDto>>(personPurcashFood.ComidaComprada)
             };
 

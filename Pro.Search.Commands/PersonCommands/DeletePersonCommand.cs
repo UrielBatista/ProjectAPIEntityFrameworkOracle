@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Pro.Search.PersonCommands
 {
-    public class DeletePersonCommand : IRequest<List<Pessoas>>
+    public class DeletePersonCommand : IRequest<List<Persons>>
     {
         public DeletePersonCommand(string Id_Pessoas)
         {
