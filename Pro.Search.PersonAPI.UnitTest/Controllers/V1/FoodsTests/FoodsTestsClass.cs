@@ -79,7 +79,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.FoodsTests
             };
 
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<CreateFoodInMemoryCommand>(p => p.FoodAllInfoDto == result)).Returns(result);
+            _ = mediator.Send(Arg.Is<CreateFoodCommand>(p => p.FoodAllInfoDto == result)).Returns(result);
 
             // Assert
             var controller = CreateController(mediator);
@@ -151,7 +151,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.FoodsTests
             var response = await controller.UpdateFood(result).ConfigureAwait(false);
             using (new AssertionScope())
             {
-                _ = response.Should().BeOfType<BadRequestResult>();
+                _ = response.Should().BeOfType<NoContentResult>();
             }
         }
 
@@ -202,7 +202,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.FoodsTests
             var response = await controller.DeleteFood(id_food).ConfigureAwait(false);
             using (new AssertionScope())
             {
-                _ = response.Should().BeOfType<NotFoundResult>();
+                _ = response.Should().BeOfType<NoContentResult>();
             }
         }
     }

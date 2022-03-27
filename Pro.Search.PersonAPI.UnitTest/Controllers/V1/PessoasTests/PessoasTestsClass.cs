@@ -258,7 +258,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.PessoasTests
             var response = await controller.DeletePerson(id_pessoa).ConfigureAwait(false);
             using (new AssertionScope())
             {
-                _ = response.Should().BeOfType<NotFoundResult>();
+                _ = response.Should().BeOfType<NoContentResult>();
             }
         }
     }
