@@ -4938,19 +4938,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Uriel\\.nuget\\packages\\": {}
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\BuldBlocks.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\BuldBlocks.Domain.csproj",
       "projectName": "BuldBlocks.Domain",
-      "projectPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\BuldBlocks.Domain.csproj",
-      "packagesPath": "C:\\Users\\Uriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Uriel\\Documents\\projects\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\obj\\",
+      "projectPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\BuldBlocks.Domain.csproj",
+      "packagesPath": "C:\\Users\\uriel_batista\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Uriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\uriel_batista\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

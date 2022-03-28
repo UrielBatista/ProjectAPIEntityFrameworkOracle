@@ -51,6 +51,7 @@ namespace Pro.Search.Infraestructure.Repositories.Support
             var pessoa = await this.pessoas
                 .Join(this.foods, p => p.Id_Pessoas, f => f.Id_Pessoas_References, (pessoa, f) => new { pessoa, f })
                 .Select(a => a.pessoa).Distinct()
+                .OrderBy(a => a.Id_Pessoas)
                 .ToListAsync(cancellationToken)
                 .ConfigureAwait(false);
 
