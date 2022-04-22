@@ -18,14 +18,9 @@ namespace Pro.Search.PersonCommands.Queries
 
         public async Task<decimal> Handle(GetMediaPersonQuery request, CancellationToken cancellationToken)
         {
-            var personsAllDb = await this.repository.FindAllAsyncPerson(cancellationToken);
+            var personsAllDb = await this.repository.CalcMediaPersonNumber(cancellationToken);
 
-            List<decimal> mediaPerson = new List<decimal>();
-            foreach (var item in personsAllDb)
-            {
-                mediaPerson.Add(item.Pessoas_Calc_Number);
-            }
-            decimal total = mediaPerson.Sum();
+            decimal total = personsAllDb.Sum();
             total = total / personsAllDb.Count;
             return total;
         }

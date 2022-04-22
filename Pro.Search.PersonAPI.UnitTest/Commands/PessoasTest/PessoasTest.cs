@@ -50,13 +50,11 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             var request = new GetMediaPersonQuery();
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.FindAllAsyncPerson(CancellationToken.None).Returns(
-                new List<Persons>
+            _ = repository.CalcMediaPersonNumber(CancellationToken.None).Returns(
+                new List<decimal>
                 {
-                    new Persons
-                    {
-                        Id_Pessoas = "519",
-                    },
+                    11.2M,
+                    12.89M,
                 });
 
             // Assert

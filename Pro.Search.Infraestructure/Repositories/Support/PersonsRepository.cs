@@ -46,6 +46,21 @@ namespace Pro.Search.Infraestructure.Repositories.Support
             return pessoas;
         }
 
+        public async Task<List<decimal>> CalcMediaPersonNumber(CancellationToken cancellationToken)
+        {
+            return await CreateTask(cancellationToken);
+
+            async Task<List<decimal>> CreateTask(CancellationToken cancellationToken)
+            {
+                var allNumbersMediaPerson = await this.pessoas
+                    .Select(p => p.Pessoas_Calc_Number)
+                    .ToListAsync(cancellationToken)
+                    .ConfigureAwait(false);
+
+                return allNumbersMediaPerson;
+            }
+        }
+
         public async Task<List<Persons>> FindAsyncPessoaWithFood(CancellationToken cancellationToken)
         {
             var pessoa = await this.pessoas

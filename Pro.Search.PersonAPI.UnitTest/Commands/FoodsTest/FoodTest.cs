@@ -8,6 +8,7 @@ using Pro.Search.Commands.PersonCommands.Queries;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.Infraestructure.Repositories;
+using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System;
@@ -20,27 +21,37 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
     [TestClass]
     public class FoodTest
     {
-        //[TestMethod]
-        //public async Task HandleGetAllFoodQuery()
-        //{
-        //    // Prepare
-        //    var request = new GetAllFoodQuery();
+        [TestMethod]
+        public async Task HandleGetAllFoodQuery()
+        {
+            // Prepare
+            var requestData = new PageAndFilteredRequestParams
+            {
+                PageNumber = 1,
+                PageSize = 10,
+                flagsValue = true,
+            };
+            var request = new GetAllFoodQuery(requestData);
 
-        //    var repository = Substitute.For<IFoodRepository>();
-        //    _ = repository.FindAllAsyncFood(CancellationToken.None).Returns(
-        //        new List<Food>
-        //        {
-        //            new Food
-        //            {
-        //                Id_Food = "159753",
-        //            },
-        //        });
+            var repository = Substitute.For<IFoodRepository>();
+            _ = repository.FindAllAsyncFood(
+                page: requestData.PageNumber, 
+                pageSize: requestData.PageSize,
+                requestData.flagsValue, 
+                CancellationToken.None).Returns(
+                new List<Food>
+                {
+                    new Food
+                    {
+                        Id_Food = "159753",
+                    },
+                });
 
-        //    // Assert
-        //    var handler = QueryHandlerAllFood(repository);
-        //    var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-        //    _ = result.Should().BeOfType(typeof(List<FoodAllInfoDto>));
-        //}
+            // Assert
+            var handler = QueryHandlerAllFood(repository);
+            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
+            _ = result.Should().BeOfType(typeof(FoodResponse));
+        }
 
         [TestMethod]
         public async Task HandleCreateFoodCommand()
