@@ -7,6 +7,7 @@ using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace PessoasAPI.Controllers.V1
@@ -66,12 +67,13 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpDelete]
-        [ProducesResponseType(typeof(List<Food>), StatusCodes.Status202Accepted)]
+        [ProducesResponseType(typeof(IEnumerable<Food>), StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> DeleteFood([FromQuery] string id_food)
         {
             var response = await mediator.Send(new DeleteFoodCommand(id_food)).ConfigureAwait(false);
-            if (response.Count == 0) return NoContent();
+            var valueResponse = response.Any();
+            if (!valueResponse) return NoContent();
             return Ok(response);
         }
     }

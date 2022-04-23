@@ -11,7 +11,6 @@ C:\Users\Uriel\Documents\projects\ProjectAPIEntityFrameworkOracle\Pro.Search.Per
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PersonDomains\bin\Debug\netcoreapp3.1\Pro.Search.PersonDomains.deps.json
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PersonDomains\bin\Debug\netcoreapp3.1\Pro.Search.PersonDomains.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PersonDomains\bin\Debug\netcoreapp3.1\Pro.Search.PersonDomains.pdb
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PersonDomains\obj\Debug\netcoreapp3.1\Pro.Search.PersonDomains.csproj.AssemblyReference.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PersonDomains\obj\Debug\netcoreapp3.1\Pro.Search.PersonDomains.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PersonDomains\obj\Debug\netcoreapp3.1\Pro.Search.PersonDomains.AssemblyInfoInputs.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\Pro.Search.PersonDomains\obj\Debug\netcoreapp3.1\Pro.Search.PersonDomains.AssemblyInfo.cs

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands
 {
-    public class DeleteFoodCommandHandler : IRequestHandler<DeleteFoodCommand, List<Food>>
+    public class DeleteFoodCommandHandler : IRequestHandler<DeleteFoodCommand, IEnumerable<Food>>
     {
         private readonly IContextDB _context;
         private readonly IFoodRepository foodRepository;
@@ -20,7 +20,7 @@ namespace Pro.Search.Commands.PersonCommands
             this.foodRepository = foodRepository;
         }
 
-        public async Task<List<Food>> Handle(DeleteFoodCommand request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<Food>> Handle(DeleteFoodCommand request, CancellationToken cancellationToken)
         {
             _ = request ?? throw new ArgumentNullException(nameof(request));
 

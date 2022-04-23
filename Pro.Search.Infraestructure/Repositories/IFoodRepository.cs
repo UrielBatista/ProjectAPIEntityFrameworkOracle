@@ -16,6 +16,6 @@ namespace Pro.Search.Infraestructure.Repositories
         
         Task<Food> FindOneAsyncFood(string Id_Food, CancellationToken cancellationToken);
 
-        Task<List<Food>> FindListFoodReferenceToIDFood(string result, CancellationToken cancellationToken);
+        Task<IEnumerable<Food>> FindListFoodReferenceToIDFood(string result, CancellationToken cancellationToken);
     }
 }
