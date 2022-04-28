@@ -30,6 +30,16 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        [HttpGet("PersonsPurcash-list")]
+        [ProducesResponseType(typeof(PersonPurcashDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> ListPersonsPurcashFoods([FromQuery] string[] id_pessoa)
+        {
+            var response = await mediator.Send(new GetListPersonsPurcashFoodsQuery(id_pessoa));
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
+
         [HttpPatch]
         [ProducesResponseType(typeof(PersonPurcashDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

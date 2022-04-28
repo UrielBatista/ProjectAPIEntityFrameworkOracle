@@ -72,5 +72,16 @@ namespace Pro.Search.Infraestructure.Repositories.Support
 
             return pessoa;
         }
+
+        public async Task<IEnumerable<Persons>> FindListPersonsPurcashFoods(string[] Id_Pessoas, CancellationToken cancellationToken)
+        {
+            var personPurcashFood = await this.pessoas
+                .Include(i => i.ComidaComprada)
+                .Where(p => Id_Pessoas.Contains(p.Id_Pessoas))
+                .ToListAsync(cancellationToken)
+                .ConfigureAwait(false);
+
+            return personPurcashFood;
+        }
     }
 }
