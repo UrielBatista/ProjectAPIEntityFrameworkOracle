@@ -194,9 +194,8 @@ C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\PersonAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\PersonAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\staticwebassets\PersonAPI.StaticWebAssets.Manifest.cache
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\staticwebassets\PersonAPI.StaticWebAssets.xml
-C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\PersonAPI.styles.css
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\PersonAPI.RazorTargetAssemblyInfo.cache
+C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\PersonAPI.csproj.CopyComplete
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\PersonAPI.dll
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\PersonAPI.xml
 C:\Users\uriel_batista\Documents\Projetos_GitHub\ProjectAPIEntityFrameworkOracle\PersonAPI\obj\Debug\netcoreapp3.1\PersonAPI.pdb
