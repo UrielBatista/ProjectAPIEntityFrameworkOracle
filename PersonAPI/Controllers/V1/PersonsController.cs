@@ -32,7 +32,7 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
-        [HttpGet("ListPersonWithFood")]
+        [HttpGet("ListPersonRequestFood")]
         [ProducesResponseType(typeof(List<PersonsAllInfoDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ListPersonsWithFood()

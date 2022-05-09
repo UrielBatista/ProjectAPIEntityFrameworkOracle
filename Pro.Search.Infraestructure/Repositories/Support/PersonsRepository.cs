@@ -24,7 +24,7 @@ namespace Pro.Search.Infraestructure.Repositories.Support
         public async Task<Persons> FindPersonPurcashFood(string Id_Pessoas, CancellationToken cancellationToken)
         {
             var personPurcashFood = await this.pessoas
-                .Include(i => i.ComidaComprada)
+                .Include(i => i.ComidaComprada.OrderBy(x => x.Id_Food))
                 .FirstOrDefaultAsync(p => p.Id_Pessoas == Id_Pessoas, cancellationToken).ConfigureAwait(false);
 
             return personPurcashFood;
@@ -76,7 +76,7 @@ namespace Pro.Search.Infraestructure.Repositories.Support
         public async Task<IEnumerable<Persons>> FindListPersonsPurcashFoods(string[] Id_Pessoas, CancellationToken cancellationToken)
         {
             var personPurcashFood = await this.pessoas
-                .Include(i => i.ComidaComprada)
+                .Include(i => i.ComidaComprada.OrderBy(x => x.Id_Food))
                 .Where(p => Id_Pessoas.Contains(p.Id_Pessoas))
                 .ToListAsync(cancellationToken)
                 .ConfigureAwait(false);
