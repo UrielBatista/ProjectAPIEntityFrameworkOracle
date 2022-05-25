@@ -171,7 +171,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.PessoasTests
             var response = await controller.PostPersons(result).ConfigureAwait(false);
             using (new AssertionScope())
             {
-                _ = response.Should().BeOfType<BadRequestResult>();
+                _ = response.Should().BeOfType<BadRequestObjectResult>();
             }
         }
 
@@ -263,7 +263,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.PessoasTests
             var response = await controller.DeletePerson(id_pessoa).ConfigureAwait(false);
             using (new AssertionScope())
             {
-                _ = response.Should().BeOfType<NoContentResult>();
+                _ = response.Should().BeOfType<BadRequestObjectResult>();
             }
         }
     }

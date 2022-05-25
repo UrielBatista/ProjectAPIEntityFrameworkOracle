@@ -11,6 +11,7 @@ using Pro.Search.PersonCommands;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
+using Pro.Search.PersonDomains.PersonEngine.OneOf;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -143,7 +144,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             // Assert
             var handler = CreatePersonCommandHandlerData(Substitute.For<IContextDB>(), repository);
             var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            _ = result.Should().BeOfType(typeof(PersonDto));
+            _ = result.Value.Should().BeOfType<CreateOrUpdateResponses.Success>();
         }
 
         [TestMethod]
@@ -177,7 +178,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             // Assert
             var handler = UpdatePersonCommandHandlerData(Substitute.For<IContextDB>(), repository);
             var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            _ = result.Should().BeOfType(typeof(PersonDto));
+            _ = result.Value.Should().BeOfType<CreateOrUpdateResponses.Success>();
         }
 
         [TestMethod]
