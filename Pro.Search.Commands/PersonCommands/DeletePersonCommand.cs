@@ -1,10 +1,9 @@
 ﻿using MediatR;
-using Pro.Search.PersonDomains.PersonEngine.Entities;
-using System.Collections.Generic;
+using Pro.Search.PersonDomains.PersonEngine.OneOf;
 
 namespace Pro.Search.PersonCommands
 {
-    public class DeletePersonCommand : IRequest<List<Persons>>
+    public class DeletePersonCommand : IRequest<DeleteResponses>
     {
         public DeletePersonCommand(string Id_Pessoas)
         {

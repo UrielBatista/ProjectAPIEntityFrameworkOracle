@@ -1,9 +1,10 @@
 ﻿using BuldBlocks.Domain.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
+using Pro.Search.PersonDomains.PersonEngine.OneOf;
 
 namespace Pro.Search.PersonCommands
 {
-    public class CreatePersonCommand : ICommand<PersonDto>
+    public class CreatePersonCommand : ICommand<CreateOrUpdateResponses>
     {
         public CreatePersonCommand(PersonDto dto)
         {

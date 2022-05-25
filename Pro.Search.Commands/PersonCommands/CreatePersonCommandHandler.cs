@@ -4,13 +4,15 @@ using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
+using Pro.Search.PersonDomains.PersonEngine.OneOf;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using static Pro.Search.PersonDomains.PersonEngine.OneOf.CreateOrUpdateResponses;
 
 namespace Pro.Search.PersonCommands
 {
-    public class CreatePersonCommandHandler : ICommandHandler<CreatePersonCommand, PersonDto>
+    public class CreatePersonCommandHandler : ICommandHandler<CreatePersonCommand, CreateOrUpdateResponses>
     {
         private readonly IContextDB _context;
         private readonly IPersonsRepository repository;
@@ -23,7 +25,7 @@ namespace Pro.Search.PersonCommands
             this.repository = repository;
         }
 
-        public async Task<PersonDto> Handle(CreatePersonCommand request, CancellationToken cancellationToken)
+        public async Task<CreateOrUpdateResponses> Handle(CreatePersonCommand request, CancellationToken cancellationToken)
         {
             _ = request ?? throw new ArgumentNullException(nameof(request));
 
@@ -41,10 +43,10 @@ namespace Pro.Search.PersonCommands
                 _ = await _context.Pessoas.AddAsync(this.mapper.Map<PersonsInfoDto, Persons>(returnValidation.Pessoas), cancellationToken).ConfigureAwait(false);
                 _ = await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
-                return returnValidation;
+                return new Success(returnValidation);
             }
 
-            return null;
+            return new BadRequest($"Person with Id {request.PersonDto.Pessoas.Id_Pessoas} already exist in database, try create person with another Id!");
         }
 
         private async Task<bool> CheckPersonExist(CreatePersonCommand request, CancellationToken cancellationToken)

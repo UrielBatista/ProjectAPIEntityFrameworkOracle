@@ -66,8 +66,11 @@ namespace PessoasAPI.Controllers.V1
         public async Task<IActionResult> PostPersons([FromBody] PersonDto personDto)
         {
             var response = await mediator.Send(new CreatePersonCommand(personDto)).ConfigureAwait(false);
-            if (response == null) return BadRequest();
-            return Ok(response);
+
+            return response.Match<ActionResult>(
+                success => this.Ok(success.PersonDto),
+                notFound => this.NotFound(notFound.Message),
+                badRequest => this.BadRequest(badRequest.Message));
         }
 
         [HttpPut]
@@ -76,8 +79,11 @@ namespace PessoasAPI.Controllers.V1
         public async Task<IActionResult> UpdatePerson([FromBody] PersonDto command)
         {
             var response = await mediator.Send(new UpdatePersonCommand(command)).ConfigureAwait(false);
-            if (response == null) return NoContent();
-            return Ok(response);
+
+            return response.Match<ActionResult>(
+                success => this.Ok(success.PersonDto),
+                notFound => this.NotFound(notFound.Message),
+                badRequest => this.BadRequest(badRequest.Message));
         }
 
         [HttpDelete]
@@ -86,8 +92,10 @@ namespace PessoasAPI.Controllers.V1
         public async Task<IActionResult> DeletePerson([FromQuery] string id_pessoa)
         {
             var response = await mediator.Send(new DeletePersonCommand(id_pessoa)).ConfigureAwait(false);
-            if (response.Count == 0) return NoContent();
-            return Ok(response);
+            
+            return response.Match<ActionResult>(
+                success => this.Ok(success.Persons),
+                badRequest => this.BadRequest(badRequest.Message));
         }
     }
 }

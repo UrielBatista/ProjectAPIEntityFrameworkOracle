@@ -8,6 +8,7 @@ using Pro.Search.PersonCommands;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
+using Pro.Search.PersonDomains.PersonEngine.OneOf;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -140,9 +141,9 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.PessoasTests
                     DataHora = DateTime.Now
                 },
             };
-
+            var output = new CreateOrUpdateResponses.Success(result);
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<CreatePersonCommand>(x => x.PersonDto == result)).Returns(result);
+            _ = mediator.Send(Arg.Is<CreatePersonCommand>(x => x.PersonDto == result)).Returns(output);
 
             // Assert
             var controller = CreateController(mediator);
@@ -161,8 +162,9 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.PessoasTests
             {
             };
 
+            var output = new CreateOrUpdateResponses.BadRequest("Person already exists in database!");
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<CreatePersonCommand>(x => x.PersonDto == result)).Returns((PersonDto)default);
+            _ = mediator.Send(Arg.Is<CreatePersonCommand>(x => x.PersonDto == result)).Returns(output);
 
             // Assert
             var controller = CreateController(mediator);
@@ -189,8 +191,9 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.PessoasTests
                 },
             };
 
+            var output = new CreateOrUpdateResponses.Success(result);
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<UpdatePersonCommand>(x => x.PersonDto == result)).Returns(result);
+            _ = mediator.Send(Arg.Is<UpdatePersonCommand>(x => x.PersonDto == result)).Returns(output);
 
             // Assert
             var controller = CreateController(mediator);
@@ -229,8 +232,9 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.PessoasTests
                 },
             };
 
+            var output = new DeleteResponses.Success(results);
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<DeletePersonCommand>(x => x.Id_Pessoas == id_pessoa)).Returns(results);
+            _ = mediator.Send(Arg.Is<DeletePersonCommand>(x => x.Id_Pessoas == id_pessoa)).Returns(output);
 
             // Assert
             var controller = CreateController(mediator);
@@ -250,8 +254,9 @@ namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.PessoasTests
             {
             };
 
+            var output = new DeleteResponses.BadRequest("Data not Found in request!");
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<DeletePersonCommand>(x => x.Id_Pessoas == id_pessoa)).Returns(results);
+            _ = mediator.Send(Arg.Is<DeletePersonCommand>(x => x.Id_Pessoas == id_pessoa)).Returns(output);
 
             // Assert
             var controller = CreateController(mediator);
