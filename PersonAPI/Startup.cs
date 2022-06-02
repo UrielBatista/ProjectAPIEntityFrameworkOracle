@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,7 +27,9 @@ namespace PessoasAPI
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers()
+                .AddOData(option => option.Select());
+
             services.AddDbContext<IContextDB, ContextDB>(options => 
             options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
@@ -34,7 +37,7 @@ namespace PessoasAPI
             _ = services.AddApiVersioning(options =>
             {
                 options.ReportApiVersions = true;
-                options.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(2, 0);
+                options.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(3, 0);
                 options.AssumeDefaultVersionWhenUnspecified = true;
             });
 
