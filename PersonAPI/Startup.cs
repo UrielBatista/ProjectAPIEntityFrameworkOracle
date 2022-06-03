@@ -28,7 +28,13 @@ namespace PessoasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers()
-                .AddOData(option => option.Select());
+                .AddOData(option => 
+                {
+                    option.Select();
+                    option.Filter();
+                    option.SetMaxTop(5);
+                    option.SkipToken();
+                });
 
             services.AddDbContext<IContextDB, ContextDB>(options => 
             options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
