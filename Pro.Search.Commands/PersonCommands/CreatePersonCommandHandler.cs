@@ -14,11 +14,11 @@ namespace Pro.Search.PersonCommands
 {
     public class CreatePersonCommandHandler : ICommandHandler<CreatePersonCommand, CreateOrUpdateResponses>
     {
-        private readonly IContextDB _context;
+        private readonly ISystemDBContext _context;
         private readonly IPersonsRepository repository;
         private readonly IMapper mapper;
 
-        public CreatePersonCommandHandler(IContextDB _context, IMapper mapper, IPersonsRepository repository)
+        public CreatePersonCommandHandler(ISystemDBContext _context, IMapper mapper, IPersonsRepository repository)
         {
             this._context = _context;
             this.mapper = mapper;

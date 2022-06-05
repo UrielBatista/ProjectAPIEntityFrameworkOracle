@@ -142,7 +142,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 });
 
             // Assert
-            var handler = CreatePersonCommandHandlerData(Substitute.For<IContextDB>(), repository);
+            var handler = CreatePersonCommandHandlerData(Substitute.For<ISystemDBContext>(), repository);
             var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
             _ = result.Value.Should().BeOfType<CreateOrUpdateResponses.Success>();
         }
@@ -176,7 +176,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 });
 
             // Assert
-            var handler = UpdatePersonCommandHandlerData(Substitute.For<IContextDB>(), repository);
+            var handler = UpdatePersonCommandHandlerData(Substitute.For<ISystemDBContext>(), repository);
             var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
             _ = result.Value.Should().BeOfType<CreateOrUpdateResponses.Success>();
         }
@@ -218,7 +218,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 );
 
             // Assert
-            var handler = DeleteHandlePersonCommand(Substitute.For<IContextDB>(), repository);
+            var handler = DeleteHandlePersonCommand(Substitute.For<ISystemDBContext>(), repository);
             var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
             using (new AssertionScope())
             {
@@ -293,27 +293,27 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             return new GetPersonPurcashFoodQueryHandler(repository, mapper);
         }
 
-        protected static CreatePersonCommandHandler CreatePersonCommandHandlerData(IContextDB _context, IPersonsRepository repository)
+        protected static CreatePersonCommandHandler CreatePersonCommandHandlerData(ISystemDBContext _context, IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
-            return new CreatePersonCommandHandler(Substitute.For<IContextDB>(), mapper, Substitute.For<IPersonsRepository>());
+            return new CreatePersonCommandHandler(Substitute.For<ISystemDBContext>(), mapper, Substitute.For<IPersonsRepository>());
         }
 
-        protected static UpdatePersonCommandHandler UpdatePersonCommandHandlerData(IContextDB _context, IPersonsRepository repository)
+        protected static UpdatePersonCommandHandler UpdatePersonCommandHandlerData(ISystemDBContext _context, IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
             return new UpdatePersonCommandHandler(
-                Substitute.For<IContextDB>(), 
+                Substitute.For<ISystemDBContext>(), 
                 repository ?? Substitute.For<IPersonsRepository>(), 
                 mapper);
         }
 
-        protected static DeletePersonCommandHandler DeleteHandlePersonCommand(IContextDB context, IPersonsRepository repository)
+        protected static DeletePersonCommandHandler DeleteHandlePersonCommand(ISystemDBContext context, IPersonsRepository repository)
         {
             return new DeletePersonCommandHandler(
-                context ?? Substitute.For<IContextDB>(), 
+                context ?? Substitute.For<ISystemDBContext>(), 
                 repository ?? Substitute.For<IPersonsRepository>());
         }
 
@@ -333,19 +333,19 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
         }
 
         protected static CreatePersonCommandHandler CreateHandlerSetPersonExceptionGetOnePessoa(
-            IContextDB context = default, IMapper mapper = default, IPersonsRepository repository = default)
+            ISystemDBContext context = default, IMapper mapper = default, IPersonsRepository repository = default)
         {
             return new CreatePersonCommandHandler(
-                context ?? Substitute.For<IContextDB>(), 
+                context ?? Substitute.For<ISystemDBContext>(), 
                 mapper, 
                 repository ?? Substitute.For<IPersonsRepository>());
         }
         
         protected static UpdatePersonCommandHandler CreateHandlerUpdatePersonExceptionGetOnePessoa(
-            IContextDB context = default, IMapper mapper = default, IPersonsRepository repository = default)
+            ISystemDBContext context = default, IMapper mapper = default, IPersonsRepository repository = default)
         {
             return new UpdatePersonCommandHandler(
-                context ?? Substitute.For<IContextDB>(),
+                context ?? Substitute.For<ISystemDBContext>(),
                 repository ?? Substitute.For<IPersonsRepository>(), 
                 mapper);
         }

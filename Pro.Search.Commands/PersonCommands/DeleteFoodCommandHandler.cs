@@ -11,10 +11,10 @@ namespace Pro.Search.Commands.PersonCommands
 {
     public class DeleteFoodCommandHandler : IRequestHandler<DeleteFoodCommand, IEnumerable<Food>>
     {
-        private readonly IContextDB _context;
+        private readonly ISystemDBContext _context;
         private readonly IFoodRepository foodRepository;
 
-        public DeleteFoodCommandHandler(IContextDB _context, IFoodRepository foodRepository)
+        public DeleteFoodCommandHandler(ISystemDBContext _context, IFoodRepository foodRepository)
         {
             this._context = _context;
             this.foodRepository = foodRepository;
