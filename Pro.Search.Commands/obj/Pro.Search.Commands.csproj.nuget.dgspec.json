@@ -50,7 +50,7 @@
             },
             "ServiceStack.Redis": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.1.0, )"
             }
           },
           "imports": [
@@ -128,7 +128,7 @@
             },
             "ServiceStack.Redis": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.1.0, )"
             }
           },
           "imports": [
@@ -208,7 +208,7 @@
             },
             "ServiceStack.Redis": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.1.0, )"
             }
           },
           "imports": [
@@ -270,9 +270,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "GraphQL": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "GraphQL.EntityFrameworkCore.DynamicLinq": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.5, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -288,7 +296,7 @@
             },
             "ServiceStack.Redis": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.1.0, )"
             }
           },
           "imports": [

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Infraestructure.Context
 {
-    public interface IContextDB
+    public interface ISystemDBContext
     {
         DbSet<Food> Food { get; set; }
 

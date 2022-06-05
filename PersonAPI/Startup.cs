@@ -1,3 +1,8 @@
+using GraphQL;
+using GraphQL.MicrosoftDI;
+using GraphQL.Server;
+using GraphQL.SystemTextJson;
+using GraphQL.Types;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,12 +12,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PersonAPI.GraphQL;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
 using Pro.Search.Infraestructure;
 using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure.GraphQL.Queries;
+using Pro.Search.Infraestructure.GraphQL.Schemas;
 using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
+using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
 
 namespace PessoasAPI
 {
@@ -27,18 +36,18 @@ namespace PessoasAPI
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers()
+            _ = services.AddControllers()
                 .AddOData(option => 
                 {
-                    option.Select();
-                    option.Filter();
-                    option.SetMaxTop(5);
-                    option.SkipToken();
+                    _ = option.Select();
+                    _ = option.Filter();
+                    _ = option.SetMaxTop(5);
+                    _ = option.SkipToken();
                 });
 
-            services.AddDbContext<IContextDB, ContextDB>(options => 
-            options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
-            services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
+            _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options => 
+                    options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
             _ = services.AddApiVersioning(options =>
             {
@@ -54,11 +63,20 @@ namespace PessoasAPI
             });
             _ = services.AddCustomSwagger();
             
-            services.AddSearchInfraestruture();
-            services.AddMediatR(
-                typeof(GetOnePersonQuery).Assembly);
+            _ = services.AddSearchInfraestruture();
+            
+            _ = services.AddMediatR(
+                    typeof(GetOnePersonQuery).Assembly);
 
-            services.AddSwaggerGen();
+            _ = services.AddScoped<PersonSchema>();
+            _ = services.AddGraphQL(b => b
+                .AddHttpMiddleware<PersonSchema>()
+                .AddUserContextBuilder(httpContext => new GraphQLUserContext { User = httpContext.User })
+                .AddSystemTextJson()
+                .AddErrorInfoProvider(opt => opt.ExposeExceptionStackTrace = true)
+                .AddGraphTypes(typeof(PersonsTypes).Assembly));
+
+            _ = services.AddSwaggerGen();
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
@@ -66,18 +84,21 @@ namespace PessoasAPI
             
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                _ = app.UseDeveloperExceptionPage();
             }
 
-            _ = app.UseCustomSwagger(provider);
-
             _ = app.UseGlobalExceptionHandler();
-            app.UseRouting();
-            app.UseAuthorization();
-            app.UseEndpoints(endpoints =>
+            _ = app.UseRouting();
+            _ = app.UseAuthorization();
+            _ = app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            _ = app.UseGraphQL<PersonSchema>();
+            _ = app.UseGraphQLPlayground();
+
+            _ = app.UseCustomSwagger(provider);
         }
     }
 }

@@ -65,6 +65,95 @@
           "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
+      "GraphQL/5.3.0": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL-Parser": "8.0.0",
+          "Microsoft.CSharp": "4.7.0",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "lib/net6.0/GraphQL.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/GraphQL.dll": {}
+        }
+      },
+      "GraphQL-Parser/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/GraphQLParser.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/GraphQLParser.dll": {}
+        }
+      },
+      "GraphQL.EntityFrameworkCore.DynamicLinq/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL": "2.4.0",
+          "Microsoft.EntityFrameworkCore.DynamicLinq": "1.0.19"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.EntityFrameworkCore.DynamicLinq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.EntityFrameworkCore.DynamicLinq.dll": {}
+        }
+      },
+      "GraphQL.MicrosoftDI/5.3.0": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL": "5.3.0",
+          "Microsoft.Extensions.Options": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.MicrosoftDI.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.MicrosoftDI.dll": {}
+        }
+      },
+      "GraphQL.Server.Transports.AspNetCore/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL": "5.3.0"
+        },
+        "compile": {
+          "lib/net6.0/GraphQL.Server.Transports.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/GraphQL.Server.Transports.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "GraphQL.Server.Ui.Playground/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/GraphQL.Server.Ui.Playground.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/GraphQL.Server.Ui.Playground.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "GraphQL.SystemTextJson/5.3.0": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL": "5.3.0",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/net6.0/GraphQL.SystemTextJson.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/GraphQL.SystemTextJson.dll": {}
+        }
+      },
       "MediatR/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -156,11 +245,11 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore/6.0.4": {
+      "Microsoft.EntityFrameworkCore/6.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.4",
-          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.4",
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.5",
+          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.5",
           "Microsoft.Extensions.Caching.Memory": "6.0.1",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "Microsoft.Extensions.Logging": "6.0.0",
@@ -174,7 +263,7 @@
           "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/6.0.4": {
+      "Microsoft.EntityFrameworkCore.Abstractions/6.0.5": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
@@ -183,13 +272,26 @@
           "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.4": {
+      "Microsoft.EntityFrameworkCore.Analyzers/6.0.5": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.DynamicLinq/1.0.19": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "System.Linq.Dynamic.Core": "1.0.19"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/Microsoft.EntityFrameworkCore.DynamicLinq.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Microsoft.EntityFrameworkCore.DynamicLinq.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/6.0.3": {
@@ -481,11 +583,11 @@
           "lib/net6.0/RestSharp.dll": {}
         }
       },
-      "ServiceStack.Common/6.0.2": {
+      "ServiceStack.Common/6.1.0": {
         "type": "package",
         "dependencies": {
-          "ServiceStack.Interfaces": "6.0.2",
-          "ServiceStack.Text": "6.0.2",
+          "ServiceStack.Interfaces": "6.1.0",
+          "ServiceStack.Text": "6.1.0",
           "System.Memory": "4.5.4"
         },
         "compile": {
@@ -495,7 +597,7 @@
           "lib/net6.0/ServiceStack.Common.dll": {}
         }
       },
-      "ServiceStack.Interfaces/6.0.2": {
+      "ServiceStack.Interfaces/6.1.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/ServiceStack.Interfaces.dll": {}
@@ -504,10 +606,12 @@
           "lib/net6.0/ServiceStack.Interfaces.dll": {}
         }
       },
-      "ServiceStack.Redis/6.0.2": {
+      "ServiceStack.Redis/6.1.0": {
         "type": "package",
         "dependencies": {
-          "ServiceStack.Common": "6.0.2"
+          "ServiceStack.Common": "6.1.0",
+          "ServiceStack.Interfaces": "6.1.0",
+          "ServiceStack.Text": "6.1.0"
         },
         "compile": {
           "lib/net6.0/ServiceStack.Redis.dll": {}
@@ -516,7 +620,7 @@
           "lib/net6.0/ServiceStack.Redis.dll": {}
         }
       },
-      "ServiceStack.Text/6.0.2": {
+      "ServiceStack.Text/6.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -595,7 +699,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.ComponentModel.Annotations/4.6.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
@@ -749,6 +853,15 @@
           }
         }
       },
+      "System.Linq.Dynamic.Core/1.0.19": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {}
+        }
+      },
       "System.Memory/4.5.4": {
         "type": "package",
         "compile": {
@@ -850,7 +963,7 @@
           "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/4.6.0": {
+      "System.Text.Json/4.7.2": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
@@ -882,7 +995,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "MediatR": "10.0.1",
-          "ServiceStack.Redis": "6.0.2"
+          "ServiceStack.Redis": "6.1.0"
         },
         "compile": {
           "bin/placeholder/BuldBlocks.Domain.dll": {}
@@ -899,7 +1012,7 @@
           "BuldBlocks.Domain": "1.0.0",
           "Pro.Search.Infraestructure": "1.0.0",
           "Pro.Search.PersonDomains": "1.0.0",
-          "ServiceStack.Redis": "6.0.2"
+          "ServiceStack.Redis": "6.1.0"
         },
         "compile": {
           "bin/placeholder/Pro.Search.Commands.dll": {}
@@ -916,7 +1029,7 @@
           "FluentValidation.AspNetCore": "11.0.0",
           "Oracle.EntityFrameworkCore": "6.21.61",
           "Pro.Search.PersonDomains": "1.0.0",
-          "ServiceStack.Redis": "6.0.2"
+          "ServiceStack.Redis": "6.1.0"
         },
         "compile": {
           "bin/placeholder/Pro.Search.Infraestructure.dll": {}
@@ -929,11 +1042,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.4",
+          "GraphQL": "5.3.0",
+          "GraphQL.EntityFrameworkCore.DynamicLinq": "1.0.2",
+          "Microsoft.EntityFrameworkCore": "6.0.5",
           "Newtonsoft.Json": "13.0.1",
           "OneOf": "3.0.216",
           "RestSharp": "107.3.0",
-          "ServiceStack.Redis": "6.0.2"
+          "ServiceStack.Redis": "6.1.0"
         },
         "compile": {
           "bin/placeholder/Pro.Search.PersonDomains.dll": {}
@@ -1029,6 +1144,132 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "GraphQL/5.3.0": {
+      "sha512": "UiipSykSkS7wkdv/5TUvqHStunDTIFbjEO9w/jlz2AQi6W8huQBvQsOzUCKSJItnQnJJOxtr+/ptMzbLwbax/g==",
+      "type": "package",
+      "path": "graphql/5.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "graphql.5.3.0.nupkg.sha512",
+        "graphql.nuspec",
+        "lib/net6.0/GraphQL.dll",
+        "lib/net6.0/GraphQL.xml",
+        "lib/netstandard2.0/GraphQL.dll",
+        "lib/netstandard2.0/GraphQL.xml",
+        "lib/netstandard2.1/GraphQL.dll",
+        "lib/netstandard2.1/GraphQL.xml",
+        "logo.64x64.png"
+      ]
+    },
+    "GraphQL-Parser/8.0.0": {
+      "sha512": "kbAEvS0u240X3eN+5zv2eEVKlYTUhW3OB3JmGvI0ZTfiikyQYbWpt3t25C3aykolZUo2WCxewveeCNP4BHXR9A==",
+      "type": "package",
+      "path": "graphql-parser/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "graphql-parser.8.0.0.nupkg.sha512",
+        "graphql-parser.nuspec",
+        "lib/net6.0/GraphQLParser.dll",
+        "lib/net6.0/GraphQLParser.xml",
+        "lib/netstandard2.0/GraphQLParser.dll",
+        "lib/netstandard2.0/GraphQLParser.xml",
+        "lib/netstandard2.1/GraphQLParser.dll",
+        "lib/netstandard2.1/GraphQLParser.xml",
+        "logo.64x64.png"
+      ]
+    },
+    "GraphQL.EntityFrameworkCore.DynamicLinq/1.0.2": {
+      "sha512": "wmyZKzfxqwxzUUq6XcLIHqjWXSACtQhBllTEPR/pxiFMBan33tX89bcSVafVhkco71aJ3JChNAJ1FhUTredJ5g==",
+      "type": "package",
+      "path": "graphql.entityframeworkcore.dynamiclinq/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "graphql.entityframeworkcore.dynamiclinq.1.0.2.nupkg.sha512",
+        "graphql.entityframeworkcore.dynamiclinq.nuspec",
+        "lib/net451/GraphQL.EntityFrameworkCore.DynamicLinq.dll",
+        "lib/netstandard1.3/GraphQL.EntityFrameworkCore.DynamicLinq.dll",
+        "lib/netstandard2.0/GraphQL.EntityFrameworkCore.DynamicLinq.dll"
+      ]
+    },
+    "GraphQL.MicrosoftDI/5.3.0": {
+      "sha512": "paHMOUKEJkmdt9rgq0aWPmvwZrP/2wn7urFdSE//CQn4DRMN+KxkPPs6MBNij60WLpJym3+u8PUnI7tjrtxkSA==",
+      "type": "package",
+      "path": "graphql.microsoftdi/5.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "graphql.microsoftdi.5.3.0.nupkg.sha512",
+        "graphql.microsoftdi.nuspec",
+        "lib/netstandard2.0/GraphQL.MicrosoftDI.dll",
+        "lib/netstandard2.0/GraphQL.MicrosoftDI.xml",
+        "logo.64x64.png"
+      ]
+    },
+    "GraphQL.Server.Transports.AspNetCore/6.1.0": {
+      "sha512": "d3vW1dVLPG+tHLVlxJG7Nk6HDievqZ9X41BRv6Qa7m/3BYsmnb0NyuabTUp5qGIyN4DmGxVnXlsn1izJI4+W6Q==",
+      "type": "package",
+      "path": "graphql.server.transports.aspnetcore/6.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "graphql.server.transports.aspnetcore.6.1.0.nupkg.sha512",
+        "graphql.server.transports.aspnetcore.nuspec",
+        "lib/net5.0/GraphQL.Server.Transports.AspNetCore.dll",
+        "lib/net5.0/GraphQL.Server.Transports.AspNetCore.xml",
+        "lib/net6.0/GraphQL.Server.Transports.AspNetCore.dll",
+        "lib/net6.0/GraphQL.Server.Transports.AspNetCore.xml",
+        "lib/netcoreapp3.1/GraphQL.Server.Transports.AspNetCore.dll",
+        "lib/netcoreapp3.1/GraphQL.Server.Transports.AspNetCore.xml",
+        "logo.64x64.png"
+      ]
+    },
+    "GraphQL.Server.Ui.Playground/6.1.0": {
+      "sha512": "GZ7RiW3oxjKrvhpHSsxTv+a7L4Va1JI3+Yp0a+mrDpAyObw4eNC+9dELOUwf45I3EejD4rNUWaJzTAZi2eZqAA==",
+      "type": "package",
+      "path": "graphql.server.ui.playground/6.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "graphql.server.ui.playground.6.1.0.nupkg.sha512",
+        "graphql.server.ui.playground.nuspec",
+        "lib/net5.0/GraphQL.Server.Ui.Playground.dll",
+        "lib/net5.0/GraphQL.Server.Ui.Playground.xml",
+        "lib/net6.0/GraphQL.Server.Ui.Playground.dll",
+        "lib/net6.0/GraphQL.Server.Ui.Playground.xml",
+        "lib/netcoreapp3.1/GraphQL.Server.Ui.Playground.dll",
+        "lib/netcoreapp3.1/GraphQL.Server.Ui.Playground.xml",
+        "logo.64x64.png"
+      ]
+    },
+    "GraphQL.SystemTextJson/5.3.0": {
+      "sha512": "fa3U3jTc0HH9KmYBV30alZq0CnAmYQYgXeNR7s9hI74EulDjOVrH+ast9GyQsJURu8mVQ0SeWh41V1aVziaMHQ==",
+      "type": "package",
+      "path": "graphql.systemtextjson/5.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "graphql.systemtextjson.5.3.0.nupkg.sha512",
+        "graphql.systemtextjson.nuspec",
+        "lib/net5.0/GraphQL.SystemTextJson.dll",
+        "lib/net5.0/GraphQL.SystemTextJson.xml",
+        "lib/net6.0/GraphQL.SystemTextJson.dll",
+        "lib/net6.0/GraphQL.SystemTextJson.xml",
+        "lib/netstandard2.0/GraphQL.SystemTextJson.dll",
+        "lib/netstandard2.0/GraphQL.SystemTextJson.xml",
+        "lib/netstandard2.1/GraphQL.SystemTextJson.dll",
+        "lib/netstandard2.1/GraphQL.SystemTextJson.xml",
+        "logo.64x64.png"
       ]
     },
     "MediatR/10.0.1": {
@@ -1221,46 +1462,76 @@
         "version.txt"
       ]
     },
-    "Microsoft.EntityFrameworkCore/6.0.4": {
-      "sha512": "gTh3SJsF5WNjEmG32kYc3U4tjeTIv55QOrwHAJcF/xtrIVMteDHMArGC35N0dw86WFY0v8yFkKYKOIOln4jkfQ==",
+    "Microsoft.EntityFrameworkCore/6.0.5": {
+      "sha512": "hP5J3EvpVdZmCn1D3ovedphvZrIn3OXZaBZfEnCkSCqqbqAu6xzwbNqwRkik0y4R6zOOf4eLh1riwjy4eAUlZA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/6.0.4",
+      "path": "microsoft.entityframeworkcore/6.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.EntityFrameworkCore.dll",
         "lib/net6.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
+        "microsoft.entityframeworkcore.6.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/6.0.4": {
-      "sha512": "jycTQF0FUJp10cGWBmtsyFhQNeISU9CltDRKCaNiX4QRSEFzgRgaFN4vAFK0T+G5etmXugyddijE4NWCGtgznQ==",
+    "Microsoft.EntityFrameworkCore.Abstractions/6.0.5": {
+      "sha512": "Q3/fKW6XCTfnDk4fYP2BJZi84cD2SuCPkP3A3QqxvCQcXbX90bfSLzVIsoMXzigHGJgZUJ+Un7QodT5Nvk0+Eg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/6.0.4",
+      "path": "microsoft.entityframeworkcore.abstractions/6.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.6.0.4.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.4": {
-      "sha512": "t12WodVyGGP2CuLo7R1qwcawHY5zlg+GiQzvkceZpsjcFJVyTFFBFDPg1isBtzurLzWsl+G3z5fVXeic90mPxg==",
+    "Microsoft.EntityFrameworkCore.Analyzers/6.0.5": {
+      "sha512": "QUeDIhs+O+MoDEc3k60mNyVDbwyDURCqZQlZoKShuZUcSfXSrDMbHKuFSxBIDNQBt092qSjfnwf7w0Ua/IB3Zw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/6.0.4",
+      "path": "microsoft.entityframeworkcore.analyzers/6.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.analyzers.6.0.4.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.6.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.DynamicLinq/1.0.19": {
+      "sha512": "ifHuvwExbTt2Ph3zdi2Yuo+foQ6b70Xgjim27Vj4lanA/40p3cR0s1fWh53S8oTHRmhz+gtzrGob3NoVGClNGw==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.dynamiclinq/1.0.19",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/Microsoft.EntityFrameworkCore.DynamicLinq.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.DynamicLinq.pdb",
+        "lib/net451/Microsoft.EntityFrameworkCore.DynamicLinq.xml",
+        "lib/net46/Microsoft.EntityFrameworkCore.DynamicLinq.dll",
+        "lib/net46/Microsoft.EntityFrameworkCore.DynamicLinq.pdb",
+        "lib/net46/Microsoft.EntityFrameworkCore.DynamicLinq.xml",
+        "lib/netcoreapp2.1/Microsoft.EntityFrameworkCore.DynamicLinq.dll",
+        "lib/netcoreapp2.1/Microsoft.EntityFrameworkCore.DynamicLinq.pdb",
+        "lib/netcoreapp2.1/Microsoft.EntityFrameworkCore.DynamicLinq.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.DynamicLinq.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.DynamicLinq.pdb",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.DynamicLinq.xml",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.DynamicLinq.dll",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.DynamicLinq.pdb",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.DynamicLinq.xml",
+        "lib/uap10.0/Microsoft.EntityFrameworkCore.DynamicLinq.dll",
+        "lib/uap10.0/Microsoft.EntityFrameworkCore.DynamicLinq.pdb",
+        "lib/uap10.0/Microsoft.EntityFrameworkCore.DynamicLinq.pri",
+        "lib/uap10.0/Microsoft.EntityFrameworkCore.DynamicLinq.xml",
+        "microsoft.entityframeworkcore.dynamiclinq.1.0.19.nupkg.sha512",
+        "microsoft.entityframeworkcore.dynamiclinq.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/6.0.3": {
@@ -1752,10 +2023,10 @@
         "restsharp.png"
       ]
     },
-    "ServiceStack.Common/6.0.2": {
-      "sha512": "Z5SplFr7n2G0WJ0qP4PrlhgeTpFBdkQ3DLzfTCrYrBwdIi4JYJtd2PDDv4HeWLs2KnlI9sdOkeNWVnVeZ5n28w==",
+    "ServiceStack.Common/6.1.0": {
+      "sha512": "GHT46Vt4OmwXlgM8XIVbLyWajKvLwvNdCl29GL3Jy/ZQP0+35bm8ZPcrpsBivWig4D5i0+6fOkWcdruJGbu1NQ==",
       "type": "package",
-      "path": "servicestack.common/6.0.2",
+      "path": "servicestack.common/6.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1765,28 +2036,28 @@
         "lib/net6.0/ServiceStack.Common.xml",
         "lib/netstandard2.0/ServiceStack.Common.dll",
         "lib/netstandard2.0/ServiceStack.Common.xml",
-        "servicestack.common.6.0.2.nupkg.sha512",
+        "servicestack.common.6.1.0.nupkg.sha512",
         "servicestack.common.nuspec"
       ]
     },
-    "ServiceStack.Interfaces/6.0.2": {
-      "sha512": "/mzW9OkScvuPHPQ0wLrRNJ7px7cjvc6t28ICZckH82eHGRnJkZDDZflUHybpwO5mxiHwNs1kxGgJlWkehX352A==",
+    "ServiceStack.Interfaces/6.1.0": {
+      "sha512": "U5EPMxVzMFXoJxpwUUyD+AZ7CLCAlA6WwWF9+MlQIf3EYjzXAK+ApYwcBEc6ekj6mBxmlE5/w0Q8uGlPXFLiNw==",
       "type": "package",
-      "path": "servicestack.interfaces/6.0.2",
+      "path": "servicestack.interfaces/6.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net472/ServiceStack.Interfaces.dll",
         "lib/net6.0/ServiceStack.Interfaces.dll",
         "lib/netstandard2.0/ServiceStack.Interfaces.dll",
-        "servicestack.interfaces.6.0.2.nupkg.sha512",
+        "servicestack.interfaces.6.1.0.nupkg.sha512",
         "servicestack.interfaces.nuspec"
       ]
     },
-    "ServiceStack.Redis/6.0.2": {
-      "sha512": "12N7mHJ/L/stkBUQhKu595wskHf+G/hjxyWYrN1JhEby1g0lsGTF/Kn+4WTC76i4eIFi0qK6JYVfmvEovSSV4A==",
+    "ServiceStack.Redis/6.1.0": {
+      "sha512": "5RZ0ZjzUe2LwVnOT4LsnPujsrIrrDyraiLdkLhQtZQNl6OXnzHPts/34PgL9rbzk8wPkqqzwzdz/sUfA2M3OGg==",
       "type": "package",
-      "path": "servicestack.redis/6.0.2",
+      "path": "servicestack.redis/6.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1798,14 +2069,14 @@
         "lib/netstandard2.0/ServiceStack.Redis.xml",
         "lib/netstandard2.1/ServiceStack.Redis.dll",
         "lib/netstandard2.1/ServiceStack.Redis.xml",
-        "servicestack.redis.6.0.2.nupkg.sha512",
+        "servicestack.redis.6.1.0.nupkg.sha512",
         "servicestack.redis.nuspec"
       ]
     },
-    "ServiceStack.Text/6.0.2": {
-      "sha512": "KLt0Pgjv3wpFvtB3gzoqWNwoY+ToJW+rG4oIMY4Zk9dcbxsDC9sI0L4IPVI/b2ct/8iIw2ke5VHJvNfgjwf92w==",
+    "ServiceStack.Text/6.1.0": {
+      "sha512": "nR9Gf/Z0XEStB4X/+u/tNyGnyXsTAvoLxau4qtjy83pRklBB1QZ2J/2YKTeMQ7xfV8gCnBPLJAfGi5AZmIQ5+A==",
       "type": "package",
-      "path": "servicestack.text/6.0.2",
+      "path": "servicestack.text/6.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1815,7 +2086,7 @@
         "lib/net6.0/ServiceStack.Text.xml",
         "lib/netstandard2.0/ServiceStack.Text.dll",
         "lib/netstandard2.0/ServiceStack.Text.xml",
-        "servicestack.text.6.0.2.nupkg.sha512",
+        "servicestack.text.6.1.0.nupkg.sha512",
         "servicestack.text.nuspec"
       ]
     },
@@ -1923,10 +2194,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.ComponentModel.Annotations/4.6.0": {
-      "sha512": "pOd+UhZ3X8xfwKDlgAzowUJNjp8VYVmOHZm++vCd0kq1HZ0zK3mNo2yRXjYgv7Ik/Xi43fmJfND2PLEsQSALCg==",
+    "System.ComponentModel.Annotations/4.7.0": {
+      "sha512": "0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
       "type": "package",
-      "path": "system.componentmodel.annotations/4.6.0",
+      "path": "system.componentmodel.annotations/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2006,7 +2277,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.4.6.0.nupkg.sha512",
+        "system.componentmodel.annotations.4.7.0.nupkg.sha512",
         "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -2226,6 +2497,42 @@
         "system.io.filesystem.accesscontrol.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Linq.Dynamic.Core/1.0.19": {
+      "sha512": "GFYslLz/1ZZ0+gbqYED2zlD0H95BIK4hOpIcEEEfTDDXAcKE5vpXQQseOGduNVjcJZOF3Wx+4npa2EjdFpuDgA==",
+      "type": "package",
+      "path": "system.linq.dynamic.core/1.0.19",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/System.Linq.Dynamic.Core.dll",
+        "lib/net35/System.Linq.Dynamic.Core.pdb",
+        "lib/net35/System.Linq.Dynamic.Core.xml",
+        "lib/net40/System.Linq.Dynamic.Core.dll",
+        "lib/net40/System.Linq.Dynamic.Core.pdb",
+        "lib/net40/System.Linq.Dynamic.Core.xml",
+        "lib/net45/System.Linq.Dynamic.Core.dll",
+        "lib/net45/System.Linq.Dynamic.Core.pdb",
+        "lib/net45/System.Linq.Dynamic.Core.xml",
+        "lib/net46/System.Linq.Dynamic.Core.dll",
+        "lib/net46/System.Linq.Dynamic.Core.pdb",
+        "lib/net46/System.Linq.Dynamic.Core.xml",
+        "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll",
+        "lib/netcoreapp2.1/System.Linq.Dynamic.Core.pdb",
+        "lib/netcoreapp2.1/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.pdb",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.pdb",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.xml",
+        "lib/uap10.0/System.Linq.Dynamic.Core.dll",
+        "lib/uap10.0/System.Linq.Dynamic.Core.pdb",
+        "lib/uap10.0/System.Linq.Dynamic.Core.pri",
+        "lib/uap10.0/System.Linq.Dynamic.Core.xml",
+        "system.linq.dynamic.core.1.0.19.nupkg.sha512",
+        "system.linq.dynamic.core.nuspec"
       ]
     },
     "System.Memory/4.5.4": {
@@ -2448,13 +2755,14 @@
         "version.txt"
       ]
     },
-    "System.Text.Json/4.6.0": {
-      "sha512": "4F8Xe+JIkVoDJ8hDAZ7HqLkjctN/6WItJIzQaifBwClC7wmoLSda/Sv2i6i1kycqDb3hWF4JCVbpAweyOKHEUA==",
+    "System.Text.Json/4.7.2": {
+      "sha512": "TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
       "type": "package",
-      "path": "system.text.json/4.6.0",
+      "path": "system.text.json/4.7.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/System.Text.Json.dll",
@@ -2463,7 +2771,7 @@
         "lib/netcoreapp3.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.4.6.0.nupkg.sha512",
+        "system.text.json.4.7.2.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -2516,6 +2824,11 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
+      "GraphQL >= 5.3.0",
+      "GraphQL.MicrosoftDI >= 5.3.0",
+      "GraphQL.Server.Transports.AspNetCore >= 6.1.0",
+      "GraphQL.Server.Ui.Playground >= 6.1.0",
+      "GraphQL.SystemTextJson >= 5.3.0",
       "MediatR >= 10.0.1",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.1",
       "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer >= 5.0.0",
@@ -2523,7 +2836,7 @@
       "Pro.Search.Commands >= 1.0.0",
       "Pro.Search.Infraestructure >= 1.0.0",
       "Pro.Search.PersonDomains >= 1.0.0",
-      "ServiceStack.Redis >= 6.0.2",
+      "ServiceStack.Redis >= 6.1.0",
       "Swashbuckle.AspNetCore >= 6.3.1"
     ]
   },
@@ -2585,6 +2898,26 @@
             "target": "Package",
             "version": "[11.0.0, )"
           },
+          "GraphQL": {
+            "target": "Package",
+            "version": "[5.3.0, )"
+          },
+          "GraphQL.MicrosoftDI": {
+            "target": "Package",
+            "version": "[5.3.0, )"
+          },
+          "GraphQL.Server.Transports.AspNetCore": {
+            "target": "Package",
+            "version": "[6.1.0, )"
+          },
+          "GraphQL.Server.Ui.Playground": {
+            "target": "Package",
+            "version": "[6.1.0, )"
+          },
+          "GraphQL.SystemTextJson": {
+            "target": "Package",
+            "version": "[5.3.0, )"
+          },
           "MediatR": {
             "target": "Package",
             "version": "[10.0.1, )"
@@ -2603,7 +2936,7 @@
           },
           "ServiceStack.Redis": {
             "target": "Package",
-            "version": "[6.0.2, )"
+            "version": "[6.1.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

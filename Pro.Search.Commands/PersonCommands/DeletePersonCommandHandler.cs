@@ -12,10 +12,10 @@ namespace Pro.Search.PersonCommands
 {
     public class DeletePersonCommandHandler : IRequestHandler<DeletePersonCommand, DeleteResponses>
     {
-        private readonly IContextDB _context;
+        private readonly ISystemDBContext _context;
         private readonly IPersonsRepository repository;
 
-        public DeletePersonCommandHandler(IContextDB _context, IPersonsRepository repository)
+        public DeletePersonCommandHandler(ISystemDBContext _context, IPersonsRepository repository)
         {
             this._context = _context;
             this.repository = repository;
