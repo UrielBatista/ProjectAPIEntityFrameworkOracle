@@ -41,9 +41,6 @@ namespace PersonAPI.Controllers.V3
             var response = await mediator
                 .Send(new ApplyTokenQuerySearhInDatabase(request));
 
-            // var refreshToken = TokenService.GenerateRefreshToken();
-            // TokenService.SaveRefreshToken(user.Username, refreshToken);
-
             return response.Match<ActionResult>(
                 success => this.Ok(success.TokenResponseDto),
                 notFound => this.NotFound(notFound.Message));

@@ -5,8 +5,10 @@ using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using Pro.Search.PersonDomains.PersonEngine.OneOf;
 using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,6 +19,7 @@ namespace Pro.Search.Commands.PersonCommands.Queries
     public class ApplyTokenQuerySearhInDatabaseHandler : IQueryHandler<ApplyTokenQuerySearhInDatabase, TokenRequestResponses>
     {
         private readonly IUserRepository repository;
+        private static List<(string, string)> _refreshTokens = new();
 
         public ApplyTokenQuerySearhInDatabaseHandler(IUserRepository repository)
         {
@@ -31,6 +34,8 @@ namespace Pro.Search.Commands.PersonCommands.Queries
                 return new NotFound($"Not contain user {request.Username} in Database!");
 
             var token = GenerateToken(user);
+            var refreshToken = GenerateRefreshToken();
+            SaveRefreshToken(user.Username, refreshToken);
             var result = new TokenResponseDto
             {
                 Username = user.Username,
@@ -38,6 +43,19 @@ namespace Pro.Search.Commands.PersonCommands.Queries
             };
 
             return new Success(result);
+        }
+
+        public static void SaveRefreshToken(string username, string refreshToken)
+        {
+            _refreshTokens.Add(new(username, refreshToken));
+        }
+
+        public static string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[32];
+            using var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+            return Convert.ToBase64String(randomNumber);
         }
 
         private string GenerateToken(UserEntity user)
