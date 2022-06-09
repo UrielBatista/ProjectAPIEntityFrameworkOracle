@@ -12,6 +12,7 @@
     <PackageReference Include="OneOf" Version="3.0.216" />
     <PackageReference Include="RestSharp" Version="107.3.0" />
     <PackageReference Include="ServiceStack.Redis" Version="6.1.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.19.0" />
   </ItemGroup>
 
 </Project>

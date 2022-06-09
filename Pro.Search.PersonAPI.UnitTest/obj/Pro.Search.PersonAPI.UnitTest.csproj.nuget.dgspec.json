@@ -250,6 +250,10 @@
             "ServiceStack.Redis": {
               "target": "Package",
               "version": "[6.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.19.0, )"
             }
           },
           "imports": [
@@ -519,6 +523,10 @@
             "ServiceStack.Redis": {
               "target": "Package",
               "version": "[6.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.19.0, )"
             }
           },
           "imports": [

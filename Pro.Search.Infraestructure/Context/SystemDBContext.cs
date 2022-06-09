@@ -11,11 +11,14 @@ namespace Pro.Search.Infraestructure.Context
         {
             this.Pessoas = this.Set<Persons>();
             this.Food = this.Set<Food>();
+            this.Users = this.Set<UserEntity>();
         }
 
         public DbSet<Persons> Pessoas { get; set; }
 
         public DbSet<Food> Food { get; set; }
+
+        public DbSet<UserEntity> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +27,7 @@ namespace Pro.Search.Infraestructure.Context
                 _ = modelBuilder.HasDefaultSchema("SYSTEM");
                 _ = modelBuilder.ApplyConfiguration(new PersonsConfigurations());
                 _ = modelBuilder.ApplyConfiguration(new FoodConfigurations());
+                _ = modelBuilder.ApplyConfiguration(new UserConfigurations());
                 base.OnModelCreating(modelBuilder);
             }
             else
