@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
+using Pro.Search.Commands.PersonCommands.Queries;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using System.Collections.Generic;
@@ -31,6 +32,18 @@ namespace PersonAPI.Controllers.V3
             var response = await mediator.Send(new GetAllPersonQuery());
             if (response == null) return NotFound();
             return Ok(response);
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public async Task<ActionResult<dynamic>> Authenticate([FromBody] TokenLoginRequestDto request)
+        {
+            var response = await mediator
+                .Send(new ApplyTokenQuerySearhInDatabase(request));
+
+            return response.Match<ActionResult>(
+                success => this.Ok(success.TokenResponseDto),
+                notFound => this.NotFound(notFound.Message));
         }
     }
 }

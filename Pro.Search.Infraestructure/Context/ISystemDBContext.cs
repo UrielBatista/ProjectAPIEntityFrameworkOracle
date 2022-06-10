@@ -10,6 +10,8 @@ namespace Pro.Search.Infraestructure.Context
         DbSet<Food> Food { get; set; }
 
         DbSet<Persons> Pessoas { get; set; }
+
+        DbSet<UserEntity> Users { get; set; }
         
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 
