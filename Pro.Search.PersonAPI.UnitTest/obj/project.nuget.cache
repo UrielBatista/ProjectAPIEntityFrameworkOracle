@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FGjnyYFHPBJ1iEKniRs/ppLzh8XOVfXr0furKa1dU4c6QvABhWeLJ/bj9DPP5+KyPAmCyRWnYMi97agTcwigug==",
+  "dgSpecHash": "C65Myhd2VPeg/praFo1tz40h4opJRcQREwfLYNybP5i3nsVnJbK8Qx1VlpsCK3XOjn5W0Z9hfJpTqGpJQhk0fQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonAPI.UnitTest\\Pro.Search.PersonAPI.UnitTest.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.5\\microsoft.aspnetcore.authentication.jwtbearer.6.0.5.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnetcore.odata\\8.0.10\\microsoft.aspnetcore.odata.8.0.10.nupkg.sha512",
@@ -47,6 +48,8 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.19.0\\microsoft.identitymodel.abstractions.6.19.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.19.0\\microsoft.identitymodel.jsonwebtokens.6.19.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.identitymodel.logging\\6.19.0\\microsoft.identitymodel.logging.6.19.0.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.19.0\\microsoft.identitymodel.tokens.6.19.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.net.test.sdk\\17.1.0\\microsoft.net.test.sdk.17.1.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\microsoft.netcore.platforms.5.0.4.nupkg.sha512",

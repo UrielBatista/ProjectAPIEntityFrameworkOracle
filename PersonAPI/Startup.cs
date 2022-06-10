@@ -1,9 +1,11 @@
+using BuldBlocks.Domain.Commons;
 using GraphQL;
 using GraphQL.MicrosoftDI;
 using GraphQL.Server;
 using GraphQL.SystemTextJson;
 using GraphQL.Types;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
@@ -12,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using PersonAPI.GraphQL;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
@@ -22,6 +25,7 @@ using Pro.Search.Infraestructure.GraphQL.Schemas;
 using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
+using System.Text;
 
 namespace PessoasAPI
 {
@@ -37,6 +41,8 @@ namespace PessoasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             _ = services.AddControllers()
+                
+                // OData configuration controller
                 .AddOData(option => 
                 {
                     _ = option.Select();
@@ -45,10 +51,32 @@ namespace PessoasAPI
                     _ = option.SkipToken();
                 });
 
+            // Database Connector
             _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options => 
                     options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
+            // Authorization dependency injection
+            var key = Encoding.ASCII.GetBytes(Settings.Secret);
+            _ = services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+             .AddJwtBearer(x =>
+             {
+                 x.RequireHttpsMetadata = false;
+                 x.SaveToken = true;
+                 x.TokenValidationParameters = new TokenValidationParameters
+                 {
+                     ValidateIssuerSigningKey = true,
+                     IssuerSigningKey = new SymmetricSecurityKey(key),
+                     ValidateIssuer = false,
+                     ValidateAudience = false
+                 };
+             });
+
+            // Versioning API dependency injection
             _ = services.AddApiVersioning(options =>
             {
                 options.ReportApiVersions = true;
@@ -68,6 +96,7 @@ namespace PessoasAPI
             _ = services.AddMediatR(
                     typeof(GetOnePersonQuery).Assembly);
 
+            // GraphQL dependency injection
             _ = services.AddScoped<PersonSchema>();
             _ = services.AddGraphQL(b => b
                 .AddHttpMiddleware<PersonSchema>()
@@ -89,7 +118,10 @@ namespace PessoasAPI
 
             _ = app.UseGlobalExceptionHandler();
             _ = app.UseRouting();
+
+            _ = app.UseAuthentication();
             _ = app.UseAuthorization();
+
             _ = app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

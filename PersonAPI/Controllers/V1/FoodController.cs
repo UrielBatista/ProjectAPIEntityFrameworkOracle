@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pro.Search.Commands.PersonCommands;
@@ -35,6 +36,7 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpPost]
+        [Authorize]
         [Route("/persistence")]
         [ProducesResponseType(typeof(FoodAllInfoDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -46,6 +48,7 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpPost]
+        [Authorize]
         [Route("/inMemory")]
         [ProducesResponseType(typeof(FoodAllInfoDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -57,6 +60,7 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpPut]
+        [Authorize]
         [ProducesResponseType(typeof(FoodAllInfoDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> UpdateFood([FromBody] FoodAllInfoDto foodAllInfoDto)
@@ -67,6 +71,7 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpDelete]
+        [Authorize]
         [ProducesResponseType(typeof(IEnumerable<Food>), StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> DeleteFood([FromQuery] string id_food)

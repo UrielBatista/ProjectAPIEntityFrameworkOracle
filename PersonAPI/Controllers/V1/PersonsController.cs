@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pro.Search.PersonCommands;
@@ -61,6 +62,7 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpPost]
+        [Authorize]
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> PostPersons([FromBody] PersonDto personDto)
@@ -74,6 +76,7 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpPut]
+        [Authorize]
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> UpdatePerson([FromBody] PersonDto command)
@@ -87,6 +90,7 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpDelete]
+        [Authorize]
         [ProducesResponseType(typeof(List<Persons>), StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> DeletePerson([FromQuery] string id_pessoa)

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pro.Search.Commands.PersonCommands;
@@ -41,6 +42,7 @@ namespace PessoasAPI.Controllers.V1
         }
 
         [HttpPatch]
+        [Authorize(Roles = "admin")]
         [ProducesResponseType(typeof(PersonPurcashDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> PersonsPurcashedFood(string id_pessoa, [FromBody] PersonPurcashDto personPurcashDto)

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
@@ -40,6 +41,23 @@ namespace PessoasAPI.Swagger
 
                 options.SwaggerDoc(apiVersionDescription.GroupName, openApiInfo);
             }
+
+            var securityScheme = new OpenApiSecurityScheme
+            {
+                BearerFormat = "JWT",
+                Description = "Enter JWT Bearer token **_only_**",
+                In = ParameterLocation.Header,
+                Name = "JWT Authentication",
+                Reference = new OpenApiReference
+                {
+                    Id = JwtBearerDefaults.AuthenticationScheme,
+                    Type = ReferenceType.SecurityScheme,
+                },
+                Scheme = "bearer",
+                Type = SecuritySchemeType.Http,
+            };
+            options.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
+            options.AddSecurityRequirement(new OpenApiSecurityRequirement { { securityScheme, Array.Empty<string>() } });
 
             var filePath = Path.Combine(AppContext.BaseDirectory, "PersonAPI.xml");
             options.IncludeXmlComments(filePath);
