@@ -11,7 +11,7 @@ namespace Pro.Search.Consumer
                 cfg.ReceiveEndpoint("receiver-new-person", e =>
                 {
                     e.Consumer<PersonCreatedConsumer>();
-                    e.PrefetchCount = 11;
+                    e.PrefetchCount = 10;
                 });
 
             });
