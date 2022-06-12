@@ -7,6 +7,9 @@ Projeto tem como princípio emular um mini sistema de cadastro e pedido de comid
  - OracleDB/PL-SQL
  - .NET Core
  - Entity Framework
+ - GraphQL
+ - OData Request
+ - RabbitMQ
  - MediaTR
  - AutoMapper
  - FluentValidation
@@ -22,6 +25,10 @@ localhost:port/swagger/index.html
 ### Publicamente:
 ```bash
 base_url:port/swagger/index.html
+```
+### Rodar o RabbitMQ via Docker:
+```bash
+docker run --platform linux/arm64 -p 15672:15672 -p 5672:5672 masstransit/rabbitmq
 ```
 ## Testes
 Esse projeto conta com uma cobertura atual de testes unitários de 55%, segue screenshot como exemplo:
