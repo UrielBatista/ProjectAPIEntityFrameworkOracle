@@ -54,6 +54,7 @@ namespace Pro.Search.PersonCommands
                     Id_Pessoas = request.PersonDto.Pessoas.Id_Pessoas,
                     Nome = request.PersonDto.Pessoas.Nome,
                     Sobrenome = request.PersonDto.Pessoas.Sobrenome,
+                    Email = request.PersonDto.Pessoas.Email,
                     Pessoas_Calc_Number = request.PersonDto.Pessoas.Pessoas_Calc_Number,
                     DataHora = request.PersonDto.Pessoas.DataHora,
                 });

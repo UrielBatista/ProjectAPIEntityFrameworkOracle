@@ -17,7 +17,7 @@ namespace Pro.Search.Consumer
             });
             busControl.Start();
 
-            Console.WriteLine("Waiting for messages...");
+            Console.WriteLine("...Waiting for messages...");
 
             while (true) ;
         }

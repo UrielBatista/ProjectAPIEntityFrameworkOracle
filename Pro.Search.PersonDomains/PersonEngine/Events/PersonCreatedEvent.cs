@@ -10,6 +10,8 @@ namespace Pro.Search.PersonDomains.PersonEngine.Events
 
         string Sobrenome { get; }
 
+        string Email { get; }
+
         decimal Pessoas_Calc_Number { get; }
 
         DateTime DataHora { get; }
