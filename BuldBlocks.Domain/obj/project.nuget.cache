@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "Zjjx2Mjw2a3azrVe4Du2zxRjTwbKa2Y+nsRCdQab4bnTxYH6DVJD0r8oQBlILzXnZxKMbPEB7AJaWNPey1Wi9w==",
+  "dgSpecHash": "u/jBjUiXFVfXDO8c9eoNktLWg+3MHtCrzASLAPU2U+IJBR+d6/W6ZjrueZLPra5GzN0M6hWC5ixjnbUtoD6RYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\uriba\\OneDrive\\Documentos\\Projects\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\BuldBlocks.Domain.csproj",
+  "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\BuldBlocks.Domain\\BuldBlocks.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\uriba\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
-    "C:\\Users\\uriba\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\uriba\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\uriba\\.nuget\\packages\\servicestack.common\\6.1.0\\servicestack.common.6.1.0.nupkg.sha512",
-    "C:\\Users\\uriba\\.nuget\\packages\\servicestack.interfaces\\6.1.0\\servicestack.interfaces.6.1.0.nupkg.sha512",
-    "C:\\Users\\uriba\\.nuget\\packages\\servicestack.redis\\6.1.0\\servicestack.redis.6.1.0.nupkg.sha512",
-    "C:\\Users\\uriba\\.nuget\\packages\\servicestack.text\\6.1.0\\servicestack.text.6.1.0.nupkg.sha512",
-    "C:\\Users\\uriba\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512"
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\servicestack.common\\6.1.0\\servicestack.common.6.1.0.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\servicestack.interfaces\\6.1.0\\servicestack.interfaces.6.1.0.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\servicestack.redis\\6.1.0\\servicestack.redis.6.1.0.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\servicestack.text\\6.1.0\\servicestack.text.6.1.0.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

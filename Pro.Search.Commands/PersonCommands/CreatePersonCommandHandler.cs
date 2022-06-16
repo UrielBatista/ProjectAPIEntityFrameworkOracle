@@ -8,6 +8,7 @@ using Pro.Search.PersonDomains.PersonEngine.Entities;
 using Pro.Search.PersonDomains.PersonEngine.Events;
 using Pro.Search.PersonDomains.PersonEngine.OneOf;
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using static Pro.Search.PersonDomains.PersonEngine.OneOf.CreateOrUpdateResponses;
@@ -39,7 +40,7 @@ namespace Pro.Search.PersonCommands
 
             CreatePersonCommandHandler.DefineLocalTime(request);
 
-            if (validationPerson)
+            if (!validationPerson.Id_Pessoas.Any())
             {
                 var returnValidation = new PersonDto
                 {
@@ -62,15 +63,17 @@ namespace Pro.Search.PersonCommands
                 return new Success(returnValidation);
             }
 
+            if (validationPerson.Email == request.PersonDto.Pessoas.Email)
+                return new BadRequest($"Person with Email {request.PersonDto.Pessoas.Email} already cadastred, try create person with another Email!");
+
             return new BadRequest($"Person with Id {request.PersonDto.Pessoas.Id_Pessoas} already exist in database, try create person with another Id!");
         }
 
-        private async Task<bool> CheckPersonExist(CreatePersonCommand request, CancellationToken cancellationToken)
+        private async Task<Persons> CheckPersonExist(CreatePersonCommand request, CancellationToken cancellationToken)
         {
             var personDb = await this.repository.FindOneAsyncPerson(request.PersonDto.Pessoas.Id_Pessoas, cancellationToken).ConfigureAwait(false);
-            if (personDb == null) return true;
-            return false;
-
+            if (personDb == null) return new Persons();
+            return personDb;
         }
 
         private static void DefineLocalTime(CreatePersonCommand request)

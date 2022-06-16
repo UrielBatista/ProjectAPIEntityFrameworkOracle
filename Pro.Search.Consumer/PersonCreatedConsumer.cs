@@ -15,7 +15,7 @@ namespace Pro.Search.Consumer
             Console.WriteLine($"Sending email to user: [{id}] - {name} | {email}");
 
             var psi = new ProcessStartInfo();
-            psi.FileName = "C:\\PythonInstaller\\python.exe";
+            psi.FileName = "C:\\PythonInstaller\\Python310\\python.exe";
             var script = "C:\\Python_Sending_Email\\Sending_Email.py";
 
             var message = email;
