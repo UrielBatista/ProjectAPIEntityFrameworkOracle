@@ -23,7 +23,7 @@ namespace Pro.Search.PersonCommands
         private readonly IPublishEndpoint publish;
 
         public CreatePersonCommandHandler(
-            ISystemDBContext _context, 
+            ISystemDBContext _context,
             IMapper mapper, IPersonsRepository repository, IPublishEndpoint publish)
         {
             this._context = _context;
@@ -40,7 +40,7 @@ namespace Pro.Search.PersonCommands
 
             CreatePersonCommandHandler.DefineLocalTime(request);
 
-            if (!validationPerson.Id_Pessoas.Any())
+            if (string.IsNullOrEmpty(validationPerson.Id_Pessoas) || !validationPerson.Id_Pessoas.Any())
             {
                 var returnValidation = new PersonDto
                 {
