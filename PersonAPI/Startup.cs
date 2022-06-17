@@ -56,6 +56,9 @@ namespace PessoasAPI
                     options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
+            //MassTransit Dependency injection
+            services.AddMassTransitExtension(Configuration);
+            
             // Authorization dependency injection
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
             _ = services.AddAuthentication(x =>

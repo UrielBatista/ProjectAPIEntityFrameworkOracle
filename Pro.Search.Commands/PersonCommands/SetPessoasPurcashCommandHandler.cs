@@ -52,6 +52,7 @@ namespace Pro.Search.Commands.PersonCommands
             
             personDb.Nome = pessoasAllInfoDto.Nome != null ? pessoasAllInfoDto.Nome : personDb.Nome;
             personDb.Sobrenome = pessoasAllInfoDto.Sobrenome != null ? pessoasAllInfoDto.Sobrenome : personDb.Sobrenome;
+            personDb.Email = pessoasAllInfoDto.Email != null ? pessoasAllInfoDto.Email : personDb.Email;
             personDb.Pessoas_Calc_Number = pessoasAllInfoDto.Pessoas_Calc_Number != 0 ? pessoasAllInfoDto.Pessoas_Calc_Number : personDb.Pessoas_Calc_Number;
             personDb.DataHora = DateTime.Now.ToString() != null ? DateTime.Now : personDb.DataHora;
             await _context.SaveChangesAsync();
