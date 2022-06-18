@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "Flurl": {
+              "target": "Package",
+              "version": "[3.0.6, )"
+            },
             "Oracle.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.21.61, )"

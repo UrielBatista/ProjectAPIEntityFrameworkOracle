@@ -92,9 +92,10 @@ namespace PessoasAPI
                 options.GroupNameFormat = "'v'VVV";
                 options.SubstituteApiVersionInUrl = true;
             });
+
             _ = services.AddCustomSwagger();
             
-            _ = services.AddSearchInfraestruture();
+            _ = services.AddSearchInfraestruture(Configuration);
             
             _ = services.AddMediatR(
                     typeof(GetOnePersonQuery).Assembly);

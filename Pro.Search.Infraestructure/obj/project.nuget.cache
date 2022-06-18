@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yUZZUzrEKLNVCwybRvdsIItefohj5qVuH1FS3SvObNSY3NcajO17kVx2fMkzoUyY6qe44hgkhiItgMyLdZsa5g==",
+  "dgSpecHash": "WuIOV0bxdDS08HLLfYUwdNTRwdQyp+qfe1ezu66ajd7nImHqjhhgHxW9oy9wN3cyRRoiV3BFWMs5nA2IDiloxw==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Infraestructure\\Pro.Search.Infraestructure.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation\\11.0.0\\fluentvalidation.11.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.0.0\\fluentvalidation.aspnetcore.11.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.0\\fluentvalidation.dependencyinjectionextensions.11.0.0.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\flurl\\3.0.6\\flurl.3.0.6.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql\\5.3.0\\graphql.5.3.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql-parser\\8.0.0\\graphql-parser.8.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql.entityframeworkcore.dynamiclinq\\1.0.2\\graphql.entityframeworkcore.dynamiclinq.1.0.2.nupkg.sha512",

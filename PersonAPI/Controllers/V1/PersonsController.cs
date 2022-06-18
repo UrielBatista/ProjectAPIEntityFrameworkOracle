@@ -61,6 +61,14 @@ namespace PessoasAPI.Controllers.V1
             return Ok(data);
         }
 
+        [HttpGet("CepLocalization")]
+        [ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetCep([FromQuery] string cep)
+        {
+            var data = await mediator.Send(new GetCepQuery(cep));
+            return Ok(data);
+        }
+
         [HttpPost]
         [Authorize]
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status201Created)]
