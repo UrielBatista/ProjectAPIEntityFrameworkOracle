@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oYJ1VWjtI8mBfcQZ+DKOupe+VbIt+m1bE0Mj9t2dK/uJAq67afw34Wjw8QaCIqxrcI7vor4vfnhYWxlVIJPNWQ==",
+  "dgSpecHash": "4/sEgRA1vU4rLTyaHFrK+fuHj3N1Ivh1OGWLEmZPAckK6LKzruVyDU5f4H6sc1bPlvsoK5WKg/1YKXgrM7bWUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.PersonAPI.UnitTest\\Pro.Search.PersonAPI.UnitTest.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,6 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation\\11.0.0\\fluentvalidation.11.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.0.0\\fluentvalidation.aspnetcore.11.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.0\\fluentvalidation.dependencyinjectionextensions.11.0.0.nupkg.sha512",
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\flurl\\3.0.6\\flurl.3.0.6.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql\\5.3.0\\graphql.5.3.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql-parser\\8.0.0\\graphql-parser.8.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql.entityframeworkcore.dynamiclinq\\1.0.2\\graphql.entityframeworkcore.dynamiclinq.1.0.2.nupkg.sha512",
@@ -29,6 +28,7 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.5\\microsoft.aspnetcore.authentication.jwtbearer.6.0.5.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",

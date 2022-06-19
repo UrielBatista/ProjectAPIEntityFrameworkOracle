@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "g3TfcIvM4fb47wWYfA3fXu99i2zaX+E/0Moow/xI2WryfrlmsOtZJ93zHDe+xuvkJsHiR7SAYAjfbczUxvX4hA==",
+  "dgSpecHash": "1jlryJj4Ju/K431wkc6+y896JJ15jZZp4y9WQHaGvsWoIcyZzSejQHGwGDl/L7GHUhG2WwhnFqCUR6xNXMnHqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,6 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation\\11.0.0\\fluentvalidation.11.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.0.0\\fluentvalidation.aspnetcore.11.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.0\\fluentvalidation.dependencyinjectionextensions.11.0.0.nupkg.sha512",
-    "C:\\Users\\uriel_batista\\.nuget\\packages\\flurl\\3.0.6\\flurl.3.0.6.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql\\5.3.0\\graphql.5.3.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql-parser\\8.0.0\\graphql-parser.8.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql.entityframeworkcore.dynamiclinq\\1.0.2\\graphql.entityframeworkcore.dynamiclinq.1.0.2.nupkg.sha512",
@@ -17,6 +16,7 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\masstransit\\7.3.0\\masstransit.7.3.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.5\\microsoft.entityframeworkcore.6.0.5.nupkg.sha512",

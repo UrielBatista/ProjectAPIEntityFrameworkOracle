@@ -1,6 +1,8 @@
-﻿using Flurl;
+﻿using Pro.Search.Infraestructure.ServiceReferences.CepApi.Dtos;
 using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Pro.Search.Infraestructure.ServiceReferences.CepApi
@@ -14,24 +16,30 @@ namespace Pro.Search.Infraestructure.ServiceReferences.CepApi
             this.httpClient = httpClient;
         }
 
-        Task<object> ICepApiResources.GetLocalization(string cep)
+        public static HttpClient ApiClient { get; set; }
+
+        Task<CepDataResultDto> ICepApiResources.GetLocalization(string cep, CancellationToken cancellationToken)
         {
             _ = cep ?? throw new ArgumentNullException(nameof(cep));
 
             return CreateTask();
 
-            async Task<object> CreateTask()
+            async Task<CepDataResultDto> CreateTask()
             {
-                var url = new Url("https://viacep.com.br")
-                    .AppendPathSegment("ws")
-                    .AppendPathSegment(cep)
-                    .AppendPathSegment("json/");
-
-                using var response = await httpClient.GetAsync(url).ConfigureAwait(false);
-
-                _ = response.EnsureSuccessStatusCode().Content;
-
-                return await Task.FromResult(response.Content).ConfigureAwait(false);
+                var url = $"http://viacep.com.br/ws/{cep}/json/";
+                ApiClient = new HttpClient();
+                ApiClient.BaseAddress = new Uri(url);
+                ApiClient.DefaultRequestHeaders.Accept.Clear();
+                ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                using (HttpResponseMessage response = await ApiClient.GetAsync(ApiClient.BaseAddress, cancellationToken).ConfigureAwait(false))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        CepDataResultDto cepReceiver = await response.Content.ReadAsAsync<CepDataResultDto>();
+                        return cepReceiver;
+                    }
+                }
+                return new CepDataResultDto();
             }
         }
     }

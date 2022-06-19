@@ -77,15 +77,6 @@
           "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
-      "Flurl/3.0.6": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {}
-        }
-      },
       "GraphQL/5.3.0": {
         "type": "package",
         "dependencies": {
@@ -284,6 +275,19 @@
         },
         "runtime": {
           "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.2.9": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.1",
+          "Newtonsoft.Json.Bson": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.5": {
@@ -1363,7 +1367,7 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "FluentValidation.AspNetCore": "11.0.0",
-          "Flurl": "3.0.6",
+          "Microsoft.AspNet.WebApi.Client": "5.2.9",
           "Oracle.EntityFrameworkCore": "6.21.61",
           "Pro.Search.PersonDomains": "1.0.0",
           "ServiceStack.Redis": "6.1.0"
@@ -1495,24 +1499,6 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
-      ]
-    },
-    "Flurl/3.0.6": {
-      "sha512": "XMIlB/tJ4nTYF2+79xDsnnlgbXHpKyizKX2fffrECekI6pEsa9MSLzf5tPVMdLy4k4AcJPLs356Sa2Le5VRDCw==",
-      "type": "package",
-      "path": "flurl/3.0.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "flurl.3.0.6.nupkg.sha512",
-        "flurl.nuspec",
-        "icon.png",
-        "lib/net461/Flurl.dll",
-        "lib/net461/Flurl.xml",
-        "lib/net472/Flurl.dll",
-        "lib/net472/Flurl.xml",
-        "lib/netstandard2.0/Flurl.dll",
-        "lib/netstandard2.0/Flurl.xml"
       ]
     },
     "GraphQL/5.3.0": {
@@ -1751,6 +1737,25 @@
         "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll",
         "mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
         "mediatr.extensions.microsoft.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.WebApi.Client/5.2.9": {
+      "sha512": "cuVhPjjNMSEFpKXweMNBbsG4RUFuuZpFBm8tSyw309U9JEjcnbB6n3EPb4xwgcy9bJ38ctIbv5G8zXUBhlrPWw==",
+      "type": "package",
+      "path": "microsoft.aspnet.webapi.client/5.2.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NET.icon.png",
+        "NET_Library_EULA_ENU.txt",
+        "lib/net45/System.Net.Http.Formatting.dll",
+        "lib/net45/System.Net.Http.Formatting.xml",
+        "lib/netstandard2.0/System.Net.Http.Formatting.dll",
+        "lib/netstandard2.0/System.Net.Http.Formatting.xml",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml",
+        "microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
+        "microsoft.aspnet.webapi.client.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.5": {

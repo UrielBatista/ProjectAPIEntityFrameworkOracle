@@ -10,6 +10,6 @@ namespace Pro.Search.Infraestructure.ServiceReferences.CepApi
 {
     public interface ICepApiResources
     {
-        Task<object> GetLocalization(string cep);
+        Task<CepDataResultDto> GetLocalization(string cep, CancellationToken cancellationToken);
     }
 }

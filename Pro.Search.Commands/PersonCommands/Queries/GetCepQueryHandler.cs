@@ -16,7 +16,7 @@ namespace Pro.Search.PersonCommands.Queries
 
         public async Task<object> Handle(GetCepQuery request, CancellationToken cancellationToken)
         {
-            var dataCollection = await this.cepApi.GetLocalization(request.Cep)
+            var dataCollection = await this.cepApi.GetLocalization(request.Cep, cancellationToken)
                 .ConfigureAwait(false);
 
             return dataCollection;
