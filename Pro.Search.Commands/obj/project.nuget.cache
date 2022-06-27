@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Hs5cIfa/zDU6RWv7iOp0kozVnIdFKJaddaQu37LDE4gGEf2m5+r0drz1x3/fCGRF2Y8vDn9geFuKD1V0/uZSfw==",
+  "dgSpecHash": "1jlryJj4Ju/K431wkc6+y896JJ15jZZp4y9WQHaGvsWoIcyZzSejQHGwGDl/L7GHUhG2WwhnFqCUR6xNXMnHqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\masstransit\\7.3.0\\masstransit.7.3.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.5\\microsoft.entityframeworkcore.6.0.5.nupkg.sha512",

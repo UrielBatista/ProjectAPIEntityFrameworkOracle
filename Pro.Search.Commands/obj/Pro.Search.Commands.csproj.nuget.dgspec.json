@@ -210,6 +210,10 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Oracle.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.21.61, )"
