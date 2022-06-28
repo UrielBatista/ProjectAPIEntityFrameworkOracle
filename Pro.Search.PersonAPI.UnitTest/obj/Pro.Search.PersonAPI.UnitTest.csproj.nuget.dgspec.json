@@ -263,6 +263,10 @@
               "target": "Package",
               "version": "[11.0.1, )"
             },
+            "JIgor.Projects.ListPicker": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "MassTransit": {
               "target": "Package",
               "version": "[7.3.0, )"

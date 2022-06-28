@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1jlryJj4Ju/K431wkc6+y896JJ15jZZp4y9WQHaGvsWoIcyZzSejQHGwGDl/L7GHUhG2WwhnFqCUR6xNXMnHqg==",
+  "dgSpecHash": "7QDwFopy48fHJuOWgjvJu2RtZvHm8Q1qJfVxA0mnUWvq5uyN7S+iPID6tpxwRLn6hM7jjNA9CbXqS0MIc6cx0A==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\Pro.Search.Commands\\Pro.Search.Commands.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql-parser\\8.0.0\\graphql-parser.8.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql.entityframeworkcore.dynamiclinq\\1.0.2\\graphql.entityframeworkcore.dynamiclinq.1.0.2.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\greenpipes\\4.0.1\\greenpipes.4.0.1.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\jigor.projects.listpicker\\1.0.0\\jigor.projects.listpicker.1.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\masstransit\\7.3.0\\masstransit.7.3.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

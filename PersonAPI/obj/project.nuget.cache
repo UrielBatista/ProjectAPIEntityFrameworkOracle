@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nSfb4gBpNwENDNIuT/OQwxAfB6xmF2RbP4YM1oXKcwFbcWJvcf9C+VS86c+taTGtI+bx+4qcocw052nXZHEqsQ==",
+  "dgSpecHash": "Gxx0wWVrXQfKgTm+YiFzv0Y6tlVYuCWn8FFh77GuHqx8/C3rsgEXqpVHc8kMdWH+6FNFa8izQLGZSvWMpLLWHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\uriel_batista\\Documents\\Projetos_GitHub\\ProjectAPIEntityFrameworkOracle\\PersonAPI\\PersonAPI.csproj",
   "expectedPackageFiles": [
@@ -18,6 +18,7 @@
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql.server.ui.playground\\6.1.0\\graphql.server.ui.playground.6.1.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\graphql.systemtextjson\\5.3.0\\graphql.systemtextjson.5.3.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\greenpipes\\4.0.1\\greenpipes.4.0.1.nupkg.sha512",
+    "C:\\Users\\uriel_batista\\.nuget\\packages\\jigor.projects.listpicker\\1.0.0\\jigor.projects.listpicker.1.0.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\masstransit\\7.3.0\\masstransit.7.3.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\masstransit.aspnetcore\\7.3.0\\masstransit.aspnetcore.7.3.0.nupkg.sha512",
     "C:\\Users\\uriel_batista\\.nuget\\packages\\masstransit.extensions.dependencyinjection\\7.3.0\\masstransit.extensions.dependencyinjection.7.3.0.nupkg.sha512",
