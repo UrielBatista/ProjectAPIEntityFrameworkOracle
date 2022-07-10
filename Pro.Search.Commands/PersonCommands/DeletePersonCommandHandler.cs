@@ -27,6 +27,12 @@ namespace Pro.Search.PersonCommands
 
             var pessoas = await this.repository.SearchAllPersonToIdPerson(request.Id_Pessoas, cancellationToken).ConfigureAwait(false);
 
+            var foodsPurcashed = pessoas.Select(x => x.ComidaComprada).ToArray();
+
+            if (foodsPurcashed[0].Any())
+                return new BadRequest($"Person contain food purcash vinculed in user {request.Id_Pessoas} delete foods and then delete user");
+
+
             if (!pessoas.Any()) 
                 return new BadRequest($"Person with Id {request.Id_Pessoas} not exist in database, try delete person with other Id!");
 

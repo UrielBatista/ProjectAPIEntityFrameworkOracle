@@ -42,7 +42,10 @@ namespace Pro.Search.Infraestructure.Repositories.Support
 
         public async Task<List<Persons>> SearchAllPersonToIdPerson(string id_pessoa, CancellationToken cancellationToken)
         {
-            var pessoas = await this.pessoas.Where(a => a.Id_Pessoas == id_pessoa).ToListAsync();
+            var pessoas = await this.pessoas
+                .Include(i => i.ComidaComprada.Where(x => x.Id_Food != null))
+                .Where(a => a.Id_Pessoas == id_pessoa)
+                .ToListAsync();
             return pessoas;
         }
 
