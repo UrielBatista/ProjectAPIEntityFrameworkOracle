@@ -37,6 +37,11 @@ Esse projeto conta com uma cobertura atual de testes unitários de 55%, segue sc
 
 ![Imagem de teste 2](https://github.com/UrielBatista/ProjectAPIEntityFrameworkOracle/blob/main/CodeCoveragePercentualTest/screenshot1.png)
 
+## Arquivo Insomnia
+Esse projeto ainda conta com um payload onde auxiliara no uso dos endpoints, você pode baixa-lo logo a baixo:
+
+[Insomnia-endpoint-PersonAPI](https://drive.google.com/file/d/15AUBvYMk0ABjBW8oDZbLH49wDg3tP3Lb/view?usp=sharing)
+
 ## Contribuidores
 Projeto apenas para simulação.
 
