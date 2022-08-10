@@ -182,27 +182,30 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
         }
 
         [TestMethod]
-        public async Task HandleDeletePersonCommandHandler()
+        public async Task HandleDeletePersonCommandHandlerReturnBadRequest()
         {
             // Prepare
             var id_pessoa = "6548";
 
-            var pessoa = new Persons
+            var pessoa = new List<Persons>
             {
-                Id_Pessoas = "04682",
-                Nome = "TesteHandle1",
-                Sobrenome = "TesteHandleSobrenome1",
-                Pessoas_Calc_Number = 45.2M,
-                DataHora = DateTime.Now,
-                ComidaComprada = new List<Food>
+                new Persons
                 {
-                    new Food
+                    Id_Pessoas = "6548",
+                    Nome = "TesteHandle1",
+                    Sobrenome = "TesteHandleSobrenome1",
+                    Pessoas_Calc_Number = 45.2M,
+                    DataHora = DateTime.Now,
+                    ComidaComprada = new List<Food>
                     {
-                        Id_Food = "88585",
-                        Name_Food = "TesteHandleFood1",
-                        Locale_Purcache_Food = "TestandoLocalHandle1",
-                        Id_Pessoas_References = "04682",
-                         Price_Food = 44.6M
+                        new Food
+                        {
+                            Id_Food = "88585",
+                            Name_Food = "TesteHandleFood1",
+                            Locale_Purcache_Food = "TestandoLocalHandle1",
+                            Id_Pessoas_References = "6548",
+                             Price_Food = 44.6M
+                        }
                     }
                 }
             };
@@ -210,19 +213,47 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             var request = new DeletePersonCommand(id_pessoa);
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.SearchAllPersonToIdPerson(id_pessoa, CancellationToken.None).Returns(
-                new List<Persons>
-                    {
-                        new Persons()
-                    }
-                );
+            _ = repository.SearchAllPersonToIdPerson(id_pessoa, CancellationToken.None).Returns(pessoa);
 
             // Assert
             var handler = DeleteHandlePersonCommand(Substitute.For<ISystemDBContext>(), repository);
             var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
             using (new AssertionScope())
             {
-                _ = result.Should().NotBeNull();
+                _ = result.AsT1.Should().BeOfType<DeleteResponses.BadRequest>();
+            }
+        }
+
+        [TestMethod]
+        public async Task HandleDeletePersonCommandHandlerReturnSuccess()
+        {
+            // Prepare
+            var id_pessoa = "6548";
+
+            var pessoa = new List<Persons>
+            {
+                new Persons
+                {
+                    Id_Pessoas = "6548",
+                    Nome = "TesteHandle1",
+                    Sobrenome = "TesteHandleSobrenome1",
+                    Pessoas_Calc_Number = 45.2M,
+                    DataHora = DateTime.Now,
+                    ComidaComprada = new List<Food>(),
+                }
+            };
+
+            var request = new DeletePersonCommand(id_pessoa);
+
+            var repository = Substitute.For<IPersonsRepository>();
+            _ = repository.SearchAllPersonToIdPerson(id_pessoa, CancellationToken.None).Returns(pessoa);
+
+            // Assert
+            var handler = DeleteHandlePersonCommand(Substitute.For<ISystemDBContext>(), repository);
+            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
+            using (new AssertionScope())
+            {
+                _ = result.AsT0.Should().BeOfType<DeleteResponses.Success>();
             }
         }
 
