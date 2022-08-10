@@ -24,7 +24,9 @@ namespace Pro.Search.PersonCommands
 
         public CreatePersonCommandHandler(
             ISystemDBContext _context,
-            IMapper mapper, IPersonsRepository repository, IPublishEndpoint publish)
+            IMapper mapper, 
+            IPersonsRepository repository, 
+            IPublishEndpoint publish)
         {
             this._context = _context;
             this.mapper = mapper;
