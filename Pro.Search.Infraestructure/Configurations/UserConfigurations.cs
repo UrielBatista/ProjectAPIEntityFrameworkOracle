@@ -8,7 +8,7 @@ namespace Pro.Search.Infraestructure.Configurations
     {
         public void Configure(EntityTypeBuilder<UserEntity> builder)
         {
-            builder.ToTable("USERS").HasKey(p => new { p.Id }); ;
+            builder.ToTable("USERS").HasKey(p => new { p.Id });
             builder.Property(p => p.Id).HasColumnName("ID");
             builder.Property(p => p.Username).HasColumnName("USERNAME").HasColumnType("VARCHAR2");
             builder.Property(p => p.Password).HasColumnName("PASSWORD").HasColumnType("VARCHAR2");
