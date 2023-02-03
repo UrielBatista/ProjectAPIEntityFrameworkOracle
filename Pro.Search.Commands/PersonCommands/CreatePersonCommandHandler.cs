@@ -65,10 +65,7 @@ namespace Pro.Search.PersonCommands
                 return new Success(returnValidation);
             }
 
-            if (validationPerson.Email == request.PersonDto.Pessoas.Email)
-                return new BadRequest($"Person with Email {request.PersonDto.Pessoas.Email} already cadastred, try create person with another Email!");
-
-            return new BadRequest($"Person with Id {request.PersonDto.Pessoas.Id_Pessoas} already exist in database, try create person with another Id!");
+            return new BadRequest("An error occurred while saving the data!");
         }
 
         private async Task<Persons> CheckPersonExist(CreatePersonCommand request, CancellationToken cancellationToken)

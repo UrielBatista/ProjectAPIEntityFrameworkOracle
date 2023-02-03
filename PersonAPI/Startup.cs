@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using PersonAPI.GraphQL;
+using PersonAPI.TempModelGraph;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
 using Pro.Search.Infraestructure;
@@ -24,6 +25,7 @@ using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
 using System.Text;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace PessoasAPI
 {
@@ -50,8 +52,11 @@ namespace PessoasAPI
                 });
 
             // Database Connector
-            _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options => 
-                    options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+            //        options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
+
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
             //MassTransit Dependency injection
@@ -107,6 +112,12 @@ namespace PessoasAPI
                 .AddErrorInfoProvider(opt => opt.ExposeExceptionStackTrace = true)
                 .AddGraphTypes(typeof(PersonsTypes).Assembly));
 
+            _ = services.AddGraphQLServer()
+                .AddQueryType<PersonQueryRequest>()
+                .AddProjections()
+                .AddFiltering()
+                .AddSorting();
+
             _ = services.AddSwaggerGen();
         }
         
@@ -127,6 +138,7 @@ namespace PessoasAPI
             _ = app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapGraphQL("/v2/graphql");
             });
 
             _ = app.UseGraphQL<PersonSchema>();

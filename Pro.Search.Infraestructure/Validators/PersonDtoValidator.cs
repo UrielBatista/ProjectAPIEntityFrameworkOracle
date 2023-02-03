@@ -1,12 +1,15 @@
 ﻿using FluentValidation;
+using Pro.Search.Infraestructure.Repositories;
+using Pro.Search.Infraestructure.Validators.Extensions;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
 namespace Pro.Search.Infraestructure.Validators
 {
     public class PersonDtoValidator : AbstractValidator<PersonDto>
     {
-        public PersonDtoValidator()
+        public PersonDtoValidator(IPersonsRepository personsRepository)
         {
+            _ = this.RuleFor(p => p).PersonCheckDataAlreadyExist(personsRepository).When(p => p != null);
             _ = this.RuleFor(p => p.Pessoas.Id_Pessoas).NotEmpty().WithMessage("Id_Pessoa não pode ser vazio");
             _ = this.RuleFor(p => p.Pessoas.Nome).NotEmpty().WithMessage("Nome não pode ser vazio");
             _ = this.RuleFor(p => p.Pessoas.Sobrenome).NotEmpty().WithMessage("Sobrenome não pode ser vazio");
