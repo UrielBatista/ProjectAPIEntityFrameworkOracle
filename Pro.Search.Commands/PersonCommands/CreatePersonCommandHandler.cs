@@ -52,23 +52,20 @@ namespace Pro.Search.PersonCommands
                 _ = await _context.Pessoas.AddAsync(this.mapper.Map<PersonsInfoDto, Persons>(returnValidation.Pessoas), cancellationToken).ConfigureAwait(false);
                 _ = await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
-                //await this.publish.Publish<PersonCreatedEvent>(new
-                //{
-                //    Id_Pessoas = request.PersonDto.Pessoas.Id_Pessoas,
-                //    Nome = request.PersonDto.Pessoas.Nome,
-                //    Sobrenome = request.PersonDto.Pessoas.Sobrenome,
-                //    Email = request.PersonDto.Pessoas.Email,
-                //    Pessoas_Calc_Number = request.PersonDto.Pessoas.Pessoas_Calc_Number,
-                //    DataHora = request.PersonDto.Pessoas.DataHora,
-                //});
+                await this.publish.Publish<PersonCreatedEvent>(new
+                {
+                    Id_Pessoas = request.PersonDto.Pessoas.Id_Pessoas,
+                    Nome = request.PersonDto.Pessoas.Nome,
+                    Sobrenome = request.PersonDto.Pessoas.Sobrenome,
+                    Email = request.PersonDto.Pessoas.Email,
+                    Pessoas_Calc_Number = request.PersonDto.Pessoas.Pessoas_Calc_Number,
+                    DataHora = request.PersonDto.Pessoas.DataHora,
+                });
 
                 return new Success(returnValidation);
             }
 
-            if (validationPerson.Email == request.PersonDto.Pessoas.Email)
-                return new BadRequest($"Person with Email {request.PersonDto.Pessoas.Email} already cadastred, try create person with another Email!");
-
-            return new BadRequest($"Person with Id {request.PersonDto.Pessoas.Id_Pessoas} already exist in database, try create person with another Id!");
+            return new BadRequest("An error occurred while saving the data!");
         }
 
         private async Task<Persons> CheckPersonExist(CreatePersonCommand request, CancellationToken cancellationToken)

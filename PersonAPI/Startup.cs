@@ -52,8 +52,11 @@ namespace PessoasAPI
                 });
 
             // Database Connector
-            _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options => 
-                    options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+            //        options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
+
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
             //MassTransit Dependency injection
@@ -101,13 +104,13 @@ namespace PessoasAPI
                     typeof(GetOnePersonQuery).Assembly);
 
             // GraphQL dependency injection
-            //_ = services.AddScoped<PersonSchema>();
-            //_ = services.AddGraphQL(b => b
-            //    .AddHttpMiddleware<PersonSchema>()
-            //    .AddUserContextBuilder(httpContext => new GraphQLUserContext { User = httpContext.User })
-            //    .AddSystemTextJson()
-            //    .AddErrorInfoProvider(opt => opt.ExposeExceptionStackTrace = true)
-            //    .AddGraphTypes(typeof(PersonsTypes).Assembly));
+            _ = services.AddScoped<PersonSchema>();
+            _ = services.AddGraphQL(b => b
+                .AddHttpMiddleware<PersonSchema>()
+                .AddUserContextBuilder(httpContext => new GraphQLUserContext { User = httpContext.User })
+                .AddSystemTextJson()
+                .AddErrorInfoProvider(opt => opt.ExposeExceptionStackTrace = true)
+                .AddGraphTypes(typeof(PersonsTypes).Assembly));
 
             _ = services.AddGraphQLServer()
                 .AddQueryType<PersonQueryRequest>()
@@ -135,7 +138,7 @@ namespace PessoasAPI
             _ = app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapGraphQL("/graphql/graph");
+                endpoints.MapGraphQL("/v2/graphql");
             });
 
             _ = app.UseGraphQL<PersonSchema>();

@@ -86,5 +86,15 @@ namespace Pro.Search.Infraestructure.Repositories.Support
 
             return personPurcashFood;
         }
+
+        public async Task<IEnumerable<Persons>> FindAlreadyPersonWithEmailOrId(string email, string Id_Pessoas, CancellationToken cancellationToken)
+        {
+            var personPurcashFood = await this.pessoas
+                .Where(p => p.Email == email || p.Id_Pessoas == Id_Pessoas)
+                .ToListAsync(cancellationToken)
+                .ConfigureAwait(false);
+
+            return personPurcashFood;
+        }
     }
 }

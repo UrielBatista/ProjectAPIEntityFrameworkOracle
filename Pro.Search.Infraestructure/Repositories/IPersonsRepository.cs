@@ -20,5 +20,7 @@ namespace Pro.Search.Infraestructure.Repositories
         Task<List<Persons>> FindAsyncPessoaWithFood(CancellationToken cancellationToken);
 
         Task<IEnumerable<Persons>> FindListPersonsPurcashFoods(string[] Id_Pessoas, CancellationToken cancellationToken);
+
+        Task<IEnumerable<Persons>> FindAlreadyPersonWithEmailOrId(string email, string Id_Pessoas, CancellationToken cancellationToken);
     }
 }
