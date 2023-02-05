@@ -21,6 +21,9 @@ namespace PessoasAPI.Controllers.V1
             this.mediator = mediator;
         }
 
+        /// <summary>
+        /// This method return single person if purcashed food.
+        /// </summary>
         [HttpGet]
         [ProducesResponseType(typeof(PersonPurcashDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -31,6 +34,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method return list all person if purcashed foods.
+        /// </summary>
         [HttpGet("PersonsPurcash-list")]
         [ProducesResponseType(typeof(PersonPurcashDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -41,6 +47,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method create of update person and food, method is patch i.e. responsability create and update datas.
+        /// </summary>
         [HttpPatch]
         [Authorize(Roles = "admin")]
         [ProducesResponseType(typeof(PersonPurcashDto), StatusCodes.Status200OK)]
