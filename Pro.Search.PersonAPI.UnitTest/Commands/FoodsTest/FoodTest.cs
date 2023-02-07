@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using FluentAssertions;
-using FluentAssertions.Execution;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using Pro.Search.Commands.PersonCommands;

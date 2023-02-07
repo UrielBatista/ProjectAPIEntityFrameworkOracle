@@ -13,27 +13,30 @@ using System.Threading.Tasks;
 namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasPurcashTest
 {
     [TestClass]
-    public class PersonPurcashTestUnit
+    public sealed partial class PersonPurcashTestUnit
     {
-        [TestMethod]
-        public async Task HandleGetPersonPurcashFoodAsyncReturnOk()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSouces.GetPersonPurcashWithFood), typeof(DataSouces))]
+        public async Task HandleGetPersonPurcashFoodAsyncReturnOk(
+            string id_pessoas,
+            Persons persons)
         {
-            // Prepare
-            var id_pessoas = "8410";
-            
-
+            // Arrange
             var request = new GetPersonPurcashFoodQuery(id_pessoas);
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.FindPersonPurcashFood(id_pessoas, CancellationToken.None).Returns(
-                new Persons 
-                { 
-                    Id_Pessoas = id_pessoas 
-                });
+            _ = repository.FindPersonPurcashFood(
+                id_pessoas, CancellationToken.None)
+                .Returns(persons);
+
+            var handler = GetPersonPurcashFoodQueryHandlerHandlerData(repository);
+
+            // Act
+            var response = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
 
             // Assert
-            var handler = GetPersonPurcashFoodQueryHandlerHandlerData(repository);
-            var response = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
             _ = response.Should().BeOfType(typeof(PersonPurcashDto));
         }
 
