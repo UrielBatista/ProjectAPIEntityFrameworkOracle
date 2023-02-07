@@ -21,6 +21,9 @@ namespace PessoasAPI.Controllers.V2
             this.mediator = mediator;
         }
 
+        /// <summary>
+        /// This method testing picker lib names.
+        /// </summary>
         [HttpPost]
         [Authorize]
         [ProducesResponseType(typeof(IEnumerable<PersonPickerDto>), StatusCodes.Status201Created)]

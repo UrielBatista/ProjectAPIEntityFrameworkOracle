@@ -25,6 +25,9 @@ namespace PessoasAPI.Controllers.V1
             this.mediator = mediator;
         }
 
+        /// <summary>
+        /// This method list all foods created in database.
+        /// </summary>
         [HttpGet]
         [ProducesResponseType(typeof(FoodResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -35,6 +38,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method create and persist food in database local or in oracle.
+        /// </summary>
         [HttpPost]
         [Authorize]
         [Route("/persistence")]
@@ -47,6 +53,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method create food in memory database with redis.
+        /// </summary>
         [HttpPost]
         [Authorize]
         [Route("/inMemory")]
@@ -59,6 +68,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method update food if already exist in database.
+        /// </summary>
         [HttpPut]
         [Authorize]
         [ProducesResponseType(typeof(FoodAllInfoDto), StatusCodes.Status200OK)]
@@ -70,6 +82,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method delete food with param passed.
+        /// </summary>
         [HttpDelete]
         [Authorize]
         [ProducesResponseType(typeof(IEnumerable<Food>), StatusCodes.Status202Accepted)]
