@@ -23,6 +23,9 @@ namespace PessoasAPI.Controllers.V1
             this.mediator = mediator;
         }
 
+        /// <summary>
+        /// This method list all persons created in database.
+        /// </summary>
         [HttpGet]
         [ProducesResponseType(typeof(List<PersonsAllInfoDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -33,6 +36,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method list all persons with linked foods.
+        /// </summary>
         [HttpGet("ListPersonRequestFood")]
         [ProducesResponseType(typeof(List<PersonsAllInfoDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -43,6 +49,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method get a single person with id_pessoa param.
+        /// </summary>
         [HttpGet("search-person")]
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -53,6 +62,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method calc media with Pessoas_Calc_Number of all persons.
+        /// </summary>
         [HttpGet("media")]
         [ProducesResponseType(typeof(decimal), StatusCodes.Status200OK)]
         public async Task<IActionResult> CalcMedia()
@@ -61,6 +73,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(data);
         }
 
+        /// <summary>
+        /// This method request service CepAPI and get address where pass cep param.
+        /// </summary>
         [HttpGet("CepLocalization")]
         [ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetCep([FromQuery] string cep)
@@ -69,6 +84,9 @@ namespace PessoasAPI.Controllers.V1
             return Ok(data);
         }
 
+        /// <summary>
+        /// This method create person and persist in database.
+        /// </summary>
         [HttpPost]
         [Authorize]
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status201Created)]
@@ -83,6 +101,9 @@ namespace PessoasAPI.Controllers.V1
                 badRequest => this.BadRequest(badRequest.Message));
         }
 
+        /// <summary>
+        /// This method update person if already exist in database.
+        /// </summary>
         [HttpPut]
         [Authorize]
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status200OK)]
@@ -97,6 +118,10 @@ namespace PessoasAPI.Controllers.V1
                 badRequest => this.BadRequest(badRequest.Message));
         }
 
+        /// <summary>
+        /// This method delete person if not linked food and already exist in database with pass
+        /// param id_pessoa.
+        /// </summary>
         [HttpDelete]
         [Authorize]
         [ProducesResponseType(typeof(List<Persons>), StatusCodes.Status202Accepted)]

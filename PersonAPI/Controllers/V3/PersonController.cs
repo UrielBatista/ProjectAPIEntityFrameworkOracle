@@ -23,6 +23,9 @@ namespace PersonAPI.Controllers.V3
             this.mediator = mediator;
         }
 
+        /// <summary>
+        /// This method is endpoint to request elements of schema with OData
+        /// </summary>
         [HttpGet]
         [EnableQuery]
         [ProducesResponseType(typeof(List<PersonsAllInfoDto>), StatusCodes.Status200OK)]
@@ -34,6 +37,9 @@ namespace PersonAPI.Controllers.V3
             return Ok(response);
         }
 
+        /// <summary>
+        /// This method authentication endpoint, passing username and token generate token
+        /// </summary>
         [HttpPost]
         [Route("login")]
         public async Task<ActionResult<dynamic>> Authenticate([FromBody] TokenLoginRequestDto request)
