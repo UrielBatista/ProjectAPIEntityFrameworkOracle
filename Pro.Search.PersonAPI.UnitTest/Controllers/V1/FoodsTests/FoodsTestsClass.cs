@@ -1,11 +1,9 @@
 ﻿using FluentAssertions;
-using FluentAssertions.Execution;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using Pro.Search.Commands.PersonCommands;
-using Pro.Search.Commands.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using System.Collections.Generic;
@@ -14,147 +12,153 @@ using System.Threading.Tasks;
 namespace Pro.Search.PessoasAPI.UnitTest.Controllers.V1.FoodsTests
 {
     [TestClass]
-    public sealed class FoodsTestsClass : TestBase
+    public sealed partial class FoodsTestsClass : TestBase
     {
-        [TestMethod]
-        public async Task CreateFoodShouldReturnOk()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.CreateFoodDataLoadController), typeof(DataSources))]
+        public async Task CreateFoodShouldReturnOk(
+            FoodAllInfoDto foodAllInfoDto)
         {
-            // Prepare
-            var result = new FoodAllInfoDto
-            {
-                Id_Food = "8484",
-                Nome = "TestPostMethodCreateFood1",
-                LocalDeVenda = "TestPostMethodCreateFood2",
-                ReferenciaIdPessoa = "1212",
-                PrecoComida = 44.4M
-            };
-
+            // Arrange
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<CreateFoodCommand>(p => p.FoodAllInfoDto == result)).Returns(result);
+            _ = mediator.Send(
+                Arg.Is<CreateFoodCommand>(p => p.FoodAllInfoDto == foodAllInfoDto))
+                .Returns(foodAllInfoDto);
+            
+            var controller = CreateController(mediator);
+
+            // Act
+            var response = await controller
+                .PostFood(foodAllInfoDto)
+                .ConfigureAwait(false);
 
             // Assert
-            var controller = CreateController(mediator);
-            var response = await controller.PostFood(result).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = response.Should().BeOfType<OkObjectResult>().Which.Value.Should().BeOfType<FoodAllInfoDto>();
-            }
+            _ = response
+                .Should()
+                .BeOfType<OkObjectResult>()
+                .Which.Value.Should()
+                .BeOfType<FoodAllInfoDto>();
+            
         }
 
-        [TestMethod]
-        public async Task CreateFoodShouldBadRequest()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.CreateFoodDataLoadControllerBadRequest), typeof(DataSources))]
+        public async Task CreateFoodShouldBadRequest(
+            FoodAllInfoDto foodAllInfoDto)
         {
-            // Prepare
-            var result = new FoodAllInfoDto
-            {
-            };
-
+            // Arrange
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<CreateFoodInMemoryCommand>(p => p.FoodAllInfoDto == result)).Returns((FoodAllInfoDto)default);
+            _ = mediator.Send(
+                Arg.Is<CreateFoodInMemoryCommand>(p => p.FoodAllInfoDto == foodAllInfoDto))
+                .Returns((FoodAllInfoDto)default);
+
+            var controller = CreateController(mediator);
+
+            // Act
+            var response = await controller
+                .PostFood(foodAllInfoDto)
+                .ConfigureAwait(false);
 
             // Assert
-            var controller = CreateController(mediator);
-            var response = await controller.PostFood(result).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = response.Should().BeOfType<BadRequestResult>();
-            }
+            _ = response.Should().BeOfType<BadRequestResult>();
         }
 
-        [TestMethod]
-        public async Task UpdateFoodShouldReturnOk()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.UpdateFoodDataLoadController), typeof(DataSources))]
+        public async Task UpdateFoodShouldReturnOk(
+            FoodAllInfoDto foodAllInfoDto)
         {
-            // Prepare
-            var result = new FoodAllInfoDto
-            {
-                Id_Food = "3390",
-                Nome = "TestUpdateMethodCreateFood3",
-                LocalDeVenda = "TestUpdateMethodCreateFood4",
-                ReferenciaIdPessoa = "6661",
-                PrecoComida = 22.2M
-            };
-
+            // Arrange
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<UpdateFoodCommand>(p => p.FoodAllInfoDto == result)).Returns(result);
+            _ = mediator.Send(
+                Arg.Is<UpdateFoodCommand>(p => p.FoodAllInfoDto == foodAllInfoDto))
+                .Returns(foodAllInfoDto);
+
+            var controller = CreateController(mediator);
+
+            // Act
+            var response = await controller
+                .UpdateFood(foodAllInfoDto)
+                .ConfigureAwait(false);
 
             // Assert
-            var controller = CreateController(mediator);
-            var response = await controller.UpdateFood(result).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = response.Should().BeOfType<OkObjectResult>().Which.Value.Should().BeOfType<FoodAllInfoDto>();
-            }
+            _ = response
+                .Should()
+                .BeOfType<OkObjectResult>()
+                .Which.Value.Should()
+                .BeOfType<FoodAllInfoDto>();
         }
 
-        [TestMethod]
-        public async Task UpdateFoodShouldReturnBadRequest()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.UpdateFoodDataLoadControllerBadRequest), typeof(DataSources))]
+        public async Task UpdateFoodShouldReturnBadRequest(
+            FoodAllInfoDto foodAllInfoDto)
         {
-            // Prepare
-            var result = new FoodAllInfoDto
-            {
-            };
-
+            // Arrange
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<UpdateFoodCommand>(p => p.FoodAllInfoDto == result)).Returns((FoodAllInfoDto)default);
+            _ = mediator.Send(
+                Arg.Is<UpdateFoodCommand>(p => p.FoodAllInfoDto == foodAllInfoDto))
+                .Returns((FoodAllInfoDto)default);
 
-            // Assert
             var controller = CreateController(mediator);
-            var response = await controller.UpdateFood(result).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = response.Should().BeOfType<NoContentResult>();
-            }
+
+            // Act
+            var response = await controller
+                .UpdateFood(foodAllInfoDto)
+                .ConfigureAwait(false);
+            
+            // Assert
+            _ = response.Should().BeOfType<NoContentResult>();
         }
 
-        [TestMethod]
-        public async Task DeleteFoodShouldReturnOk()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.DeleteDataLoadController), typeof(DataSources))]
+        public async Task DeleteFoodShouldReturnOk(
+            string id_food,
+            List<Food> food)
         {
-            // Prepare
-            var id_food = "7754";
-
-            var result = new List<Food>
-            {
-                new Food
-                {
-                    Id_Food = "4489",
-                    Name_Food = "TestDeleteMethodCreateFood4",
-                    Locale_Purcache_Food = "TestDeleteMethodCreateFood5",
-                    Id_Pessoas_References = "0019",
-                    Price_Food = 52.38M
-                },
-            };
-
+            // Arrange
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<DeleteFoodCommand>(p => p.Id_Food == id_food)).Returns(result);
+            _ = mediator.Send(
+                Arg.Is<DeleteFoodCommand>(p => p.Id_Food == id_food))
+                .Returns(food);
+
+            var controller = CreateController(mediator);
+
+            // Act
+            var response = await controller
+                .DeleteFood(id_food)
+                .ConfigureAwait(false);
 
             // Assert
-            var controller = CreateController(mediator);
-            var response = await controller.DeleteFood(id_food).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = response.Should().BeOfType<OkObjectResult>().Which.Value.Should().BeOfType<List<Food>>();
-            }
+            _ = response
+                .Should()
+                .BeOfType<OkObjectResult>()
+                .Which.Value.Should()
+                .BeOfType<List<Food>>();
         }
 
-        [TestMethod]
-        public async Task DeleteFoodShouldReturnNotFound()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.DeleteDataLoadControllerNotFound), typeof(DataSources))]
+        public async Task DeleteFoodShouldReturnNotFound(
+            string id_food,
+            List<Food> foods)
         {
-            var id_food = "7754";
-
-            var result = new List<Food>
-            {
-            };
-
+            // Arrange
             var mediator = Substitute.For<IMediator>();
-            _ = mediator.Send(Arg.Is<DeleteFoodCommand>(p => p.Id_Food == id_food)).Returns(result);
+            _ = mediator.Send(
+                Arg.Is<DeleteFoodCommand>(p => p.Id_Food == id_food))
+                .Returns(foods);
+
+            var controller = CreateController(mediator);
+
+            // Act
+            var response = await controller
+                .DeleteFood(id_food)
+                .ConfigureAwait(false);
 
             // Assert
-            var controller = CreateController(mediator);
-            var response = await controller.DeleteFood(id_food).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = response.Should().BeOfType<NoContentResult>();
-            }
+            _ = response.Should().BeOfType<NoContentResult>();
         }
     }
 }
