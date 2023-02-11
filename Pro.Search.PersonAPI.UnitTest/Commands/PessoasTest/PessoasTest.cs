@@ -1,6 +1,5 @@
 using AutoMapper;
 using FluentAssertions;
-using FluentAssertions.Execution;
 using MassTransit;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
@@ -21,241 +20,217 @@ using System.Threading.Tasks;
 namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
 {
     [TestClass]
-    public class PessoasTest
+    public sealed partial class PessoasTest
     {
-        [TestMethod]
-        public async Task HandleGetPessoas()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSouces.GetAllPersonsDataSource), typeof(DataSouces))]
+        public async Task HandleGetPessoas(
+            List<Persons> persons)
         {
-            // Prepare
+            // Arrange
             var request = new GetAllPersonQuery();
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.FindAllAsyncPerson(CancellationToken.None).Returns(
-                    new List<Persons>
-                    {
-                        new Persons
-                        {
-                            Id_Pessoas = "1234",
-                        },
-                    });
+            _ = repository.FindAllAsyncPerson(CancellationToken.None).Returns(persons);
+
+            var handler = QueryHandler(repository);
+
+            // Act
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
 
             // Assert
-            var handler = QueryHandler(repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
             _ = result.Should().BeOfType(typeof(List<PersonsAllInfoDto>));
         }
 
-        [TestMethod]
-        public async Task HandleGetMediaPessoas()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSouces.MediaCalcDataSource), typeof(DataSouces))]
+        public async Task HandleGetMediaPessoas(
+            List<decimal> media)
         {
-            // Prepare
+            // Arrange
             var request = new GetMediaPersonQuery();
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.CalcMediaPersonNumber(CancellationToken.None).Returns(
-                new List<decimal>
-                {
-                    11.2M,
-                    12.89M,
-                });
+            _ = repository.CalcMediaPersonNumber(CancellationToken.None).Returns(media);
+            
+            var handler = QueryHandlerMediaPerson(repository);
+
+            // Act
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
 
             // Assert
-            var handler = QueryHandlerMediaPerson(repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = result.Should();
-            }
+            _ = result.Should().Be(12.045M);
         }
 
-        [TestMethod]
-        public async Task HandleGetOnePessoa()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSouces.GetOnePersonDataSource), typeof(DataSouces))]
+        public async Task HandleGetOnePessoa(
+            string id_pessoa,
+            Persons persons)
         {
-            // Prepare
-            var id_pessoa = "0001";
+            // Arrange
             var request = new GetOnePersonQuery(id_pessoa);
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.FindOneAsyncPerson(id_pessoa, CancellationToken.None).Returns(
-                    new Persons
-                    {
-                        Id_Pessoas = id_pessoa,
-                    });
+            _ = repository.FindOneAsyncPerson(
+                id_pessoa, CancellationToken.None)
+                .Returns(persons);
+
+            var handler = QueryOneHandler(repository);
+
+            // Act
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
 
             // Assert
-            var handler = QueryOneHandler(repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = result.Should().NotBeNull();
-            }
+            _ = result.Should().NotBeNull();
         }
 
-        [TestMethod]
-        public async Task HandleGetPersonPurcashFood()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSouces.GetPersonPurcashFood), typeof(DataSouces))]
+        public async Task HandleGetPersonPurcashFood(
+            string id_pessoa,
+            Persons persons)
         {
-            // Prepare
-            var id_pessoa = "5757";
+            // Arrange
             var request = new GetPersonPurcashFoodQuery(id_pessoa);
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.FindPersonPurcashFood(id_pessoa, CancellationToken.None).Returns(
-                    new Persons
-                    {
-                        Id_Pessoas = id_pessoa,
-                    });
+            _ = repository.FindPersonPurcashFood(
+                id_pessoa, CancellationToken.None)
+                .Returns(persons);
 
-            // Assert
             var handler = QueryPersonFoodPurcash(repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = result.Should().NotBeNull();
-            }
-        }
-        
-        [TestMethod]
-        public async Task HandleCreatePersonCommand()
-        {
-            // Prepare
-            var request = new CreatePersonCommand(
-                new PersonDto
-                {
-                    Pessoas = new PersonsInfoDto
-                    {
-                        Id_Pessoas = "987456",
-                        Nome = "CreateTestePerson",
-                        Sobrenome = "CreateTesteSobrenomePerson",
-                        Pessoas_Calc_Number = 11.2M,
-                        DataHora = DateTime.Now
-                    }
-                });
 
-            var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.FindOneAsyncPerson(request.PersonDto.Pessoas.Id_Pessoas, CancellationToken.None).Returns(
-                new Persons()
-                {
-                    Id_Pessoas = "987456",
-                    Nome = "CreateTestePerson",
-                    Sobrenome = "CreateTesteSobrenomePerson",
-                    Pessoas_Calc_Number = 11.2M,
-                    DataHora = DateTime.Now
-                });
+            // Act
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
 
             // Assert
-            var handler = CreatePersonCommandHandlerData(Substitute.For<ISystemDBContext>(), repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            _ = result.Value.Should().BeOfType<CreateOrUpdateResponses.Success>();
+            _ = result.Should().NotBeNull();
         }
 
-        [TestMethod]
-        public async Task HandleUpdatePersonCommand()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSouces.CreatePersonDataSource), typeof(DataSouces))]
+        public async Task HandleCreatePersonCommand(
+            PersonDto personDto,
+            Persons persons)
         {
             // Prepare
-            var request = new UpdatePersonCommand(
-                new PersonDto
-                {
-                    Pessoas = new PersonsInfoDto
-                    {
-                        Id_Pessoas = "25752",
-                        Nome = "UpdateTestePerson",
-                        Sobrenome = "UpdateTesteSobrenomePerson",
-                        Pessoas_Calc_Number = 12.6M,
-                        DataHora = DateTime.Now
-                    }
-                });
+            var request = new CreatePersonCommand(personDto);
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.FindOneAsyncPerson(request.PersonDto.Pessoas.Id_Pessoas, CancellationToken.None).Returns(
-                new Persons()
-                {
-                    Id_Pessoas = "987456",
-                    Nome = "CreateTestePerson",
-                    Sobrenome = "CreateTesteSobrenomePerson",
-                    Pessoas_Calc_Number = 11.2M,
-                    DataHora = DateTime.Now
-                });
+            _ = repository.FindOneAsyncPerson(
+                request.PersonDto.Pessoas.Id_Pessoas, 
+                CancellationToken.None)
+                .Returns(persons);
+            
+            var handler = CreatePersonCommandHandlerData(
+                Substitute.For<ISystemDBContext>(), 
+                repository);
+
+            // Act
+            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
 
             // Assert
-            var handler = UpdatePersonCommandHandlerData(Substitute.For<ISystemDBContext>(), repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            _ = result.Value.Should().BeOfType<CreateOrUpdateResponses.Success>();
+            _ = result.Value
+                .Should()
+                .BeOfType<CreateOrUpdateResponses.Success>();
         }
 
-        [TestMethod]
-        public async Task HandleDeletePersonCommandHandlerReturnBadRequest()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSouces.UpdatePersonDataSource), typeof(DataSouces))]
+        public async Task HandleUpdatePersonCommand(
+            PersonDto personDto,
+            Persons persons)
         {
-            // Prepare
-            var id_pessoa = "6548";
+            // Arrange
+            var request = new UpdatePersonCommand(personDto);
 
-            var pessoa = new List<Persons>
-            {
-                new Persons
-                {
-                    Id_Pessoas = "6548",
-                    Nome = "TesteHandle1",
-                    Sobrenome = "TesteHandleSobrenome1",
-                    Pessoas_Calc_Number = 45.2M,
-                    DataHora = DateTime.Now,
-                    ComidaComprada = new List<Food>
-                    {
-                        new Food
-                        {
-                            Id_Food = "88585",
-                            Name_Food = "TesteHandleFood1",
-                            Locale_Purcache_Food = "TestandoLocalHandle1",
-                            Id_Pessoas_References = "6548",
-                             Price_Food = 44.6M
-                        }
-                    }
-                }
-            };
+            var repository = Substitute.For<IPersonsRepository>();
+            _ = repository.FindOneAsyncPerson(
+                request.PersonDto.Pessoas.Id_Pessoas, 
+                CancellationToken.None)
+                .Returns(persons);
 
+            var handler = UpdatePersonCommandHandlerData(
+                Substitute.For<ISystemDBContext>(), 
+                repository);
+
+            // Act
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
+
+            // Assert
+            _ = result.Value
+                .Should()
+                .BeOfType<CreateOrUpdateResponses.Success>();
+        }
+
+        [DataTestMethod]
+        [DynamicData(nameof(DataSouces.DeletePersonDataSource), typeof(DataSouces))]
+        public async Task HandleDeletePersonCommandHandlerReturnBadRequest(
+            string id_pessoa,
+            List<Persons> pessoa)
+        {
+            // Arrange
             var request = new DeletePersonCommand(id_pessoa);
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.SearchAllPersonToIdPerson(id_pessoa, CancellationToken.None).Returns(pessoa);
+            _ = repository.SearchAllPersonToIdPerson(
+                id_pessoa, CancellationToken.None)
+                .Returns(pessoa);
 
+            var handler = DeleteHandlePersonCommand(
+                Substitute.For<ISystemDBContext>(), 
+                repository);
+
+            // Act
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
+            
             // Assert
-            var handler = DeleteHandlePersonCommand(Substitute.For<ISystemDBContext>(), repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = result.AsT1.Should().BeOfType<DeleteResponses.BadRequest>();
-            }
+            _ = result.AsT1
+                .Should()
+                .BeOfType<DeleteResponses.BadRequest>();
         }
 
-        [TestMethod]
-        public async Task HandleDeletePersonCommandHandlerReturnSuccess()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSouces.DeletePersonBadRequestDataSource), typeof(DataSouces))]
+        public async Task HandleDeletePersonCommandHandlerReturnSuccess(
+            string id_pessoa,
+            List<Persons> persons)
         {
-            // Prepare
-            var id_pessoa = "6548";
-
-            var pessoa = new List<Persons>
-            {
-                new Persons
-                {
-                    Id_Pessoas = "6548",
-                    Nome = "TesteHandle1",
-                    Sobrenome = "TesteHandleSobrenome1",
-                    Pessoas_Calc_Number = 45.2M,
-                    DataHora = DateTime.Now,
-                    ComidaComprada = new List<Food>(),
-                }
-            };
-
+            // Arrange
             var request = new DeletePersonCommand(id_pessoa);
 
             var repository = Substitute.For<IPersonsRepository>();
-            _ = repository.SearchAllPersonToIdPerson(id_pessoa, CancellationToken.None).Returns(pessoa);
+            _ = repository.SearchAllPersonToIdPerson(
+                id_pessoa, 
+                CancellationToken.None)
+                .Returns(persons);
+
+            var handler = DeleteHandlePersonCommand(
+                Substitute.For<ISystemDBContext>(), 
+                repository);
+
+            // Act
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
 
             // Assert
-            var handler = DeleteHandlePersonCommand(Substitute.For<ISystemDBContext>(), repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = result.AsT0.Should().BeOfType<DeleteResponses.Success>();
-            }
+            _ = result.AsT0
+                .Should()
+                .BeOfType<DeleteResponses.Success>();
         }
 
         [TestMethod]
@@ -357,15 +332,6 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 mapper ?? Substitute.For<IMapper>());
         }
 
-        /*protected static CreatePersonCommandHandler CreateHandlerSetPersonExceptionGetOnePessoa(
-            ISystemDBContext context = default, IMapper mapper = default, IPersonsRepository repository = default)
-        {
-            return new CreatePersonCommandHandler(
-                context ?? Substitute.For<ISystemDBContext>(), 
-                mapper, 
-                repository ?? Substitute.For<IPersonsRepository>());
-        }*/
-        
         protected static UpdatePersonCommandHandler CreateHandlerUpdatePersonExceptionGetOnePessoa(
             ISystemDBContext context = default, IMapper mapper = default, IPersonsRepository repository = default)
         {

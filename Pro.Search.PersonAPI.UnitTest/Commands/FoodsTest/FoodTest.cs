@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using FluentAssertions;
-using FluentAssertions.Execution;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using Pro.Search.Commands.PersonCommands;
@@ -19,134 +18,113 @@ using System.Threading.Tasks;
 namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
 {
     [TestClass]
-    public class FoodTest
+    public sealed partial class FoodTest
     {
-        [TestMethod]
-        public async Task HandleGetAllFoodQuery()
+        
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.GetListAllFoods), typeof(DataSources))]
+        public async Task HandleGetAllFoodQuery(
+            PageAndFilteredRequestParams requestDataPageFilteredRequestParams,
+            IEnumerable<Food> returnListFoodEntity)
         {
-            // Prepare
-            var requestData = new PageAndFilteredRequestParams
-            {
-                PageNumber = 1,
-                PageSize = 10,
-                flagsValue = true,
-            };
-            var request = new GetAllFoodQuery(requestData);
+            // Arrange
+            var request = new GetAllFoodQuery(requestDataPageFilteredRequestParams);
 
             var repository = Substitute.For<IFoodRepository>();
             _ = repository.FindAllAsyncFood(
-                page: requestData.PageNumber, 
-                pageSize: requestData.PageSize,
-                requestData.flagsValue, 
-                CancellationToken.None).Returns(
-                new List<Food>
-                {
-                    new Food
-                    {
-                        Id_Food = "159753",
-                    },
-                });
+                page: requestDataPageFilteredRequestParams.PageNumber, 
+                pageSize: requestDataPageFilteredRequestParams.PageSize,
+                requestDataPageFilteredRequestParams.flagsValue, 
+                CancellationToken.None).Returns(returnListFoodEntity);
 
-            // Assert
+            // Act
             var handler = QueryHandlerAllFood(repository);
             var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
+
+            // Assert
             _ = result.Should().BeOfType(typeof(FoodResponse));
         }
 
-        [TestMethod]
-        public async Task HandleCreateFoodCommand()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.PostFoodDatas), typeof(DataSources))]
+        public async Task HandleCreateFoodCommand(
+            FoodAllInfoDto requestFoodAllInfoDto,
+            Food returnRepositoryEntity)
         {
-            // Prepare
-            var request = new CreateFoodCommand(
-                new FoodAllInfoDto
-                {
-                    Id_Food = "654321",
-                    Nome = "TestandoCreate2",
-                    LocalDeVenda = "TestandoLocalCreate2",
-                    ReferenciaIdPessoa = "159753",
-                    PrecoComida = 66.6M
-                });
+            // Arrange
+            var request = new CreateFoodCommand(requestFoodAllInfoDto);
 
             var repository = Substitute.For<IFoodRepository>();
-            _ = repository.FindOneAsyncFood(request.FoodAllInfoDto.Id_Food, CancellationToken.None).Returns(
-                new Food() 
-                {
-                    Id_Food = "654321",
-                    Name_Food = "TestandoCreate2",
-                    Locale_Purcache_Food = "TestandoLocalCreate2",
-                    Id_Pessoas_References = "159753",
-                    Price_Food = 66.6M
-                });
+            _ = repository.FindOneAsyncFood(
+                request.FoodAllInfoDto.Id_Food, 
+                CancellationToken.None)
+                .Returns(returnRepositoryEntity);
+
+            var handler = CreateFoodCommandHandlerData(
+                Substitute.For<ISystemDBContext>(), 
+                repository);
+
+            // Act
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
 
             // Assert
-            var handler = CreateFoodCommandHandlerData(Substitute.For<ISystemDBContext>() ,repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
             _ = result.Should().BeOfType(typeof(FoodAllInfoDto));
         }
 
-        [TestMethod]
-        public async Task HandleUpdateFoodCommand()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.UpdateFoodDatas), typeof(DataSources))]
+        public async Task HandleUpdateFoodCommand(
+            FoodAllInfoDto requestFoodAllInfoDto,
+            Food returnRepositoryEntity)
         {
-            // Prepare
-            var request = new UpdateFoodCommand(
-                new FoodAllInfoDto
-                {
-                    Id_Food = "654321",
-                    Nome = "TestandoCreate2",
-                    LocalDeVenda = "TestandoLocalCreate2",
-                    ReferenciaIdPessoa = "159753",
-                    PrecoComida = 66.6M
-                });
+            // Arrange
+            var request = new UpdateFoodCommand(requestFoodAllInfoDto);
 
             var repository = Substitute.For<IFoodRepository>();
-            _ = repository.FindOneAsyncFood(request.FoodAllInfoDto.Id_Food, CancellationToken.None).Returns(
-                new Food()
-                {
-                    Id_Food = "654321",
-                    Name_Food = "TestandoCreate2",
-                    Locale_Purcache_Food = "TestandoLocalCreate2",
-                    Id_Pessoas_References = "159753",
-                    Price_Food = 66.6M
-                });
+            _ = repository.FindOneAsyncFood(
+                request.FoodAllInfoDto.Id_Food, 
+                CancellationToken.None)
+                .Returns(returnRepositoryEntity);
+
+            //Act
+            var handler = UpdateFoodCommandHandlerData(
+                Substitute.For<ISystemDBContext>(), repository);
+            
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
 
             // Assert
-            var handler = UpdateFoodCommandHandlerData(Substitute.For<ISystemDBContext>(), repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
             _ = result.Should().BeOfType(typeof(FoodAllInfoDto));
         }
 
-        [TestMethod]
-        public async Task HandleDeleteFoodCommandHandler()
+        [DataTestMethod]
+        [DynamicData(nameof(DataSources.DeleteFoodDataParam), typeof(DataSources))]
+        public async Task HandleDeleteFoodCommandHandler(
+            string idFood,
+            IEnumerable<Food> returnFoodOfRepository)
         {
-            // Prepare
-            var id_food = "7858";
-
-            var food = new Food
-            {
-                Id_Food = "88585",
-                Name_Food = "TesteHandleFood1",
-                Locale_Purcache_Food = "TestandoLocalHandle1",
-                Id_Pessoas_References = "04682",
-                Price_Food = 44.6M
-            };
-
-            var request = new DeleteFoodCommand(id_food);
+            // Arrange
+            var request = new DeleteFoodCommand(idFood);
 
             var repository = Substitute.For<IFoodRepository>();
-            _ = repository.FindListFoodReferenceToIDFood(id_food, CancellationToken.None).Returns(
-                new List<Food>
-                    {
-                        food
-                    }
-                );
+            _ = repository.FindListFoodReferenceToIDFood(
+                idFood, 
+                CancellationToken.None)
+                .Returns(returnFoodOfRepository);
+
+            var handler = DeleteFoodCommandHandlerData(
+                Substitute.For<ISystemDBContext>(), repository);
+
+            //Act
+            var result = await handler
+                .Handle(request, CancellationToken.None)
+                .ConfigureAwait(false);
 
             // Assert
-            var handler = DeleteFoodCommandHandlerData(Substitute.For<ISystemDBContext>(), repository);
-            var result = await handler.Handle(request, CancellationToken.None).ConfigureAwait(false);
-            using (new AssertionScope())
-            {
-                _ = result.Should().NotBeNull();
-            }
+            _ = result.Should().NotBeNull();
         }
 
         [TestMethod]
