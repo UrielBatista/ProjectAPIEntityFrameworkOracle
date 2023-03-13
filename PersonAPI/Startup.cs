@@ -3,6 +3,7 @@ using GraphQL;
 using GraphQL.MicrosoftDI;
 using GraphQL.Server;
 using GraphQL.SystemTextJson;
+using HotChocolate.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -114,6 +115,7 @@ namespace PessoasAPI
 
             _ = services.AddGraphQLServer()
                 .AddQueryType<PersonQueryRequest>()
+                .AddExportDirectiveType()
                 .AddProjections()
                 .AddFiltering()
                 .AddSorting();
@@ -138,7 +140,10 @@ namespace PessoasAPI
             _ = app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapGraphQL("/v2/graphql");
+                endpoints.MapGraphQL("/v2/graphql").WithOptions(new GraphQLServerOptions
+                {
+                    EnableBatching = true
+                });
             });
 
             _ = app.UseGraphQL<PersonSchema>();

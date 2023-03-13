@@ -14,8 +14,8 @@
     <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="6.1.0" />
     <PackageReference Include="GraphQL.Server.Ui.Playground" Version="6.1.0" />
     <PackageReference Include="GraphQL.SystemTextJson" Version="5.3.0" />
-    <PackageReference Include="HotChocolate.AspNetCore" Version="12.12.1" />
-    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="12.12.1" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="13.0.5" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="13.0.5" />
     <PackageReference Include="MassTransit.AspNetCore" Version="7.3.0" />
     <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.3.0" />
     <PackageReference Include="MassTransit.RabbitMQ" Version="7.3.0" />

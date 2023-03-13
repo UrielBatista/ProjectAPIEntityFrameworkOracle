@@ -2,8 +2,6 @@
 using HotChocolate.Data;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
-using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace PersonAPI.TempModelGraph
@@ -15,5 +13,12 @@ namespace PersonAPI.TempModelGraph
         [UseSorting]
         public IQueryable<Persons> GetPersonsData([Service] ISystemDBContext context) =>
             context.Pessoas;
+
+        [UseProjection]
+        [UseFiltering]
+        [UseSorting]
+        public IQueryable<Food> GetFoodPurchase([Service] ISystemDBContext context) =>
+            context.Food;
     }
+
 }
