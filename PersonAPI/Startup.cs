@@ -16,17 +16,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using PersonAPI.GraphQL;
-using PersonAPI.TempModelGraph;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
-using Pro.Search.Infraestructure;
-using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure;using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure.GraphQL.Queries;
 using Pro.Search.Infraestructure.GraphQL.Schemas;
 using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
 using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace PessoasAPI
 {
@@ -114,7 +112,7 @@ namespace PessoasAPI
                 .AddGraphTypes(typeof(PersonsTypes).Assembly));
 
             _ = services.AddGraphQLServer()
-                .AddQueryType<PersonQueryRequest>()
+                .AddQueryType<PersonQueryHotChocolate>()
                 .AddExportDirectiveType()
                 .AddProjections()
                 .AddFiltering()

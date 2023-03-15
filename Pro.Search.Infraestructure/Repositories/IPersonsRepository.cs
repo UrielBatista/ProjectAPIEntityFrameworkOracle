@@ -13,6 +13,8 @@ namespace Pro.Search.Infraestructure.Repositories
         
         Task<List<Persons>> FindAllAsyncPerson(CancellationToken cancellationToken);
 
+        Task<List<Persons>> FindAllAsyncPersonWithId(string[] idPessoas, CancellationToken cancellationToken);
+
         Task<List<decimal>> CalcMediaPersonNumber(CancellationToken cancellationToken);
 
         Task<List<Persons>> SearchAllPersonToIdPerson(string id_pessoa,CancellationToken cancellationToken);
