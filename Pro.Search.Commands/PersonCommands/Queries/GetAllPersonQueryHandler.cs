@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BuldBlocks.Domain.Commons;
+using MediatR;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetAllPersonQueryHandler : IQueryHandler<GetAllPersonQuery, List<PersonsAllInfoDto>>
+    public class GetAllPersonQueryHandler : IRequestHandler<GetAllPersonQuery, List<PersonsAllInfoDto>>
     {
         private readonly IPersonsRepository repository;
         private readonly IMapper mapper;

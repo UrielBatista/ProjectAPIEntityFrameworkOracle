@@ -1,9 +1,9 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class GetPersonPurcashFoodQuery : IQuery<PersonPurcashDto>
+    public class GetPersonPurcashFoodQuery : IRequest<PersonPurcashDto>
     {
         public GetPersonPurcashFoodQuery(string pessoasId)
         {

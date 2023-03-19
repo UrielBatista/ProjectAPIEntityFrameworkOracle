@@ -1,8 +1,8 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetCepQuery : IQuery<object>
+    public class GetCepQuery : IRequest<object>
     {
         public GetCepQuery(string cep)
         {

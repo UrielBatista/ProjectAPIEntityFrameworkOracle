@@ -1,10 +1,10 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using System.Collections.Generic;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class GetListPersonsPurcashFoodsQuery : IQuery<IEnumerable<PersonPurcashDto>>
+    public class GetListPersonsPurcashFoodsQuery : IRequest<IEnumerable<PersonPurcashDto>>
     {
         public GetListPersonsPurcashFoodsQuery(string[] pessoasId)
         {

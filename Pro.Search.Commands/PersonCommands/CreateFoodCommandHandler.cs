@@ -1,17 +1,16 @@
 ﻿using AutoMapper;
-using BuldBlocks.Domain.Commons;
+using MediatR;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
-using ServiceStack.Redis;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands
 {
-    public class CreateFoodCommandHandler : ICommandHandler<CreateFoodCommand, FoodAllInfoDto>
+    public class CreateFoodCommandHandler : IRequestHandler<CreateFoodCommand, FoodAllInfoDto>
     {
         private readonly ISystemDBContext _context;
         private readonly IFoodRepository repository;

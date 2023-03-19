@@ -1,9 +1,9 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetOnePersonQuery : IQuery<PersonDto>
+    public class GetOnePersonQuery : IRequest<PersonDto>
     {
         public GetOnePersonQuery(string pessoasId)
         {
