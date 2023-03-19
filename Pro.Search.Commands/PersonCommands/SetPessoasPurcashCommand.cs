@@ -1,9 +1,9 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
 namespace Pro.Search.Commands.PersonCommands
 {
-    public class SetPessoasPurcashCommand : ICommand<PersonPurcashDto>
+    public class SetPessoasPurcashCommand : IRequest<PersonPurcashDto>
     {
         public SetPessoasPurcashCommand(string id_pessoa, PersonPurcashDto personPurcashDto)
         {

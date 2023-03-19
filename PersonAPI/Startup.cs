@@ -57,13 +57,12 @@ namespace PessoasAPI
             //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
             //        options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
             _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-                    options.UseMySQL(Configuration.GetConnectionString("MySqlDBConnection"))
-                    .EnableSensitiveDataLogging());
+                    options.UseMySQL(Configuration.GetConnectionString("MySqlDBConnection")));
 
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
             //MassTransit Dependency injection
-            services.AddMassTransitExtension(Configuration);
+            //services.AddMassTransitExtension(Configuration);
             
             // Authorization dependency injection
             var key = Encoding.ASCII.GetBytes(Settings.Secret);

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BuldBlocks.Domain.Commons;
+using MediatR;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class GetListPersonsPurcashFoodsQueryHandler : IQueryHandler<GetListPersonsPurcashFoodsQuery, IEnumerable<PersonPurcashDto>>
+    public class GetListPersonsPurcashFoodsQueryHandler : IRequestHandler<GetListPersonsPurcashFoodsQuery, IEnumerable<PersonPurcashDto>>
     {
         private readonly IPersonsRepository repository;
         private readonly IMapper mapper;

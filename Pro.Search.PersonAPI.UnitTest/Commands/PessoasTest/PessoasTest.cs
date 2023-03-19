@@ -296,8 +296,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             var mapper = new Mapper(mapperConf);
             return new CreatePersonCommandHandler(
                 Substitute.For<ISystemDBContext>(), 
-                mapper, Substitute.For<IPersonsRepository>(), 
-                Substitute.For<IPublishEndpoint>());
+                mapper, Substitute.For<IPersonsRepository>());
         }
 
         protected static UpdatePersonCommandHandler UpdatePersonCommandHandlerData(ISystemDBContext _context, IPersonsRepository repository)

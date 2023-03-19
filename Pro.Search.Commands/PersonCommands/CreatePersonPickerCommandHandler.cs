@@ -1,5 +1,5 @@
-﻿using BuldBlocks.Domain.Commons;
-using JIgor.Projects.ListPicker;
+﻿using JIgor.Projects.ListPicker;
+using MediatR;
 using Pro.Search.Commands.PersonCommands;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.OneOf;
@@ -11,7 +11,7 @@ using static Pro.Search.PersonDomains.PersonEngine.OneOf.CreateOrUpdatePickerLis
 
 namespace Pro.Search.PersonCommands
 {
-    public class CreatePersonPickerCommandHandler : ICommandHandler<CreatePersonPickerCommand, CreateOrUpdatePickerListResponses>
+    public class CreatePersonPickerCommandHandler : IRequestHandler<CreatePersonPickerCommand, CreateOrUpdatePickerListResponses>
     {
         public async Task<CreateOrUpdatePickerListResponses> Handle(CreatePersonPickerCommand request, CancellationToken cancellationToken)
         {

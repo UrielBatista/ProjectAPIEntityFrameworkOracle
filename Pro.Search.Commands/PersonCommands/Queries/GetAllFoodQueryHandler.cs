@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BuldBlocks.Domain.Commons;
+using MediatR;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class GetAllFoodQueryHandler : IQueryHandler<GetAllFoodQuery, FoodResponse>
+    public class GetAllFoodQueryHandler : IRequestHandler<GetAllFoodQuery, FoodResponse>
     {
         private readonly IFoodRepository repository;
         private readonly IMapper mapper;
