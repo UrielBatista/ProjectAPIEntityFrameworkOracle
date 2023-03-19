@@ -1,5 +1,4 @@
-﻿using BuldBlocks.Domain.Commons;
-using MediatR;
+﻿using MediatR;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.OneOf;
 
