@@ -1,5 +1,4 @@
-﻿using BuldBlocks.Domain.Commons;
-using MediatR;
+﻿using MediatR;
 using Pro.Search.Infraestructure.ServiceReferences.CepApi;
 using System.Threading;
 using System.Threading.Tasks;

@@ -1,5 +1,4 @@
-﻿using BuldBlocks.Domain.Commons;
-using MediatR;
+﻿using MediatR;
 using Pro.Search.Infraestructure.Repositories;
 using System.Collections.Generic;
 using System.Linq;

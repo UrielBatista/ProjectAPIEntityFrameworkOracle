@@ -1,7 +1,7 @@
-﻿using BuldBlocks.Domain.Commons;
-using MediatR;
+﻿using MediatR;
 using Microsoft.IdentityModel.Tokens;
 using Pro.Search.Infraestructure.Repositories.Support;
+using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using Pro.Search.PersonDomains.PersonEngine.OneOf;

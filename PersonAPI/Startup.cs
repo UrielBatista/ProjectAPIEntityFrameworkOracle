@@ -1,4 +1,3 @@
-using BuldBlocks.Domain.Commons;
 using GraphQL;
 using GraphQL.MicrosoftDI;
 using GraphQL.Server;
@@ -24,6 +23,7 @@ using Pro.Search.Infraestructure.GraphQL.Queries;
 using Pro.Search.Infraestructure.GraphQL.Schemas;
 using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
+using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
 using System.Text;
 
