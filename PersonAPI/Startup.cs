@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using MySql.Data.MySqlClient;
 using PersonAPI.GraphQL;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
@@ -53,8 +54,11 @@ namespace PessoasAPI
             // Database Connector
             //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
             //        options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+            //        options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
             _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
+                    options.UseMySQL(Configuration.GetConnectionString("MySqlDBConnection"))
+                    .EnableSensitiveDataLogging());
 
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
