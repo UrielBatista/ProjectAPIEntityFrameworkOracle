@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using BuldBlocks.Domain.Commons;
 using MediatR;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;

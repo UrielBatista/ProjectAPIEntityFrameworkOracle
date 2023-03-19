@@ -1,4 +1,4 @@
-﻿namespace BuldBlocks.Domain.Commons
+﻿namespace Pro.Search.PersonDomains.PersonEngine.Commons
 {
     public static class Settings
     {
