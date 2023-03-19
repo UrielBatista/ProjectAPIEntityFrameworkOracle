@@ -96,5 +96,10 @@ namespace Pro.Search.Infraestructure.Repositories.Support
 
             return personPurcashFood;
         }
+
+        public async Task<List<Persons>> FindAllAsyncPersonWithId(string[] idPessoas, CancellationToken cancellationToken)
+        {
+            return await pessoas.Where(p => idPessoas.Contains(p.Id_Pessoas)).ToListAsync();
+        }
     }
 }

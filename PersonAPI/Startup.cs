@@ -3,6 +3,7 @@ using GraphQL;
 using GraphQL.MicrosoftDI;
 using GraphQL.Server;
 using GraphQL.SystemTextJson;
+using HotChocolate.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -14,18 +15,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using MySql.Data.MySqlClient;
 using PersonAPI.GraphQL;
-using PersonAPI.TempModelGraph;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
-using Pro.Search.Infraestructure;
-using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure;using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure.GraphQL.Queries;
 using Pro.Search.Infraestructure.GraphQL.Schemas;
 using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
 using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace PessoasAPI
 {
@@ -54,8 +54,11 @@ namespace PessoasAPI
             // Database Connector
             //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
             //        options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+            //        options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
             _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
+                    options.UseMySQL(Configuration.GetConnectionString("MySqlDBConnection"))
+                    .EnableSensitiveDataLogging());
 
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
@@ -113,7 +116,8 @@ namespace PessoasAPI
                 .AddGraphTypes(typeof(PersonsTypes).Assembly));
 
             _ = services.AddGraphQLServer()
-                .AddQueryType<PersonQueryRequest>()
+                .AddQueryType<PersonQueryHotChocolate>()
+                .AddExportDirectiveType()
                 .AddProjections()
                 .AddFiltering()
                 .AddSorting();
@@ -138,7 +142,10 @@ namespace PessoasAPI
             _ = app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapGraphQL("/v2/graphql");
+                endpoints.MapGraphQL("/v2/graphql").WithOptions(new GraphQLServerOptions
+                {
+                    EnableBatching = true
+                });
             });
 
             _ = app.UseGraphQL<PersonSchema>();
