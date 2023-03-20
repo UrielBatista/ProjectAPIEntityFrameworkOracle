@@ -6,6 +6,7 @@ using HotChocolate.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.OData;
@@ -51,14 +52,13 @@ namespace PessoasAPI
                     _ = option.SetMaxTop(5);
                     _ = option.SkipToken();
                 });
-
             // Database Connector
             //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
             //        options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
             //        options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
             _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-                    options.UseMySQL(Configuration.GetConnectionString("MySqlDBConnection")));
+                    options.UseMySQL(Configuration["CONNECT_STRING"]));
 
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
