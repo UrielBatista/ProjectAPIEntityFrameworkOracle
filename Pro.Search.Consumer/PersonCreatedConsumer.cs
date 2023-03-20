@@ -30,7 +30,7 @@ namespace Pro.Search.Consumer
 
             using (var process = Process.Start(psi))
             {
-                errors = process.StandardError.ReadToEnd();
+                errors = process!.StandardError.ReadToEnd();
                 results = process.StandardOutput.ReadToEnd();
             }
 

@@ -40,7 +40,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasPurcashTest
             _ = response.Should().BeOfType(typeof(PersonPurcashDto));
         }
 
-        protected static GetPersonPurcashFoodQueryHandler GetPersonPurcashFoodQueryHandlerHandlerData(IPersonsRepository pessoasRepository)
+        private static GetPersonPurcashFoodQueryHandler GetPersonPurcashFoodQueryHandlerHandlerData(IPersonsRepository pessoasRepository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
