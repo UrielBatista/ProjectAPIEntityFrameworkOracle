@@ -25,6 +25,7 @@ using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
+using System.Net.NetworkInformation;
 using System.Text;
 
 namespace PessoasAPI
@@ -102,8 +103,7 @@ namespace PessoasAPI
             
             _ = services.AddSearchInfraestruture(Configuration);
             
-            _ = services.AddMediatR(
-                    typeof(GetOnePersonQuery).Assembly);
+            _ = services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetOnePersonQuery).Assembly));
 
             // GraphQL dependency injection
             _ = services.AddScoped<PersonSchema>();
