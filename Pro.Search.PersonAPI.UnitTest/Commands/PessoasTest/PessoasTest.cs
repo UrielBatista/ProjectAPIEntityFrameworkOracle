@@ -263,44 +263,43 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
         }
 
-        protected static GetAllPersonQueryHandler QueryHandler(IPersonsRepository repository)
+        private static GetAllPersonQueryHandler QueryHandler(IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
             return new GetAllPersonQueryHandler(repository, mapper);
         }
 
-        protected static GetMediaPersonQueryHandler QueryHandlerMediaPerson(IPersonsRepository repository)
+        private static GetMediaPersonQueryHandler QueryHandlerMediaPerson(IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             return new GetMediaPersonQueryHandler(repository);
         }
 
-        protected static GetOnePersonQueryHandler QueryOneHandler(IPersonsRepository repository)
+        private static GetOnePersonQueryHandler QueryOneHandler(IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
             return new GetOnePersonQueryHandler(repository, mapper);
         }
 
-        protected static GetPersonPurcashFoodQueryHandler QueryPersonFoodPurcash(IPersonsRepository repository)
+        private static GetPersonPurcashFoodQueryHandler QueryPersonFoodPurcash(IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
             return new GetPersonPurcashFoodQueryHandler(repository, mapper);
         }
 
-        protected static CreatePersonCommandHandler CreatePersonCommandHandlerData(ISystemDBContext _context, IPersonsRepository repository)
+        private static CreatePersonCommandHandler CreatePersonCommandHandlerData(ISystemDBContext _context, IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
             return new CreatePersonCommandHandler(
                 Substitute.For<ISystemDBContext>(), 
-                mapper, Substitute.For<IPersonsRepository>(), 
-                Substitute.For<IPublishEndpoint>());
+                mapper, Substitute.For<IPersonsRepository>());
         }
 
-        protected static UpdatePersonCommandHandler UpdatePersonCommandHandlerData(ISystemDBContext _context, IPersonsRepository repository)
+        private static UpdatePersonCommandHandler UpdatePersonCommandHandlerData(ISystemDBContext _context, IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
@@ -310,7 +309,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 mapper);
         }
 
-        protected static DeletePersonCommandHandler DeleteHandlePersonCommand(ISystemDBContext context, IPersonsRepository repository)
+        private static DeletePersonCommandHandler DeleteHandlePersonCommand(ISystemDBContext context, IPersonsRepository repository)
         {
             return new DeletePersonCommandHandler(
                 context ?? Substitute.For<ISystemDBContext>(), 
@@ -332,7 +331,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 mapper ?? Substitute.For<IMapper>());
         }
 
-        protected static UpdatePersonCommandHandler CreateHandlerUpdatePersonExceptionGetOnePessoa(
+        private static UpdatePersonCommandHandler CreateHandlerUpdatePersonExceptionGetOnePessoa(
             ISystemDBContext context = default, IMapper mapper = default, IPersonsRepository repository = default)
         {
             return new UpdatePersonCommandHandler(

@@ -157,14 +157,14 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
             _ = await result.Should().ThrowExactlyAsync<ArgumentNullException>().ConfigureAwait(false);
         }
 
-        protected static GetAllFoodQueryHandler QueryHandlerAllFood(IFoodRepository repository)
+        private static GetAllFoodQueryHandler QueryHandlerAllFood(IFoodRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<FoodProfile>());
             var mapper = new Mapper(mapperConf);
             return new GetAllFoodQueryHandler(repository, mapper);
         }
 
-        protected static CreateFoodCommandHandler CreateFoodCommandHandlerData(ISystemDBContext _context, IFoodRepository repository)
+        private static CreateFoodCommandHandler CreateFoodCommandHandlerData(ISystemDBContext _context, IFoodRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<FoodProfile>());
             var mapper = new Mapper(mapperConf);
@@ -174,7 +174,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
                 repository ?? Substitute.For<IFoodRepository>());
         }
 
-        protected static UpdateFoodCommandHandler UpdateFoodCommandHandlerData(ISystemDBContext _context, IFoodRepository repository)
+        private static UpdateFoodCommandHandler UpdateFoodCommandHandlerData(ISystemDBContext _context, IFoodRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<FoodProfile>());
             var mapper = new Mapper(mapperConf);
@@ -202,7 +202,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
                 mapper ?? Substitute.For<IMapper>());
         }
 
-        protected static DeleteFoodCommandHandler DeleteFoodCommandHandlerData(ISystemDBContext _context, IFoodRepository foodRepository)
+        private static DeleteFoodCommandHandler DeleteFoodCommandHandlerData(ISystemDBContext _context, IFoodRepository foodRepository)
         {
             return new DeleteFoodCommandHandler(
                 _context ?? Substitute.For<ISystemDBContext>(), 

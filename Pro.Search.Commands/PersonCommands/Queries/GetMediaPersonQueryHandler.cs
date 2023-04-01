@@ -1,4 +1,4 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Pro.Search.Infraestructure.Repositories;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetMediaPersonQueryHandler : IQueryHandler<GetMediaPersonQuery, decimal>
+    public class GetMediaPersonQueryHandler : IRequestHandler<GetMediaPersonQuery, decimal>
     {
         private readonly IPersonsRepository repository;
 

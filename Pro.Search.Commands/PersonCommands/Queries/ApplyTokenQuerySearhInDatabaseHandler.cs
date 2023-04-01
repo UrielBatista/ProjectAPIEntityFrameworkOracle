@@ -1,6 +1,7 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Microsoft.IdentityModel.Tokens;
 using Pro.Search.Infraestructure.Repositories.Support;
+using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.Entities;
 using Pro.Search.PersonDomains.PersonEngine.OneOf;
@@ -16,7 +17,7 @@ using static Pro.Search.PersonDomains.PersonEngine.OneOf.TokenRequestResponses;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class ApplyTokenQuerySearhInDatabaseHandler : IQueryHandler<ApplyTokenQuerySearhInDatabase, TokenRequestResponses>
+    public class ApplyTokenQuerySearhInDatabaseHandler : IRequestHandler<ApplyTokenQuerySearhInDatabase, TokenRequestResponses>
     {
         private readonly IUserRepository repository;
         private static List<(string, string)> _refreshTokens = new();

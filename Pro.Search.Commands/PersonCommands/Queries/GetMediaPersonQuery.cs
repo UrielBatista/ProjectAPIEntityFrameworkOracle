@@ -1,8 +1,8 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetMediaPersonQuery : IQuery<decimal>
+    public class GetMediaPersonQuery : IRequest<decimal>
     {
     }
 }

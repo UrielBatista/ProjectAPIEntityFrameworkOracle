@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
-using BuldBlocks.Domain.Commons;
+using MediatR;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Repositories;
-using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.OneOf;
 using System;
 using System.Threading;
@@ -11,7 +10,7 @@ using static Pro.Search.PersonDomains.PersonEngine.OneOf.CreateOrUpdateResponses
 
 namespace Pro.Search.PersonCommands
 {
-    public class UpdatePersonCommandHandler : ICommandHandler<UpdatePersonCommand, CreateOrUpdateResponses>
+    public class UpdatePersonCommandHandler : IRequestHandler<UpdatePersonCommand, CreateOrUpdateResponses>
     {
         private readonly ISystemDBContext _context;
         private readonly IPersonsRepository repository;

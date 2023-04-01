@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BuldBlocks.Domain.Commons;
+using MediatR;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Repositories;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Commands.PersonCommands
 {
-    public class CreateFoodInMemoryCommandHandler : ICommandHandler<CreateFoodInMemoryCommand, FoodAllInfoDto>
+    public class CreateFoodInMemoryCommandHandler : IRequestHandler<CreateFoodInMemoryCommand, FoodAllInfoDto>
     {
         private readonly ISystemDBContext _context;
         private readonly IFoodRepository repository;

@@ -1,11 +1,11 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Pro.Search.Infraestructure.ServiceReferences.CepApi;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Pro.Search.PersonCommands.Queries
 {
-    public class GetCepQueryHandler : IQueryHandler<GetCepQuery, object>
+    public class GetCepQueryHandler : IRequestHandler<GetCepQuery, object>
     {
         private readonly ICepApiResources cepApi;
 

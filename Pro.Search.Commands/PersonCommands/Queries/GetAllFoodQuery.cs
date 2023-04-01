@@ -1,10 +1,10 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class GetAllFoodQuery : IQuery<FoodResponse>
+    public class GetAllFoodQuery : IRequest<FoodResponse>
     {
         public GetAllFoodQuery(PageAndFilteredRequestParams parans)
         {

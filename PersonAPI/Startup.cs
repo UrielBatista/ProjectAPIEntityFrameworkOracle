@@ -1,4 +1,3 @@
-using BuldBlocks.Domain.Commons;
 using GraphQL;
 using GraphQL.MicrosoftDI;
 using GraphQL.Server;
@@ -7,6 +6,7 @@ using HotChocolate.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.OData;
@@ -15,18 +15,19 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using MySql.Data.MySqlClient;
 using PersonAPI.GraphQL;
-using PersonAPI.TempModelGraph;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
-using Pro.Search.Infraestructure;
-using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure;using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure.GraphQL.Queries;
 using Pro.Search.Infraestructure.GraphQL.Schemas;
 using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
+using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
+using System.Net.NetworkInformation;
 using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace PessoasAPI
 {
@@ -51,17 +52,18 @@ namespace PessoasAPI
                     _ = option.SetMaxTop(5);
                     _ = option.SkipToken();
                 });
-
             // Database Connector
             //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
             //        options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+            //        options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
             _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
+                    options.UseMySQL(Configuration["CONNECT_STRING"]));
 
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
             //MassTransit Dependency injection
-            services.AddMassTransitExtension(Configuration);
+            //services.AddMassTransitExtension(Configuration);
             
             // Authorization dependency injection
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
@@ -101,8 +103,7 @@ namespace PessoasAPI
             
             _ = services.AddSearchInfraestruture(Configuration);
             
-            _ = services.AddMediatR(
-                    typeof(GetOnePersonQuery).Assembly);
+            _ = services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetOnePersonQuery).Assembly));
 
             // GraphQL dependency injection
             _ = services.AddScoped<PersonSchema>();
@@ -114,7 +115,7 @@ namespace PessoasAPI
                 .AddGraphTypes(typeof(PersonsTypes).Assembly));
 
             _ = services.AddGraphQLServer()
-                .AddQueryType<PersonQueryRequest>()
+                .AddQueryType<PersonQueryHotChocolate>()
                 .AddExportDirectiveType()
                 .AddProjections()
                 .AddFiltering()

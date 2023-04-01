@@ -1,10 +1,10 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 using Pro.Search.PersonDomains.PersonEngine.OneOf;
 
 namespace Pro.Search.Commands.PersonCommands.Queries
 {
-    public class ApplyTokenQuerySearhInDatabase : IQuery<TokenRequestResponses>
+    public class ApplyTokenQuerySearhInDatabase : IRequest<TokenRequestResponses>
     {
 
         public ApplyTokenQuerySearhInDatabase(TokenLoginRequestDto request)

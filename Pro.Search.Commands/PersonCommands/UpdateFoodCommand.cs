@@ -1,9 +1,9 @@
-﻿using BuldBlocks.Domain.Commons;
+﻿using MediatR;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
 
 namespace Pro.Search.Commands.PersonCommands
 {
-    public class UpdateFoodCommand : ICommand<FoodAllInfoDto>
+    public class UpdateFoodCommand : IRequest<FoodAllInfoDto>
     {
         public UpdateFoodCommand(FoodAllInfoDto foodAllInfoDto)
         {

@@ -24,7 +24,7 @@ namespace Pro.Search.Infraestructure.Context
         {
             if (modelBuilder != null)
             {
-                _ = modelBuilder.HasDefaultSchema("SYSTEM");
+                // _ = modelBuilder.HasDefaultSchema("SYSTEM");
                 _ = modelBuilder.ApplyConfiguration(new PersonsConfigurations());
                 _ = modelBuilder.ApplyConfiguration(new FoodConfigurations());
                 _ = modelBuilder.ApplyConfiguration(new UserConfigurations());
