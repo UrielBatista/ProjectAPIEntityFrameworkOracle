@@ -3,6 +3,7 @@ using GraphQL.MicrosoftDI;
 using GraphQL.Server;
 using GraphQL.SystemTextJson;
 using HotChocolate.AspNetCore;
+using MassTransit.Courier.Contracts;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -14,18 +15,23 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using MySql.Data.MySqlClient;
+using PersonAPI.Extensions;
 using PersonAPI.GraphQL;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
 using Pro.Search.Infraestructure;using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure.GraphQL.Mutations;
 using Pro.Search.Infraestructure.GraphQL.Queries;
 using Pro.Search.Infraestructure.GraphQL.Schemas;
+using Pro.Search.Infraestructure.GraphQL.Subscriptions;
 using Pro.Search.Infraestructure.Mappers;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
+using System;
 using System.Net.NetworkInformation;
 using System.Text;
 
@@ -58,13 +64,18 @@ namespace PessoasAPI
             //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
             //        options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
             _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-                    options.UseMySQL(Configuration["CONNECT_STRING"]));
+                    options.UseMySQL(Configuration["CONNECT_STRING"])
+                    .LogTo(Console.WriteLine, LogLevel.Information));
 
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
             //MassTransit Dependency injection
             //services.AddMassTransitExtension(Configuration);
-            
+            services.AddLogging(builder =>
+            {
+                builder.ClearProviders();
+                builder.AddConsole();
+            });
             // Authorization dependency injection
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
             _ = services.AddAuthentication(x =>
@@ -114,12 +125,7 @@ namespace PessoasAPI
                 .AddErrorInfoProvider(opt => opt.ExposeExceptionStackTrace = true)
                 .AddGraphTypes(typeof(PersonsTypes).Assembly));
 
-            _ = services.AddGraphQLServer()
-                .AddQueryType<PersonQueryHotChocolate>()
-                .AddExportDirectiveType()
-                .AddProjections()
-                .AddFiltering()
-                .AddSorting();
+            services.AddGraphQLExtensions();
 
             _ = services.AddSwaggerGen();
         }
@@ -135,12 +141,15 @@ namespace PessoasAPI
             _ = app.UseGlobalExceptionHandler();
             _ = app.UseRouting();
 
+            _ = app.UseWebSockets();
+
             _ = app.UseAuthentication();
             _ = app.UseAuthorization();
 
             _ = app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapGraphQL();
                 endpoints.MapGraphQL("/v2/graphql").WithOptions(new GraphQLServerOptions
                 {
                     EnableBatching = true

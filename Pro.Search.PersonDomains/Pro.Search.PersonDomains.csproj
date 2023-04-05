@@ -8,6 +8,9 @@
     <PackageReference Include="GraphQL" Version="5.3.0" />
     <PackageReference Include="GraphQL.EntityFrameworkCore.DynamicLinq" Version="1.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+	<PackageReference Include="HotChocolate.AspNetCore" Version="13.0.5" />
+	<PackageReference Include="HotChocolate.Data.EntityFramework" Version="13.0.5" />
+	<PackageReference Include="HotChocolate.Types" Version="13.0.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="OneOf" Version="3.0.216" />
     <PackageReference Include="RestSharp" Version="107.3.0" />

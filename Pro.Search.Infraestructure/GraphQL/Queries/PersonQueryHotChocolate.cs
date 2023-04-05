@@ -1,6 +1,7 @@
 ﻿using GreenDonut;
 using HotChocolate;
 using HotChocolate.Data;
+using Microsoft.EntityFrameworkCore;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.GraphQL.DataLoaders;
 using Pro.Search.PersonDomains.PersonEngine.Dtos;
@@ -14,6 +15,13 @@ namespace Pro.Search.Infraestructure.GraphQL.Queries
 {
     public class PersonQueryHotChocolate
     {
+        [UseFiltering]
+        [UseSorting]
+        public IQueryable<Persons> People([Service] ISystemDBContext context) =>
+            context.Pessoas
+            .Include(p => p.ComidaComprada)
+            .AsNoTracking().AsQueryable();
+
         [UseProjection]
         [UseFiltering]
         [UseSorting]

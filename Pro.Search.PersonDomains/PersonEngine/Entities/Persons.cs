@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotChocolate.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -19,6 +20,8 @@ namespace Pro.Search.PersonDomains.PersonEngine.Entities
 
         public DateTime DataHora { get; set; }
 
+        [UseFiltering]
+        [UseSorting]
         public IEnumerable<Food> ComidaComprada { get; set; }
     }
 }
