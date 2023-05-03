@@ -43,7 +43,7 @@ Esse projeto ainda conta com um payload onde auxiliara no uso dos endpoints, voc
 [Insomnia-endpoint-PersonAPI](https://drive.google.com/file/d/15AUBvYMk0ABjBW8oDZbLH49wDg3tP3Lb/view?usp=sharing)
 
 ## Contribuidores
-Projeto apenas para simulação.
+Projeto apenas para simulação de API.
 
 Ass: Uriel Batista
 
