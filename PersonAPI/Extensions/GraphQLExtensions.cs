@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AppAny.HotChocolate.FluentValidation;
+using FluentValidation.AspNetCore;
+using HotChocolate;
+using Microsoft.Extensions.DependencyInjection;
 using Pro.Search.Infraestructure.GraphQL.Mutations;
 using Pro.Search.Infraestructure.GraphQL.Queries;
 using Pro.Search.Infraestructure.GraphQL.Subscriptions;
@@ -14,11 +17,11 @@ namespace PersonAPI.Extensions
                 .AddMutationType<PersonMutation>()
                 .AddSubscriptionType<PersonSubscriptions>()
                 .AddInMemorySubscriptions()
-                .AddMutationConventions()
                 .AddDefaultTransactionScopeHandler()
                 .AddExportDirectiveType()
                 .AddProjections()
                 .AddFiltering()
+                .AddFluentValidation(x => x.UseDefaultErrorMapper())
                 .AddSorting();
         }
     }

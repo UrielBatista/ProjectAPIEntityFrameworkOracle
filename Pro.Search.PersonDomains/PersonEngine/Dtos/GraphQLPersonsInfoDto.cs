@@ -1,10 +1,11 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace Pro.Search.PersonDomains.PersonEngine.Dtos
 {
     public class GraphQLPersonsInfoDto
     {
+        public string IdPessoas { get; set; }
+
         public string Nome { get; set; }
 
         public string Sobrenome { get; set; }

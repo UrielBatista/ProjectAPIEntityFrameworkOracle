@@ -2,11 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+	<LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AppAny.HotChocolate.FluentValidation" Version="0.11.0" />
     <PackageReference Include="AutoMapper" Version="11.0.1" />
-    <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="GreenDonut" Version="13.0.5" />
 	<PackageReference Include="HotChocolate.AspNetCore" Version="13.0.5" />
 	<PackageReference Include="HotChocolate.AspNetCore.Subscriptions" Version="10.5.5" />

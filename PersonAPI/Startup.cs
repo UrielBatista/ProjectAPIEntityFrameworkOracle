@@ -1,13 +1,12 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using GraphQL;
 using GraphQL.MicrosoftDI;
 using GraphQL.Server;
 using GraphQL.SystemTextJson;
 using HotChocolate.AspNetCore;
-using MassTransit.Courier.Contracts;
-using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.OData;
@@ -17,22 +16,18 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using MySql.Data.MySqlClient;
 using PersonAPI.Extensions;
 using PersonAPI.GraphQL;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
-using Pro.Search.Infraestructure;using Pro.Search.Infraestructure.Context;
-using Pro.Search.Infraestructure.GraphQL.Mutations;
-using Pro.Search.Infraestructure.GraphQL.Queries;
+using Pro.Search.Infraestructure;
+using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.GraphQL.Schemas;
-using Pro.Search.Infraestructure.GraphQL.Subscriptions;
 using Pro.Search.Infraestructure.Mappers;
+using Pro.Search.Infraestructure.Validators;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
-using System;
-using System.Net.NetworkInformation;
 using System.Text;
 
 namespace PessoasAPI
@@ -59,13 +54,13 @@ namespace PessoasAPI
                     _ = option.SkipToken();
                 });
             // Database Connector
-            //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-            //        options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+                    options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
             //        options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
-            _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-                    options.UseMySQL(Configuration["CONNECT_STRING"])
-                    .LogTo(Console.WriteLine, LogLevel.Information));
+            //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+            //        options.UseMySQL(Configuration["CONNECT_STRING"])
+            //        .LogTo(Console.WriteLine, LogLevel.Information));
 
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 
@@ -124,6 +119,10 @@ namespace PessoasAPI
                 .AddSystemTextJson()
                 .AddErrorInfoProvider(opt => opt.ExposeExceptionStackTrace = true)
                 .AddGraphTypes(typeof(PersonsTypes).Assembly));
+            
+            _ = services.AddValidatorsFromAssemblyContaining<GraphQLPersonsInfoDtoValidator>();
+            _ = services.AddFluentValidationAutoValidation();
+            _ = services.AddFluentValidationClientsideAdapters();
 
             services.AddGraphQLExtensions();
 
