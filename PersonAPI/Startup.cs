@@ -28,6 +28,7 @@ using Pro.Search.Infraestructure.Validators;
 using Pro.Search.PersonCommands.Queries;
 using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
+using System;
 using System.Text;
 
 namespace PessoasAPI
