@@ -12,6 +12,13 @@ namespace Pro.Search.Infraestructure.Validators
             _ = this.RuleFor(p => p.LocalDeVenda).NotEmpty().WithMessage("LocalDeVenda não pode ser vazio");
             _ = this.RuleFor(p => p.ReferenciaIdPessoa).NotEmpty().WithMessage("ReferenciaIdPessoa não pode ser vazio");
             _ = this.RuleFor(p => p.PrecoComida).NotEmpty().WithMessage("PrecoComida não pode ser vazio");
+
+            this.RuleSet("GraphQLFoods", () =>
+            {
+                _ = this.RuleFor(p => p.Nome).NotEmpty().WithMessage("Nome is not can be empty");
+                _ = this.RuleFor(p => p.ReferenciaIdPessoa).NotEmpty().WithMessage("ReferenciaIdPessoa is not can be empty");
+                _ = this.RuleFor(p => p.PrecoComida).NotEmpty().WithMessage("PrecoComida is not can be empty");
+            });
         }
     }
 }

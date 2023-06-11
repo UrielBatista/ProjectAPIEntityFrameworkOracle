@@ -88,7 +88,7 @@ namespace PessoasAPI.Controllers.V1
         /// This method create person and persist in database.
         /// </summary>
         [HttpPost]
-        [Authorize]
+        // [Authorize]
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> PostPersons([FromBody] PersonDto personDto)

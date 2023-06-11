@@ -2,6 +2,7 @@
 using AutoMapper;
 using HotChocolate;
 using HotChocolate.Subscriptions;
+using HotChocolate.Types;
 using Microsoft.EntityFrameworkCore;
 using Pro.Search.Infraestructure.Context;
 using Pro.Search.Infraestructure.Validators;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace Pro.Search.Infraestructure.GraphQL.Mutations
 {
+    [ExtendObjectType(typeof(Mutation))]
     public class PersonMutation
     {
         private readonly IMapper mapper;

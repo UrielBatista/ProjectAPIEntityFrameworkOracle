@@ -18,7 +18,9 @@ namespace PersonAPI.Extensions
 
             _ = services.AddGraphQLServer()
                 .AddQueryType<PersonQueryHotChocolate>()
-                .AddMutationType<PersonMutation>()
+                .AddMutationType<Mutation>()
+                .AddTypeExtension<PersonMutation>()
+                .AddTypeExtension<PersonWithFoodsMutation>()
                 .AddSubscriptionType<PersonSubscriptions>()
                 .AddInMemorySubscriptions()
                 .AddDefaultTransactionScopeHandler()
