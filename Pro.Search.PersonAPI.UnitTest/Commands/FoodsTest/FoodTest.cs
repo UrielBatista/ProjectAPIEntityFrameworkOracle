@@ -61,7 +61,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
                 .Returns(returnRepositoryEntity);
 
             var handler = CreateFoodCommandHandlerData(
-                Substitute.For<ISystemDBContext>(), 
+                Substitute.For<ISystemReadDBContext>(), 
                 repository);
 
             // Act
@@ -90,7 +90,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
 
             //Act
             var handler = UpdateFoodCommandHandlerData(
-                Substitute.For<ISystemDBContext>(), repository);
+                Substitute.For<ISystemReadDBContext>(), repository);
             
             var result = await handler
                 .Handle(request, CancellationToken.None)
@@ -116,7 +116,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
                 .Returns(returnFoodOfRepository);
 
             var handler = DeleteFoodCommandHandlerData(
-                Substitute.For<ISystemDBContext>(), repository);
+                Substitute.For<ISystemReadDBContext>(), repository);
 
             //Act
             var result = await handler
@@ -164,56 +164,56 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.FoodsTest
             return new GetAllFoodQueryHandler(repository, mapper);
         }
 
-        private static CreateFoodCommandHandler CreateFoodCommandHandlerData(ISystemDBContext _context, IFoodRepository repository)
+        private static CreateFoodCommandHandler CreateFoodCommandHandlerData(ISystemReadDBContext _context, IFoodRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<FoodProfile>());
             var mapper = new Mapper(mapperConf);
             return new CreateFoodCommandHandler(
-                Substitute.For<ISystemDBContext>(), 
+                Substitute.For<ISystemReadDBContext>(), 
                 mapper, 
                 repository ?? Substitute.For<IFoodRepository>());
         }
 
-        private static UpdateFoodCommandHandler UpdateFoodCommandHandlerData(ISystemDBContext _context, IFoodRepository repository)
+        private static UpdateFoodCommandHandler UpdateFoodCommandHandlerData(ISystemReadDBContext _context, IFoodRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<FoodProfile>());
             var mapper = new Mapper(mapperConf);
             return new UpdateFoodCommandHandler(
-                Substitute.For<ISystemDBContext>(),
+                Substitute.For<ISystemReadDBContext>(),
                 repository ?? Substitute.For<IFoodRepository>(),
                 mapper);
         }
 
         private static CreateFoodCommandHandler CreateHandlerFoodCommandThrowExceptionArgumentIsNull(
-            ISystemDBContext _context = default, IMapper mapper = default, IFoodRepository repository = default)
+            ISystemReadDBContext _context = default, IMapper mapper = default, IFoodRepository repository = default)
         {
             return new CreateFoodCommandHandler(
-                _context ?? Substitute.For<ISystemDBContext>(), 
+                _context ?? Substitute.For<ISystemReadDBContext>(), 
                 mapper ?? Substitute.For<IMapper>(), 
                 repository ?? Substitute.For<IFoodRepository>());
         }
 
         private static UpdateFoodCommandHandler UpdateHandlerFoodCommandThrowExceptionArgumentIsNull(
-            ISystemDBContext _context = default, IMapper mapper = default, IFoodRepository repository = default)
+            ISystemReadDBContext _context = default, IMapper mapper = default, IFoodRepository repository = default)
         {
             return new UpdateFoodCommandHandler(
-                _context ?? Substitute.For<ISystemDBContext>(),
+                _context ?? Substitute.For<ISystemReadDBContext>(),
                 repository ?? Substitute.For<IFoodRepository>(),
                 mapper ?? Substitute.For<IMapper>());
         }
 
-        private static DeleteFoodCommandHandler DeleteFoodCommandHandlerData(ISystemDBContext _context, IFoodRepository foodRepository)
+        private static DeleteFoodCommandHandler DeleteFoodCommandHandlerData(ISystemReadDBContext _context, IFoodRepository foodRepository)
         {
             return new DeleteFoodCommandHandler(
-                _context ?? Substitute.For<ISystemDBContext>(), 
+                _context ?? Substitute.For<ISystemReadDBContext>(), 
                 foodRepository ?? Substitute.For<IFoodRepository>());
         }
 
         private static DeleteFoodCommandHandler DeleteHandlerFoodCommandThrowExceptionArgumentIsNull(
-            ISystemDBContext _context = default, IFoodRepository foodRepository = default)
+            ISystemReadDBContext _context = default, IFoodRepository foodRepository = default)
         {
             return new DeleteFoodCommandHandler(
-                _context ?? Substitute.For<ISystemDBContext>(), 
+                _context ?? Substitute.For<ISystemReadDBContext>(), 
                 foodRepository ?? Substitute.For<IFoodRepository>());
         }
     }

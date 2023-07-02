@@ -14,7 +14,7 @@ namespace Pro.Search.Infraestructure.Repositories.Support
 
         private readonly DbSet<Food> foods;
 
-        public FoodRepository(ISystemDBContext _context)
+        public FoodRepository(ISystemReadDBContext _context)
         {
             _ = _context ?? throw new ArgumentNullException(nameof(_context));
             this.foods = _context.Food;

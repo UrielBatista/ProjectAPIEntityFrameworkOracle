@@ -16,7 +16,7 @@ namespace Pro.Search.Infraestructure.GraphQL.Queries
         [UseProjection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<Persons> GetPersonsData([Service] ISystemDBContext context)
+        public IQueryable<Persons> GetPersonsData([Service] ISystemWriteDBContext context)
         {
             var queryable = context.Pessoas;
             DisposeIfDisposable(ref queryable);
@@ -26,7 +26,7 @@ namespace Pro.Search.Infraestructure.GraphQL.Queries
         [UseProjection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<Food> GetFoodPurchase([Service] ISystemDBContext context)
+        public IQueryable<Food> GetFoodPurchase([Service] ISystemWriteDBContext context)
         {
             var result = context.Food;
             DisposeIfDisposable(ref result);

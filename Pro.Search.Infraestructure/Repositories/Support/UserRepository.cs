@@ -11,7 +11,7 @@ namespace Pro.Search.Infraestructure.Repositories.Support
     {
         private readonly DbSet<UserEntity> users;
 
-        public UserRepository(ISystemDBContext _context)
+        public UserRepository(ISystemReadDBContext _context)
         {
             _ = _context ?? throw new ArgumentNullException(nameof(_context));
             this.users = _context.Users;

@@ -12,10 +12,10 @@ namespace Pro.Search.PersonCommands
 {
     public class DeletePersonCommandHandler : IRequestHandler<DeletePersonCommand, DeleteResponses>
     {
-        private readonly ISystemDBContext _context;
+        private readonly ISystemWriteDBContext _context;
         private readonly IPersonsRepository repository;
 
-        public DeletePersonCommandHandler(ISystemDBContext _context, IPersonsRepository repository)
+        public DeletePersonCommandHandler(ISystemWriteDBContext _context, IPersonsRepository repository)
         {
             this._context = _context;
             this.repository = repository;
@@ -40,7 +40,7 @@ namespace Pro.Search.PersonCommands
             {
                 _context.Pessoas.Remove(item);
             }
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(cancellationToken);
             return new Success(pessoas);
         }
     }

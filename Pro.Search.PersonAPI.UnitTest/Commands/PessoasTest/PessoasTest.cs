@@ -132,7 +132,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 .Returns(persons);
             
             var handler = CreatePersonCommandHandlerData(
-                Substitute.For<ISystemDBContext>(), 
+                Substitute.For<ISystemReadDBContext>(), 
                 repository);
 
             // Act
@@ -160,7 +160,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 .Returns(persons);
 
             var handler = UpdatePersonCommandHandlerData(
-                Substitute.For<ISystemDBContext>(), 
+                Substitute.For<ISystemReadDBContext>(), 
                 repository);
 
             // Act
@@ -189,7 +189,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 .Returns(pessoa);
 
             var handler = DeleteHandlePersonCommand(
-                Substitute.For<ISystemDBContext>(), 
+                Substitute.For<ISystemReadDBContext>(), 
                 repository);
 
             // Act
@@ -219,7 +219,7 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
                 .Returns(persons);
 
             var handler = DeleteHandlePersonCommand(
-                Substitute.For<ISystemDBContext>(), 
+                Substitute.For<ISystemReadDBContext>(), 
                 repository);
 
             // Act
@@ -290,29 +290,29 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
             return new GetPersonPurcashFoodQueryHandler(repository, mapper);
         }
 
-        private static CreatePersonCommandHandler CreatePersonCommandHandlerData(ISystemDBContext _context, IPersonsRepository repository)
+        private static CreatePersonCommandHandler CreatePersonCommandHandlerData(ISystemReadDBContext _context, IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
             return new CreatePersonCommandHandler(
-                Substitute.For<ISystemDBContext>(), 
+                Substitute.For<ISystemReadDBContext>(), 
                 mapper, Substitute.For<IPersonsRepository>());
         }
 
-        private static UpdatePersonCommandHandler UpdatePersonCommandHandlerData(ISystemDBContext _context, IPersonsRepository repository)
+        private static UpdatePersonCommandHandler UpdatePersonCommandHandlerData(ISystemReadDBContext _context, IPersonsRepository repository)
         {
             var mapperConf = new MapperConfiguration(conf => conf.AddProfile<PersonProfile>());
             var mapper = new Mapper(mapperConf);
             return new UpdatePersonCommandHandler(
-                Substitute.For<ISystemDBContext>(), 
+                Substitute.For<ISystemReadDBContext>(), 
                 repository ?? Substitute.For<IPersonsRepository>(), 
                 mapper);
         }
 
-        private static DeletePersonCommandHandler DeleteHandlePersonCommand(ISystemDBContext context, IPersonsRepository repository)
+        private static DeletePersonCommandHandler DeleteHandlePersonCommand(ISystemReadDBContext context, IPersonsRepository repository)
         {
             return new DeletePersonCommandHandler(
-                context ?? Substitute.For<ISystemDBContext>(), 
+                context ?? Substitute.For<ISystemReadDBContext>(), 
                 repository ?? Substitute.For<IPersonsRepository>());
         }
 
@@ -332,10 +332,10 @@ namespace Pro.Search.PessoasAPI.UnitTest.Commands.PessoasTest
         }
 
         private static UpdatePersonCommandHandler CreateHandlerUpdatePersonExceptionGetOnePessoa(
-            ISystemDBContext context = default, IMapper mapper = default, IPersonsRepository repository = default)
+            ISystemReadDBContext context = default, IMapper mapper = default, IPersonsRepository repository = default)
         {
             return new UpdatePersonCommandHandler(
-                context ?? Substitute.For<ISystemDBContext>(),
+                context ?? Substitute.For<ISystemReadDBContext>(),
                 repository ?? Substitute.For<IPersonsRepository>(), 
                 mapper);
         }

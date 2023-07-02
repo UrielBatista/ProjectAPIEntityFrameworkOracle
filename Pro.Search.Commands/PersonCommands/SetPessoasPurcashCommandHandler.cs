@@ -15,12 +15,12 @@ namespace Pro.Search.Commands.PersonCommands
     public class SetPessoasPurcashCommandHandler : IRequestHandler<SetPessoasPurcashCommand, PersonPurcashDto>
     {
         private readonly Random _random = new Random();
-        private readonly ISystemDBContext _context;
+        private readonly ISystemWriteDBContext _context;
         private readonly IPersonsRepository repository;
         private readonly IFoodRepository repositoryFood;
         private readonly IMapper mapper;
 
-        public SetPessoasPurcashCommandHandler(ISystemDBContext _context, IFoodRepository repositoryFood, IPersonsRepository repository, IMapper mapper)
+        public SetPessoasPurcashCommandHandler(ISystemWriteDBContext _context, IFoodRepository repositoryFood, IPersonsRepository repository, IMapper mapper)
         {
             this._context = _context;
             this.repository = repository;

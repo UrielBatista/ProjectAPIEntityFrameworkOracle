@@ -16,12 +16,12 @@ namespace Pro.Search.PersonCommands
 {
     public class CreatePersonCommandHandler : IRequestHandler<CreatePersonCommand, CreateOrUpdateResponses>
     {
-        private readonly ISystemDBContext _context;
+        private readonly ISystemWriteDBContext _context;
         private readonly IPersonsRepository repository;
         private readonly IMapper mapper;
 
         public CreatePersonCommandHandler(
-            ISystemDBContext _context,
+            ISystemWriteDBContext _context,
             IMapper mapper, 
             IPersonsRepository repository)
         {

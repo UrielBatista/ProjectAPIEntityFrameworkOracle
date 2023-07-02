@@ -7,7 +7,7 @@ namespace Pro.Search.Infraestructure.GraphQL.Schemas
 {
     public class PersonSchema : Schema
     {
-        public PersonSchema(IServiceProvider serviceProvider, ISystemDBContext dbContext)
+        public PersonSchema(IServiceProvider serviceProvider, ISystemReadDBContext dbContext)
             : base(serviceProvider)
         {
             this.Query = new PersonQuery(dbContext);

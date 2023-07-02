@@ -9,7 +9,7 @@ namespace Pro.Search.Infraestructure.GraphQL.Queries
 {
     internal class PersonQuery : ObjectGraphType
     {
-        public PersonQuery(ISystemDBContext dbContext)
+        public PersonQuery(ISystemReadDBContext dbContext)
         {
             var queryArgs = new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id_Pessoas", Description = "Pessoas Id" });
             this.Name = "Query";

@@ -14,7 +14,7 @@ namespace Pro.Search.Infraestructure.Repositories.Support
         private readonly DbSet<Persons> pessoas;
         private readonly DbSet<Food> foods;
 
-        public PersonsRepository(ISystemDBContext _context)
+        public PersonsRepository(ISystemReadDBContext _context)
         {
             _ = _context ?? throw new ArgumentNullException(nameof(_context));
             this.pessoas = _context.Pessoas;

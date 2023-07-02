@@ -13,11 +13,11 @@ namespace Pro.Search.Commands.PersonCommands
 {
     public class CreateFoodInMemoryCommandHandler : IRequestHandler<CreateFoodInMemoryCommand, FoodAllInfoDto>
     {
-        private readonly ISystemDBContext _context;
+        private readonly ISystemWriteDBContext _context;
         private readonly IFoodRepository repository;
         private readonly IMapper mapper;
 
-        public CreateFoodInMemoryCommandHandler(ISystemDBContext _context, IMapper mapper, IFoodRepository repository)
+        public CreateFoodInMemoryCommandHandler(ISystemWriteDBContext _context, IMapper mapper, IFoodRepository repository)
         {
             this._context = _context;
             this.mapper = mapper;

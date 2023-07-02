@@ -5,9 +5,9 @@ using System;
 
 namespace Pro.Search.Infraestructure.Context
 {
-    public sealed class SystemDBContext : DbContext, ISystemDBContext
+    public sealed class SystemWriteDBContext : DbContext, ISystemWriteDBContext
     {
-        public SystemDBContext(DbContextOptions<SystemDBContext> options) : base(options)
+        public SystemWriteDBContext(DbContextOptions<SystemWriteDBContext> options) : base(options)
         {
             this.Pessoas = this.Set<Persons>();
             this.Food = this.Set<Food>();

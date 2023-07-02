@@ -12,11 +12,11 @@ namespace Pro.Search.PersonCommands
 {
     public class UpdatePersonCommandHandler : IRequestHandler<UpdatePersonCommand, CreateOrUpdateResponses>
     {
-        private readonly ISystemDBContext _context;
+        private readonly ISystemWriteDBContext _context;
         private readonly IPersonsRepository repository;
         private readonly IMapper mapper;
 
-        public UpdatePersonCommandHandler(ISystemDBContext _context, IPersonsRepository repository, IMapper mapper)
+        public UpdatePersonCommandHandler(ISystemWriteDBContext _context, IPersonsRepository repository, IMapper mapper)
         {
             this._context = _context;
             this.repository = repository;
