@@ -19,7 +19,9 @@ using MySql.Data.MySqlClient;
 using PersonAPI.GraphQL;
 using PessoasAPI.Extensions;
 using PessoasAPI.Swagger.DependencyInjection;
-using Pro.Search.Infraestructure;using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure;
+using Pro.Search.Infraestructure.Context;
+using Pro.Search.Infraestructure.GraphQL.Directives;
 using Pro.Search.Infraestructure.GraphQL.Queries;
 using Pro.Search.Infraestructure.GraphQL.Schemas;
 using Pro.Search.Infraestructure.Mappers;
@@ -116,6 +118,8 @@ namespace PessoasAPI
 
             _ = services.AddGraphQLServer()
                 .AddQueryType<PersonQueryHotChocolate>()
+                .AddTypeExtension<ToUpperCase>()
+                .AddTypeExtension<ToLowerCase>()
                 .AddExportDirectiveType()
                 .AddProjections()
                 .AddFiltering()
