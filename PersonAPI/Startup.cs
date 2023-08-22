@@ -59,13 +59,13 @@ namespace PessoasAPI
                     _ = option.SkipToken();
                 });
             // Database Connector
-            //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-            //        options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
+            _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+                    options.UseOracle(Configuration.GetConnectionString("OracleDBConnection")));
             //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
             //        options.UseSqlite(Configuration.GetConnectionString("SqliteDBConnection")));
-            _ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
-                    options.UseMySQL(Configuration["CONNECT_STRING"])
-                    .LogTo(Console.WriteLine, LogLevel.Information));
+            //_ = services.AddDbContext<ISystemDBContext, SystemDBContext>(options =>
+            //        options.UseMySQL(Configuration["CONNECT_STRING"])
+            //        .LogTo(Console.WriteLine, LogLevel.Information));
 
             _ = services.AddAutoMapper(typeof(PersonProfile).Assembly, typeof(FoodProfile).Assembly);
 

@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Pro.Search.Infraestructure.ServiceReferences.CepApi.DependencyInjection;
 using Pro.Search.Infraestructure.ServiceReferences.Configuration;
+using Pro.Search.Infraestructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;

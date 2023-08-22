@@ -12,7 +12,9 @@ namespace Pro.Search.Infraestructure.Mappers
         {
             _ = this.CreateMap<Persons, PersonsInfoDto>();
             _ = this.CreateMap<PersonsInfoDto, Persons>();
+
             _ = this.CreateMap<GraphQLPersonsInfoDto, Persons>();
+            _ = this.CreateMap<PersonsInfoDto, GraphQLPersonsInfoDto>();
 
             _ = this.CreateMap<Persons, PersonsAllInfoDto>();
         }

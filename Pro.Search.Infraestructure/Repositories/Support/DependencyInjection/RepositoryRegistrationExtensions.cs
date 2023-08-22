@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Pro.Search.Infraestructure.Services;
 
 namespace Pro.Search.Infraestructure.Repositories.Support.DependencyInjection
 {
@@ -8,7 +9,8 @@ namespace Pro.Search.Infraestructure.Repositories.Support.DependencyInjection
         {
             _ = services.AddTransient<IPersonsRepository, PersonsRepository>()
                 .AddTransient<IFoodRepository, FoodRepository>()
-                .AddTransient<IUserRepository, UserRepository>();
+                .AddTransient<IUserRepository, UserRepository>()
+                .AddTransient<ITopicCreatePersonSubscriptionService, TopicCreatePersonSubscriptionService>();
                     
             return services;
         }
