@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using HotChocolate;
+using HotChocolate.Subscriptions;
 using MassTransit;
 using MediatR;
 using Pro.Search.Infraestructure.Context;
@@ -19,15 +21,18 @@ namespace Pro.Search.PersonCommands
         private readonly ISystemDBContext _context;
         private readonly IPersonsRepository repository;
         private readonly IMapper mapper;
+        private readonly ITopicEventSender sender;
 
         public CreatePersonCommandHandler(
             ISystemDBContext _context,
             IMapper mapper, 
-            IPersonsRepository repository)
+            IPersonsRepository repository,
+            [Service] ITopicEventSender sender)
         {
             this._context = _context;
             this.mapper = mapper;
             this.repository = repository;
+            this.sender = sender;
         }
 
         public async Task<CreateOrUpdateResponses> Handle(CreatePersonCommand request, CancellationToken cancellationToken)
@@ -47,6 +52,8 @@ namespace Pro.Search.PersonCommands
 
                 _ = await _context.Pessoas.AddAsync(this.mapper.Map<PersonsInfoDto, Persons>(returnValidation.Pessoas), cancellationToken).ConfigureAwait(false);
                 _ = await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+                var persons = this.mapper.Map<Persons, GraphQLPersonsInfoDto>(this.mapper.Map<PersonsInfoDto, Persons>(returnValidation.Pessoas));
+                await this.sender.SendAsync("CreatedGraphQLPerson", persons).ConfigureAwait(false);
 
                 return new Success(returnValidation);
             }
