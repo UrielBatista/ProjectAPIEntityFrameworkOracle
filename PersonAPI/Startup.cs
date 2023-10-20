@@ -30,6 +30,7 @@ using Pro.Search.PersonDomains.PersonEngine.Commons;
 using Pro.Search.PersonDomains.PersonEngine.GraphQL.Types;
 using System.Net.NetworkInformation;
 using System.Text;
+using static Pro.Search.Infraestructure.GraphQL.Directives.DistinctDirective;
 
 namespace PessoasAPI
 {
@@ -120,6 +121,7 @@ namespace PessoasAPI
                 .AddQueryType<PersonQueryHotChocolate>()
                 .AddTypeExtension<ToUpperCase>()
                 .AddTypeExtension<ToLowerCase>()
+                .AddTypeExtension<Distinct>()
                 .AddExportDirectiveType()
                 .AddProjections()
                 .AddFiltering()
